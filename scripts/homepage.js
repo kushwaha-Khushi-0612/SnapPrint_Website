@@ -454,6 +454,9 @@ const bestSellers = [
 document.addEventListener('DOMContentLoaded', () => {
     console.log('🚀 SnapPrint Homepage Loading...');
 
+    // Initialize hamburger menu FIRST to ensure it always works
+    initHamburgerMenu();
+
     // Initialize hero slider
     initHeroSlider();
 
@@ -482,11 +485,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add smooth scroll to anchor links
     addSmoothScroll();
-
-    // Initialize hamburger menu with delay to ensure DOM is ready
-    setTimeout(() => {
-        initHamburgerMenu();
-    }, 100);
 
     console.log('✅ SnapPrint Homepage Ready!');
 });
