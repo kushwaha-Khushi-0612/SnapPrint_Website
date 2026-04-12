@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/homepage.css">
     <link rel="stylesheet" href="styles/productCategory.css">
+    <link rel="stylesheet" href="styles/loginModal.css">
+    <script src="scripts/dataService.js"></script>
+    <script src="scripts/analyticsService.js"></script>
 </head>
 <body>
     <!-- Main Container -->
@@ -215,6 +218,14 @@
             <div id="mixed-categories" class="product-grid product-grid-large"></div>
         </section>
 
+        <!-- Random Discoveries -->
+        <section class="products-section random-section">
+            <div class="section-header">
+                <h2>🎲 Random Discoveries</h2>
+            </div>
+            <div id="random-discoveries" class="product-grid"></div>
+        </section>
+
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
@@ -257,6 +268,9 @@
     </div>
 
     <!-- Scripts -->
+    <script src="scripts/authService.js"></script>
+    <script src="widgets/loginModal.js"></script>
+    <script src="scripts/globalNavigation.js"></script>
     <script src="widgets/productCard.js"></script>
     <script src="scripts/productCategory.js"></script>
 </body>

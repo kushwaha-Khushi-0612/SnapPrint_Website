@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapPrint - My Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/homepage.css">
+    <link rel="stylesheet" href="styles/loginModal.css">
+    <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Navigation Header -->
+        <header class="header">
+            <div class="header-top">
+                <button class="hamburger-menu" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <h1>SnapPrint</h1>
+                        <span class="tagline">Custom Printing Studio</span>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products, categories...">
+                    <button class="search-btn">
+                        <img src="constants/icons/search.svg" alt="Search" class="icon">
+                    </button>
+                </div>
+
+                <div class="header-actions">
+                    <button class="header-btn">
+                        <img src="constants/icons/heart.svg" alt="Wishlist" class="icon">
+                        <span>Wishlist</span>
+                    </button>
+                    <button class="header-btn">
+                        <img src="constants/icons/cart.svg" alt="Cart" class="icon">
+                        <span>Cart</span>
+                    </button>
+                    <button class="header-btn login-btn">
+                        <!-- Replaced by GlobalNav if logged in -->
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Profile Dashboard -->
+        <section class="profile-section">
+            <div class="profile-layout">
+                <!-- Sidebar Navigation -->
+                <aside class="profile-sidebar">
+                    <nav class="sidebar-nav">
+                        <button class="nav-item active" data-view="profile">
+                            <img src="constants/icons/user.svg" alt="" class="icon">
+                            <span>My Profile</span>
+                        </button>
+                        <button class="nav-item" data-view="orders">
+                            <img src="constants/icons/package.svg" alt="" class="icon">
+                            <span>View Orders</span>
+                        </button>
+                        <button class="nav-item" data-view="payments">
+                            <img src="constants/icons/credit-card.svg" alt="" class="icon">
+                            <span>Payments</span>
+                        </button>
+                        <button class="nav-item" data-view="refunds">
+                            <img src="constants/icons/refresh.svg" alt="" class="icon">
+                            <span>Refunds</span>
+                        </button>
+                        <button class="nav-item" data-view="wishlist">
+                            <img src="constants/icons/heart.svg" alt="" class="icon">
+                            <span>Wishlist</span>
+                        </button>
+                        <button class="nav-item" data-view="cart">
+                            <img src="constants/icons/cart.svg" alt="" class="icon">
+                            <span>My Cart</span>
+                        </button>
+                        <button class="nav-item" data-view="designs">
+                            <img src="constants/icons/edit.svg" alt="" class="icon">
+                            <span>My Designs</span>
+                        </button>
+                    </nav>
+                </aside>
+
+                <!-- Content Area -->
+                <div class="profile-content">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                           <img src="constants/icons/user.svg" alt="Avatar">
+                        </div>
+                        <div>
+                            <h2 id="profile-greeting">Welcome back!</h2>
+                            <p id="profile-phone">+91 ******</p>
+                        </div>
+                    </div>
+
+                    <!-- Profile View -->
+                    <div id="view-profile" class="content-view active">
+                        <div class="profile-grid">
+                            <!-- Personal Info Card -->
+                            <div class="profile-card">
+                                <div class="card-header">
+                                    <h3>Personal Information</h3>
+                                    <button id="edit-profile-btn" class="edit-btn">Edit Details</button>
+                                </div>
+                                <form id="profile-form">
+                                    <div class="form-row">
+                                        <div class="input-group">
+                                            <label>Full Name</label>
+                                            <input type="text" id="profile-name" placeholder="John Doe" disabled>
+                                        </div>
+                                        <div class="input-group">
+                                            <label>Email Address</label>
+                                            <input type="email" id="profile-email" placeholder="john@example.com" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <label>Phone Number</label>
+                                        <input type="tel" id="profile-phone-input" disabled>
+                                    </div>
+                                    <div class="input-group">
+                                        <label>Complete Address</label>
+                                        <input type="text" id="profile-address" placeholder="123, Street Name, Area" disabled>
+                                    </div>
+                                    <div class="input-group">
+                                        <label>Pincode</label>
+                                        <input type="text" id="profile-pincode" placeholder="110001" maxlength="6" disabled>
+                                    </div>
+                                    <div class="form-actions" style="display: none;">
+                                        <button type="button" id="cancel-edit-btn" class="btn-secondary">Cancel</button>
+                                        <button type="submit" id="save-profile-btn" class="btn-primary">Save Changes</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Account Actions -->
+                            <div class="profile-card logout-card">
+                                <div>
+                                    <h3>Account Security</h3>
+                                    <p>Manage your session securely.</p>
+                                </div>
+                                <button class="logout-btn" id="logout-btn">Log out</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orders View -->
+                    <div id="view-orders" class="content-view">
+                        <div class="profile-card">
+                            <div class="card-header">
+                                <h3>My Orders</h3>
+                            </div>
+                            <div class="orders-list">
+                                <div class="order-item">
+                                    <div class="order-img">
+                                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=100&h=100&fit=crop" alt="product">
+                                    </div>
+                                    <div class="order-details">
+                                        <h4>Premium Custom T-Shirt</h4>
+                                        <p class="order-meta">Order #ORD-89432 • ₹799</p>
+                                        <span class="order-status status-delivered">Delivered on Apr 10</span>
+                                    </div>
+                                </div>
+                                <div class="order-item">
+                                    <div class="order-img">
+                                        <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=100&h=100&fit=crop" alt="product">
+                                    </div>
+                                    <div class="order-details">
+                                        <h4>Color Changing Mug</h4>
+                                        <p class="order-meta">Order #ORD-92144 • ₹399</p>
+                                        <span class="order-status status-processing">Processing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder Views -->
+                    <div id="view-payments" class="content-view">
+                        <div class="profile-card placeholder-card">
+                            <img src="constants/icons/credit-card.svg" alt="" class="placeholder-icon">
+                            <h3>Saved Payments</h3>
+                            <p>You haven't saved any payment methods yet.</p>
+                        </div>
+                    </div>
+
+                    <div id="view-refunds" class="content-view">
+                        <div class="profile-card placeholder-card">
+                            <img src="constants/icons/refresh.svg" alt="" class="placeholder-icon">
+                            <h3>Refund History</h3>
+                            <p>No refund requests found.</p>
+                        </div>
+                    </div>
+
+                    <div id="view-wishlist" class="content-view">
+                        <div class="profile-card placeholder-card">
+                            <img src="constants/icons/heart.svg" alt="" class="placeholder-icon">
+                            <h3>My Wishlist</h3>
+                            <p>Your wishlist is currently empty.</p>
+                            <a href="index.html" class="btn-primary" style="text-decoration: none; display: inline-block; margin-top: 16px;">Browse Products</a>
+                        </div>
+                    </div>
+
+                    <div id="view-cart" class="content-view">
+                        <div class="profile-card placeholder-card">
+                            <img src="constants/icons/cart.svg" alt="" class="placeholder-icon">
+                            <h3>Your Cart</h3>
+                            <p>Looks like you haven't added anything to your cart.</p>
+                        </div>
+                    </div>
+
+                    <div id="view-designs" class="content-view">
+                        <div class="profile-card placeholder-card">
+                            <img src="constants/icons/edit.svg" alt="" class="placeholder-icon">
+                            <h3>My Custom Designs</h3>
+                            <p>Start creating your first design today!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About SnapPrint</h3>
+                    <p>Premium custom printing services for all your personalization needs.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SnapPrint. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/authService.js"></script>
+    <script src="widgets/loginModal.js"></script>
+    <script src="scripts/globalNavigation.js"></script>
+    <script src="scripts/profile.js"></script>
+</body>
+</html>

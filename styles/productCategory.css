@@ -294,7 +294,23 @@
 
 /* Subcategory Sections */
 .subcategory-section {
-    padding: 40px 0 60px;
+    padding: 20px 0 30px;
+}
+
+.category-section-header {
+    max-width: 1200px;
+    margin: 60px auto 30px;
+    padding: 0 24px;
+    border-left: 6px solid #000;
+}
+
+.category-section-header .section-title {
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #000;
 }
 
 .new-arrivals-section {
@@ -348,11 +364,16 @@
 .subcategory-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 14px;
     padding: 0 24px;
     max-width: 1200px;
     margin: 0 auto;
     justify-items: center;
+}
+
+.product-grid-dense {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) !important;
+    gap: 12px !important;
 }
 
 /* Subcategory Card */
@@ -361,7 +382,7 @@
     border: 2px dashed #d0d0d0;
     border-radius: 8px;
     overflow: visible;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: default;
     position: relative;
     padding: 12px;
@@ -790,7 +811,7 @@
 }
 
 .subcategory-card {
-    animation: fadeInUp 0.6s ease-out both;
+    animation: fadeInUp 1.2s ease-out both;
 }
 
 .subcategory-card:nth-child(1) { animation-delay: 0.1s; }

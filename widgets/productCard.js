@@ -43,15 +43,18 @@ function createProductCard(config) {
         ? Math.round(((originalPrice - price) / originalPrice) * 100)
         : 0;
 
-    // Generate star rating
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 >= 0.5;
-    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+    // Badge styling mapping - simplified to single premium look
+    const getBadgeClass = (badgeText) => {
+        return badgeText ? 'badge-standard' : '';
+    };
 
     return `
-        <a href="${link}" class="product-card-link" style="text-decoration: none; color: inherit; display: block; height: 100%;">
+        <a href="${link}" class="product-card-link" onclick="if(window.analyticsService) window.analyticsService.trackProductView(${JSON.stringify(config).replace(/"/g, '&quot;')});" style="text-decoration: none; color: inherit; display: block; height: 100%;">
             <div class="product-card-detail ${variant ? `product-card-${variant}` : ''}" data-product-id="${productId}">
-                ${badge ? `<div class="product-badge">${badge}</div>` : ''}
+                <div class="badge-stack">
+                    ${badge ? `<div class="product-badge badge-standard">${badge}</div>` : ''}
+                    ${config.productTag ? `<div class="product-tag">${config.productTag}</div>` : ''}
+                </div>
                 
                 <div class="product-card-image">
                     <img src="${image}" alt="${title}" loading="lazy">
@@ -279,6 +282,32 @@ style.textContent = `
 
     .product-card-curved-all {
         border-radius: 24px;
+    }
+
+    .badge-stack {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        z-index: 5;
+        pointer-events: none;
+    }
+
+    .product-tag, .product-badge {
+        position: static !important;
+        background: #000;
+        color: #fff;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        width: fit-content;
+        pointer-events: auto;
     }
 
     .rating-count {

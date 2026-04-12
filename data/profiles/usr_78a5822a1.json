@@ -1,0 +1,32 @@
+{
+    "id": "usr_78a5822a1",
+    "phone": "8896538118",
+    "joinDate": "2026-04-12T08:29:01Z",
+    "name": "R R Maheshwar",
+    "email": "maheshwarsinha01@gmail.com",
+    "address": "Chhatrapati Shahu Ji Maharaj University, Kanpur Nagar, Uttar Pradesh",
+    "pincode": "208024",
+    "analytics": {
+        "categoryInterests": {
+            "Hoodies": 2,
+            "Mugs & Cups": 3,
+            "Footwear": 1,
+            "Phone Cases": 2,
+            "T-Shirts": 2
+        },
+        "subcategoryInterests": {
+            "Cartoon": 1,
+            "Slides": 1
+        },
+        "badgeInterests": {
+            "New Arrival": 1,
+            "Limited Edition": 1
+        },
+        "viewHistory": [
+            "prod-footwear-womenclothing-slides-2",
+            "prod-mugs&cups-cartoon-4"
+        ],
+        "lastInteracted": 1775979284626
+    },
+    "lastSync": "2026-04-12 09:34:44"
+}

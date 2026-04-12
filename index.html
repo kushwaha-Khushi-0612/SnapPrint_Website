@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/homepage.css">
+    <link rel="stylesheet" href="styles/loginModal.css">
+    <script src="scripts/dataService.js"></script>
+    <script src="scripts/analyticsService.js"></script>
 </head>
 <body>
     <!-- Main Container -->
@@ -201,6 +204,15 @@
             <div id="you-might-like" class="product-grid product-grid-large"></div>
         </section>
 
+        <!-- Random Discoveries -->
+        <section class="products-section random-section">
+            <div class="section-header">
+                <h2>🎲 Random Discoveries</h2>
+                <p class="section-subtitle">Something special for you</p>
+            </div>
+            <div id="random-discoveries" class="product-grid"></div>
+        </section>
+
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
@@ -243,6 +255,9 @@
     </div>
 
     <!-- Scripts -->
+    <script src="scripts/authService.js"></script>
+    <script src="widgets/loginModal.js"></script>
+    <script src="scripts/globalNavigation.js"></script>
     <script src="widgets/slidshowImage.js"></script>
     <script src="widgets/category_unit.js"></script>
     <script src="widgets/productCard.js"></script>

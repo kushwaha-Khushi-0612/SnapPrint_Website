@@ -1,0 +1,252 @@
+/* ========== LOGIN MODAL STYLES ========== */
+.login-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.login-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.login-modal-container {
+    background: var(--color-white);
+    width: 100%;
+    max-width: 440px;
+    border-radius: 20px;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    transform: translateY(30px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.login-modal-overlay.active .login-modal-container {
+    transform: translateY(0);
+}
+
+.login-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    background: var(--gray-100);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.login-modal-close:hover {
+    background: var(--gray-200);
+    transform: rotate(90deg);
+}
+
+.login-modal-close svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--color-black);
+}
+
+.login-step-wrapper {
+    padding: 40px 32px;
+}
+
+/* Internal Steps Logic */
+.login-step {
+    display: none;
+    animation: fadeInStep 0.4s ease forwards;
+}
+
+.login-step.active {
+    display: block;
+}
+
+@keyframes fadeInStep {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-header .logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 8px;
+}
+
+.login-header .subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* Inputs */
+.login-input-group {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.login-input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 8px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--gray-200);
+    border-radius: var(--button-radius);
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: var(--color-white);
+}
+
+.login-input:focus {
+    outline: none;
+    border-color: var(--color-black);
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
+}
+
+.phone-input-wrapper {
+    display: flex;
+    gap: 12px;
+}
+
+.country-code {
+    background: var(--gray-100);
+    padding: 14px 16px;
+    border-radius: var(--button-radius);
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid var(--gray-100);
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+}
+
+/* Action Button */
+.login-btn-primary {
+    width: 100%;
+    padding: 16px;
+    background: var(--color-black);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--button-radius);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.login-btn-primary:not(:disabled):hover {
+    background: var(--gray-800);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.login-btn-primary:disabled {
+    background: var(--gray-300);
+    cursor: not-allowed;
+}
+
+.spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+.login-btn-primary.loading .spinner {
+    display: inline-block;
+}
+
+.login-btn-primary.loading .btn-text {
+    display: none;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* OTP Specifics */
+.otp-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.otp-box {
+    width: 48px;
+    height: 56px;
+    border: 2px solid var(--gray-200);
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-black);
+    transition: all 0.2s ease;
+}
+
+.otp-box:focus {
+    outline: none;
+    border-color: var(--color-black);
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 13px;
+    margin-top: 8px;
+    min-height: 20px;
+    display: block;
+}
+
+.resend-text {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.resend-text a {
+    color: var(--color-black);
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.resend-text a:hover {
+    text-decoration: underline;
+}
