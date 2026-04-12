@@ -49,54 +49,57 @@ function createProductCard(config) {
     const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
     return `
-        <div class="product-card ${variant ? `product-card-${variant}` : ''}" data-product-id="${productId}">
-            ${badge ? `<div class="product-badge">${badge}</div>` : ''}
-            
-            <div class="product-image-container">
-                <img src="${image}" alt="${title}" class="product-image" loading="lazy">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-title">${title}</h3>
+        <a href="${link}" class="product-card-link" style="text-decoration: none; color: inherit; display: block; height: 100%;">
+            <div class="product-card-detail ${variant ? `product-card-${variant}` : ''}" data-product-id="${productId}">
+                ${badge ? `<div class="product-badge">${badge}</div>` : ''}
                 
-                ${description ? `<p class="product-description">${description}</p>` : ''}
-                
-                ${showRating && rating > 0 ? `
-                    <div class="product-rating">
-                        <span class="rating-stars">
-                            ${'★'.repeat(fullStars)}${hasHalfStar ? '½' : ''}${'☆'.repeat(emptyStars)}
-                        </span>
-                        ${reviewCount > 0 ? `<span class="rating-count">(${reviewCount})</span>` : ''}
-                    </div>
-                ` : ''}
-
-                <div class="product-bottom-row">
-                    <div class="product-price-group">
-                        <span class="product-price">₹${price.toLocaleString('en-IN')}</span>
-                        ${originalPrice && originalPrice > price ? `
-                            <span class="product-original-price">₹${originalPrice.toLocaleString('en-IN')}</span>
-                        ` : ''}
-                        ${showDiscount && discountPercent > 0 ? `
-                            <span class="product-discount">${discountPercent}% OFF</span>
-                        ` : ''}
-                    </div>
-                    
+                <div class="product-card-image">
+                    <img src="${image}" alt="${title}" loading="lazy">
                     ${showWishlist ? `
-                        <button class="wishlist-btn" data-product-id="${productId}" aria-label="Add to wishlist">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <button class="wishlist-btn" onclick="event.preventDefault(); event.stopPropagation(); toggleWishlist('${productId}')" data-product-id="${productId}" aria-label="Add to wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                             </svg>
                         </button>
                     ` : ''}
-                    
-                    <a href="${link}" class="product-arrow-btn" aria-label="View ${title}">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                        </svg>
-                    </a>
                 </div>
+
+                <div class="product-card-info">
+                    <h3 class="product-card-title">${title}</h3>
+                    
+                    ${description ? `<p class="product-card-description">${description}</p>` : ''}
+                    
+                    ${showRating && rating > 0 ? `
+                        <div class="product-card-rating">
+                            <div class="rating-badge">
+                                <span class="rating-value">${rating}</span>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="#FFA500" stroke="none">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            ${reviewCount > 0 ? `<span class="review-count">(${reviewCount.toLocaleString()})</span>` : ''}
+                        </div>
+                    ` : ''}
+
+                    <div class="product-card-pricing">
+                        <div class="product-price-row">
+                            <span class="product-discount">₹${price.toLocaleString('en-IN')}</span>
+                            ${originalPrice && originalPrice > price ? `
+                                <span class="product-original-price">₹${originalPrice.toLocaleString('en-IN')}</span>
+                            ` : ''}
+                            ${showDiscount && discountPercent > 0 ? `
+                                <span class="product-discount-badge">${discountPercent}% OFF</span>
+                            ` : ''}
+                        </div>
+                    </div>
+                </div>
+                <button class="product-card-arrow" aria-label="View product">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
             </div>
-        </div>
+        </a>
     `;
 }
 

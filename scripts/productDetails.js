@@ -130,6 +130,16 @@ const mixedCategoryProducts = [
 // Related products
 const relatedProducts = generateProducts('T-Shirt', 8);
 
+// Customers Also Bought products
+const customersAlsoBought = generateProducts('T-Shirt', 6);
+
+// Bundled Offers products
+const bundledOffers = generateProducts('Bundle', 4).map((p, i) => {
+    p.title = ['T-Shirt + Mug', 'Couple Hoodies', 'Phone Case + Pop Socket', '2x T-Shirts'][i];
+    p.badge = 'BUNDLE SAVE';
+    return p;
+});
+
 // Previously viewed products
 const previouslyViewedProducts = [
     {
@@ -366,71 +376,19 @@ document.addEventListener('DOMContentLoaded', () => {
     loadReviews();
     
     // Load product sections
-    renderProductSection(viralProducts, 'viral-products');
-    renderProductSection(mostViewedProducts, 'most-viewed-products');
-    renderProductSection(mixedCategoryProducts, 'mixed-category-products');
-    renderProductSection(relatedProducts, 'related-products');
-    renderProductSection(previouslyViewedProducts, 'previously-viewed');
-    renderProductSection(mixedCategoriesFinal, 'mixed-categories-final');
+    renderProducts(viralProducts, 'viral-products');
+    renderProducts(mostViewedProducts, 'most-viewed-products');
+    renderProducts(mixedCategoryProducts, 'mixed-category-products');
+    renderProducts(relatedProducts, 'related-products');
+    renderProducts(customersAlsoBought, 'customers-also-bought');
+    renderProducts(previouslyViewedProducts, 'previously-viewed');
+    renderProducts(bundledOffers, 'bundled-offers');
+    renderProducts(mixedCategoriesFinal, 'mixed-categories-final');
     
     console.log('✅ Product Details Page Ready!');
 });
 
-/**
- * Render product section with consistent card design
- */
-function renderProductSection(products, containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    
-    container.innerHTML = products.map(product => createProductCard(product)).join('');
-}
 
-/**
- * Create product card HTML matching reference design
- */
-function createProductCard(product) {
-    const discount = product.discount || Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
-    const viewedTime = product.viewedTime || '';
-    
-    return `
-        <a href="${product.link}" class="product-card-link">
-            <div class="product-card-detail">
-                <div class="product-card-image">
-                    <img src="${product.image}" alt="${product.title}" loading="lazy">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">${product.title}</h3>
-                    <p class="product-card-description">${product.description}</p>
-                    ${viewedTime ? `<p class="product-viewed-time">${viewedTime}</p>` : ''}
-                    
-                    <div class="product-card-rating">
-                        <div class="rating-badge">
-                            <span class="rating-value">${product.rating}</span>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="#FFA500" stroke="none">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                        </div>
-                        <span class="review-count">(${product.reviewCount})</span>
-                    </div>
-                    
-                    <div class="product-card-pricing">
-                        <div class="product-price-row">
-                            <span class="product-discount">₹${product.price}</span>
-                            <span class="product-original-price">₹${product.originalPrice}</span>
-                            <span class="product-discount-badge">${discount}% OFF</span>
-                        </div>
-                    </div>
-                </div>
-                <button class="product-card-arrow" aria-label="View product">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </button>
-            </div>
-        </a>
-    `;
-}
 
 /**
  * Load product data into page
