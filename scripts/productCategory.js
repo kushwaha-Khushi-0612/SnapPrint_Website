@@ -167,10 +167,39 @@ function renderSubcategories() {
     const secondaryGrid = document.getElementById('collections-grid');
     
     if (categoryData.sections) {
-        // Clear grids or use them differently
-        mainGrid.innerHTML = '';
-        secondaryGrid.innerHTML = '';
+        // Collect all subcategories from all sections
+        const allSubcategories = categoryData.sections.flatMap(s => s.subcategories);
         
+        // 1. Populate New Arrivals (Main Grid)
+        // Find subcategories that have "New Arrival" tagged products, otherwise just take the first few
+        let newArrivalSubs = allSubcategories.filter(sub => 
+            sub.products && sub.products.some(p => p.badge === 'New Arrival' || p.badge === 'New')
+        );
+        
+        if (newArrivalSubs.length === 0) {
+            newArrivalSubs = allSubcategories.slice(0, 4);
+        } else {
+            newArrivalSubs = newArrivalSubs.slice(0, 4);
+        }
+        
+        mainGrid.innerHTML = newArrivalSubs.map(sub => {
+            if (!sub.image && sub.products && sub.products.length > 0) sub.image = sub.products[0].image;
+            return createSubcategoryCard(sub);
+        }).join('');
+        mainGrid.style.display = 'grid'; // Ensure it's visible
+
+        // 2. Populate Collections (Secondary Grid)
+        const collections = allSubcategories
+            .filter(sub => !newArrivalSubs.find(nas => nas.id === sub.id))
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 4);
+            
+        secondaryGrid.innerHTML = collections.map(sub => {
+            if (!sub.image && sub.products && sub.products.length > 0) sub.image = sub.products[0].image;
+            return createSubcategoryCard(sub);
+        }).join('');
+
+        // 3. Render the specific sections separately
         categoryData.sections.forEach((section, index) => {
             const sectionHtml = `
                 <div class="category-section-header">
@@ -178,7 +207,6 @@ function renderSubcategories() {
                 </div>
                 <div class="product-grid" id="section-grid-${index}">
                     ${section.subcategories.map(sub => {
-                        // Ensure sub has an image for the category card
                         if (!sub.image && sub.products && sub.products.length > 0) {
                             sub.image = sub.products[0].image;
                         }
@@ -186,21 +214,16 @@ function renderSubcategories() {
                     }).join('')}
                 </div>
             `;
+            
+            // Insert sections after the main grids to keep New Arrivals at the top
             if (index === 0) {
-               mainGrid.parentElement.insertAdjacentHTML('beforebegin', sectionHtml);
-               mainGrid.style.display = 'none'; 
+                // Insert after NEW ARRIVALS
+                mainGrid.parentElement.insertAdjacentHTML('afterend', sectionHtml);
             } else {
-               // Instead of hiding collections, we insert the sections before it
-               secondaryGrid.parentElement.insertAdjacentHTML('beforebegin', sectionHtml);
+                // Insert after COLLECTIONS
+                secondaryGrid.parentElement.insertAdjacentHTML('afterend', sectionHtml);
             }
         });
-        
-        // Ensure collections section stays visible and gets some mixed data
-        const collections = categoryData.sections.flatMap(s => s.subcategories).sort(() => 0.5 - Math.random());
-        secondaryGrid.innerHTML = collections.slice(0, 4).map(sub => {
-            if (!sub.image && sub.products && sub.products.length > 0) sub.image = sub.products[0].image;
-            return createSubcategoryCard(sub);
-        }).join('');
     } else {
         const subcategories = categoryData.subcategories || [];
         const midPoint = Math.ceil(subcategories.length / 2);

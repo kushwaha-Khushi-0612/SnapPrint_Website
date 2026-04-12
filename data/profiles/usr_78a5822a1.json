@@ -8,25 +8,39 @@
     "pincode": "208024",
     "analytics": {
         "categoryInterests": {
-            "Hoodies": 2,
+            "Hoodies": 8,
             "Mugs & Cups": 3,
-            "Footwear": 1,
-            "Phone Cases": 2,
-            "T-Shirts": 2
+            "Footwear": 2,
+            "Phone Cases": 4,
+            "T-Shirts": 22,
+            "Face Masks": 4,
+            "Key Chains": 5,
+            "Photo Frames": 2
         },
         "subcategoryInterests": {
             "Cartoon": 1,
-            "Slides": 1
+            "Slides": 1,
+            "Outdoor": 1,
+            "Wooden": 1
         },
         "badgeInterests": {
-            "New Arrival": 1,
-            "Limited Edition": 1
+            "New Arrival": 2,
+            "Limited Edition": 1,
+            "Special": 1
         },
         "viewHistory": [
+            "prod-keychains-wooden-1",
+            "prod-footwear-womenclothing-outdoor-5",
             "prod-footwear-womenclothing-slides-2",
             "prod-mugs&cups-cartoon-4"
         ],
-        "lastInteracted": 1775979284626
+        "lastInteracted": 1775989505135
     },
-    "lastSync": "2026-04-12 09:34:44"
+    "lastSync": "2026-04-12 12:25:05",
+    "availedCoupons": [
+        "FESTIVE_PRINT",
+        "PRINT_PRO",
+        "BULK_SAVER",
+        "SNAP_WELCOME"
+    ]
 }

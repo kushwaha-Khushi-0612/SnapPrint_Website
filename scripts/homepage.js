@@ -112,6 +112,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     const youMightLike = await window.dataService.getRecommendedProducts(12);
     const recentlyViewed = await window.dataService.getRecentlyViewedProducts(8);
     
+    // Fetch and render Discounts
+    try {
+        const discResponse = await fetch('data/discounts.json');
+        const discData = await discResponse.json();
+        const discContainer = document.getElementById('special-offers');
+        if (discContainer && discData.discounts) {
+            discContainer.innerHTML = discData.discounts.map(d => window.createDiscountCard(d)).join('');
+            initCarouselNav('special-offers');
+        }
+    } catch (e) {
+        console.warn('Discounts failed to load:', e);
+    }
+    
     // Render product sections (using the global widget function)
     renderProducts(featuredProducts, 'featured-products', { variant: 'default' });
     renderProducts(specialOccasions, 'special-occasions', { variant: 'colored', enableCardColors: true });
@@ -173,6 +186,51 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     console.log('✅ SnapPrint Homepage Ready!');
 });
+
+/**
+ * Initialize Carousel Navigation
+ * @param {string} containerId 
+ */
+function initCarouselNav(containerId) {
+    const container = document.getElementById(containerId);
+    const prevBtn = document.querySelector(`[data-carousel="${containerId}"].prev`);
+    const nextBtn = document.querySelector(`[data-carousel="${containerId}"].next`);
+
+    if (!container || !prevBtn || !nextBtn) return;
+
+    const scrollAmount = container.firstElementChild ? container.firstElementChild.offsetWidth + 20 : 440;
+
+    prevBtn.addEventListener('click', () => {
+        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    // Hide buttons if not scrollable
+    const toggleButtons = () => {
+        if (container.scrollLeft <= 0) {
+            prevBtn.style.opacity = '0.3';
+            prevBtn.style.pointerEvents = 'none';
+        } else {
+            prevBtn.style.opacity = '1';
+            prevBtn.style.pointerEvents = 'auto';
+        }
+        
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 5) {
+            nextBtn.style.opacity = '0.3';
+            nextBtn.style.pointerEvents = 'none';
+        } else {
+            nextBtn.style.opacity = '1';
+            nextBtn.style.pointerEvents = 'auto';
+        }
+    };
+
+    container.addEventListener('scroll', toggleButtons);
+    window.addEventListener('resize', toggleButtons);
+    toggleButtons();
+}
 
 /**
  * Initialize hero slider

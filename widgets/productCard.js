@@ -123,16 +123,16 @@ function renderProducts(products, containerId, options = {}) {
     ).join('');
     
     container.innerHTML = html;
+    
+    // Add reveal classes for scroll animation
+    container.classList.add('reveal', 'reveal-up');
 
     // Attach wishlist event listeners
     attachWishlistListeners(container);
 
-    // Add staggered animation
-    if (staggerAnimation) {
-        const cards = container.querySelectorAll('.product-card');
-        cards.forEach((card, index) => {
-            card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.05}s both`;
-        });
+    // Initialise with ScrollReveal if available
+    if (window.ScrollReveal) {
+        window.ScrollReveal.observe(container);
     }
 }
 
