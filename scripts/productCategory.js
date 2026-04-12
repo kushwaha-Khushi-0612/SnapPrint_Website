@@ -436,88 +436,48 @@ function renderRelatedProducts() {
     // Section 1: Popular Choices
     document.getElementById('related-section-1-title').textContent = `Popular ${categoryName}`;
     const products1 = generateCategoryProducts(categoryName, 6);
-    renderProductSection(products1, 'related-products-1');
+    renderProducts(products1, 'related-products-1');
     
     // Section 2: Trending Now
     document.getElementById('related-section-2-title').textContent = `Trending ${categoryName}`;
     const products2 = generateCategoryProducts(categoryName, 6);
-    renderProductSection(products2, 'related-products-2');
+    renderProducts(products2, 'related-products-2');
     
     // Section 3: Best Sellers
     document.getElementById('related-section-3-title').textContent = `Best Selling ${categoryName}`;
     const products3 = generateCategoryProducts(categoryName, 6);
-    renderProductSection(products3, 'related-products-3');
+    renderProducts(products3, 'related-products-3');
+
+    // Section 4: Seasonal Picks
+    const seasonalPicks = generateCategoryProducts(categoryName + ' Summer', 6);
+    renderProducts(seasonalPicks, 'seasonal-picks-grid');
+
+    // Section 5: Under ₹499
+    // Manipulate price to forcibly be under 499
+    const under499 = generateCategoryProducts(categoryName, 8).map(p => {
+        p.price = Math.floor(Math.random() * 200) + 199; // 199 to 399
+        p.originalPrice = p.price + 200;
+        p.badge = 'VALUE';
+        return p;
+    });
+    renderProducts(under499, 'under-499-grid');
 }
 
 /**
  * Render previously viewed products
  */
 function renderPreviouslyViewed() {
-    renderProductSection(previouslyViewedProducts, 'previously-viewed');
+    renderProducts(previouslyViewedProducts, 'previously-viewed');
 }
 
 /**
  * Render mixed categories section
  */
 function renderMixedCategories() {
-    renderProductSection(mixedCategoryProducts, 'mixed-categories');
+    renderProducts(mixedCategoryProducts, 'mixed-categories');
 }
 
-/**
- * Render product section with consistent card design
- */
-function renderProductSection(products, containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    
-    container.innerHTML = products.map(product => createProductCard(product)).join('');
-}
 
-/**
- * Create product card HTML matching reference design
- */
-function createProductCard(product) {
-    const discount = product.discount || Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
-    const viewedTime = product.viewedTime || '';
-    
-    return `
-        <a href="${product.link}" class="product-card-link">
-            <div class="product-card-detail">
-                <div class="product-card-image">
-                    <img src="${product.image}" alt="${product.title}" loading="lazy">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">${product.title}</h3>
-                    <p class="product-card-description">${product.description}</p>
-                    ${viewedTime ? `<p class="product-viewed-time">${viewedTime}</p>` : ''}
-                    
-                    <div class="product-card-rating">
-                        <div class="rating-badge">
-                            <span class="rating-value">${product.rating}</span>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="#FFA500" stroke="none">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                        </div>
-                        <span class="review-count">(${product.reviewCount})</span>
-                    </div>
-                    
-                    <div class="product-card-pricing">
-                        <div class="product-price-row">
-                            <span class="product-discount">₹${product.price}</span>
-                            <span class="product-original-price">₹${product.originalPrice}</span>
-                            <span class="product-discount-badge">${discount}% OFF</span>
-                        </div>
-                    </div>
-                </div>
-                <button class="product-card-arrow" aria-label="View product">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </button>
-            </div>
-        </a>
-    `;
-}
 
 /**
  * Initialize hamburger menu

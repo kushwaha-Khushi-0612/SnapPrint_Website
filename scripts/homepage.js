@@ -582,6 +582,116 @@ const recentlyViewed = [
     }
 ];
 
+const flashSales = [
+    {
+        title: 'Premium Hard Cover',
+        description: 'Custom hard case for iPhone 14',
+        image: 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=400&h=400&fit=crop',
+        price: 199,
+        originalPrice: 499,
+        rating: 4.8,
+        reviewCount: 156,
+        badge: '⚡ 60% OFF',
+        link: '#flash-1',
+        productId: 'flash-001',
+        cardColor: '#FFE5E5'
+    },
+    {
+        title: 'Color Changing Mug',
+        description: 'Magic mug with custom photo',
+        image: 'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&h=400&fit=crop',
+        price: 249,
+        originalPrice: 599,
+        rating: 4.6,
+        reviewCount: 342,
+        badge: '⚡ FLASH',
+        link: '#flash-2',
+        productId: 'flash-002',
+        cardColor: '#FFF5E5'
+    },
+    {
+        title: 'Cotton T-Shirt Bulk',
+        description: 'Pack of 3 custom tees',
+        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop',
+        price: 899,
+        originalPrice: 1999,
+        rating: 4.9,
+        reviewCount: 892,
+        badge: '⚡ FLASH',
+        link: '#flash-3',
+        productId: 'flash-003',
+        cardColor: '#E5FFE5'
+    },
+    {
+        title: 'Custom Photo Collage',
+        description: 'A3 size framed collage',
+        image: 'https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=400&h=400&fit=crop',
+        price: 499,
+        originalPrice: 999,
+        rating: 4.7,
+        reviewCount: 231,
+        badge: '⚡ 50% OFF',
+        link: '#flash-4',
+        productId: 'flash-004',
+        cardColor: '#E5F5FF'
+    }
+];
+
+const curatedCollections = [
+    {
+        title: 'Home Office Set',
+        description: 'Mousepad, Mug & Planner',
+        image: 'https://images.unsplash.com/photo-1517842264405-16ad5f7a5940?w=400&h=400&fit=crop',
+        price: 899,
+        originalPrice: 1499,
+        rating: 4.8,
+        reviewCount: 442,
+        badge: 'BUNDLE',
+        link: '#bundle-1',
+        productId: 'bundle-001',
+        cardColor: '#F5E5FF'
+    },
+    {
+        title: 'Travel Kit Bundle',
+        description: 'Tote, Water Bottle & Tag',
+        image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400&h=400&fit=crop',
+        price: 1299,
+        originalPrice: 1999,
+        rating: 4.9,
+        reviewCount: 512,
+        badge: 'BUNDLE',
+        link: '#bundle-2',
+        productId: 'bundle-002',
+        cardColor: '#E5FFFA'
+    },
+    {
+        title: 'Couple Goals Kit',
+        description: '2 Tees & 2 Mugs',
+        image: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400&h=400&fit=crop',
+        price: 1499,
+        originalPrice: 2499,
+        rating: 5.0,
+        reviewCount: 899,
+        badge: 'BUNDLE',
+        link: '#bundle-3',
+        productId: 'bundle-003',
+        cardColor: '#FFE5E5'
+    },
+    {
+        title: 'Gamer Set',
+        description: 'XL Mousepad & Grip',
+        image: 'https://images.unsplash.com/photo-1527814050087-3793815479db?w=400&h=400&fit=crop',
+        price: 599,
+        originalPrice: 999,
+        rating: 4.7,
+        reviewCount: 334,
+        badge: 'BUNDLE',
+        link: '#bundle-4',
+        productId: 'bundle-004',
+        cardColor: '#E5E5FF'
+    }
+];
+
 const youMightLike = [
     // Row 1 - T-Shirts & Apparel
     {
@@ -1200,9 +1310,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Render product sections
     renderProducts(featuredProducts, 'featured-products', { variant: 'default' });
     renderProducts(specialOccasions, 'special-occasions', { variant: 'colored', enableCardColors: true });
+    renderProducts(flashSales, 'flash-sales', { variant: 'curved-all' });
     renderProducts(trendingProducts, 'trending-products', { variant: 'curved-bottom' });
     renderProducts(newArrivals, 'new-arrivals', { variant: 'default' });
     renderProducts(recentlyViewed, 'recently-viewed', { variant: 'colored', enableCardColors: true });
+    renderProducts(curatedCollections, 'curated-collections', { variant: 'curved-bottom' });
     renderProducts(bestSellers, 'best-sellers', { variant: 'curved-all' });
     renderProducts(mostLovedProducts, 'most-loved', { variant: 'curved-bottom' });
     renderProducts(youMightLike, 'you-might-like', { variant: 'colored', enableCardColors: true, gridCols: 6 });
