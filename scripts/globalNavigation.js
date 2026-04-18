@@ -82,5 +82,39 @@ function initHamburgerMenu() {
     }
 }
 
+function initGlobalSearch() {
+    const searchInputs = document.querySelectorAll('.search-bar input');
+    const searchBtns = document.querySelectorAll('.search-btn');
+
+    const handleSearch = (val) => {
+        if (!val.trim()) return;
+        // If we are already on searchPage, we might have an executeGlobalSearch override
+        if (window.executeGlobalSearch) {
+            window.executeGlobalSearch(val.trim());
+        } else {
+            window.location.href = `searchPage.html?q=${encodeURIComponent(val.trim())}`;
+        }
+    };
+
+    searchInputs.forEach((input, index) => {
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                handleSearch(input.value);
+            }
+        });
+        
+        if (searchBtns[index]) {
+            searchBtns[index].addEventListener('click', (e) => {
+                e.preventDefault();
+                handleSearch(input.value);
+            });
+        }
+    });
+}
+
 // Initialize on load
-document.addEventListener('DOMContentLoaded', initHamburgerMenu);
+document.addEventListener('DOMContentLoaded', () => {
+    initHamburgerMenu();
+    initGlobalSearch();
+});

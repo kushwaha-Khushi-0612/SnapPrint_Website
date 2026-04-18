@@ -1,0 +1,56 @@
+{
+    "global": [
+        {
+            "id": "price",
+            "label": "Price Max",
+            "type": "slider",
+            "min": 0,
+            "max": 5000,
+            "step": 50
+        }
+    ],
+    "T-Shirts": [
+        {
+            "id": "gsm",
+            "label": "Fabric Weight (GSM)",
+            "type": "checkbox",
+            "options": ["180", "200", "220", "240"]
+        },
+        {
+            "id": "color",
+            "label": "Colors",
+            "type": "color",
+            "options": ["White", "Black", "Navy", "Gray", "Red", "Green", "Blue"]
+        }
+    ],
+    "Hoodies": [
+        {
+            "id": "gsm",
+            "label": "Fabric Thickness (GSM)",
+            "type": "checkbox",
+            "options": ["240", "280", "300", "320"]
+        },
+        {
+            "id": "color",
+            "label": "Colors",
+            "type": "color",
+            "options": ["Black", "White", "Gray", "Navy", "Red"]
+        }
+    ],
+    "Phone Cases": [
+        {
+            "id": "color",
+            "label": "Base Color",
+            "type": "color",
+            "options": ["Clear", "Black", "White", "Navy"]
+        }
+    ],
+    "Mugs & Cups": [
+        {
+            "id": "color",
+            "label": "Inner Color",
+            "type": "color",
+            "options": ["White", "Black", "Red", "Yellow", "Blue"]
+        }
+    ]
+}

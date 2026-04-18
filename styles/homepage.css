@@ -9,6 +9,8 @@
     /* Colors */
     --color-white: #FFFFFF;
     --color-black: #000000;
+    --color-primary: #000000;
+    --color-primary-rgb: 0, 0, 0;
     --gray-900: #111111;
     --gray-800: #1A1A1A;
     --gray-700: #2A2A2A;
@@ -19,6 +21,9 @@
     --gray-200: #E6E6E6;
     --gray-100: #F4F4F4;
     --gray-050: #FAFAFA;
+
+    --surface-1: var(--color-white);
+    --surface-2: var(--gray-100);
 
     /* Opacity-based */
     --text-primary: rgba(0, 0, 0, 0.95);
