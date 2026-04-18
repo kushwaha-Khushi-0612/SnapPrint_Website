@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initialize Data Service & Config
     await loadData();
     
+    // Infer category from subcategory if missing (Supports direct subcategory links)
+    if (!state.selectedCategory && state.selectedSubcategories.length > 0) {
+        inferCategoryFromSub();
+    }
+    
     // Render Filters
     renderCategoryDropdown();
     
@@ -137,6 +142,39 @@ function renderMobileCategories() {
             pill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         });
     });
+
+    // Auto-scroll the active pill into view on initial render or update
+    setTimeout(() => {
+        const activePill = list.querySelector('.cat-pill.active');
+        if (activePill) {
+            activePill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+    }, 100);
+}
+
+function inferCategoryFromSub() {
+    const subToFind = state.selectedSubcategories[0];
+    if (!subToFind) return;
+
+    for (const cat of allCategoriesRaw) {
+        const potentialSubs = [];
+        if (cat.sections) {
+            cat.sections.forEach(s => s.subcategories.forEach(sub => potentialSubs.push(sub)));
+        } else if (cat.subcategories) {
+            cat.subcategories.forEach(sub => potentialSubs.push(sub));
+        }
+
+        const found = potentialSubs.find(s => 
+            (s.id && s.id.toLowerCase() === subToFind) || 
+            (s.name && s.name.toLowerCase() === subToFind)
+        );
+
+        if (found) {
+            state.selectedCategory = cat.name.toLowerCase();
+            console.log(`🧠 Inferred Category: ${cat.name} from Subcategory: ${subToFind}`);
+            break;
+        }
+    }
 }
 
 function updateSubcategoryFilters() {
@@ -509,6 +547,7 @@ function applyFilters() {
 
             updateSubcategoryFilters();
             renderDynamicFilters();
+            renderCategoryDropdown(); // Sync sidebar and mobile pill visuals
             
             // Re-apply filter with corrected category
             filtered = allProducts.filter(p => (p.categoryName || '').toLowerCase() === state.selectedCategory);
