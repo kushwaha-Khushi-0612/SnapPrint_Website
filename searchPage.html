@@ -17,6 +17,9 @@
 <body>
     <!-- Main Container -->
     <div class="main-container">
+        <!-- Sidebar Backdrop Overlay -->
+        <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+        
         <!-- Navigation Header -->
         <header class="header">
             <div class="header-top">
@@ -67,9 +70,12 @@
 
         <!-- Mobile Filter Toggle -->
         <div class="mobile-filter-bar">
-            <button id="mobile-filter-toggle" class="header-btn">
+            <div id="mobile-category-list" class="mobile-category-list">
+                <!-- Content injected via JS: T-Shirts, Hoodies, etc. -->
+            </div>
+            <button id="mobile-filter-toggle" class="filter-toggle-btn">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-                <span>Show Filters</span>
+                <span>Filters</span>
             </button>
         </div>
 
@@ -117,6 +123,8 @@
 
             <!-- Main Content Area -->
             <main class="search-main">
+                <div id="search-suggestion" class="search-suggestion hide"></div>
+                
                 <div class="search-results-header">
                     <div class="results-info">
                         <h1 id="search-title">All Products</h1>

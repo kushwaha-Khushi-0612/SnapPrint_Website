@@ -8,11 +8,11 @@
     "pincode": "208024",
     "analytics": {
         "categoryInterests": {
-            "Hoodies": 25,
+            "Hoodies": 29,
             "Mugs & Cups": 5,
-            "Footwear": 19,
+            "Footwear": 21,
             "Phone Cases": 6,
-            "T-Shirts": 30,
+            "T-Shirts": 31,
             "Face Masks": 4,
             "Key Chains": 9,
             "Photo Frames": 2,
@@ -28,7 +28,8 @@
             "Waterproof": 1,
             "Foldable": 3,
             "Plain": 1,
-            "Pocket": 1
+            "Pocket": 1,
+            "Half Sleeve": 1
         },
         "badgeInterests": {
             "New Arrival": 2,
@@ -39,6 +40,7 @@
             "Occasional": 1
         },
         "viewHistory": [
+            "prod-t-shirts-menclothing-halfsleeve-2",
             "prod-footwear-menclothing-slides-5",
             "prod-totebags-foldable-2",
             "prod-t-shirts-menclothing-pocket-1",
@@ -50,9 +52,9 @@
             "prod-footwear-womenclothing-slides-2",
             "prod-mugs&cups-cartoon-4"
         ],
-        "lastInteracted": 1776531517687
+        "lastInteracted": 1776538468524
     },
-    "lastSync": "2026-04-18 18:58:37",
+    "lastSync": "2026-04-18 20:54:28",
     "availedCoupons": [
         "FESTIVE_PRINT",
         "PRINT_PRO",

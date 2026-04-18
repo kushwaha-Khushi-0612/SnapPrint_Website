@@ -100,6 +100,43 @@ function renderCategoryDropdown() {
     
     updateSubcategoryFilters();
     renderDynamicFilters();
+    renderMobileCategories();
+}
+
+function renderMobileCategories() {
+    const list = document.getElementById('mobile-category-list');
+    if (!list) return;
+
+    let html = `<div class="cat-pill ${!state.selectedCategory ? 'active' : ''}" data-cat="">All</div>`;
+    
+    allCategoriesRaw.forEach(cat => {
+        const val = cat.name.toLowerCase();
+        const isActive = (state.selectedCategory === val) ? 'active' : '';
+        html += `<div class="cat-pill ${isActive}" data-cat="${cat.name}">${cat.name}</div>`;
+    });
+    
+    list.innerHTML = html;
+
+    list.querySelectorAll('.cat-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+            const cat = pill.getAttribute('data-cat');
+            state.selectedCategory = cat.toLowerCase();
+            state.selectedSubcategories = [];
+            state.dynamicFilters = {}; 
+            
+            // Sync with sidebar select
+            const sidebarSelect = document.getElementById('category-select');
+            if (sidebarSelect) sidebarSelect.value = cat;
+
+            updateSubcategoryFilters();
+            renderDynamicFilters();
+            renderMobileCategories();
+            state.page = 1;
+            applyFilters();
+            
+            pill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        });
+    });
 }
 
 function updateSubcategoryFilters() {
@@ -291,9 +328,23 @@ function setupEventListeners() {
     const mobileToggle = document.getElementById('mobile-filter-toggle');
     const closeMobileBtn = document.getElementById('close-sidebar-mobile');
     const sidebar = document.getElementById('search-sidebar');
+    const backdrop = document.getElementById('sidebar-backdrop');
 
-    if (mobileToggle) mobileToggle.addEventListener('click', () => sidebar.classList.add('mobile-open'));
-    if (closeMobileBtn) closeMobileBtn.addEventListener('click', () => sidebar.classList.remove('mobile-open'));
+    const openFilters = () => {
+        sidebar.classList.add('mobile-open');
+        backdrop.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scroll
+    };
+
+    const closeFilters = () => {
+        sidebar.classList.remove('mobile-open');
+        backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    if (mobileToggle) mobileToggle.addEventListener('click', openFilters);
+    if (closeMobileBtn) closeMobileBtn.addEventListener('click', closeFilters);
+    if (backdrop) backdrop.addEventListener('click', closeFilters);
 
     // Category Select Box
     document.getElementById('category-select').addEventListener('change', (e) => {
@@ -376,7 +427,7 @@ function handleDynamicChange(filterId, newValueString) {
 
 function applyFilters() {
     // 1. Filter Engine
-    filteredProducts = allProducts.filter(p => {
+    let filtered = allProducts.filter(p => {
         let match = true;
 
         if (state.searchQuery) {
@@ -409,7 +460,6 @@ function applyFilters() {
                 if (p.gsm) {
                     if (!selectedGSMs.includes(p.gsm.toString())) match = false;
                 } else {
-                    // If no GSM on product but GSM filter is active, check description just in case
                     const dataScope = ((p.description || '') + ' ' + (p.title || '')).toLowerCase();
                     const hasMatch = selectedGSMs.some(gsm => dataScope.includes(gsm));
                     if (!hasMatch) match = false;
@@ -420,13 +470,11 @@ function applyFilters() {
                 if (prodColor) {
                     if (!selectedColors.includes(prodColor)) match = false;
                 } else {
-                    // Fallback to title/description search
                     const dataScope = ((p.description || '') + ' ' + (p.title || '')).toLowerCase();
                     const hasMatch = selectedColors.some(color => dataScope.includes(color));
                     if (!hasMatch) match = false;
                 }
             } else {
-                // Generic rule for any other dynamic filters
                 const options = valStr.split(',');
                 const dataScope = ((p.description || '') + ' ' + (p.title || '')).toLowerCase();
                 const optionMatch = options.some(opt => dataScope.includes(opt));
@@ -436,6 +484,42 @@ function applyFilters() {
         
         return match;
     });
+
+    // Intelligent Search Auto-Correction (Fuzzy)
+    const suggestionEl = document.getElementById('search-suggestion');
+    suggestionEl.classList.add('hide');
+
+    if (filtered.length === 0 && state.searchQuery && !state.selectedCategory) {
+        // Try to fuzzy match a category
+        const categoriesNodes = allCategoriesRaw.map(c => c.name);
+        const bestMatch = getFuzzyMatch(state.searchQuery, categoriesNodes);
+
+        if (bestMatch && bestMatch.distance <= 2) {
+            console.log(`🎯 Fuzzy search: auto-applying category "${bestMatch.target}" for query "${state.searchQuery}"`);
+            
+            const originalQuery = state.searchQuery;
+            // Set category
+            state.selectedCategory = bestMatch.target.toLowerCase();
+            document.getElementById('category-select').value = bestMatch.target;
+            
+            // Clear current search text so it doesn't conflict with the new category filter
+            state.searchQuery = ''; 
+            const globalSearchInput = document.getElementById('global-search-input');
+            if (globalSearchInput) globalSearchInput.value = '';
+
+            updateSubcategoryFilters();
+            renderDynamicFilters();
+            
+            // Re-apply filter with corrected category
+            filtered = allProducts.filter(p => (p.categoryName || '').toLowerCase() === state.selectedCategory);
+            
+            // Show suggestion in UI
+            suggestionEl.innerHTML = `No results for "<strong>${originalQuery}</strong>". Showing results for <strong>${bestMatch.target}</strong> instead.`;
+            suggestionEl.classList.remove('hide');
+        }
+    }
+
+    filteredProducts = filtered;
 
     // 2. Sort Logic
     switch(state.sort) {
@@ -457,6 +541,54 @@ function applyFilters() {
 
     updateURL();
     renderMainArea();
+}
+
+function levenshteinDistance(a, b) {
+    if (a.length === 0) return b.length;
+    if (b.length === 0) return a.length;
+
+    const matrix = [];
+
+    for (let i = 0; i <= b.length; i++) {
+        matrix[i] = [i];
+    }
+
+    for (let j = 0; j <= a.length; j++) {
+        matrix[0][j] = j;
+    }
+
+    for (let i = 1; i <= b.length; i++) {
+        for (let j = 1; j <= a.length; j++) {
+            if (b.charAt(i - 1) === a.charAt(j - 1)) {
+                matrix[i][j] = matrix[i - 1][j - 1];
+            } else {
+                matrix[i][j] = Math.min(
+                    matrix[i - 1][j - 1] + 1, // substitution
+                    Math.min(
+                        matrix[i][j - 1] + 1, // insertion
+                        matrix[i - 1][j] + 1  // deletion
+                    )
+                );
+            }
+        }
+    }
+
+    return matrix[b.length][a.length];
+}
+
+function getFuzzyMatch(query, targets) {
+    let bestMatch = null;
+    let minDistance = Infinity;
+
+    targets.forEach(target => {
+        const distance = levenshteinDistance(query.toLowerCase(), target.toLowerCase());
+        if (distance < minDistance) {
+            minDistance = distance;
+            bestMatch = target;
+        }
+    });
+
+    return { target: bestMatch, distance: minDistance };
 }
 
 function updateURL() {
