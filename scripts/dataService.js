@@ -27,6 +27,7 @@ const dataService = {
                 sub.products.forEach(p => {
                     p.categoryName = cat.name;
                     p.subcategoryName = sub.name;
+                    p.subcategoryId = sub.id;
                     p.parentSection = parentName;
                     
                     // Normalize image path
@@ -35,6 +36,9 @@ const dataService = {
                     } else if (!p.image) {
                         p.image = 'constants/products/placeholder.jpg'; // safe fallback
                     }
+
+                    // Dynamic UI Link Injection
+                    p.link = `productDetails.html?id=${p.id}`;
                     
                     allProds.push(p);
                 });

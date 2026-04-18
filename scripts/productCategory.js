@@ -435,7 +435,7 @@ function createGSMCard(gsm) {
 function navigateToSubcategory(subcategoryId) {
     console.log('Navigate to:', currentCategory, subcategoryId);
     // Navigate to product listing page with filters
-    window.location.href = `productDetails.html?category=${currentCategory}&subcategory=${subcategoryId}`;
+    window.location.href = `searchPage.html?category=${currentCategory}&subcategory=${subcategoryId}`;
 }
 
 /**
