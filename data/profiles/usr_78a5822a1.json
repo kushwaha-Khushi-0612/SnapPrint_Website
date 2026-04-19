@@ -8,11 +8,11 @@
     "pincode": "208024",
     "analytics": {
         "categoryInterests": {
-            "Hoodies": 31,
+            "Hoodies": 45,
             "Mugs & Cups": 5,
-            "Footwear": 21,
-            "Phone Cases": 8,
-            "T-Shirts": 31,
+            "Footwear": 37,
+            "Phone Cases": 38,
+            "T-Shirts": 53,
             "Face Masks": 4,
             "Key Chains": 9,
             "Photo Frames": 2,
@@ -52,9 +52,9 @@
             "prod-footwear-womenclothing-slides-2",
             "prod-mugs&cups-cartoon-4"
         ],
-        "lastInteracted": 1776539396473
+        "lastInteracted": 1776571962365
     },
-    "lastSync": "2026-04-18 21:09:56",
+    "lastSync": "2026-04-19 06:12:42",
     "availedCoupons": [
         "FESTIVE_PRINT",
         "PRINT_PRO",
