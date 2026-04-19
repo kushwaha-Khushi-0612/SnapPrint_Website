@@ -510,6 +510,7 @@
 @media (min-width: 600px) { .search-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); } }
 @media (min-width: 1024px) { .search-grid { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); } }
 
+
 .pagination-container { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 48px; }
 .page-btn {
     min-width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;

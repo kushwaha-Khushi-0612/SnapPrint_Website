@@ -205,7 +205,7 @@ function renderSubcategories() {
                 <div class="category-section-header">
                     <h2 class="section-title">${section.name}</h2>
                 </div>
-                <div class="product-grid" id="section-grid-${index}">
+                <div class="subcategory-grid" id="section-grid-${index}">
                     ${section.subcategories.map(sub => {
                         if (!sub.image && sub.products && sub.products.length > 0) {
                             sub.image = sub.products[0].image;
@@ -313,7 +313,7 @@ function createSubcategoryCard(subcategory) {
             </div>
             <div class="subcategory-card-content">
                 <h3 class="subcategory-name">${subcategory.name}</h3>
-                <p class="subcategory-description">${subcategory.description}</p>
+                <p class="subcategory-description">${subcategory.description || ''}</p>
                 <div class="subcategory-footer">
                     <div class="subcategory-count">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -357,7 +357,7 @@ function createColorCard(color) {
             </div>
             <div class="subcategory-card-content">
                 <h3 class="subcategory-name">${color.name}</h3>
-                <p class="subcategory-description">${color.description}</p>
+                <p class="subcategory-description">${color.description || ''}</p>
                 <div class="subcategory-footer">
                     <div class="subcategory-count">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -401,7 +401,7 @@ function createGSMCard(gsm) {
             </div>
             <div class="subcategory-card-content">
                 <h3 class="subcategory-name">${gsm.name} - ${gsm.gsm}GSM</h3>
-                <p class="subcategory-description">${gsm.description}</p>
+                <p class="subcategory-description">${gsm.description || ''}</p>
                 <div class="subcategory-footer">
                     <div class="subcategory-count">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
