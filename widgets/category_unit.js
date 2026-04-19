@@ -52,12 +52,14 @@ function renderCategories(categories, containerId) {
 
     const html = categories.map(category => createCategoryUnit(category)).join('');
     container.innerHTML = html;
+    
+    // Add reveal classes for scroll animation
+    container.classList.add('reveal', 'reveal-up');
 
-    // Add staggered animation
-    const categoryElements = container.querySelectorAll('.category-unit');
-    categoryElements.forEach((el, index) => {
-        el.style.animation = `fadeInUp 0.5s ease-out ${index * 0.05}s both`;
-    });
+    // Initialise with ScrollReveal if available
+    if (window.ScrollReveal) {
+        window.ScrollReveal.observe(container);
+    }
 }
 
 // Category icons mapping (can be extended)

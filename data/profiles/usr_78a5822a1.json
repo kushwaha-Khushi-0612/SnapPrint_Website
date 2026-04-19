@@ -1,0 +1,64 @@
+{
+    "id": "usr_78a5822a1",
+    "phone": "8896538118",
+    "joinDate": "2026-04-12T08:29:01Z",
+    "name": "R R Maheshwar",
+    "email": "maheshwarsinha01@gmail.com",
+    "address": "Chhatrapati Shahu Ji Maharaj University, Kanpur Nagar, Uttar Pradesh",
+    "pincode": "208024",
+    "analytics": {
+        "categoryInterests": {
+            "Hoodies": 45,
+            "Mugs & Cups": 5,
+            "Footwear": 37,
+            "Phone Cases": 38,
+            "T-Shirts": 53,
+            "Face Masks": 4,
+            "Key Chains": 9,
+            "Photo Frames": 2,
+            "Pendants": 6,
+            "Tote Bags": 4
+        },
+        "subcategoryInterests": {
+            "Cartoon": 1,
+            "Slides": 2,
+            "Outdoor": 1,
+            "Wooden": 1,
+            "Slim Fit": 1,
+            "Waterproof": 1,
+            "Foldable": 3,
+            "Plain": 1,
+            "Pocket": 1,
+            "Half Sleeve": 1
+        },
+        "badgeInterests": {
+            "New Arrival": 2,
+            "Limited Edition": 4,
+            "Special": 2,
+            "Bestseller": 2,
+            "Trending": 1,
+            "Occasional": 1
+        },
+        "viewHistory": [
+            "prod-t-shirts-menclothing-halfsleeve-2",
+            "prod-footwear-menclothing-slides-5",
+            "prod-totebags-foldable-2",
+            "prod-t-shirts-menclothing-pocket-1",
+            "prod-t-shirts-menclothing-plain-3",
+            "prod-totebags-waterproof-2",
+            "prod-hoodies-womenclothing-slimfit-4",
+            "prod-keychains-wooden-1",
+            "prod-footwear-womenclothing-outdoor-5",
+            "prod-footwear-womenclothing-slides-2",
+            "prod-mugs&cups-cartoon-4"
+        ],
+        "lastInteracted": 1776571962365
+    },
+    "lastSync": "2026-04-19 06:12:42",
+    "availedCoupons": [
+        "FESTIVE_PRINT",
+        "PRINT_PRO",
+        "BULK_SAVER",
+        "SNAP_WELCOME"
+    ]
+}

@@ -7,7 +7,9 @@
 const urlParams = new URLSearchParams(window.location.search);
 const currentCategory = urlParams.get('category') || 'tshirts';
 
+// Initialize data state
 let categoryData = null;
+let categoryProducts = [];
 
 // Hero background image slider
 let currentSlide = 0;
@@ -26,114 +28,12 @@ if (heroSlides.length > 0) {
     setInterval(rotateHeroBackground, 5000);
 }
 
-// Sample product data for demonstration
-const generateCategoryProducts = (categoryName, count = 6) => {
-    const products = [];
-    const baseImages = [
-        'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1622445275463-afa2ab738c34?w=400&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=400&fit=crop'
-    ];
-    
-    for (let i = 0; i < count; i++) {
-        const price = Math.floor(Math.random() * 500) + 299;
-        const originalPrice = Math.floor(price * 1.5) + 100;
-        const discount = Math.round(((originalPrice - price) / originalPrice) * 100);
-        
-        products.push({
-            title: `${categoryName} Design ${i + 1}`,
-            description: `Premium custom ${categoryName.toLowerCase()}`,
-            image: baseImages[i % baseImages.length],
-            price: price,
-            originalPrice: originalPrice,
-            discount: discount,
-            rating: (Math.random() * 1.5 + 3.5).toFixed(1),
-            reviewCount: Math.floor(Math.random() * 500) + 50,
-            link: `productDetails.html?id=${currentCategory}-${i}`,
-            productId: `cat-${currentCategory}-${i}`
-        });
-    }
-    
-    return products;
-};
-
-// Mixed categories products (4-5 rows = 24-30 products)
-const mixedCategoryProducts = [
-    ...generateCategoryProducts('Mug', 6),
-    ...generateCategoryProducts('Hoodie', 6),
-    ...generateCategoryProducts('Phone Case', 6),
-    ...generateCategoryProducts('Frame', 6),
-    ...generateCategoryProducts('Keychain', 6)
-];
-
-// Previously viewed products
-const previouslyViewedProducts = [
-    {
-        title: 'Custom Design Pro',
-        description: 'Premium custom design',
-        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop',
-        price: 499,
-        originalPrice: 999,
-        discount: 50,
-        rating: 4.8,
-        reviewCount: 234,
-        link: 'productDetails.html?id=prev-1',
-        productId: 'prev-001',
-        viewedTime: 'Viewed 2 hours ago'
-    },
-    {
-        title: 'Premium Quality Item',
-        description: 'Premium custom item',
-        image: 'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=400&fit=crop',
-        price: 699,
-        originalPrice: 1299,
-        discount: 46,
-        rating: 4.7,
-        reviewCount: 189,
-        link: 'productDetails.html?id=prev-2',
-        productId: 'prev-002',
-        viewedTime: 'Viewed yesterday'
-    },
-    {
-        title: 'Classic Design',
-        description: 'Premium classic design',
-        image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop',
-        price: 549,
-        originalPrice: 999,
-        discount: 45,
-        rating: 4.6,
-        reviewCount: 156,
-        link: 'productDetails.html?id=prev-3',
-        productId: 'prev-003',
-        viewedTime: 'Viewed 3 days ago'
-    },
-    {
-        title: 'Modern Style',
-        description: 'Premium modern style',
-        image: 'https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=400&fit=crop',
-        price: 799,
-        originalPrice: 1499,
-        discount: 47,
-        rating: 4.9,
-        reviewCount: 345,
-        link: 'productDetails.html?id=prev-4',
-        productId: 'prev-004',
-        viewedTime: 'Viewed last week'
-    }
-];
-
 // Initialize page
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('🚀 Loading Product Category Page...');
     console.log('Current Category:', currentCategory);
     
-    // Initialize hamburger menu
-    initHamburgerMenu();
-    
-    // Load category data
+    // Load category data via dataService
     await loadCategoryData();
     
     // Render page sections
@@ -154,27 +54,27 @@ document.addEventListener('DOMContentLoaded', async () => {
  */
 function loadHeroImages() {
     const categoryImages = {
-        tshirts: [
+        'T-Shirts': [
             'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=1200&h=600&fit=crop'
         ],
-        hoodies: [
+        'Hoodies': [
             'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=1200&h=600&fit=crop'
         ],
-        cups: [
+        'Mugs': [
             'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1609505833958-16f65ffb5ad1?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?w=1200&h=600&fit=crop'
         ],
-        '2DMobileCover': [
+        'Phone Cases': [
             'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1617296538902-887900d9b592?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=1200&h=600&fit=crop'
         ],
-        woodenFrame: [
+        'Frames': [
             'https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1582139329536-e7284fece509?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1594843267926-de1f6b5c7e29?w=1200&h=600&fit=crop'
@@ -186,7 +86,7 @@ function loadHeroImages() {
         ]
     };
     
-    const images = categoryImages[currentCategory] || categoryImages.default;
+    const images = categoryImages[categoryData.name] || categoryImages.default;
     const slides = document.querySelectorAll('.hero-slide');
     
     slides.forEach((slide, index) => {
@@ -205,28 +105,46 @@ function loadHeroImages() {
 }
 
 /**
- * Load category data from JSON
+ * Load category data from dataService
  */
 async function loadCategoryData() {
-    try {
-        const response = await fetch('data/categories_subcategories.json');
-        const data = await response.json();
-        categoryData = data.categories[currentCategory];
-        
-        if (!categoryData) {
-            console.error('Category not found:', currentCategory);
-            // Fallback to tshirts
-            categoryData = data.categories['tshirts'];
-        }
-    } catch (error) {
-        console.error('Error loading category data:', error);
-        // Fallback data
-        categoryData = {
-            name: 'Products',
-            icon: '📦',
-            description: 'Custom printed products',
-            subcategories: []
-        };
+    await window.dataService.init();
+    const db = window.dataService.productsDB;
+    
+    // Find category (case insensitive match of URL param)
+    let catRegex = new RegExp(currentCategory, 'i');
+    categoryData = db.categories.find(c => catRegex.test(c.name));
+    
+    if (!categoryData) {
+        console.error('Category not found:', currentCategory);
+        categoryData = db.categories[0]; // fallback
+    }
+
+    // Set icons
+    const iconsMap = {
+        'T-Shirts': 'constants/icons/tshirt.svg',
+        'Hoodies': 'constants/icons/hoodie.svg',
+        'Phone Cases': 'constants/icons/phone-case.svg',
+        'Mugs': 'constants/icons/mug.svg',
+        'Frames': 'constants/icons/frame.svg',
+        'Keychains': 'constants/icons/keychain.svg',
+        'Tote Bags': 'constants/icons/tote-bag.svg',
+        'Masks': 'constants/icons/facemask.svg',
+        'Kids Clothing': 'constants/icons/tshirt.svg',
+        'Jewelry': 'constants/icons/pendant.svg',
+        'Footwear': 'constants/icons/slipper.svg',
+        'Decor': 'constants/icons/star.svg'
+    };
+    
+    categoryData.icon = iconsMap[categoryData.name] || 'constants/icons/star.svg';
+    categoryData.description = `Premium custom ${categoryData.name.toLowerCase()}`;
+    
+    // Fetch products belonging to this category
+    categoryProducts = await window.dataService.getProductsByCategory(categoryData.name);
+
+    // Track category view for personalization
+    if (window.analyticsService) {
+        window.analyticsService.trackCategoryClick(categoryData.name);
     }
 }
 
@@ -245,45 +163,138 @@ function updatePageHeader() {
  * Render subcategory cards
  */
 function renderSubcategories() {
-    const subcategories = categoryData.subcategories || [];
+    const mainGrid = document.getElementById('new-arrivals-grid');
+    const secondaryGrid = document.getElementById('collections-grid');
     
-    // Split into two sections: New Arrivals (first half) and Collections (second half)
-    const midPoint = Math.ceil(subcategories.length / 2);
-    const newArrivals = subcategories.slice(0, midPoint);
-    const collections = subcategories.slice(midPoint);
-    
-    // Render New Arrivals
-    const newArrivalsGrid = document.getElementById('new-arrivals-grid');
-    newArrivalsGrid.innerHTML = newArrivals.map(sub => createSubcategoryCard(sub)).join('');
-    
-    // Render Collections
-    const collectionsGrid = document.getElementById('collections-grid');
-    collectionsGrid.innerHTML = collections.map(sub => createSubcategoryCard(sub)).join('');
-    
-    // Render Color Categories (T-Shirts only)
-    if (categoryData.colorCategories && categoryData.colorCategories.length > 0) {
-        const colorSection = document.getElementById('color-categories-section');
-        const colorGrid = document.getElementById('color-categories-grid');
-        colorSection.style.display = 'block';
-        colorGrid.innerHTML = categoryData.colorCategories.map(color => createColorCard(color)).join('');
+    if (categoryData.sections) {
+        // Collect all subcategories from all sections
+        const allSubcategories = categoryData.sections.flatMap(s => s.subcategories);
+        
+        // 1. Populate New Arrivals (Main Grid)
+        // Find subcategories that have "New Arrival" tagged products, otherwise just take the first few
+        let newArrivalSubs = allSubcategories.filter(sub => 
+            sub.products && sub.products.some(p => p.badge === 'New Arrival' || p.badge === 'New')
+        );
+        
+        if (newArrivalSubs.length === 0) {
+            newArrivalSubs = allSubcategories.slice(0, 4);
+        } else {
+            newArrivalSubs = newArrivalSubs.slice(0, 4);
+        }
+        
+        mainGrid.innerHTML = newArrivalSubs.map(sub => {
+            if (!sub.image && sub.products && sub.products.length > 0) sub.image = sub.products[0].image;
+            return createSubcategoryCard(sub);
+        }).join('');
+        mainGrid.style.display = 'grid'; // Ensure it's visible
+
+        // 2. Populate Collections (Secondary Grid)
+        const collections = allSubcategories
+            .filter(sub => !newArrivalSubs.find(nas => nas.id === sub.id))
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 4);
+            
+        secondaryGrid.innerHTML = collections.map(sub => {
+            if (!sub.image && sub.products && sub.products.length > 0) sub.image = sub.products[0].image;
+            return createSubcategoryCard(sub);
+        }).join('');
+
+        // 3. Render the specific sections separately
+        categoryData.sections.forEach((section, index) => {
+            const sectionHtml = `
+                <div class="category-section-header">
+                    <h2 class="section-title">${section.name}</h2>
+                </div>
+                <div class="product-grid" id="section-grid-${index}">
+                    ${section.subcategories.map(sub => {
+                        if (!sub.image && sub.products && sub.products.length > 0) {
+                            sub.image = sub.products[0].image;
+                        }
+                        return createSubcategoryCard(sub);
+                    }).join('')}
+                </div>
+            `;
+            
+            // Insert sections after the main grids to keep New Arrivals at the top
+            if (index === 0) {
+                // Insert after NEW ARRIVALS
+                mainGrid.parentElement.insertAdjacentHTML('afterend', sectionHtml);
+            } else {
+                // Insert after COLLECTIONS
+                secondaryGrid.parentElement.insertAdjacentHTML('afterend', sectionHtml);
+            }
+        });
+    } else {
+        const subcategories = categoryData.subcategories || [];
+        const midPoint = Math.ceil(subcategories.length / 2);
+        const newArrivals = subcategories.slice(0, midPoint);
+        const collections = subcategories.slice(midPoint);
+        
+        mainGrid.innerHTML = newArrivals.map(sub => {
+            if (!sub.image && sub.products && sub.products.length > 0) sub.image = sub.products[0].image;
+            return createSubcategoryCard(sub);
+        }).join('');
+        
+        secondaryGrid.innerHTML = collections.map(sub => {
+            if (!sub.image && sub.products && sub.products.length > 0) sub.image = sub.products[0].image;
+            return createSubcategoryCard(sub);
+        }).join('');
     }
     
-    // Render GSM Categories (T-Shirts only)
-    if (categoryData.gsmCategories && categoryData.gsmCategories.length > 0) {
-        const gsmSection = document.getElementById('gsm-categories-section');
-        const gsmGrid = document.getElementById('gsm-categories-grid');
-        gsmSection.style.display = 'block';
-        gsmGrid.innerHTML = categoryData.gsmCategories.map(gsm => createGSMCard(gsm)).join('');
-    }
+    // Render Color/GSM logic stays same...
     
     // Update hero stats
-    const totalProducts = (categoryData.subcategories?.length || 0) + 
-                         (categoryData.colorCategories?.length || 0) + 
-                         (categoryData.gsmCategories?.length || 0);
-    const totalSubcategories = categoryData.subcategories?.length || 0;
+    let totalProductsCount = 0;
+    let subCount = 0;
+    if (categoryData.sections) {
+        categoryData.sections.forEach(s => {
+            subCount += s.subcategories.length;
+            s.subcategories.forEach(sub => totalProductsCount += sub.products.length);
+        });
+    } else {
+        subCount = categoryData.subcategories?.length || 0;
+        categoryData.subcategories?.forEach(sub => totalProductsCount += sub.products.length);
+    }
     
-    document.getElementById('total-products').textContent = `${totalProducts * 15}+`;
-    document.getElementById('subcategory-count').textContent = totalSubcategories;
+    document.getElementById('total-products').textContent = `${totalProductsCount}+`;
+    document.getElementById('subcategory-count').textContent = subCount;
+
+    // Render Additional Personalized Sections
+    renderPersonalizedSections();
+}
+
+/**
+ * Render recommendations and history at the bottom
+ */
+async function renderPersonalizedSections() {
+    // 1. Previously Viewed
+    const history = await window.dataService.getRecentlyViewedProducts(4);
+    if (history.length > 0) {
+        document.getElementById('previously-viewed').parentElement.style.display = 'block';
+        renderProducts(history, 'previously-viewed', { variant: 'default' });
+    } else {
+        document.getElementById('previously-viewed').parentElement.style.display = 'none';
+    }
+
+    // 2. Budget Section (Under 499)
+    const budgetProds = categoryProducts.filter(p => p.price < 500).slice(0, 4);
+    if (budgetProds.length > 0) {
+        renderProducts(budgetProds, 'under-499-grid', { variant: 'curved-all' });
+    }
+
+    const recommended = await window.dataService.getRecommendedProducts(6);
+    const mixedGrid = document.getElementById('mixed-categories');
+    if (mixedGrid) {
+        renderProducts(recommended, 'mixed-categories', { variant: 'colored' });
+        mixedGrid.classList.add('product-grid-dense');
+    }
+
+    const randomFinal = await window.dataService.getRandomProducts(12);
+    const randomContainer = document.getElementById('random-discoveries');
+    if (randomContainer) {
+        renderProducts(randomFinal, 'random-discoveries', { variant: 'default' });
+        randomContainer.classList.add('product-grid-dense');
+    }
 }
 
 /**
@@ -424,84 +435,78 @@ function createGSMCard(gsm) {
 function navigateToSubcategory(subcategoryId) {
     console.log('Navigate to:', currentCategory, subcategoryId);
     // Navigate to product listing page with filters
-    window.location.href = `productDetails.html?category=${currentCategory}&subcategory=${subcategoryId}`;
+    window.location.href = `searchPage.html?category=${currentCategory}&subcategory=${subcategoryId}`;
 }
 
 /**
  * Render related products sections
  */
-function renderRelatedProducts() {
+async function renderRelatedProducts() {
     const categoryName = categoryData.name;
+    
+    // Safety check - if category has no products, fetch some random ones
+    let sourceProducts = categoryProducts;
+    if (!sourceProducts || sourceProducts.length === 0) {
+        sourceProducts = await window.dataService.getRandomProducts(20);
+    }
+
+    // Shuffle helper
+    const shuffle = arr => [...arr].sort(() => 0.5 - Math.random());
     
     // Section 1: Popular Choices
     document.getElementById('related-section-1-title').textContent = `Popular ${categoryName}`;
-    const products1 = generateCategoryProducts(categoryName, 6);
+    const products1 = shuffle(sourceProducts).slice(0, 6);
     renderProducts(products1, 'related-products-1');
     
     // Section 2: Trending Now
     document.getElementById('related-section-2-title').textContent = `Trending ${categoryName}`;
-    const products2 = generateCategoryProducts(categoryName, 6);
+    const products2 = shuffle(sourceProducts).slice(0, 6);
     renderProducts(products2, 'related-products-2');
     
     // Section 3: Best Sellers
     document.getElementById('related-section-3-title').textContent = `Best Selling ${categoryName}`;
-    const products3 = generateCategoryProducts(categoryName, 6);
+    const products3 = shuffle(sourceProducts).slice(0, 6);
     renderProducts(products3, 'related-products-3');
 
     // Section 4: Seasonal Picks
-    const seasonalPicks = generateCategoryProducts(categoryName + ' Summer', 6);
+    const seasonalPicks = shuffle(sourceProducts).slice(0, 6);
     renderProducts(seasonalPicks, 'seasonal-picks-grid');
 
     // Section 5: Under ₹499
-    // Manipulate price to forcibly be under 499
-    const under499 = generateCategoryProducts(categoryName, 8).map(p => {
-        p.price = Math.floor(Math.random() * 200) + 199; // 199 to 399
-        p.originalPrice = p.price + 200;
-        p.badge = 'VALUE';
-        return p;
-    });
+    // Manipulate price to forcibly be under 499 for display if needed, or filter
+    let under499 = sourceProducts.filter(p => p.price < 500);
+    if (under499.length < 8) {
+        // Mock the price if not enough
+        under499 = shuffle(sourceProducts).slice(0, 8).map(p => {
+            return {...p, price: Math.floor(Math.random() * 200) + 199, badge: 'VALUE'};
+        });
+    } else {
+        under499 = shuffle(under499).slice(0, 8);
+    }
     renderProducts(under499, 'under-499-grid');
 }
 
 /**
  * Render previously viewed products
  */
-function renderPreviouslyViewed() {
-    renderProducts(previouslyViewedProducts, 'previously-viewed');
+async function renderPreviouslyViewed() {
+    const prevViewed = await window.dataService.getRandomProducts(4);
+    // Add view time mock
+    prevViewed.forEach(p => p.viewedTime = 'Viewed recently');
+    renderProducts(prevViewed, 'previously-viewed');
 }
 
 /**
  * Render mixed categories section
  */
-function renderMixedCategories() {
-    renderProducts(mixedCategoryProducts, 'mixed-categories');
+async function renderMixedCategories() {
+    const mixed = await window.dataService.getRandomProducts(30);
+    renderProducts(mixed, 'mixed-categories');
 }
 
 
 
-/**
- * Initialize hamburger menu
- */
-function initHamburgerMenu() {
-    const hamburger = document.querySelector('.hamburger-menu');
-    const headerActions = document.querySelector('.header-actions');
 
-    if (hamburger && headerActions) {
-        hamburger.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            hamburger.classList.toggle('active');
-            headerActions.classList.toggle('active');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!hamburger.contains(e.target) && !headerActions.contains(e.target)) {
-                hamburger.classList.remove('active');
-                headerActions.classList.remove('active');
-            }
-        });
-    }
-}
 
 /**
  * Format currency

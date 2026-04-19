@@ -6,40 +6,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id') || 'prod-001';
 
-// Sample product data (in real app, fetch from API)
-const productData = {
-    id: 'prod-001',
-    title: 'Custom Print Round Neck T-Shirt',
-    category: 'T-Shirts',
-    categoryLink: 'productCategory.html?category=tshirts',
-    description: 'Experience premium comfort with our custom printed t-shirts. Made from 100% pure cotton with 220 GSM fabric weight, these tees are perfect for everyday wear. Our advanced printing technology ensures vibrant, long-lasting prints that won\'t fade or crack even after multiple washes.',
-    price: 499,
-    originalPrice: 799,
-    rating: 4.5,
-    reviewCount: 1234,
-    badge: 'NEW',
-    images: [
-        'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=600&fit=crop'
-    ],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    colors: [
-        { name: 'Black', hex: '#000000' },
-        { name: 'White', hex: '#FFFFFF' },
-        { name: 'Grey', hex: '#808080' },
-        { name: 'Navy', hex: '#001f3f' },
-        { name: 'Red', hex: '#DC143C' }
-    ],
-    highlights: [
-        'Premium 220 GSM fabric - Soft & comfortable',
-        '100% cotton - Breathable for all-day wear',
-        'Custom print quality - Vibrant & long-lasting colors',
-        'Pre-shrunk fabric - Maintains size after wash',
-        'Available in 5+ colors and all sizes'
-    ]
-};
+/// Global state
+let productData = null;
 
 // Sample reviews data
 const reviewsData = [
@@ -75,336 +43,119 @@ const reviewsData = [
     }
 ];
 
-// Generate sample products
-const generateProducts = (category, count = 6) => {
-    const products = [];
-    const images = [
-        'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1622445275463-afa2ab738c34?w=400&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=400&fit=crop'
-    ];
-    
-    for (let i = 0; i < count; i++) {
-        const price = Math.floor(Math.random() * 500) + 299;
-        const originalPrice = Math.floor(price * 1.5) + 100;
-        const discount = Math.round(((originalPrice - price) / originalPrice) * 100);
-        
-        products.push({
-            title: `${category} Design ${i + 1}`,
-            description: `Premium custom ${category.toLowerCase()}`,
-            image: images[i % images.length],
-            price: price,
-            originalPrice: originalPrice,
-            discount: discount,
-            rating: (Math.random() * 1.5 + 3.5).toFixed(1),
-            reviewCount: Math.floor(Math.random() * 500) + 50,
-            link: `productDetails.html?id=prod-${i + 1}`,
-            productId: `prod-${i + 1}`
-        });
-    }
-    
-    return products;
-};
-
-// Viral products
-const viralProducts = generateProducts('T-Shirt', 8);
-
-// Most viewed products
-const mostViewedProducts = [
-    ...generateProducts('Mug', 3),
-    ...generateProducts('Hoodie', 3),
-    ...generateProducts('Phone Case', 2)
-];
-
-// Mixed category products
-const mixedCategoryProducts = [
-    ...generateProducts('T-Shirt', 3),
-    ...generateProducts('Mug', 3),
-    ...generateProducts('Phone Case', 3),
-    ...generateProducts('Frame', 3)
-];
-
-// Related products
-const relatedProducts = generateProducts('T-Shirt', 8);
-
-// Customers Also Bought products
-const customersAlsoBought = generateProducts('T-Shirt', 6);
-
-// Bundled Offers products
-const bundledOffers = generateProducts('Bundle', 4).map((p, i) => {
-    p.title = ['T-Shirt + Mug', 'Couple Hoodies', 'Phone Case + Pop Socket', '2x T-Shirts'][i];
-    p.badge = 'BUNDLE SAVE';
-    return p;
-});
-
-// Previously viewed products
-const previouslyViewedProducts = [
-    {
-        title: 'Custom Mug Design',
-        description: 'Premium custom mug',
-        image: 'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&h=400&fit=crop',
-        price: 299,
-        originalPrice: 499,
-        discount: 40,
-        rating: 4.6,
-        reviewCount: 189,
-        link: 'productDetails.html?id=prev-1',
-        productId: 'prev-001',
-        viewedTime: 'Viewed 2 hours ago'
-    },
-    {
-        title: 'Phone Case Premium',
-        description: 'Premium custom phone case',
-        image: 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=400&h=400&fit=crop',
-        price: 399,
-        originalPrice: 599,
-        discount: 33,
-        rating: 4.8,
-        reviewCount: 234,
-        link: 'productDetails.html?id=prev-2',
-        productId: 'prev-002',
-        viewedTime: 'Viewed yesterday'
-    },
-    {
-        title: 'Wooden Photo Frame',
-        description: 'Premium custom frame',
-        image: 'https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=400&h=400&fit=crop',
-        price: 599,
-        originalPrice: 999,
-        discount: 40,
-        rating: 4.7,
-        reviewCount: 156,
-        link: 'productDetails.html?id=prev-3',
-        productId: 'prev-003',
-        viewedTime: 'Viewed 3 days ago'
-    },
-    {
-        title: 'Custom Hoodie',
-        description: 'Premium custom hoodie',
-        image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop',
-        price: 899,
-        originalPrice: 1499,
-        discount: 40,
-        rating: 4.9,
-        reviewCount: 345,
-        link: 'productDetails.html?id=prev-4',
-        productId: 'prev-004',
-        viewedTime: 'Viewed last week'
-    }
-];
-
-// Final mixed categories products (at bottom of page)
-const mixedCategoriesFinal = [
-    {
-        title: 'Custom Tote Bag',
-        description: 'Premium canvas tote bag',
-        image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400&h=400&fit=crop',
-        price: 349,
-        originalPrice: 599,
-        discount: 42,
-        rating: 4.5,
-        reviewCount: 178,
-        link: 'productDetails.html?id=tote-1',
-        productId: 'tote-001'
-    },
-    {
-        title: 'Custom Keychain',
-        description: 'Premium metal keychain',
-        image: 'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=400&h=400&fit=crop',
-        price: 149,
-        originalPrice: 249,
-        discount: 40,
-        rating: 4.4,
-        reviewCount: 234,
-        link: 'productDetails.html?id=key-1',
-        productId: 'key-001'
-    },
-    {
-        title: 'Premium Face Mask',
-        description: 'Custom printed face mask',
-        image: 'https://images.unsplash.com/photo-1584634731339-252c581abfc5?w=400&h=400&fit=crop',
-        price: 199,
-        originalPrice: 349,
-        discount: 43,
-        rating: 4.6,
-        reviewCount: 456,
-        link: 'productDetails.html?id=mask-1',
-        productId: 'mask-001'
-    },
-    {
-        title: 'Custom Pendant',
-        description: 'Premium custom pendant',
-        image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=400&fit=crop',
-        price: 799,
-        originalPrice: 1299,
-        discount: 38,
-        rating: 4.8,
-        reviewCount: 289,
-        link: 'productDetails.html?id=pend-1',
-        productId: 'pend-001'
-    },
-    {
-        title: 'Custom Slippers',
-        description: 'Premium printed slippers',
-        image: 'https://images.unsplash.com/photo-1603487742131-4160ec999306?w=400&h=400&fit=crop',
-        price: 449,
-        originalPrice: 749,
-        discount: 40,
-        rating: 4.3,
-        reviewCount: 167,
-        link: 'productDetails.html?id=slip-1',
-        productId: 'slip-001'
-    },
-    {
-        title: 'Stone Pasting Art',
-        description: 'Premium stone pasting',
-        image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop',
-        price: 999,
-        originalPrice: 1599,
-        discount: 38,
-        rating: 4.9,
-        reviewCount: 312,
-        link: 'productDetails.html?id=stone-1',
-        productId: 'stone-001'
-    },
-    {
-        title: 'Custom Child Costume',
-        description: 'Premium child costume',
-        image: 'https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=400&h=400&fit=crop',
-        price: 1199,
-        originalPrice: 1999,
-        discount: 40,
-        rating: 4.7,
-        reviewCount: 234,
-        link: 'productDetails.html?id=costume-1',
-        productId: 'costume-001'
-    },
-    {
-        title: '2D Mobile Cover',
-        description: 'Premium 2D mobile cover',
-        image: 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=400&h=400&fit=crop',
-        price: 299,
-        originalPrice: 499,
-        discount: 40,
-        rating: 4.6,
-        reviewCount: 445,
-        link: 'productDetails.html?id=cover-1',
-        productId: 'cover-001'
-    },
-    {
-        title: 'Custom Hoodie Pro',
-        description: 'Premium custom hoodie',
-        image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop',
-        price: 999,
-        originalPrice: 1599,
-        discount: 38,
-        rating: 4.8,
-        reviewCount: 567,
-        link: 'productDetails.html?id=hood-1',
-        productId: 'hood-001'
-    },
-    {
-        title: 'Custom Coffee Mug',
-        description: 'Premium ceramic mug',
-        image: 'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&h=400&fit=crop',
-        price: 249,
-        originalPrice: 399,
-        discount: 38,
-        rating: 4.5,
-        reviewCount: 389,
-        link: 'productDetails.html?id=mug-1',
-        productId: 'mug-001'
-    },
-    {
-        title: 'Wooden Photo Frame',
-        description: 'Premium wooden frame',
-        image: 'https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=400&h=400&fit=crop',
-        price: 649,
-        originalPrice: 999,
-        discount: 35,
-        rating: 4.7,
-        reviewCount: 278,
-        link: 'productDetails.html?id=frame-1',
-        productId: 'frame-001'
-    },
-    {
-        title: 'Premium T-Shirt',
-        description: 'Custom printed t-shirt',
-        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop',
-        price: 499,
-        originalPrice: 799,
-        discount: 38,
-        rating: 4.8,
-        reviewCount: 1234,
-        link: 'productDetails.html?id=tshirt-1',
-        productId: 'tshirt-001'
-    }
-];
-
 // Initialize page
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     console.log('🚀 Loading Product Details Page...');
     
-    // Initialize hamburger menu
-    initHamburgerMenu();
+    await window.dataService.init();
+    await loadProductData();
     
-    // Load product data
-    loadProductData();
-    
-    // Setup image gallery
-    setupImageGallery();
-    
-    // Setup size selection
-    setupSizeSelection();
-    
-    // Setup color selection
-    setupColorSelection();
-    
-    // Setup quantity controls
-    setupQuantityControls();
-    
-    // Setup action buttons
-    setupActionButtons();
-    
-    // Setup tabs
-    setupTabs();
-    
-    // Load reviews
-    loadReviews();
-    
-    // Load product sections
-    renderProducts(viralProducts, 'viral-products');
-    renderProducts(mostViewedProducts, 'most-viewed-products');
-    renderProducts(mixedCategoryProducts, 'mixed-category-products');
-    renderProducts(relatedProducts, 'related-products');
-    renderProducts(customersAlsoBought, 'customers-also-bought');
-    renderProducts(previouslyViewedProducts, 'previously-viewed');
-    renderProducts(bundledOffers, 'bundled-offers');
-    renderProducts(mixedCategoriesFinal, 'mixed-categories-final');
+    if (productData) {
+        // Setup image gallery
+        setupImageGallery();
+        
+        // Setup size selection
+        setupSizeSelection();
+        
+        // Setup color selection
+        setupColorSelection();
+        
+        // Setup quantity controls
+        setupQuantityControls();
+        
+        // Setup action buttons
+        setupActionButtons();
+        
+        // Setup tabs
+        setupTabs();
+        
+        // Load reviews (mock)
+        loadReviews();
+        
+        // Load product sections dynamically
+        const categoryName = productData.categoryName || productData.category;
+        let related = await window.dataService.getProductsByCategory(categoryName);
+        if (related.length === 0) related = await window.dataService.getRandomProducts(10);
+        
+        const shuffle = arr => [...arr].sort(() => 0.5 - Math.random());
+        
+        renderProducts(shuffle(related).slice(0, 8), 'viral-products');
+        renderProducts(await window.dataService.getRandomProducts(8), 'most-viewed-products');
+        renderProducts(await window.dataService.getRandomProducts(12), 'mixed-category-products');
+        renderProducts(shuffle(related).slice(0, 8), 'related-products');
+        renderProducts(await window.dataService.getRandomProducts(6), 'customers-also-bought');
+        
+        const prevViewed = await window.dataService.getRandomProducts(4);
+        prevViewed.forEach(p => p.viewedTime = 'Viewed recently');
+        renderProducts(prevViewed, 'previously-viewed');
+        
+        const bundled = await window.dataService.getRandomProducts(4);
+        bundled.forEach(p => p.badge = 'BUNDLE SAVE');
+        renderProducts(bundled, 'bundled-offers');
+        
+        renderProducts(await window.dataService.getRandomProducts(10), 'mixed-categories-final');
+    }
     
     console.log('✅ Product Details Page Ready!');
 });
 
-
-
 /**
  * Load product data into page
  */
-function loadProductData() {
+async function loadProductData() {
+    productData = await window.dataService.getProductById(productId);
+    
+    if (!productData) {
+        console.error("Product not found:", productId);
+        // Load a random product as fallback if dev test links are broken
+        const randoms = await window.dataService.getRandomProducts(1);
+        productData = randoms[0];
+        if (!productData) return;
+    }
+
+    // Build the dynamic image paths if they exist
+    let imageArray = productData.images || [];
+    if (productData.baseImagePath && productData.images) {
+        imageArray = productData.images.map(img => productData.baseImagePath + img);
+    } else if (productData.image) {
+        imageArray = [productData.image];
+    }
+    productData.images = imageArray;
+
+    // Fill missing mock data since JSON might be sparse
+    productData.category = productData.categoryName || 'T-Shirts';
+    productData.categoryLink = `productCategory.html?category=${encodeURIComponent(productData.category)}`;
+    productData.description = productData.description || 'Premium quality print material.';
+    productData.sizes = ['S', 'M', 'L', 'XL', 'XXL'];
+    productData.colors = [
+        { name: 'Black', hex: '#000000' },
+        { name: 'White', hex: '#FFFFFF' },
+        { name: 'Grey', hex: '#808080' },
+        { name: 'Navy', hex: '#001f3f' }
+    ];
+    productData.highlights = [
+        'Premium quality material',
+        'Vibrant & long-lasting colors',
+        'Custom verified print'
+    ];
+    
     // Update breadcrumb
-    document.getElementById('breadcrumb-category').textContent = productData.category;
-    document.getElementById('breadcrumb-category').href = productData.categoryLink;
-    document.getElementById('breadcrumb-product').textContent = productData.title;
+    const breadCat = document.getElementById('breadcrumb-category');
+    if (breadCat) {
+        breadCat.textContent = productData.category;
+        breadCat.href = productData.categoryLink;
+    }
+    const breadProd = document.getElementById('breadcrumb-product');
+    if (breadProd) breadProd.textContent = productData.title;
     
     // Update product info
-    document.getElementById('product-category').textContent = 'Men Fashion';
+    document.getElementById('product-category').textContent = productData.category;
     document.getElementById('product-title').textContent = productData.title;
-    document.getElementById('rating-value').textContent = productData.rating;
-    document.getElementById('review-count').textContent = productData.reviewCount.toLocaleString();
-    document.getElementById('review-count-tab').textContent = productData.reviewCount.toLocaleString();
+    document.getElementById('rating-value').textContent = productData.rating || 4.5;
+    
+    let rvCount = productData.reviewCount || 100;
+    document.getElementById('review-count').textContent = rvCount.toLocaleString();
+    if(document.getElementById('review-count-tab')) document.getElementById('review-count-tab').textContent = rvCount.toLocaleString();
     
     // Calculate discount
     const discount = Math.round(((productData.originalPrice - productData.price) / productData.originalPrice) * 100);
@@ -413,10 +164,12 @@ function loadProductData() {
     document.getElementById('original-price').textContent = `₹${productData.originalPrice}`;
     
     // Update badge
+    const badgeEl = document.getElementById('product-badge');
     if (productData.badge) {
-        document.getElementById('product-badge').textContent = productData.badge;
+        badgeEl.textContent = productData.badge;
+        badgeEl.style.display = 'inline-block';
     } else {
-        document.getElementById('product-badge').style.display = 'none';
+        if(badgeEl) badgeEl.style.display = 'none';
     }
     
     // Update description
@@ -424,7 +177,7 @@ function loadProductData() {
     
     // Update highlights
     const highlightsList = document.getElementById('product-highlights-list');
-    highlightsList.innerHTML = productData.highlights.map(h => `<li>${h}</li>`).join('');
+    if (highlightsList) highlightsList.innerHTML = productData.highlights.map(h => `<li>${h}</li>`).join('');
     
     document.title = `${productData.title} - SnapPrint`;
 }
@@ -582,26 +335,4 @@ function loadReviews() {
     `).join('');
 }
 
-/**
- * Initialize hamburger menu
- */
-function initHamburgerMenu() {
-    const hamburger = document.querySelector('.hamburger-menu');
-    const headerActions = document.querySelector('.header-actions');
 
-    if (hamburger && headerActions) {
-        hamburger.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            hamburger.classList.toggle('active');
-            headerActions.classList.toggle('active');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!hamburger.contains(e.target) && !headerActions.contains(e.target)) {
-                hamburger.classList.remove('active');
-                headerActions.classList.remove('active');
-            }
-        });
-    }
-}

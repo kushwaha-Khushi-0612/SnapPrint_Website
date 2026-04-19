@@ -1,0 +1,40 @@
+{
+    "discounts": [
+        {
+            "id": "disc_001",
+            "code": "SNAP_WELCOME",
+            "percentage": 50,
+            "title": "Welcome Treat",
+            "description": "Get 50% discount on your very first order",
+            "theme": "black-gold",
+            "pattern": "dots"
+        },
+        {
+            "id": "disc_002",
+            "code": "FESTIVE_PRINT",
+            "percentage": 30,
+            "title": "Festive Mood",
+            "description": "Celebrate with custom prints at 30% off",
+            "theme": "vibrant-orange",
+            "pattern": "chevrons"
+        },
+        {
+            "id": "disc_003",
+            "code": "PRINT_PRO",
+            "percentage": 15,
+            "title": "Pro Printer",
+            "description": "15% off for our regular creative designers",
+            "theme": "dark-blue",
+            "pattern": "grid"
+        },
+        {
+            "id": "disc_004",
+            "code": "BULK_SAVER",
+            "percentage": 25,
+            "title": "Bulk Bonanza",
+            "description": "Flat 25% off on orders above $500",
+            "theme": "premium-purple",
+            "pattern": "circles"
+        }
+    ]
+}

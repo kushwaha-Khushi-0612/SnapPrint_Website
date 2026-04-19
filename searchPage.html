@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapPrint - Search Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/homepage.css">
+    <link rel="stylesheet" href="styles/productCategory.css">
+    <link rel="stylesheet" href="styles/searchPage.css">
+    <link rel="stylesheet" href="styles/loginModal.css">
+    <script src="scripts/dataService.js"></script>
+    <script src="scripts/analyticsService.js"></script>
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar Backdrop Overlay -->
+        <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+        
+        <!-- Navigation Header -->
+        <header class="header">
+            <div class="header-top">
+                <!-- Mobile Menu Toggle -->
+                <button class="hamburger-menu" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <h1>SnapPrint</h1>
+                        <span class="tagline">Custom Printing Studio</span>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" id="global-search-input" placeholder="Search for products, categories...">
+                    <button class="search-btn" onclick="executeGlobalSearch()">
+                        <img src="constants/icons/search.svg" alt="Search" class="icon">
+                    </button>
+                </div>
+
+                <div class="header-actions">
+                    <button class="header-btn">
+                        <img src="constants/icons/heart.svg" alt="Wishlist" class="icon">
+                        <span>Wishlist</span>
+                    </button>
+                    <button class="header-btn">
+                        <img src="constants/icons/cart.svg" alt="Cart" class="icon">
+                        <span>Cart</span>
+                    </button>
+                    <button class="header-btn login-btn">
+                        <img src="constants/icons/user.svg" alt="Login" class="icon">
+                        <span>Login</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="separator">/</span>
+            <span id="breadcrumb-term">Search</span>
+        </nav>
+
+        <!-- Mobile Filter Toggle -->
+        <div class="mobile-filter-bar">
+            <div id="mobile-category-list" class="mobile-category-list">
+                <!-- Content injected via JS: T-Shirts, Hoodies, etc. -->
+            </div>
+            <button id="mobile-filter-toggle" class="filter-toggle-btn">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <span>Filters</span>
+            </button>
+        </div>
+
+        <!-- Search Layout -->
+        <div class="search-layout">
+            <!-- Left Sidebar Filters -->
+            <aside class="search-sidebar" id="search-sidebar">
+                <div class="sidebar-header">
+                    <h2>Filters</h2>
+                    <button id="close-sidebar-mobile" class="close-sidebar-btn" aria-label="Close Filters">&times;</button>
+                    <button id="clear-filters-btn" class="clear-btn">Clear All</button>
+                </div>
+
+                <!-- Native Dropdown: Categories -->
+                <div class="filter-group block-group">
+                    <h3>Category</h3>
+                    <div class="custom-select-wrapper">
+                        <select id="category-select" class="premium-select">
+                            <option value="">All Categories</option>
+                            <!-- Populated dynamically -->
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Accordion: Subcategories -->
+                <div class="filter-group accordion hide" id="subcategory-filter-group">
+                    <button class="accordion-header" aria-expanded="true">
+                        <span>Subcategories</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <div class="filter-options" id="subcategory-filters">
+                                <!-- Populated dynamically based on category -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Filters Container (For GSM, Colors, Size, Custom Prices) -->
+                <div id="dynamic-filters-container">
+                    <!-- Fetched from filters.json based on selected category -->
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="search-main">
+                <div id="search-suggestion" class="search-suggestion hide"></div>
+                
+                <div class="search-results-header">
+                    <div class="results-info">
+                        <h1 id="search-title">All Products</h1>
+                        <span class="results-count">Showing <span id="showing-start">1</span>-<span id="showing-end">6</span> of <span id="total-results">0</span> products</span>
+                    </div>
+                    <div class="sort-controls">
+                        <label for="sort-dropdown">Sort by:</label>
+                        <select id="sort-dropdown">
+                            <option value="recommended">Recommended</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="newest">Newest Arrivals</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <!-- We limit to 6 products per page -->
+                <div id="search-results-grid" class="product-grid search-grid">
+                    <!-- Populated dynamically -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-container" id="pagination-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-bottom" style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 20px; text-align: center;">
+                <p>&copy; 2026 SnapPrint. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/authService.js"></script>
+    <script src="widgets/loginModal.js"></script>
+    <script src="scripts/globalNavigation.js"></script>
+    <script src="widgets/productCard.js"></script>
+    <script src="scripts/scrollReveal.js"></script>
+    <script src="scripts/searchPage.js"></script>
+</body>
+</html>
