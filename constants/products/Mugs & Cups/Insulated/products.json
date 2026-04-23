@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-insulated-1",
+        "title": "Insulated Mugs & Cups Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-insulated1/400/400",
+        "rating": "4.2",
+        "reviewCount": 198,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-insulated-2",
+        "title": "Insulated Mugs & Cups Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-insulated2/400/400",
+        "rating": "4.2",
+        "reviewCount": 177,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-insulated-3",
+        "title": "Insulated Mugs & Cups Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-insulated3/400/400",
+        "rating": "4.2",
+        "reviewCount": 26,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-insulated-4",
+        "title": "Insulated Mugs & Cups Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-insulated4/400/400",
+        "rating": "4.2",
+        "reviewCount": 82,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-insulated-5",
+        "title": "Insulated Mugs & Cups Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-insulated5/400/400",
+        "rating": "4.2",
+        "reviewCount": 199,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-insulated-6",
+        "title": "Insulated Mugs & Cups Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-insulated6/400/400",
+        "rating": "4.2",
+        "reviewCount": 32,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-insulated-7",
+        "title": "Insulated Mugs & Cups Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-insulated7/400/400",
+        "rating": "4.2",
+        "reviewCount": 69,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-insulated-8",
+        "title": "Insulated Mugs & Cups Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-insulated8/400/400",
+        "rating": "4.2",
+        "reviewCount": 216,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

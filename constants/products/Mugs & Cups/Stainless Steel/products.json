@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-stainlesssteel-1",
+        "title": "Stainless Steel Mugs & Cups Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-stainlesssteel1/400/400",
+        "rating": "4.2",
+        "reviewCount": 54,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-stainlesssteel-2",
+        "title": "Stainless Steel Mugs & Cups Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-stainlesssteel2/400/400",
+        "rating": "4.2",
+        "reviewCount": 59,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-stainlesssteel-3",
+        "title": "Stainless Steel Mugs & Cups Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-stainlesssteel3/400/400",
+        "rating": "4.2",
+        "reviewCount": 170,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-stainlesssteel-4",
+        "title": "Stainless Steel Mugs & Cups Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-stainlesssteel4/400/400",
+        "rating": "4.2",
+        "reviewCount": 197,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-stainlesssteel-5",
+        "title": "Stainless Steel Mugs & Cups Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-stainlesssteel5/400/400",
+        "rating": "4.2",
+        "reviewCount": 98,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-stainlesssteel-6",
+        "title": "Stainless Steel Mugs & Cups Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-stainlesssteel6/400/400",
+        "rating": "4.2",
+        "reviewCount": 215,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-stainlesssteel-7",
+        "title": "Stainless Steel Mugs & Cups Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-stainlesssteel7/400/400",
+        "rating": "4.2",
+        "reviewCount": 65,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-stainlesssteel-8",
+        "title": "Stainless Steel Mugs & Cups Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-stainlesssteel8/400/400",
+        "rating": "4.2",
+        "reviewCount": 136,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

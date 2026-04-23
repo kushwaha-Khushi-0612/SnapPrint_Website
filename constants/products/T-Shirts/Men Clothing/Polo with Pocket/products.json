@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-menclothing-polowithpocket-1",
+        "title": "Polo with Pocket T-Shirts Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-polowithpocket1/400/400",
+        "rating": "4.2",
+        "reviewCount": 168,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-polowithpocket-2",
+        "title": "Polo with Pocket T-Shirts Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-polowithpocket2/400/400",
+        "rating": "4.2",
+        "reviewCount": 116,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-polowithpocket-3",
+        "title": "Polo with Pocket T-Shirts Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-polowithpocket3/400/400",
+        "rating": "4.2",
+        "reviewCount": 33,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-polowithpocket-4",
+        "title": "Polo with Pocket T-Shirts Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-polowithpocket4/400/400",
+        "rating": "4.2",
+        "reviewCount": 111,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-polowithpocket-5",
+        "title": "Polo with Pocket T-Shirts Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-polowithpocket5/400/400",
+        "rating": "4.2",
+        "reviewCount": 38,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-polowithpocket-6",
+        "title": "Polo with Pocket T-Shirts Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-polowithpocket6/400/400",
+        "rating": "4.2",
+        "reviewCount": 219,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-polowithpocket-7",
+        "title": "Polo with Pocket T-Shirts Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-polowithpocket7/400/400",
+        "rating": "4.2",
+        "reviewCount": 122,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-polowithpocket-8",
+        "title": "Polo with Pocket T-Shirts Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-polowithpocket8/400/400",
+        "rating": "4.2",
+        "reviewCount": 62,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

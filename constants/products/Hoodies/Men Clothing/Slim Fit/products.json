@@ -1,0 +1,332 @@
+[
+    {
+        "id": "sub-menclothing-slimfit-0",
+        "sku_id": "SKU-SUBMENCLOTHINGSLIMFIT0",
+        "title": "Blue Customized Half Sleeve Cotton Blend Bicycle Graphic Printed Round Neck Slim Fit Men’s T-Shirt",
+        "description": "Classic half-sleeve Slim Fit, perfect for everyday wear. Blue Customized Half Sleeve Cotton Blend Bicycle Graphic Printed Round Neck Slim Fit Men’s T-Shirt",
+        "price": 598,
+        "originalPrice": 1196,
+        "rating": "3.9",
+        "reviewCount": 165,
+        "color": "Blue",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB09HXSSHKD_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Slim Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    },
+    {
+        "id": "sub-menclothing-slimfit-1",
+        "sku_id": "SKU-SUBMENCLOTHINGSLIMFIT1",
+        "title": "Pink Customized Half Sleeve Cotton Blend Stonger Typography Graphic Printed Round Neck Slim Fit Men’s T-Shirt",
+        "description": "Classic half-sleeve Slim Fit, perfect for everyday wear. Pink Customized Half Sleeve Cotton Blend Stonger Typography Graphic Printed Round Neck Slim Fit Men’s T-Shirt",
+        "price": 598,
+        "originalPrice": 1196,
+        "rating": "4.1",
+        "reviewCount": 776,
+        "color": "Free Color",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB09JG2YCQN_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Slim Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    },
+    {
+        "id": "sub-menclothing-slimfit-2",
+        "sku_id": "SKU-SUBMENCLOTHINGSLIMFIT2",
+        "title": "Green Customized Half Sleeve Cotton Blend Graphic Printed Round Neck Slim Fit Men’s T-Shirt",
+        "description": "Classic half-sleeve Slim Fit, perfect for everyday wear. Green Customized Half Sleeve Cotton Blend Graphic Printed Round Neck Slim Fit Men’s T-Shirt",
+        "price": 798,
+        "originalPrice": 1596,
+        "rating": "4.3",
+        "reviewCount": 82,
+        "color": "Green",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB09JFW81NR_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Slim Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    },
+    {
+        "id": "sub-menclothing-slimfit-3",
+        "sku_id": "SKU-SUBMENCLOTHINGSLIMFIT3",
+        "title": "White Customized Half Sleeve Cotton Blend Vogue Text Graphic Printed Round Neck Slim Fit Men’s T-Shirt",
+        "description": "Classic half-sleeve Slim Fit, perfect for everyday wear. White Customized Half Sleeve Cotton Blend Vogue Text Graphic Printed Round Neck Slim Fit Men’s T-Shirt",
+        "price": 998,
+        "originalPrice": 1996,
+        "rating": "4.9",
+        "reviewCount": 414,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB09HXSC2DQ_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Slim Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    },
+    {
+        "id": "sub-menclothing-slimfit-4",
+        "sku_id": "SKU-SUBMENCLOTHINGSLIMFIT4",
+        "title": "White Customized Men’s Lee Graphic Printed Slim Fit T-Shirt",
+        "description": "Personalized Slim Fit - add your own touch to this premium design. White Customized Men’s Lee Graphic Printed Slim Fit T-Shirt",
+        "price": 1199,
+        "originalPrice": 2398,
+        "rating": "4.3",
+        "reviewCount": 645,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB09ZF2P7YG_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "Premium Blend",
+            "fit": "Slim Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    },
+    {
+        "id": "sub-menclothing-slimfit-5",
+        "sku_id": "SKU-SUBMENCLOTHINGSLIMFIT5",
+        "title": "Black Customized Into The Blue Typography Graphic Cotton Slim Fit Men’s T-Shirt",
+        "description": "Personalized Slim Fit - add your own touch to this premium design. Black Customized Into The Blue Typography Graphic Cotton Slim Fit Men’s T-Shirt",
+        "price": 1204,
+        "originalPrice": 2408,
+        "rating": "3.9",
+        "reviewCount": 453,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB09QCV3G1D_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Slim Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-menclothing-slimfit-6",
+        "sku_id": "SKU-SUBMENCLOTHINGSLIMFIT6",
+        "title": "Red Customized Allen Solly Men’s Graphic Printed Slim Fit T-Shirt",
+        "description": "Personalized Slim Fit - add your own touch to this premium design. Red Customized Allen Solly Men’s Graphic Printed Slim Fit T-Shirt",
+        "price": 1204,
+        "originalPrice": 2408,
+        "rating": "4.5",
+        "reviewCount": 129,
+        "color": "Red",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB09VT7GM9R_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "Premium Blend",
+            "fit": "Slim Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    },
+    {
+        "id": "sub-menclothing-slimfit-7",
+        "sku_id": "SKU-SUBMENCLOTHINGSLIMFIT7",
+        "title": "Olive Green Customized Allen Solly Men’s Graphic Printed Slim Fit T-Shirt",
+        "description": "Personalized Slim Fit - add your own touch to this premium design. Olive Green Customized Allen Solly Men’s Graphic Printed Slim Fit T-Shirt",
+        "price": 1234,
+        "originalPrice": 2468,
+        "rating": "4.8",
+        "reviewCount": 832,
+        "color": "Free Color",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB09VT8KDZW_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "Premium Blend",
+            "fit": "Slim Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    },
+    {
+        "id": "sub-menclothing-slimfit-8",
+        "sku_id": "SKU-SUBMENCLOTHINGSLIMFIT8",
+        "title": "Orange Customized Men’s Graphic Slim Fit T-Shirt",
+        "description": "Personalized Slim Fit - add your own touch to this premium design. Orange Customized Men’s Graphic Slim Fit T-Shirt",
+        "price": 1688,
+        "originalPrice": 3376,
+        "rating": "4.5",
+        "reviewCount": 329,
+        "color": "Free Color",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB0BGHZY246_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "Premium Blend",
+            "fit": "Slim Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-menclothing-slimfit-9",
+        "sku_id": "SKU-SUBMENCLOTHINGSLIMFIT9",
+        "title": "Black Customized Tommy Hilfiger Graphic Slim Fit T-Shirt",
+        "description": "Personalized Slim Fit - add your own touch to this premium design. Black Customized Tommy Hilfiger Graphic Slim Fit T-Shirt",
+        "price": 3189,
+        "originalPrice": 6378,
+        "rating": "4.1",
+        "reviewCount": 583,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB0BPY743NP_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "Premium Blend",
+            "fit": "Slim Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    }
+]

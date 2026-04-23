@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-menclothing-embroidered-1",
+        "title": "Embroidered Hoodies Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-embroidered1/400/400",
+        "rating": "4.2",
+        "reviewCount": 102,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-embroidered-2",
+        "title": "Embroidered Hoodies Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-embroidered2/400/400",
+        "rating": "4.2",
+        "reviewCount": 211,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-embroidered-3",
+        "title": "Embroidered Hoodies Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-embroidered3/400/400",
+        "rating": "4.2",
+        "reviewCount": 149,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-embroidered-4",
+        "title": "Embroidered Hoodies Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-embroidered4/400/400",
+        "rating": "4.2",
+        "reviewCount": 103,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-embroidered-5",
+        "title": "Embroidered Hoodies Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-embroidered5/400/400",
+        "rating": "4.2",
+        "reviewCount": 63,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-embroidered-6",
+        "title": "Embroidered Hoodies Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-embroidered6/400/400",
+        "rating": "4.2",
+        "reviewCount": 97,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-embroidered-7",
+        "title": "Embroidered Hoodies Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-embroidered7/400/400",
+        "rating": "4.2",
+        "reviewCount": 158,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-embroidered-8",
+        "title": "Embroidered Hoodies Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-embroidered8/400/400",
+        "rating": "4.2",
+        "reviewCount": 171,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

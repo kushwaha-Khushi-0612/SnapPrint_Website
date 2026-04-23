@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-womenclothing-zipup-1",
+        "title": "Zip-Up Hoodies Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-zipup1/400/400",
+        "rating": "4.2",
+        "reviewCount": 100,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-zipup-2",
+        "title": "Zip-Up Hoodies Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-zipup2/400/400",
+        "rating": "4.2",
+        "reviewCount": 127,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-zipup-3",
+        "title": "Zip-Up Hoodies Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-zipup3/400/400",
+        "rating": "4.2",
+        "reviewCount": 39,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-zipup-4",
+        "title": "Zip-Up Hoodies Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-zipup4/400/400",
+        "rating": "4.2",
+        "reviewCount": 130,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-zipup-5",
+        "title": "Zip-Up Hoodies Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-zipup5/400/400",
+        "rating": "4.2",
+        "reviewCount": 28,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-zipup-6",
+        "title": "Zip-Up Hoodies Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-zipup6/400/400",
+        "rating": "4.2",
+        "reviewCount": 186,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-zipup-7",
+        "title": "Zip-Up Hoodies Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-zipup7/400/400",
+        "rating": "4.2",
+        "reviewCount": 156,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-zipup-8",
+        "title": "Zip-Up Hoodies Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-zipup8/400/400",
+        "rating": "4.2",
+        "reviewCount": 169,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

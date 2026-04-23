@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-womenclothing-oversized-1",
+        "title": "Oversized Hoodies Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-oversized1/400/400",
+        "rating": "4.2",
+        "reviewCount": 160,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-oversized-2",
+        "title": "Oversized Hoodies Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-oversized2/400/400",
+        "rating": "4.2",
+        "reviewCount": 112,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-oversized-3",
+        "title": "Oversized Hoodies Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-oversized3/400/400",
+        "rating": "4.2",
+        "reviewCount": 125,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-oversized-4",
+        "title": "Oversized Hoodies Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-oversized4/400/400",
+        "rating": "4.2",
+        "reviewCount": 26,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-oversized-5",
+        "title": "Oversized Hoodies Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-oversized5/400/400",
+        "rating": "4.2",
+        "reviewCount": 103,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-oversized-6",
+        "title": "Oversized Hoodies Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-oversized6/400/400",
+        "rating": "4.2",
+        "reviewCount": 148,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-oversized-7",
+        "title": "Oversized Hoodies Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-oversized7/400/400",
+        "rating": "4.2",
+        "reviewCount": 78,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-oversized-8",
+        "title": "Oversized Hoodies Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing-oversized8/400/400",
+        "rating": "4.2",
+        "reviewCount": 172,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

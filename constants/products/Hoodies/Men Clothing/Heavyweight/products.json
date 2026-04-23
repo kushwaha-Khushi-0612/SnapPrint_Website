@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-menclothing-heavyweight-1",
+        "title": "Heavyweight Hoodies Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-heavyweight1/400/400",
+        "rating": "4.2",
+        "reviewCount": 211,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-heavyweight-2",
+        "title": "Heavyweight Hoodies Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-heavyweight2/400/400",
+        "rating": "4.2",
+        "reviewCount": 138,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-heavyweight-3",
+        "title": "Heavyweight Hoodies Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-heavyweight3/400/400",
+        "rating": "4.2",
+        "reviewCount": 124,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-heavyweight-4",
+        "title": "Heavyweight Hoodies Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-heavyweight4/400/400",
+        "rating": "4.2",
+        "reviewCount": 75,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-heavyweight-5",
+        "title": "Heavyweight Hoodies Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-heavyweight5/400/400",
+        "rating": "4.2",
+        "reviewCount": 40,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-heavyweight-6",
+        "title": "Heavyweight Hoodies Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-heavyweight6/400/400",
+        "rating": "4.2",
+        "reviewCount": 44,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-heavyweight-7",
+        "title": "Heavyweight Hoodies Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-heavyweight7/400/400",
+        "rating": "4.2",
+        "reviewCount": 216,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-heavyweight-8",
+        "title": "Heavyweight Hoodies Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-heavyweight8/400/400",
+        "rating": "4.2",
+        "reviewCount": 184,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "id": "prod-wood-1",
+        "title": "Wood Keychains 1",
+        "price": 499,
+        "originalPrice": 999,
+        "image": "constants/products/placeholder.jpg",
+        "rating": "4.5"
+    },
+    {
+        "id": "prod-wood-2",
+        "title": "Wood Keychains 2",
+        "price": 499,
+        "originalPrice": 999,
+        "image": "constants/products/placeholder.jpg",
+        "rating": "4.5"
+    },
+    {
+        "id": "prod-wood-3",
+        "title": "Wood Keychains 3",
+        "price": 499,
+        "originalPrice": 999,
+        "image": "constants/products/placeholder.jpg",
+        "rating": "4.5"
+    },
+    {
+        "id": "prod-wood-4",
+        "title": "Wood Keychains 4",
+        "price": 499,
+        "originalPrice": 999,
+        "image": "constants/products/placeholder.jpg",
+        "rating": "4.5"
+    },
+    {
+        "id": "prod-wood-5",
+        "title": "Wood Keychains 5",
+        "price": 499,
+        "originalPrice": 999,
+        "image": "constants/products/placeholder.jpg",
+        "rating": "4.5"
+    }
+]

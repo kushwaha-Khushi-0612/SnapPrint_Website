@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-ringholder-1",
+        "title": "Ring Holder Phone Cases Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ringholder1/400/400",
+        "rating": "4.2",
+        "reviewCount": 139,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-ringholder-2",
+        "title": "Ring Holder Phone Cases Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ringholder2/400/400",
+        "rating": "4.2",
+        "reviewCount": 40,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-ringholder-3",
+        "title": "Ring Holder Phone Cases Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ringholder3/400/400",
+        "rating": "4.2",
+        "reviewCount": 115,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-ringholder-4",
+        "title": "Ring Holder Phone Cases Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ringholder4/400/400",
+        "rating": "4.2",
+        "reviewCount": 41,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-ringholder-5",
+        "title": "Ring Holder Phone Cases Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ringholder5/400/400",
+        "rating": "4.2",
+        "reviewCount": 41,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-ringholder-6",
+        "title": "Ring Holder Phone Cases Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ringholder6/400/400",
+        "rating": "4.2",
+        "reviewCount": 111,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-ringholder-7",
+        "title": "Ring Holder Phone Cases Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ringholder7/400/400",
+        "rating": "4.2",
+        "reviewCount": 63,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-ringholder-8",
+        "title": "Ring Holder Phone Cases Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ringholder8/400/400",
+        "rating": "4.2",
+        "reviewCount": 101,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

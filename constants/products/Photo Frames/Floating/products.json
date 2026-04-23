@@ -1,0 +1,37 @@
+[
+    {
+        "id": "sub-floating-0",
+        "sku_id": "SKU-SUBFLOATING0",
+        "title": "Floating Astronaut Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "description": "Relaxed fit oversized Floating T-Shirt for a modern street-style look. Floating Astronaut Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "price": 599,
+        "originalPrice": 1198,
+        "rating": "4.1",
+        "reviewCount": 55,
+        "color": "Free Color",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d95_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Half Sleeve",
+            "Oversized",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Oversized Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    }
+]

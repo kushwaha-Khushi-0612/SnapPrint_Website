@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-menclothing-supimacotton-1",
+        "title": "Supima Cotton T-Shirts Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton1/400/400",
+        "rating": "4.2",
+        "reviewCount": 164,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-supimacotton-2",
+        "title": "Supima Cotton T-Shirts Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton2/400/400",
+        "rating": "4.2",
+        "reviewCount": 62,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-supimacotton-3",
+        "title": "Supima Cotton T-Shirts Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton3/400/400",
+        "rating": "4.2",
+        "reviewCount": 58,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-supimacotton-4",
+        "title": "Supima Cotton T-Shirts Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton4/400/400",
+        "rating": "4.2",
+        "reviewCount": 30,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-supimacotton-5",
+        "title": "Supima Cotton T-Shirts Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton5/400/400",
+        "rating": "4.2",
+        "reviewCount": 81,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-supimacotton-6",
+        "title": "Supima Cotton T-Shirts Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton6/400/400",
+        "rating": "4.2",
+        "reviewCount": 154,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-supimacotton-7",
+        "title": "Supima Cotton T-Shirts Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton7/400/400",
+        "rating": "4.2",
+        "reviewCount": 62,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-supimacotton-8",
+        "title": "Supima Cotton T-Shirts Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton8/400/400",
+        "rating": "4.2",
+        "reviewCount": 123,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

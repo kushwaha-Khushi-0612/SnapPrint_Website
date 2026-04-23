@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-hardcase-1",
+        "title": "Hard Case Phone Cases Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-hardcase1/400/400",
+        "rating": "4.2",
+        "reviewCount": 30,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-hardcase-2",
+        "title": "Hard Case Phone Cases Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-hardcase2/400/400",
+        "rating": "4.2",
+        "reviewCount": 84,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-hardcase-3",
+        "title": "Hard Case Phone Cases Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-hardcase3/400/400",
+        "rating": "4.2",
+        "reviewCount": 189,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-hardcase-4",
+        "title": "Hard Case Phone Cases Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-hardcase4/400/400",
+        "rating": "4.2",
+        "reviewCount": 67,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-hardcase-5",
+        "title": "Hard Case Phone Cases Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-hardcase5/400/400",
+        "rating": "4.2",
+        "reviewCount": 212,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-hardcase-6",
+        "title": "Hard Case Phone Cases Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-hardcase6/400/400",
+        "rating": "4.2",
+        "reviewCount": 59,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-hardcase-7",
+        "title": "Hard Case Phone Cases Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-hardcase7/400/400",
+        "rating": "4.2",
+        "reviewCount": 48,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-hardcase-8",
+        "title": "Hard Case Phone Cases Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-hardcase8/400/400",
+        "rating": "4.2",
+        "reviewCount": 66,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

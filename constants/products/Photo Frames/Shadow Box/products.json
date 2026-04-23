@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-shadowbox-1",
+        "title": "Shadow Box Photo Frames Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-shadowbox1/400/400",
+        "rating": "4.2",
+        "reviewCount": 88,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-shadowbox-2",
+        "title": "Shadow Box Photo Frames Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-shadowbox2/400/400",
+        "rating": "4.2",
+        "reviewCount": 52,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-shadowbox-3",
+        "title": "Shadow Box Photo Frames Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-shadowbox3/400/400",
+        "rating": "4.2",
+        "reviewCount": 38,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-shadowbox-4",
+        "title": "Shadow Box Photo Frames Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-shadowbox4/400/400",
+        "rating": "4.2",
+        "reviewCount": 95,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-shadowbox-5",
+        "title": "Shadow Box Photo Frames Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-shadowbox5/400/400",
+        "rating": "4.2",
+        "reviewCount": 125,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-shadowbox-6",
+        "title": "Shadow Box Photo Frames Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-shadowbox6/400/400",
+        "rating": "4.2",
+        "reviewCount": 112,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-shadowbox-7",
+        "title": "Shadow Box Photo Frames Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-shadowbox7/400/400",
+        "rating": "4.2",
+        "reviewCount": 97,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-shadowbox-8",
+        "title": "Shadow Box Photo Frames Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-shadowbox8/400/400",
+        "rating": "4.2",
+        "reviewCount": 106,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

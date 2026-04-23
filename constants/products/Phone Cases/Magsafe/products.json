@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-magsafe-1",
+        "title": "Magsafe Phone Cases Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-magsafe1/400/400",
+        "rating": "4.2",
+        "reviewCount": 144,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-magsafe-2",
+        "title": "Magsafe Phone Cases Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-magsafe2/400/400",
+        "rating": "4.2",
+        "reviewCount": 184,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-magsafe-3",
+        "title": "Magsafe Phone Cases Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-magsafe3/400/400",
+        "rating": "4.2",
+        "reviewCount": 145,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-magsafe-4",
+        "title": "Magsafe Phone Cases Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-magsafe4/400/400",
+        "rating": "4.2",
+        "reviewCount": 45,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-magsafe-5",
+        "title": "Magsafe Phone Cases Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-magsafe5/400/400",
+        "rating": "4.2",
+        "reviewCount": 102,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-magsafe-6",
+        "title": "Magsafe Phone Cases Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-magsafe6/400/400",
+        "rating": "4.2",
+        "reviewCount": 79,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-magsafe-7",
+        "title": "Magsafe Phone Cases Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-magsafe7/400/400",
+        "rating": "4.2",
+        "reviewCount": 29,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-magsafe-8",
+        "title": "Magsafe Phone Cases Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-magsafe8/400/400",
+        "rating": "4.2",
+        "reviewCount": 29,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

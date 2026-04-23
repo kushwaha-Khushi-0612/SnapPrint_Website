@@ -1,0 +1,72 @@
+[
+    {
+        "id": "sub-travel-0",
+        "sku_id": "SKU-SUBTRAVEL0",
+        "title": "Traveller Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "description": "Relaxed fit oversized Travel T-Shirt for a modern street-style look. Traveller Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "price": 599,
+        "originalPrice": 1331,
+        "rating": "4.8",
+        "reviewCount": 613,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "55% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d128_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Half Sleeve",
+            "Oversized",
+            "Men"
+        ],
+        "status": "Special Offer",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Oversized Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    },
+    {
+        "id": "sub-travel-1",
+        "sku_id": "SKU-SUBTRAVEL1",
+        "title": "Traveller Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "description": "Relaxed fit oversized Travel T-Shirt for a modern street-style look. Traveller Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "price": 599,
+        "originalPrice": 1198,
+        "rating": "4.3",
+        "reviewCount": 157,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d58_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Half Sleeve",
+            "Oversized",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Oversized Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    }
+]

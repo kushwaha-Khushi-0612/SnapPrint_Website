@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-menclothing-samedaydelivery-1",
+        "title": "Same Day Delivery T-Shirts Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-samedaydelivery1/400/400",
+        "rating": "4.2",
+        "reviewCount": 27,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-samedaydelivery-2",
+        "title": "Same Day Delivery T-Shirts Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-samedaydelivery2/400/400",
+        "rating": "4.2",
+        "reviewCount": 71,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-samedaydelivery-3",
+        "title": "Same Day Delivery T-Shirts Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-samedaydelivery3/400/400",
+        "rating": "4.2",
+        "reviewCount": 60,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-samedaydelivery-4",
+        "title": "Same Day Delivery T-Shirts Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-samedaydelivery4/400/400",
+        "rating": "4.2",
+        "reviewCount": 152,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-samedaydelivery-5",
+        "title": "Same Day Delivery T-Shirts Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-samedaydelivery5/400/400",
+        "rating": "4.2",
+        "reviewCount": 187,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-samedaydelivery-6",
+        "title": "Same Day Delivery T-Shirts Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-samedaydelivery6/400/400",
+        "rating": "4.2",
+        "reviewCount": 160,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-samedaydelivery-7",
+        "title": "Same Day Delivery T-Shirts Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-samedaydelivery7/400/400",
+        "rating": "4.2",
+        "reviewCount": 57,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-samedaydelivery-8",
+        "title": "Same Day Delivery T-Shirts Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-samedaydelivery8/400/400",
+        "rating": "4.2",
+        "reviewCount": 70,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

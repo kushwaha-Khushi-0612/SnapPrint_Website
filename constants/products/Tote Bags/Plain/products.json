@@ -1,0 +1,578 @@
+[
+    {
+        "id": "sub-plain-0",
+        "sku_id": "SKU-SUBPLAIN0",
+        "title": "White Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. White Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.6",
+        "reviewCount": 847,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_White_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-1",
+        "sku_id": "SKU-SUBPLAIN1",
+        "title": "Purple Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Purple Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.7",
+        "reviewCount": 447,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Purple_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-2",
+        "sku_id": "SKU-SUBPLAIN2",
+        "title": "Green Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Green Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.5",
+        "reviewCount": 147,
+        "color": "Green",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Green_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-3",
+        "sku_id": "SKU-SUBPLAIN3",
+        "title": "Olive Green Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Olive Green Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.7",
+        "reviewCount": 841,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Olive_Green_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-4",
+        "sku_id": "SKU-SUBPLAIN4",
+        "title": "Navy Blue Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Navy Blue Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.8",
+        "reviewCount": 525,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Navy_Blue_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-5",
+        "sku_id": "SKU-SUBPLAIN5",
+        "title": "Red Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Red Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.0",
+        "reviewCount": 609,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Red_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-6",
+        "sku_id": "SKU-SUBPLAIN6",
+        "title": "Yellow Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Yellow Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "5.0",
+        "reviewCount": 189,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Yellow_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-7",
+        "sku_id": "SKU-SUBPLAIN7",
+        "title": "Ocean Blue Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Ocean Blue Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.5",
+        "reviewCount": 489,
+        "color": "Free Color",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Ocean_Blue_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-8",
+        "sku_id": "SKU-SUBPLAIN8",
+        "title": "Teal Green Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Teal Green Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.0",
+        "reviewCount": 601,
+        "color": "Free Color",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Teal_Green_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-9",
+        "sku_id": "SKU-SUBPLAIN9",
+        "title": "Maroon Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Maroon Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.5",
+        "reviewCount": 512,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Maroon_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-10",
+        "sku_id": "SKU-SUBPLAIN10",
+        "title": "Asphalt Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Asphalt Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.1",
+        "reviewCount": 412,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Asphalt_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-11",
+        "sku_id": "SKU-SUBPLAIN11",
+        "title": "Grey Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Grey Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.3",
+        "reviewCount": 472,
+        "color": "Grey",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Grey_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-12",
+        "sku_id": "SKU-SUBPLAIN12",
+        "title": "Sunset Orange Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Sunset Orange Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.2",
+        "reviewCount": 140,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Sunset_Orange_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-13",
+        "sku_id": "SKU-SUBPLAIN13",
+        "title": "Lilac Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Lilac Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.0",
+        "reviewCount": 486,
+        "color": "Free Color",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Lilac_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-14",
+        "sku_id": "SKU-SUBPLAIN14",
+        "title": "Mint Green Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Mint Green Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.7",
+        "reviewCount": 328,
+        "color": "Free Color",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Mint_Green_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-15",
+        "sku_id": "SKU-SUBPLAIN15",
+        "title": "Kiwi Green Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Kiwi Green Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.3",
+        "reviewCount": 621,
+        "color": "Free Color",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Kiwi_Green_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-16",
+        "sku_id": "SKU-SUBPLAIN16",
+        "title": "Soft Pink Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Soft Pink Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.7",
+        "reviewCount": 802,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Soft_Pink_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-plain-17",
+        "sku_id": "SKU-SUBPLAIN17",
+        "title": "Black Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "description": "Classic half-sleeve Plain T-Shirt, perfect for everyday wear. Black Solid Plain Half Sleeve Men’s Cotton T-Shirt by yP Basics",
+        "price": 199,
+        "originalPrice": 998,
+        "rating": "4.5",
+        "reviewCount": 821,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": null,
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2FMen_Plain_Black_1.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 0,
+        "tags": [
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    }
+]

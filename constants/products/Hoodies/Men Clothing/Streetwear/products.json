@@ -1,0 +1,33 @@
+[
+    {
+        "id": "sub-menclothing-streetwear-0",
+        "sku_id": "SKU-SUBMENCLOTHINGSTREETWEAR0",
+        "title": "Black Customized Travis Scott Astroworld T-Shirt, Hip Hop Merchandise Graphic Streetwear",
+        "description": "Personalized Streetwear - add your own touch to this premium design. Black Customized Travis Scott Astroworld T-Shirt, Hip Hop Merchandise Graphic Streetwear",
+        "price": 998,
+        "originalPrice": 1996,
+        "rating": "4.9",
+        "reviewCount": 141,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB0BQF6K115_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "Premium Blend",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    }
+]

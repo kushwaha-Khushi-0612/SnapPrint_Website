@@ -1,0 +1,69 @@
+[
+    {
+        "id": "sub-menclothing-fullsleeves-0",
+        "sku_id": "SKU-SUBMENCLOTHINGFULLSLEEVES0",
+        "title": "Black White Customized Full Sleeve Men’s Raglan Cotton T-Shirt",
+        "description": "Comfortable full-sleeve Full Sleeves T-Shirt, ideal for cooler weather. Black White Customized Full Sleeve Men’s Raglan Cotton T-Shirt",
+        "price": 499,
+        "originalPrice": 1426,
+        "rating": "4.7",
+        "reviewCount": 152,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "65% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F12%2FBlack_White_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Full Sleeve",
+            "Men",
+            "Trending"
+        ],
+        "status": "Special Offer",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Full Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-menclothing-fullsleeves-1",
+        "sku_id": "SKU-SUBMENCLOTHINGFULLSLEEVES1",
+        "title": "Grey Black Customized Full Sleeve Men’s Raglan Cotton T-Shirt",
+        "description": "Comfortable full-sleeve Full Sleeves T-Shirt, ideal for cooler weather. Grey Black Customized Full Sleeve Men’s Raglan Cotton T-Shirt",
+        "price": 499,
+        "originalPrice": 1109,
+        "rating": "4.8",
+        "reviewCount": 373,
+        "color": "Grey",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "55% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F12%2FBlack_Grey_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Full Sleeve",
+            "Men"
+        ],
+        "status": "Special Offer",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Full Sleeve",
+            "pattern": "Solid"
+        }
+    }
+]

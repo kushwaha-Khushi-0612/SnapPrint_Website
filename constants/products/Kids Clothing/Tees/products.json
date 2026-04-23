@@ -1,0 +1,99 @@
+[
+    {
+        "id": "sub-tees-0",
+        "sku_id": "SKU-SUBTEES0",
+        "title": "Steel Grey Customized Men’s Cotton Henley Neck T-Shirt",
+        "description": "Personalized Tees - add your own touch to this premium design. Steel Grey Customized Men’s Cotton Henley Neck T-Shirt",
+        "price": 558,
+        "originalPrice": 1116,
+        "rating": "4.9",
+        "reviewCount": 602,
+        "color": "Free Color",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FYPB01MR1JZZE_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-tees-1",
+        "sku_id": "SKU-SUBTEES1",
+        "title": "Steel Blue Customized Beast Graphic Printed T-Shirt for Men",
+        "description": "Personalized Tees - add your own touch to this premium design. Steel Blue Customized Beast Graphic Printed T-Shirt for Men",
+        "price": 898,
+        "originalPrice": 1796,
+        "rating": "4.4",
+        "reviewCount": 846,
+        "color": "Free Color",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB09TFVBMBS_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "Premium Blend",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    },
+    {
+        "id": "sub-tees-2",
+        "sku_id": "SKU-SUBTEES2",
+        "title": "Customized Rojana Fashions T-Shirt for Men The Beatles Typography Graphic Tees Grey",
+        "description": "Personalized Tees - add your own touch to this premium design. Customized Rojana Fashions T-Shirt for Men The Beatles Typography Graphic Tees Grey",
+        "price": 996,
+        "originalPrice": 1992,
+        "rating": "4.0",
+        "reviewCount": 596,
+        "color": "Free Color",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB089QNQHJJ_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "Premium Blend",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    }
+]

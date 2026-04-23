@@ -1,0 +1,236 @@
+[
+    {
+        "id": "sub-menclothing-raglan-0",
+        "sku_id": "SKU-SUBMENCLOTHINGRAGLAN0",
+        "title": "Black White Raglan Customized Half Sleeve Men’s Cotton T-Shirt",
+        "description": "Classic half-sleeve Raglan T-Shirt, perfect for everyday wear. Black White Raglan Customized Half Sleeve Men’s Cotton T-Shirt",
+        "price": 499,
+        "originalPrice": 1426,
+        "rating": "4.1",
+        "reviewCount": 848,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "65% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F03%2FBlack_White.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Half Sleeve",
+            "Men",
+            "Trending"
+        ],
+        "status": "Special Offer",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-menclothing-raglan-1",
+        "sku_id": "SKU-SUBMENCLOTHINGRAGLAN1",
+        "title": "Black White Customized Full Sleeve Men’s Raglan Cotton T-Shirt",
+        "description": "Comfortable full-sleeve Raglan T-Shirt, ideal for cooler weather. Black White Customized Full Sleeve Men’s Raglan Cotton T-Shirt",
+        "price": 499,
+        "originalPrice": 1426,
+        "rating": "4.0",
+        "reviewCount": 834,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "65% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F12%2FBlack_White_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Full Sleeve",
+            "Men",
+            "Trending"
+        ],
+        "status": "Special Offer",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Full Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-menclothing-raglan-2",
+        "sku_id": "SKU-SUBMENCLOTHINGRAGLAN2",
+        "title": "Grey Black Raglan Customized Half Sleeve Men’s Cotton T-Shirt",
+        "description": "Classic half-sleeve Raglan T-Shirt, perfect for everyday wear. Grey Black Raglan Customized Half Sleeve Men’s Cotton T-Shirt",
+        "price": 499,
+        "originalPrice": 1109,
+        "rating": "4.2",
+        "reviewCount": 469,
+        "color": "Grey",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "55% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F03%2FGrey_Black-2.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "Special Offer",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-menclothing-raglan-3",
+        "sku_id": "SKU-SUBMENCLOTHINGRAGLAN3",
+        "title": "Grey Black Customized Full Sleeve Men’s Raglan Cotton T-Shirt",
+        "description": "Comfortable full-sleeve Raglan T-Shirt, ideal for cooler weather. Grey Black Customized Full Sleeve Men’s Raglan Cotton T-Shirt",
+        "price": 499,
+        "originalPrice": 1109,
+        "rating": "4.9",
+        "reviewCount": 768,
+        "color": "Grey",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "55% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F12%2FBlack_Grey_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Full Sleeve",
+            "Men"
+        ],
+        "status": "Special Offer",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Full Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-menclothing-raglan-4",
+        "sku_id": "SKU-SUBMENCLOTHINGRAGLAN4",
+        "title": "White Red Raglan Customized Half Sleeve Men’s Cotton T-Shirt",
+        "description": "Classic half-sleeve Raglan T-Shirt, perfect for everyday wear. White Red Raglan Customized Half Sleeve Men’s Cotton T-Shirt",
+        "price": 499,
+        "originalPrice": 998,
+        "rating": "4.7",
+        "reviewCount": 786,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F03%2FWhite_Red-Htr.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-menclothing-raglan-5",
+        "sku_id": "SKU-SUBMENCLOTHINGRAGLAN5",
+        "title": "Yellow Navy Raglan Customized Half Sleeve Men’s Cotton T-Shirt",
+        "description": "Classic half-sleeve Raglan T-Shirt, perfect for everyday wear. Yellow Navy Raglan Customized Half Sleeve Men’s Cotton T-Shirt",
+        "price": 499,
+        "originalPrice": 1426,
+        "rating": "4.4",
+        "reviewCount": 438,
+        "color": "Yellow",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "65% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F03%2FYellow_Navy-2.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Half Sleeve",
+            "Men",
+            "Trending"
+        ],
+        "status": "Special Offer",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    },
+    {
+        "id": "sub-menclothing-raglan-6",
+        "sku_id": "SKU-SUBMENCLOTHINGRAGLAN6",
+        "title": "Grey Navy Raglan Customized Half Sleeve Men’s Cotton T-Shirt",
+        "description": "Classic half-sleeve Raglan T-Shirt, perfect for everyday wear. Grey Navy Raglan Customized Half Sleeve Men’s Cotton T-Shirt",
+        "price": 499,
+        "originalPrice": 998,
+        "rating": "5.0",
+        "reviewCount": 541,
+        "color": "Grey",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F03%2FGry_Nay-Htr.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Half Sleeve",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Solid"
+        }
+    }
+]

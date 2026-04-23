@@ -1,0 +1,107 @@
+[
+    {
+        "id": "sub-kids-0",
+        "sku_id": "SKU-SUBKIDS0",
+        "title": "Cool Kids Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "description": "Classic half-sleeve Kids, perfect for everyday wear. Cool Kids Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "price": 729,
+        "originalPrice": 1458,
+        "rating": "4.4",
+        "reviewCount": 693,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d92_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Half Sleeve",
+            "Oversized",
+            "Men"
+        ],
+        "status": "",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Oversized Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    },
+    {
+        "id": "sub-kids-1",
+        "sku_id": "SKU-SUBKIDS1",
+        "title": "Cool Kids Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "description": "Classic half-sleeve Kids, perfect for everyday wear. Cool Kids Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "price": 629,
+        "originalPrice": 1797,
+        "rating": "4.7",
+        "reviewCount": 141,
+        "color": "Black",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "65% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_men_pat_d92_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Half Sleeve",
+            "Men",
+            "Trending"
+        ],
+        "status": "Special Offer",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    },
+    {
+        "id": "sub-kids-2",
+        "sku_id": "SKU-SUBKIDS2",
+        "title": "Cool Kids V Neck Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "description": "Classic half-sleeve Kids, perfect for everyday wear. Cool Kids V Neck Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "price": 629,
+        "originalPrice": 1797,
+        "rating": "4.7",
+        "reviewCount": 242,
+        "color": "Free Color",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "badge": "65% OFF",
+        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_vneck_men_pat_d92_o.jpg&resizeTo=450&format=webp",
+        "can_beCustomised": 1,
+        "tags": [
+            "Customizable",
+            "Printed",
+            "Half Sleeve",
+            "Men",
+            "Trending"
+        ],
+        "status": "Special Offer",
+        "features": {
+            "fabric": "100% Cotton",
+            "fit": "Regular Fit",
+            "sleeve": "Half Sleeve",
+            "pattern": "Graphic Print"
+        }
+    }
+]
