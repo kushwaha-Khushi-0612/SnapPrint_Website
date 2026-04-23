@@ -21,46 +21,98 @@ const dataService = {
 
     getAllProductsFlattened: async function() {
         await this.init();
+        
         let allProds = [];
-        this.productsDB.categories.forEach(cat => {
-            const processSub = (sub, parentName) => {
-                sub.products.forEach(p => {
-                    p.categoryName = cat.name;
-                    p.subcategoryName = sub.name;
-                    p.subcategoryId = sub.id;
-                    p.parentSection = parentName;
-                    
-                    // Normalize image path
-                    if (!p.image && p.baseImagePath && p.images && p.images.length > 0) {
-                        p.image = p.baseImagePath + p.images[0];
-                    } else if (!p.image) {
-                        p.image = 'constants/products/placeholder.jpg'; // safe fallback
-                    }
+        const fetchPromises = [];
 
-                    // Dynamic UI Link Injection
-                    p.link = `productDetails.html?id=${p.id}`;
-                    
-                    allProds.push(p);
+        this.productsDB.categories.forEach(cat => {
+            const processSubcategories = (subs, parentSection) => {
+                subs.forEach(sub => {
+                    if (sub.dataFile) {
+                        // Fetch the external product data file
+                        const fetchPromise = fetch(sub.dataFile)
+                            .then(res => res.json())
+                            .then(products => {
+                                products.forEach(p => {
+                                    p.categoryName = cat.name;
+                                    p.subcategoryName = sub.name;
+                                    p.subcategoryId = sub.id;
+                                    p.parentSection = parentSection;
+                                    
+                                    // Normalize image path
+                                    if (!p.image && p.baseImagePath && p.images && p.images.length > 0) {
+                                        p.image = p.baseImagePath + p.images[0];
+                                    } else if (!p.image) {
+                                        p.image = 'constants/products/placeholder.jpg';
+                                    }
+
+                                    p.link = `productDetails.html?id=${p.id}`;
+                                    allProds.push(p);
+                                });
+                            })
+                            .catch(err => console.error(`Failed to load ${sub.dataFile}:`, err));
+                        fetchPromises.push(fetchPromise);
+                    } else if (sub.products) {
+                        // Handle legacy embedded products if any
+                        sub.products.forEach(p => {
+                            p.categoryName = cat.name;
+                            p.subcategoryName = sub.name;
+                            p.subcategoryId = sub.id;
+                            p.parentSection = parentSection;
+                            if (!p.image && p.baseImagePath && p.images && p.images.length > 0) {
+                                p.image = p.baseImagePath + p.images[0];
+                            }
+                            p.link = `productDetails.html?id=${p.id}`;
+                            allProds.push(p);
+                        });
+                    }
                 });
             };
 
             if (cat.sections) {
-                cat.sections.forEach(section => {
-                    section.subcategories.forEach(sub => processSub(sub, section.name));
-                });
+                cat.sections.forEach(section => processSubcategories(section.subcategories, section.name));
             } else if (cat.subcategories) {
-                cat.subcategories.forEach(sub => processSub(sub, cat.name));
+                processSubcategories(cat.subcategories, cat.name);
             }
         });
+
+        // Wait for all external files to be loaded
+        await Promise.all(fetchPromises);
         return allProds;
     },
 
-    getProductsByCategory: async function(categoryNameRegex) {
+    getProductsBySubcategory: async function(subId) {
         await this.init();
-        const regex = new RegExp(categoryNameRegex, 'i');
-        let matched = [];
+        let subData = null;
         
+        this.productsDB.categories.forEach(cat => {
+            const findSub = (subs) => subs.find(s => s.id === subId);
+            if (cat.sections) {
+                cat.sections.forEach(sec => {
+                    const found = findSub(sec.subcategories);
+                    if (found) subData = found;
+                });
+            } else if (cat.subcategories) {
+                const found = findSub(cat.subcategories);
+                if (found) subData = found;
+            }
+        });
+
+        if (subData && subData.dataFile) {
+            try {
+                const response = await fetch(subData.dataFile);
+                return await response.json();
+            } catch (e) {
+                console.error("Failed to fetch subcategory data:", e);
+                return [];
+            }
+        }
+        return subData ? (subData.products || []) : [];
+    },
+
+    getProductsByCategory: async function(categoryNameRegex) {
         const all = await this.getAllProductsFlattened();
+        const regex = new RegExp(categoryNameRegex, 'i');
         return all.filter(p => regex.test(p.categoryName));
     },
 

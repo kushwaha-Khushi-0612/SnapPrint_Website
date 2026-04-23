@@ -166,77 +166,62 @@ function renderSubcategories() {
     const mainGrid = document.getElementById('new-arrivals-grid');
     const secondaryGrid = document.getElementById('collections-grid');
     
-    if (categoryData.sections) {
-        // Collect all subcategories from all sections
-        const allSubcategories = categoryData.sections.flatMap(s => s.subcategories);
-        
-        // 1. Populate New Arrivals (Main Grid)
-        // Find subcategories that have "New Arrival" tagged products, otherwise just take the first few
-        let newArrivalSubs = allSubcategories.filter(sub => 
-            sub.products && sub.products.some(p => p.badge === 'New Arrival' || p.badge === 'New')
-        );
-        
-        if (newArrivalSubs.length === 0) {
-            newArrivalSubs = allSubcategories.slice(0, 4);
-        } else {
-            newArrivalSubs = newArrivalSubs.slice(0, 4);
-        }
-        
-        mainGrid.innerHTML = newArrivalSubs.map(sub => {
-            if (!sub.image && sub.products && sub.products.length > 0) sub.image = sub.products[0].image;
-            return createSubcategoryCard(sub);
-        }).join('');
-        mainGrid.style.display = 'grid'; // Ensure it's visible
+    const isSpecialCategory = ['T-Shirts', 'Hoodies'].includes(categoryData.name);
 
-        // 2. Populate Collections (Secondary Grid)
-        const collections = allSubcategories
-            .filter(sub => !newArrivalSubs.find(nas => nas.id === sub.id))
-            .sort(() => 0.5 - Math.random())
-            .slice(0, 4);
-            
-        secondaryGrid.innerHTML = collections.map(sub => {
-            if (!sub.image && sub.products && sub.products.length > 0) sub.image = sub.products[0].image;
-            return createSubcategoryCard(sub);
-        }).join('');
+    if (isSpecialCategory && categoryData.sections) {
+        // Clear existing grids
+        mainGrid.parentElement.style.display = 'none';
+        secondaryGrid.parentElement.style.display = 'none';
+        
+        // Remove any previously rendered sections to avoid duplicates
+        const existingSections = document.querySelectorAll('.category-dynamic-section');
+        existingSections.forEach(s => s.remove());
 
-        // 3. Render the specific sections separately
+        // Render the specific sections separately (Men/Women)
         categoryData.sections.forEach((section, index) => {
             const sectionHtml = `
-                <div class="category-section-header">
-                    <h2 class="section-title">${section.name}</h2>
-                </div>
-                <div class="product-grid" id="section-grid-${index}">
-                    ${section.subcategories.map(sub => {
-                        if (!sub.image && sub.products && sub.products.length > 0) {
-                            sub.image = sub.products[0].image;
-                        }
-                        return createSubcategoryCard(sub);
-                    }).join('')}
-                </div>
+                <section class="subcategory-section category-dynamic-section">
+                    <div class="category-section-header">
+                        <h2 class="section-title">${section.name}</h2>
+                    </div>
+                    <div class="subcategory-grid" id="section-grid-${index}">
+                        ${section.subcategories.map(sub => {
+                            if (!sub.image && sub.products && sub.products.length > 0) {
+                                sub.image = sub.products[0].image;
+                            }
+                            return createSubcategoryCard(sub);
+                        }).join('')}
+                    </div>
+                </section>
             `;
-            
-            // Insert sections after the main grids to keep New Arrivals at the top
-            if (index === 0) {
-                // Insert after NEW ARRIVALS
-                mainGrid.parentElement.insertAdjacentHTML('afterend', sectionHtml);
-            } else {
-                // Insert after COLLECTIONS
-                secondaryGrid.parentElement.insertAdjacentHTML('afterend', sectionHtml);
-            }
+            secondaryGrid.parentElement.insertAdjacentHTML('afterend', sectionHtml);
         });
     } else {
+        // For other categories or if sections don't exist, use standard grid
+        mainGrid.parentElement.style.display = 'block';
+        secondaryGrid.parentElement.style.display = 'block';
+        
         const subcategories = categoryData.subcategories || [];
-        const midPoint = Math.ceil(subcategories.length / 2);
-        const newArrivals = subcategories.slice(0, midPoint);
-        const collections = subcategories.slice(midPoint);
+        // Flatten sections if they exist but we are not in special category
+        const allSubs = categoryData.sections 
+            ? categoryData.sections.flatMap(s => s.subcategories)
+            : subcategories;
+
+        const midPoint = Math.ceil(allSubs.length / 2);
+        const newArrivals = allSubs.slice(0, midPoint);
+        const collections = allSubs.slice(midPoint);
         
         mainGrid.innerHTML = newArrivals.map(sub => {
-            if (!sub.image && sub.products && sub.products.length > 0) sub.image = sub.products[0].image;
+            if (!sub.image && sub.products && sub.products.length > 0) {
+                sub.image = sub.products[0].image || '';
+            }
             return createSubcategoryCard(sub);
         }).join('');
         
         secondaryGrid.innerHTML = collections.map(sub => {
-            if (!sub.image && sub.products && sub.products.length > 0) sub.image = sub.products[0].image;
+            if (!sub.image && sub.products && sub.products.length > 0) {
+                sub.image = sub.products[0].image || '';
+            }
             return createSubcategoryCard(sub);
         }).join('');
     }
@@ -304,7 +289,7 @@ function createSubcategoryCard(subcategory) {
     return `
         <div class="subcategory-card">
             <div class="subcategory-card-image">
-                <img src="${subcategory.image}" alt="${subcategory.name}" loading="lazy">
+                ${subcategory.image ? `<img src="${subcategory.image}" alt="${subcategory.name}" loading="lazy">` : ''}
                 <div class="subcategory-wishlist" onclick="event.stopPropagation(); toggleWishlist('${subcategory.id}')">
                     <svg viewBox="0 0 24 24" stroke-width="2">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>

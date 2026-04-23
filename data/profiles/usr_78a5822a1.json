@@ -8,16 +8,17 @@
     "pincode": "208024",
     "analytics": {
         "categoryInterests": {
-            "Hoodies": 45,
+            "Hoodies": 47,
             "Mugs & Cups": 5,
             "Footwear": 37,
-            "Phone Cases": 38,
-            "T-Shirts": 53,
+            "Phone Cases": 39,
+            "T-Shirts": 82,
             "Face Masks": 4,
             "Key Chains": 9,
             "Photo Frames": 2,
-            "Pendants": 6,
-            "Tote Bags": 4
+            "Pendants": 7,
+            "Tote Bags": 4,
+            "Decor": 2
         },
         "subcategoryInterests": {
             "Cartoon": 1,
@@ -29,17 +30,28 @@
             "Foldable": 3,
             "Plain": 1,
             "Pocket": 1,
-            "Half Sleeve": 1
+            "Half Sleeve": 1,
+            "Hard": 1,
+            "V Neck": 4,
+            "Silver": 1,
+            "Raglan": 1
         },
         "badgeInterests": {
-            "New Arrival": 2,
-            "Limited Edition": 4,
+            "New Arrival": 3,
+            "Limited Edition": 5,
             "Special": 2,
             "Bestseller": 2,
             "Trending": 1,
-            "Occasional": 1
+            "Occasional": 1,
+            "50% OFF": 5
         },
         "viewHistory": [
+            "sub-menclothing-raglan-4",
+            "p-sub-silver-8",
+            "sub-menclothing-vneck-124",
+            "p-vneck-165",
+            "p-vneck-55",
+            "prod-phonecases-hard-4",
             "prod-t-shirts-menclothing-halfsleeve-2",
             "prod-footwear-menclothing-slides-5",
             "prod-totebags-foldable-2",
@@ -52,9 +64,9 @@
             "prod-footwear-womenclothing-slides-2",
             "prod-mugs&cups-cartoon-4"
         ],
-        "lastInteracted": 1776571962365
+        "lastInteracted": 1776919289920
     },
-    "lastSync": "2026-04-19 06:12:42",
+    "lastSync": "2026-04-23 06:41:29",
     "availedCoupons": [
         "FESTIVE_PRINT",
         "PRINT_PRO",

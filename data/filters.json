@@ -11,16 +11,39 @@
     ],
     "T-Shirts": [
         {
-            "id": "gsm",
-            "label": "Fabric Weight (GSM)",
+            "id": "material",
+            "label": "Material",
             "type": "checkbox",
-            "options": ["180", "200", "220", "240"]
+            "options": ["Cotton", "Polyester", "Dri-Fit", "Supima Cotton", "Cotton Blend"]
+        },
+        {
+            "id": "sleeve",
+            "label": "Sleeve Type",
+            "type": "checkbox",
+            "options": ["Half Sleeve", "Full Sleeve", "Sleeveless"]
+        },
+        {
+            "id": "fit",
+            "label": "Fit",
+            "type": "checkbox",
+            "options": ["Regular Fit", "Slim Fit", "Oversized Fit"]
+        },
+        {
+            "id": "neck",
+            "label": "Neck Type",
+            "type": "checkbox",
+            "options": ["Round Neck", "V Neck", "Polo", "Henley"]
         },
         {
             "id": "color",
             "label": "Colors",
             "type": "color",
-            "options": ["White", "Black", "Navy", "Gray", "Red", "Green", "Blue"]
+            "options": [
+                "White", "Black", "Navy Blue", "Grey", "Red", "Olive Green", 
+                "Maroon", "Yellow", "Purple", "Green", "Kiwi Green", 
+                "Asphalt", "Lilac", "Mint Green", "Ocean Blue", "Soft Pink", 
+                "Sunset Orange", "Teal Green"
+            ]
         }
     ],
     "Hoodies": [

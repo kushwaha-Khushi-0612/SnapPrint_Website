@@ -332,9 +332,12 @@ function renderDynamicFilters() {
 
 function getHexForColorName(name) {
     const map = {
-        'white': '#ffffff', 'black': '#000000', 'navy': '#000080', 
-        'gray': '#808080', 'red': '#ff0000', 'green': '#008000', 'blue': '#0000ff',
-        'clear': 'transparent', 'yellow': '#ffff00'
+        'white': '#ffffff', 'black': '#000000', 'navy': '#000080', 'navy blue': '#000080',
+        'gray': '#808080', 'grey': '#808080', 'red': '#ff0000', 'green': '#008000', 'blue': '#0000ff',
+        'clear': 'transparent', 'yellow': '#ffff00', 'maroon': '#800000', 'purple': '#800080',
+        'olive green': '#556b2f', 'kiwi green': '#8ee53f', 'asphalt': '#4e5452', 'lilac': '#c8a2c8',
+        'mint green': '#98ff98', 'ocean blue': '#0077be', 'soft pink': '#ffb6c1',
+        'sunset orange': '#fd5e53', 'teal green': '#006d5b'
     };
     return map[name.toLowerCase()] || '#ccc';
 }
@@ -490,32 +493,65 @@ function applyFilters() {
             const valStr = state.dynamicFilters[fid];
             if (!valStr || !match) return;
 
+            const selectedValues = valStr.split(',').map(v => v.toLowerCase().trim());
+
             if (fid === 'price') {
                 const max = parseInt(valStr.split('-')[1]);
                 if (p.price > max) match = false;
-            } else if (fid === 'gsm') {
-                const selectedGSMs = valStr.split(',').map(v => v.trim());
-                if (p.gsm) {
-                    if (!selectedGSMs.includes(p.gsm.toString())) match = false;
-                } else {
-                    const dataScope = ((p.description || '') + ' ' + (p.title || '')).toLowerCase();
-                    const hasMatch = selectedGSMs.some(gsm => dataScope.includes(gsm));
-                    if (!hasMatch) match = false;
-                }
             } else if (fid === 'color') {
-                const selectedColors = valStr.split(',').map(v => v.toLowerCase().trim());
                 const prodColor = (p.color || '').toLowerCase();
                 if (prodColor) {
-                    if (!selectedColors.includes(prodColor)) match = false;
+                    if (!selectedValues.includes(prodColor)) match = false;
                 } else {
                     const dataScope = ((p.description || '') + ' ' + (p.title || '')).toLowerCase();
-                    const hasMatch = selectedColors.some(color => dataScope.includes(color));
+                    const hasMatch = selectedValues.some(color => dataScope.includes(color));
+                    if (!hasMatch) match = false;
+                }
+            } else if (fid === 'material' || fid === 'fabric') {
+                const prodFabric = (p.features && p.features.fabric || '').toLowerCase();
+                if (prodFabric) {
+                    const hasMatch = selectedValues.some(opt => prodFabric.includes(opt));
+                    if (!hasMatch) match = false;
+                } else {
+                    const dataScope = ((p.description || '') + ' ' + (p.title || '')).toLowerCase();
+                    const hasMatch = selectedValues.some(opt => dataScope.includes(opt));
+                    if (!hasMatch) match = false;
+                }
+            } else if (fid === 'fit') {
+                const prodFit = (p.features && p.features.fit || '').toLowerCase();
+                if (prodFit) {
+                    const hasMatch = selectedValues.some(opt => prodFit.includes(opt));
+                    if (!hasMatch) match = false;
+                } else {
+                    const dataScope = ((p.description || '') + ' ' + (p.title || '')).toLowerCase();
+                    const hasMatch = selectedValues.some(opt => dataScope.includes(opt));
+                    if (!hasMatch) match = false;
+                }
+            } else if (fid === 'sleeve') {
+                const prodSleeve = (p.features && p.features.sleeve || '').toLowerCase();
+                if (prodSleeve) {
+                    const hasMatch = selectedValues.some(opt => prodSleeve.includes(opt));
+                    if (!hasMatch) match = false;
+                } else {
+                    const dataScope = ((p.description || '') + ' ' + (p.title || '')).toLowerCase();
+                    const hasMatch = selectedValues.some(opt => dataScope.includes(opt));
+                    if (!hasMatch) match = false;
+                }
+            } else if (fid === 'neck') {
+                const dataScope = ((p.description || '') + ' ' + (p.title || '')).toLowerCase();
+                const hasMatch = selectedValues.some(opt => dataScope.includes(opt));
+                if (!hasMatch) match = false;
+            } else if (fid === 'gsm') {
+                if (p.gsm) {
+                    if (!selectedValues.includes(p.gsm.toString())) match = false;
+                } else {
+                    const dataScope = ((p.description || '') + ' ' + (p.title || '')).toLowerCase();
+                    const hasMatch = selectedValues.some(gsm => dataScope.includes(gsm));
                     if (!hasMatch) match = false;
                 }
             } else {
-                const options = valStr.split(',');
                 const dataScope = ((p.description || '') + ' ' + (p.title || '')).toLowerCase();
-                const optionMatch = options.some(opt => dataScope.includes(opt));
+                const optionMatch = selectedValues.some(opt => dataScope.includes(opt));
                 if (!optionMatch) match = false;
             }
         });
