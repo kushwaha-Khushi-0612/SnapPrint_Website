@@ -12,13 +12,15 @@
             "Mugs & Cups": 5,
             "Footwear": 37,
             "Phone Cases": 39,
-            "T-Shirts": 82,
+            "T-Shirts": 92,
             "Face Masks": 4,
             "Key Chains": 9,
             "Photo Frames": 2,
             "Pendants": 7,
-            "Tote Bags": 4,
-            "Decor": 2
+            "Tote Bags": 6,
+            "Decor": 2,
+            "Men's Special": 6,
+            "Women's Special": 4
         },
         "subcategoryInterests": {
             "Cartoon": 1,
@@ -64,9 +66,9 @@
             "prod-footwear-womenclothing-slides-2",
             "prod-mugs&cups-cartoon-4"
         ],
-        "lastInteracted": 1776919289920
+        "lastInteracted": 1777374554019
     },
-    "lastSync": "2026-04-23 06:41:29",
+    "lastSync": "2026-04-28 13:09:14",
     "availedCoupons": [
         "FESTIVE_PRINT",
         "PRINT_PRO",

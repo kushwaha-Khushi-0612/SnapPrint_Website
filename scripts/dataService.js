@@ -33,6 +33,10 @@ const dataService = {
                         const fetchPromise = fetch(sub.dataFile)
                             .then(res => res.json())
                             .then(products => {
+                                if (!Array.isArray(products)) {
+                                    console.warn(`Data from ${sub.dataFile} is not an array:`, products);
+                                    return;
+                                }
                                 products.forEach(p => {
                                     p.categoryName = cat.name;
                                     p.subcategoryName = sub.name;
@@ -110,10 +114,64 @@ const dataService = {
         return subData ? (subData.products || []) : [];
     },
 
-    getProductsByCategory: async function(categoryNameRegex) {
-        const all = await this.getAllProductsFlattened();
-        const regex = new RegExp(categoryNameRegex, 'i');
-        return all.filter(p => regex.test(p.categoryName));
+    getProductsByCategory: async function(categoryName) {
+        await this.init();
+        const normalizedTarget = categoryName.replace(/[-\s]/g, '').toLowerCase();
+        
+        const cat = this.productsDB.categories.find(c => {
+            const normalizedName = c.name.replace(/[-\s]/g, '').toLowerCase();
+            return normalizedName === normalizedTarget;
+        });
+
+        if (!cat) return [];
+
+        let categoryProds = [];
+        const fetchPromises = [];
+
+        const processSubcategories = (subs, parentSection) => {
+            subs.forEach(sub => {
+                if (sub.dataFile) {
+                    const fetchPromise = fetch(sub.dataFile)
+                        .then(res => res.json())
+                        .then(products => {
+                            if (!Array.isArray(products)) return;
+                            products.forEach(p => {
+                                p.categoryName = cat.name;
+                                p.subcategoryName = sub.name;
+                                p.subcategoryId = sub.id;
+                                p.parentSection = parentSection;
+                                if (!p.image && p.baseImagePath && p.images && p.images.length > 0) {
+                                    p.image = p.baseImagePath + p.images[0];
+                                } else if (!p.image) {
+                                    p.image = 'constants/products/placeholder.jpg';
+                                }
+                                p.link = `productDetails.html?id=${p.id}`;
+                                categoryProds.push(p);
+                            });
+                        })
+                        .catch(err => console.error(`Failed to load ${sub.dataFile}:`, err));
+                    fetchPromises.push(fetchPromise);
+                } else if (sub.products) {
+                    sub.products.forEach(p => {
+                        p.categoryName = cat.name;
+                        p.subcategoryName = sub.name;
+                        p.subcategoryId = sub.id;
+                        p.parentSection = parentSection;
+                        p.link = `productDetails.html?id=${p.id}`;
+                        categoryProds.push(p);
+                    });
+                }
+            });
+        };
+
+        if (cat.sections) {
+            cat.sections.forEach(section => processSubcategories(section.subcategories, section.name));
+        } else if (cat.subcategories) {
+            processSubcategories(cat.subcategories, cat.name);
+        }
+
+        await Promise.all(fetchPromises);
+        return categoryProds;
     },
 
     /**

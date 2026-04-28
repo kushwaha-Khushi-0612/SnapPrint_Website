@@ -227,36 +227,6 @@
             ]
         },
         {
-            "id": "cat-frames",
-            "name": "Frames",
-            "subcategories": [
-                {
-                    "id": "sub-collage",
-                    "name": "Collage",
-                    "image": "https://picsum.photos/seed/sub-collage1/400/400",
-                    "description": "Collage Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Frames/Collage/products.json"
-                },
-                {
-                    "id": "sub-deskframe",
-                    "name": "Desk Frame",
-                    "image": "https://picsum.photos/seed/sub-deskframe1/400/400",
-                    "description": "Desk Frame Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Frames/Desk Frame/products.json"
-                },
-                {
-                    "id": "sub-wallart",
-                    "name": "Wall Art",
-                    "image": "https://picsum.photos/seed/sub-wallart1/400/400",
-                    "description": "Wall Art Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Frames/Wall Art/products.json"
-                }
-            ]
-        },
-        {
             "id": "cat-hoodies",
             "name": "Hoodies",
             "sections": [
@@ -829,36 +799,6 @@
             ]
         },
         {
-            "id": "cat-keychains",
-            "name": "Key Chains",
-            "subcategories": [
-                {
-                    "id": "sub-acrylic",
-                    "name": "Acrylic",
-                    "image": "https://picsum.photos/seed/sub-acrylic1/400/400",
-                    "description": "Acrylic Keychains ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Keychains/Acrylic/products.json"
-                },
-                {
-                    "id": "sub-metal",
-                    "name": "Metal",
-                    "image": "https://picsum.photos/seed/sub-metal1/400/400",
-                    "description": "Metal Keychains ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Keychains/Metal/products.json"
-                },
-                {
-                    "id": "sub-wood",
-                    "name": "Wood",
-                    "image": "constants/products/placeholder.jpg",
-                    "description": "Wood Keychains ",
-                    "productCount": "5+",
-                    "dataFile": "constants/products/Keychains/Wood/products.json"
-                }
-            ]
-        },
-        {
             "id": "cat-kidsclothing",
             "name": "Kids Clothing",
             "subcategories": [
@@ -877,58 +817,6 @@
                     "description": "Tees Kids Clothing ",
                     "productCount": "3+",
                     "dataFile": "constants/products/Kids Clothing/Tees/products.json"
-                }
-            ]
-        },
-        {
-            "id": "cat-masks",
-            "name": "Masks",
-            "subcategories": [
-                {
-                    "id": "sub-cotton",
-                    "name": "Cotton",
-                    "image": "https://picsum.photos/seed/sub-cotton1/400/400",
-                    "description": "Cotton Masks ",
-                    "productCount": "6+",
-                    "dataFile": "constants/products/Tote Bags/Cotton/products.json"
-                },
-                {
-                    "id": "sub-layered",
-                    "name": "Layered",
-                    "image": "https://picsum.photos/seed/sub-layered1/400/400",
-                    "description": "Layered Masks ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Masks/Layered/products.json"
-                }
-            ]
-        },
-        {
-            "id": "cat-mugs",
-            "name": "Mugs",
-            "subcategories": [
-                {
-                    "id": "sub-ceramic",
-                    "name": "Ceramic",
-                    "image": "https://picsum.photos/seed/sub-ceramic1/400/400",
-                    "description": "Ceramic Mugs ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs/Ceramic/products.json"
-                },
-                {
-                    "id": "sub-magicmug",
-                    "name": "Magic Mug",
-                    "image": "https://picsum.photos/seed/sub-magicmug1/400/400",
-                    "description": "Magic Mug Mugs ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs/Magic Mug/products.json"
-                },
-                {
-                    "id": "sub-travelmug",
-                    "name": "Travel Mug",
-                    "image": "https://picsum.photos/seed/sub-travelmug1/400/400",
-                    "description": "Travel Mug Mugs ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs/Travel Mug/products.json"
                 }
             ]
         },
@@ -1515,6 +1403,22 @@
                     "dataFile": "constants/products/Photo Frames/Couple/products.json"
                 },
                 {
+                    "id": "sub-deskframe",
+                    "name": "Desk Frame",
+                    "image": "https://picsum.photos/seed/sub-deskframe1/400/400",
+                    "description": "Desk Frame Frames ",
+                    "productCount": "8+",
+                    "dataFile": "constants/products/Frames/Desk Frame/products.json"
+                },
+                {
+                    "id": "sub-wallart",
+                    "name": "Wall Art",
+                    "image": "https://picsum.photos/seed/sub-wallart1/400/400",
+                    "description": "Wall Art Frames ",
+                    "productCount": "8+",
+                    "dataFile": "constants/products/Frames/Wall Art/products.json"
+                },
+                {
                     "id": "sub-customized",
                     "name": "Customized",
                     "image": "https://picsum.photos/seed/sub-customized1/400/400",
@@ -1960,6 +1864,20 @@
                     "dataFile": "constants/products/Tote Bags/Zipper/products.json"
                 }
             ]
+        },
+        {
+            "id": "cat-mens-special",
+            "name": "Men's Special",
+            "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2025%2F08%2FTshirt-half-sleeve.png&resizeTo=180&format=webp",
+            "description": "Curated collection for Men",
+            "subcategories": []
+        },
+        {
+            "id": "cat-womens-special",
+            "name": "Women's Special",
+            "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2025%2F08%2Fwomens-half-sleeve-tshirt.png&resizeTo=180&format=webp",
+            "description": "Curated collection for Women",
+            "subcategories": []
         }
     ]
 }

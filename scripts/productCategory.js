@@ -5,7 +5,9 @@
 
 // Get category from URL parameter
 const urlParams = new URLSearchParams(window.location.search);
-const currentCategory = urlParams.get('category') || 'tshirts';
+// Handle both 'tshirts' and 't-shirts' in URL
+const categoryParam = urlParams.get('category') || 't-shirts';
+const currentCategory = categoryParam.toLowerCase().includes('tshirt') ? 't-shirts' : categoryParam;
 
 // Initialize data state
 let categoryData = null;
@@ -112,12 +114,17 @@ async function loadCategoryData() {
     const db = window.dataService.productsDB;
     
     // Find category (case insensitive match of URL param)
-    let catRegex = new RegExp(currentCategory, 'i');
-    categoryData = db.categories.find(c => catRegex.test(c.name));
+    // Be more flexible with dashes in category names
+    const normalizedParam = currentCategory.replace(/[-\s]/g, '');
+    categoryData = db.categories.find(c => {
+        const normalizedName = c.name.replace(/[-\s]/g, '').toLowerCase();
+        return normalizedName === normalizedParam.toLowerCase() || 
+               c.id.toLowerCase().includes(normalizedParam.toLowerCase());
+    });
     
     if (!categoryData) {
-        console.error('Category not found:', currentCategory);
-        categoryData = db.categories[0]; // fallback
+        console.warn('Category not found:', currentCategory, 'Falling back to first available.');
+        categoryData = db.categories[0]; 
     }
 
     // Set icons
@@ -173,12 +180,22 @@ function renderSubcategories() {
         mainGrid.parentElement.style.display = 'none';
         secondaryGrid.parentElement.style.display = 'none';
         
-        // Remove any previously rendered sections to avoid duplicates
-        const existingSections = document.querySelectorAll('.category-dynamic-section');
-        existingSections.forEach(s => s.remove());
-
         // Render the specific sections separately (Men/Women)
+        // Use a wrapper to maintain order
+        const dynamicContainerId = 'dynamic-sections-container';
+        let dynamicContainer = document.getElementById(dynamicContainerId);
+        
+        if (!dynamicContainer) {
+            dynamicContainer = document.createElement('div');
+            dynamicContainer.id = dynamicContainerId;
+            secondaryGrid.parentElement.insertAdjacentElement('afterend', dynamicContainer);
+        } else {
+            dynamicContainer.innerHTML = '';
+        }
+
         categoryData.sections.forEach((section, index) => {
+            if (!section.subcategories || section.subcategories.length === 0) return;
+            
             const sectionHtml = `
                 <section class="subcategory-section category-dynamic-section">
                     <div class="category-section-header">
@@ -186,6 +203,7 @@ function renderSubcategories() {
                     </div>
                     <div class="subcategory-grid" id="section-grid-${index}">
                         ${section.subcategories.map(sub => {
+                            // Sub.products might not be pre-loaded, check existence safely
                             if (!sub.image && sub.products && sub.products.length > 0) {
                                 sub.image = sub.products[0].image;
                             }
@@ -194,7 +212,7 @@ function renderSubcategories() {
                     </div>
                 </section>
             `;
-            secondaryGrid.parentElement.insertAdjacentHTML('afterend', sectionHtml);
+            dynamicContainer.insertAdjacentHTML('beforeend', sectionHtml);
         });
     } else {
         // For other categories or if sections don't exist, use standard grid
@@ -234,11 +252,18 @@ function renderSubcategories() {
     if (categoryData.sections) {
         categoryData.sections.forEach(s => {
             subCount += s.subcategories.length;
-            s.subcategories.forEach(sub => totalProductsCount += sub.products.length);
+            s.subcategories.forEach(sub => {
+                // Safely handle missing products array (using productCount string if available)
+                const count = sub.products ? sub.products.length : (parseInt(sub.productCount) || 0);
+                totalProductsCount += count;
+            });
         });
     } else {
         subCount = categoryData.subcategories?.length || 0;
-        categoryData.subcategories?.forEach(sub => totalProductsCount += sub.products.length);
+        categoryData.subcategories?.forEach(sub => {
+            const count = sub.products ? sub.products.length : (parseInt(sub.productCount) || 0);
+            totalProductsCount += count;
+        });
     }
     
     document.getElementById('total-products').textContent = `${totalProductsCount}+`;
