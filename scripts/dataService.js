@@ -5,6 +5,7 @@
 
 const dataService = {
     productsDB: null,
+    cachedAllProducts: null,
 
     init: async function() {
         if (this.productsDB) return this.productsDB;
@@ -20,6 +21,8 @@ const dataService = {
     },
 
     getAllProductsFlattened: async function() {
+        if (this.cachedAllProducts) return this.cachedAllProducts;
+
         await this.init();
         
         let allProds = [];
@@ -82,6 +85,7 @@ const dataService = {
 
         // Wait for all external files to be loaded
         await Promise.all(fetchPromises);
+        this.cachedAllProducts = allProds;
         return allProds;
     },
 
@@ -194,11 +198,21 @@ const dataService = {
         
         if (recommended.length < count) {
             // Fill with random products if not enough recommendations
-            const randoms = all.filter(p => !recommended.find(r => r.id === p.id))
-                               .sort(() => 0.5 - Math.random());
-            recommended = recommended.concat(randoms.slice(0, count - recommended.length));
+            const needed = count - recommended.length;
+            const available = all.filter(p => !recommended.find(r => r.id === p.id));
+            const randoms = [];
+            const used = new Set();
+            while(randoms.length < needed && used.size < available.length) {
+                const idx = Math.floor(Math.random() * available.length);
+                if (!used.has(idx)) {
+                    used.add(idx);
+                    randoms.push(available[idx]);
+                }
+            }
+            recommended = recommended.concat(randoms);
         }
         
+        // Shuffle recommended slightly
         return recommended.sort(() => 0.5 - Math.random()).slice(0, count);
     },
 
@@ -218,7 +232,18 @@ const dataService = {
      */
     getRandomProducts: async function(count = 6) {
         const all = await this.getAllProductsFlattened();
-        return all.sort(() => 0.5 - Math.random()).slice(0, count);
+        const result = [];
+        const max = all.length;
+        if (max === 0) return result;
+        const used = new Set();
+        while(result.length < count && used.size < max) {
+            const idx = Math.floor(Math.random() * max);
+            if (!used.has(idx)) {
+                used.add(idx);
+                result.push(all[idx]);
+            }
+        }
+        return result;
     },
 
     getProductById: async function(id) {
