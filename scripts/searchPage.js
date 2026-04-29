@@ -16,7 +16,8 @@ const state = {
     dynamicFilters: {}, // Maps filter ID to array of selected values (or min/max object for slider)
     sort: 'recommended',
     page: 1,
-    searchQuery: ''
+    searchQuery: '',
+    disableFuzzyMatch: false
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -563,12 +564,15 @@ function applyFilters() {
     const suggestionEl = document.getElementById('search-suggestion');
     suggestionEl.classList.add('hide');
 
-    if (filtered.length === 0 && state.searchQuery && !state.selectedCategory) {
+    if (filtered.length === 0 && state.searchQuery && !state.selectedCategory && !state.disableFuzzyMatch) {
         // Try to fuzzy match a category
         const categoriesNodes = allCategoriesRaw.map(c => c.name);
         const bestMatch = getFuzzyMatch(state.searchQuery, categoriesNodes);
 
-        if (bestMatch && bestMatch.distance <= 2) {
+        // Increase threshold to allow more typos (e.g. "hadiiiiii" -> "Hoodies")
+        const threshold = Math.max(3, Math.floor(state.searchQuery.length * 0.6));
+
+        if (bestMatch && bestMatch.distance <= threshold) {
             console.log(`🎯 Fuzzy search: auto-applying category "${bestMatch.target}" for query "${state.searchQuery}"`);
             
             const originalQuery = state.searchQuery;
@@ -588,8 +592,8 @@ function applyFilters() {
             // Re-apply filter with corrected category
             filtered = allProducts.filter(p => (p.categoryName || '').toLowerCase() === state.selectedCategory);
             
-            // Show suggestion in UI
-            suggestionEl.innerHTML = `No results for "<strong>${originalQuery}</strong>". Showing results for <strong>${bestMatch.target}</strong> instead.`;
+            // Show suggestion in UI without a container, just italic text with a clickable link
+            suggestionEl.innerHTML = `Showing results for <strong>${bestMatch.target}</strong><br>Search instead for <a href="javascript:void(0)" onclick="forceOriginalSearch('${originalQuery.replace(/'/g, "\\'")}')"><strong>${originalQuery}</strong></a>`;
             suggestionEl.classList.remove('hide');
         }
     }
@@ -774,7 +778,24 @@ window.executeGlobalSearch = function(queryStr) {
     if (!q) q = document.getElementById('global-search-input')?.value;
     if (q) {
         state.searchQuery = q.toLowerCase();
+        state.disableFuzzyMatch = false; // Reset fuzzy override on new search
         state.page = 1;
         applyFilters();
     }
+};
+
+window.forceOriginalSearch = function(originalQuery) {
+    state.searchQuery = originalQuery.toLowerCase();
+    state.selectedCategory = '';
+    document.getElementById('category-select').value = '';
+    const globalSearchInput = document.getElementById('global-search-input');
+    if (globalSearchInput) globalSearchInput.value = originalQuery;
+    
+    state.disableFuzzyMatch = true; // Prevent auto-correction
+    state.page = 1;
+    
+    updateSubcategoryFilters();
+    renderDynamicFilters();
+    renderCategoryDropdown();
+    applyFilters();
 };

@@ -1637,4 +1637,240 @@ html {
 .category-grid .revealed {
     opacity: 1;
     transform: translateY(0);
-}
+}
+
+/* ==========================================================================
+   Blinkit-Style Promo Banners Section
+   ========================================================================== */
+.promo-banners-section {
+    padding: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.promo-banners-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Main Wide Banner */
+.promo-banner-main {
+    position: relative;
+    border-radius: 20px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.promo-content-left {
+    position: relative;
+    z-index: 2;
+    max-width: 50%;
+}
+
+.promo-content-left h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.promo-content-left p {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.shop-now-btn {
+    background: white;
+    color: #e62846;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.shop-now-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Secondary Banners (Row-based for isolated hover) */
+.promo-secondary-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.promo-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    transition: grid-template-columns 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.promo-banner-card {
+    position: relative;
+    border-radius: 16px;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    
+    /* Animation base */
+    width: 100%;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+/* Hover expansion animation (Desktop only) - Isolated to Row */
+@media (min-width: 1025px) {
+    .promo-row:has(.promo-banner-card:nth-child(1):hover) {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+    .promo-row:has(.promo-banner-card:nth-child(2):hover) {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .promo-row:has(.promo-banner-card:nth-child(3):hover) {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+
+    .promo-row .promo-banner-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        z-index: 10;
+    }
+}
+
+.promo-banner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+
+.promo-content {
+    position: relative;
+    z-index: 2;
+    max-width: 65%;
+    transition: transform 0.4s ease;
+}
+
+.promo-banner-card:hover .promo-content {
+    transform: translateX(5px);
+}
+
+.promo-banner-card h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.promo-banner-card p {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    color: #555;
+    font-weight: 500;
+}
+
+.order-now-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.order-now-btn:hover {
+    opacity: 0.8;
+}
+
+.mothers-btn {
+    background: #D81B60;
+    color: white;
+}
+
+.floating-icon {
+    transition: transform 0.4s ease;
+}
+
+.promo-banner-card:hover .floating-icon {
+    transform: scale(1.1) rotate(-10deg);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .promo-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    .promo-banner-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .promo-banners-section {
+        padding: 16px;
+    }
+    
+    .promo-banner-main {
+        height: 200px;
+        padding: 24px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .promo-content-left {
+        max-width: 100%;
+    }
+    
+    .promo-content-left h2 {
+        font-size: 1.8rem;
+    }
+    
+    .promo-row {
+        display: contents;
+    }
+    
+    .promo-secondary-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding-bottom: 8px;
+        scroll-behavior: smooth;
+    }
+    .promo-secondary-grid::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .promo-banner-card {
+        width: 85vw;
+        min-width: 85vw;
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        height: 160px;
+    }
+}

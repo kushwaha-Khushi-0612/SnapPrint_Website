@@ -9,18 +9,18 @@
     "analytics": {
         "categoryInterests": {
             "Hoodies": 47,
-            "Mugs & Cups": 5,
+            "Mugs & Cups": 7,
             "Footwear": 37,
             "Phone Cases": 39,
-            "T-Shirts": 98,
+            "T-Shirts": 105,
             "Face Masks": 4,
             "Key Chains": 9,
             "Photo Frames": 2,
             "Pendants": 7,
             "Tote Bags": 6,
             "Decor": 2,
-            "Men's Special": 6,
-            "Women's Special": 4
+            "Men's Special": 8,
+            "Women's Special": 6
         },
         "subcategoryInterests": {
             "Cartoon": 1,
@@ -36,7 +36,8 @@
             "Hard": 1,
             "V Neck": 4,
             "Silver": 1,
-            "Raglan": 1
+            "Raglan": 1,
+            "Holi": 1
         },
         "badgeInterests": {
             "New Arrival": 3,
@@ -45,9 +46,10 @@
             "Bestseller": 2,
             "Trending": 1,
             "Occasional": 1,
-            "50% OFF": 5
+            "50% OFF": 6
         },
         "viewHistory": [
+            "sub-menclothing-holi-24",
             "sub-menclothing-raglan-4",
             "p-sub-silver-8",
             "sub-menclothing-vneck-124",
@@ -66,9 +68,9 @@
             "prod-footwear-womenclothing-slides-2",
             "prod-mugs&cups-cartoon-4"
         ],
-        "lastInteracted": 1777376248409
+        "lastInteracted": 1777396008266
     },
-    "lastSync": "2026-04-28 13:37:28",
+    "lastSync": "2026-04-28 19:06:48",
     "availedCoupons": [
         "FESTIVE_PRINT",
         "PRINT_PRO",
