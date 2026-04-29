@@ -58,23 +58,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Wait for dataService to load db
     await window.dataService.init();
-    
+
     // Convert JSON database categories to UI categories array
     let dbCategories = window.dataService.productsDB.categories;
-    const iconsMap = {
-        'T-Shirts': 'constants/icons/tshirt.svg',
-        'Hoodies': 'constants/icons/hoodie.svg',
-        'Phone Cases': 'constants/icons/phone-case.svg',
-        'Mugs': 'constants/icons/mug.svg',
-        'Frames': 'constants/icons/frame.svg',
-        'Keychains': 'constants/icons/keychain.svg',
-        'Tote Bags': 'constants/icons/tote-bag.svg',
-        'Masks': 'constants/icons/facemask.svg',
-        'Kids Clothing': 'constants/icons/tshirt.svg',
-        'Jewelry': 'constants/icons/pendant.svg',
-        'Footwear': 'constants/icons/slipper.svg',
-        'Decor': 'constants/icons/star.svg'
-    };
 
     let categories = dbCategories.map(cat => {
         let count = 0;
@@ -85,17 +71,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else if (cat.subcategories) {
             cat.subcategories.forEach(s => count += (s.products ? s.products.length : 0));
         }
-        
+
         return {
             name: cat.name,
-            icon: iconsMap[cat.name] || 'constants/icons/star.svg',
+            icon: typeof getCategoryIcon === 'function' ? getCategoryIcon(cat.name) : '📦',
             count: count,
             link: `productCategory.html?category=${encodeURIComponent(cat.name)}`
         };
     });
 
-    // Initialize hero slider
-    initHeroSlider();
+    // Load and render Promo Banners dynamically
+    await loadAndRenderPromos();
 
     // Render categories
     renderCategories(categories, 'category-grid');
@@ -111,7 +97,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const bestSellers = await window.dataService.getRandomProducts(8);
     const youMightLike = await window.dataService.getRecommendedProducts(12);
     const recentlyViewed = await window.dataService.getRecentlyViewedProducts(8);
-    
+
     // Fetch and render Discounts
     try {
         const discResponse = await fetch('data/discounts.json');
@@ -124,14 +110,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     } catch (e) {
         console.warn('Discounts failed to load:', e);
     }
-    
+
     // Render product sections (using the global widget function)
     renderProducts(featuredProducts, 'featured-products', { variant: 'default' });
     renderProducts(specialOccasions, 'special-occasions', { variant: 'colored', enableCardColors: true });
     renderProducts(flashSales, 'flash-sales', { variant: 'curved-all' });
     renderProducts(trendingProducts, 'trending-products', { variant: 'curved-bottom' });
     renderProducts(newArrivals, 'new-arrivals', { variant: 'default' });
-    
+
     // Render Recently Viewed if exists
     if (recentlyViewed.length > 0) {
         document.getElementById('recently-viewed').parentElement.style.display = 'block';
@@ -144,11 +130,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderProducts(bestSellers, 'best-sellers', { variant: 'curved-all' });
     const surprisePicks = await window.dataService.getRandomProducts(12);
     const randomFinal = await window.dataService.getRandomProducts(12);
-    
+
     // Final high-density sections
     renderProducts(mostLovedProducts, 'most-loved', { variant: 'curved-bottom' });
     renderProducts(youMightLike, 'you-might-like', { variant: 'colored', enableCardColors: true });
-    
+
     // Add denser look to final sections
     const mixedGrid = document.getElementById('you-might-like');
     if (mixedGrid) mixedGrid.classList.add('product-grid-dense');
@@ -217,7 +203,7 @@ function initCarouselNav(containerId) {
             prevBtn.style.opacity = '1';
             prevBtn.style.pointerEvents = 'auto';
         }
-        
+
         if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 5) {
             nextBtn.style.opacity = '0.3';
             nextBtn.style.pointerEvents = 'none';
@@ -315,4 +301,112 @@ if (typeof window !== 'undefined') {
         formatCurrency,
         getRandomItems
     };
+}
+
+/**
+ * Fetch and Render Promos
+ */
+async function loadAndRenderPromos() {
+    try {
+        const response = await fetch('data/promos.json');
+        if (!response.ok) throw new Error('Failed to load promos');
+        const data = await response.json();
+
+        const container = document.querySelector('.promo-banners-container');
+        if (!container) return;
+
+        // Main banner
+        const main = data.mainPromo;
+        const mainHtml = `
+            <div class="promo-banner-main" style="background-image: ${main.gradient}, url('${main.image}'); cursor: pointer;" onclick="window.location.href='${main.link}'">
+                <div class="promo-content-left">
+                    <h2>${main.title}</h2>
+                    <p>${main.subtitle}</p>
+                    <button class="shop-now-btn" onclick="event.stopPropagation(); window.location.href='${main.link}'">${main.buttonText}</button>
+                </div>
+            </div>
+        `;
+
+        // Secondary banners grouped into rows
+        let secondaryHtml = '<div class="promo-secondary-grid">';
+
+        // Chunk array into groups of 3
+        const chunkSize = 3;
+        for (let i = 0; i < data.secondaryPromos.length; i += chunkSize) {
+            const chunk = data.secondaryPromos.slice(i, i + chunkSize);
+            secondaryHtml += '<div class="promo-row">';
+
+            chunk.forEach(promo => {
+                const bgStyle = promo.image
+                    ? `background-image: ${promo.gradient}, url('${promo.image}');`
+                    : `background: ${promo.gradient};`;
+
+                const titleStyle = promo.textColorTitle ? `color: ${promo.textColorTitle};` : '';
+                const subStyle = promo.textColorSubtitle ? `color: ${promo.textColorSubtitle}; font-family: cursive;` : '';
+                const btnStyle = (promo.buttonColor || promo.buttonTextColor)
+                    ? `style="background: ${promo.buttonColor || '#000'}; color: ${promo.buttonTextColor || '#fff'};"`
+                    : '';
+
+                const floatingIcon = promo.floatingIcon
+                    ? `<img src="${promo.floatingIcon}" class="floating-icon" alt="Icon" style="position: absolute; right: 20px; bottom: 20px; width: 60px; opacity: 0.2; pointer-events: none;">`
+                    : '';
+
+                secondaryHtml += `
+                    <div class="promo-banner-card" style="${bgStyle} cursor: pointer;" onclick="window.location.href='${promo.link}'">
+                        <div class="promo-content">
+                            <h3 style="${titleStyle}">${promo.title}</h3>
+                            <p style="${subStyle}">${promo.subtitle}</p>
+                            <button class="order-now-btn" ${btnStyle} onclick="event.stopPropagation(); window.location.href='${promo.link}'">${promo.buttonText}</button>
+                        </div>
+                        ${floatingIcon}
+                    </div>
+                `;
+            });
+            secondaryHtml += '</div>'; // End promo-row
+        }
+        secondaryHtml += '</div>'; // End promo-secondary-grid
+
+        container.innerHTML = mainHtml + secondaryHtml;
+
+        // Init mobile slider
+        initMobilePromoSlider();
+
+    } catch (e) {
+        console.error('Error rendering promos:', e);
+    }
+}
+
+/**
+ * Mobile Auto Slideshow
+ */
+function initMobilePromoSlider() {
+    const grid = document.querySelector('.promo-secondary-grid');
+    if (!grid) return;
+
+    let isScrolling = false;
+    let scrollInterval;
+
+    const startAutoScroll = () => {
+        if (window.innerWidth > 768) return;
+
+        scrollInterval = setInterval(() => {
+            if (isScrolling) return;
+            const maxScroll = grid.scrollWidth - grid.clientWidth;
+            if (maxScroll <= 0) return;
+
+            let nextScroll = grid.scrollLeft + grid.clientWidth * 0.85;
+            if (nextScroll >= maxScroll - 10) {
+                nextScroll = 0;
+            }
+            grid.scrollTo({ left: nextScroll, behavior: 'smooth' });
+        }, 3000);
+    };
+
+    const stopAutoScroll = () => clearInterval(scrollInterval);
+
+    grid.addEventListener('touchstart', () => { isScrolling = true; stopAutoScroll(); }, { passive: true });
+    grid.addEventListener('touchend', () => { isScrolling = false; startAutoScroll(); }, { passive: true });
+
+    startAutoScroll();
+    window.addEventListener('resize', () => { stopAutoScroll(); startAutoScroll(); });
 }

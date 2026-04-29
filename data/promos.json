@@ -1,0 +1,65 @@
+{
+  "mainPromo": {
+    "title": "Mega Print Festival!",
+    "subtitle": "Get up to 50% OFF on all custom prints & corporate orders",
+    "image": "constants/promos/discount_promo_bg.png",
+    "buttonText": "Shop Now",
+    "link": "searchPage.html?offer=mega-fest",
+    "gradient": "linear-gradient(to right, rgba(230, 40, 70, 0.9), rgba(230, 40, 70, 0.5))"
+  },
+  "secondaryPromos": [
+    {
+      "title": "Women's Custom Wear",
+      "subtitle": "Design your own unique style",
+      "image": "constants/promos/womens_fashion_bg.png",
+      "buttonText": "Order Now",
+      "link": "productCategory.html?category=Women's Special",
+      "gradient": "linear-gradient(to right, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0))"
+    },
+    {
+      "title": "Men's Urban Streetwear",
+      "subtitle": "Premium customized hoodies & tees",
+      "image": "constants/promos/mens_fashion_bg.png",
+      "buttonText": "Order Now",
+      "link": "productCategory.html?category=T-Shirts&subcategory=Oversized",
+      "gradient": "linear-gradient(to right, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0))"
+    },
+    {
+      "title": "Mother's Day Gifts",
+      "subtitle": "Surprise her with memories...",
+      "image": "",
+      "buttonText": "Order Now",
+      "link": "searchPage.html?q=mothers+day",
+      "gradient": "linear-gradient(135deg, #FFEBF0 0%, #FFD1E0 100%)",
+      "textColorTitle": "#D81B60",
+      "textColorSubtitle": "#ad1457",
+      "buttonColor": "#D81B60",
+      "buttonTextColor": "white",
+      "floatingIcon": "constants/icons/heart.svg"
+    },
+    {
+      "title": "Custom Mugs",
+      "subtitle": "Sip in style with personalized mugs",
+      "image": "constants/promos/mugs_promo_bg.png",
+      "buttonText": "Shop Mugs",
+      "link": "productCategory.html?category=Mugs & Cups",
+      "gradient": "linear-gradient(to right, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0))"
+    },
+    {
+      "title": "Premium Stationery",
+      "subtitle": "Notebooks, pens & business cards",
+      "image": "constants/promos/stationery_promo_bg.png",
+      "buttonText": "Shop Stationery",
+      "link": "searchPage.html?q=stationery",
+      "gradient": "linear-gradient(to right, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0))"
+    },
+    {
+      "title": "Wall Art & Posters",
+      "subtitle": "Decorate your space your way",
+      "image": "constants/promos/posters_promo_bg.png",
+      "buttonText": "Shop Posters",
+      "link": "productCategory.html?category=Photo Frames",
+      "gradient": "linear-gradient(to right, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0))"
+    }
+  ]
+}
