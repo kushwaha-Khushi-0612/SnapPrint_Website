@@ -163,7 +163,63 @@ function updatePageHeader() {
     document.getElementById('category-icon').textContent = categoryData.icon;
     document.getElementById('category-title').textContent = categoryData.name;
     document.getElementById('category-description').textContent = categoryData.description;
-    document.title = `SnapPrint - ${categoryData.name}`;
+    
+    // SEO Data Mapping
+    const seoData = {
+        'T-Shirts': {
+            title: 'Custom T-Shirts Printing Online India | Design Your Own T-Shirt – SnapPrint',
+            desc: 'Design and order custom t-shirts online in India with SnapPrint. High-quality printing, trendy designs, and fast delivery. Create your own t-shirt now!'
+        },
+        'Hoodies': {
+            title: 'Custom Hoodies & Sweatshirts India | Personalized Hoodie Printing – SnapPrint',
+            desc: 'Create your own hoodies and sweatshirts with custom prints. Perfect for gifts, brands, and personal use. Premium quality with fast delivery across India.'
+        },
+        'Kids Clothing': {
+            title: 'Custom Kids Clothing India | Personalized Kids T-Shirts & Wear – SnapPrint',
+            desc: 'Shop custom kids clothing online in India. Print names, photos, and designs on kids t-shirts and outfits. Safe fabric, vibrant prints, and quick delivery.'
+        },
+        'Mugs': {
+            title: 'Custom Mugs Printing Online India | Personalized Photo Mugs – SnapPrint',
+            desc: 'Design custom mugs with photos, names, or quotes. Perfect gifts for birthdays, anniversaries, and special occasions. Order personalized mugs online today!'
+        },
+        'Keychains': {
+            title: 'Custom Keychains Online India | Personalized Keychain Printing – SnapPrint',
+            desc: 'Create personalized keychains with photos or text. Stylish, durable, and perfect for gifting. Order custom keychains online with fast delivery in India.'
+        },
+        'Phone Cases': {
+            title: 'Custom Phone Cases India | Personalized Mobile Covers Online – SnapPrint',
+            desc: 'Design your own phone cases with photos, names, or artwork. High-quality printed mobile covers for all models. Order custom phone cases online now.'
+        },
+        'Frames': {
+            title: 'Custom Photo Frames Online India | Personalized Picture Frames – SnapPrint',
+            desc: 'Turn your memories into beautiful custom photo frames. Perfect for home decor and gifting. High-quality prints with fast delivery across India.'
+        },
+        'Tote Bags': {
+            title: 'Custom Tote Bags India | Personalized Printed Tote Bags Online – SnapPrint',
+            desc: 'Shop custom tote bags with unique prints and designs. Eco-friendly, stylish, and perfect for daily use or gifting. Design your tote bag online today!'
+        },
+        'Jewelry': {
+            title: 'Custom Photo Pendants India | Personalized Jewelry Online – SnapPrint',
+            desc: 'Create personalized pendants with your photo or name. Unique jewelry for gifting or personal style. Order custom pendants online with premium finish.'
+        }
+    };
+
+    const currentSeo = seoData[categoryData.name] || {
+        title: `Custom ${categoryData.name} India | Personalized Gifts Online – SnapPrint`,
+        desc: `Browse custom ${categoryData.name.toLowerCase()} at SnapPrint. High-quality personalized products with fast delivery across India.`
+    };
+
+    document.title = currentSeo.title;
+    
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+        metaDesc.setAttribute("content", currentSeo.desc);
+    } else {
+        const newMetaDesc = document.createElement('meta');
+        newMetaDesc.name = "description";
+        newMetaDesc.content = currentSeo.desc;
+        document.head.appendChild(newMetaDesc);
+    }
 }
 
 /**

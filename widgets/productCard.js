@@ -43,21 +43,45 @@ function createProductCard(config) {
         ? Math.round(((originalPrice - price) / originalPrice) * 100)
         : 0;
 
-    // Badge styling mapping - simplified to single premium look
+    // Badge styling mapping
     const getBadgeClass = (badgeText) => {
         return badgeText ? 'badge-standard' : '';
     };
 
+    // Dynamic SEO Keywords Mapping based on product title
+    const seoKeywordsMap = {
+        't-shirt': 'custom t shirts India, printed t shirts online, design your own t shirt',
+        'hoodie': 'custom hoodies India, personalized hoodies, custom sweatshirts',
+        'mug': 'custom mugs India, photo mugs online, birthday photo gifts',
+        'frame': 'custom photo frames, photo collage prints, custom wall frames',
+        'phone': 'custom phone cases, printed mobile covers',
+        'keychain': 'custom keychains India, engraved accessories',
+        'tote': 'custom tote bags, printed tote bags India',
+        'kids': 'custom kids clothing, personalized kids wear',
+        'default': 'personalized gifts online, custom printing India, print on demand India'
+    };
+
+    let dynamicKeywords = seoKeywordsMap['default'];
+    if (title) {
+        const lowerTitle = title.toLowerCase();
+        for (const [key, keywords] of Object.entries(seoKeywordsMap)) {
+            if (key !== 'default' && lowerTitle.includes(key)) {
+                dynamicKeywords = keywords;
+                break;
+            }
+        }
+    }
+
     return `
-        <a href="${link}" class="product-card-link" onclick="if(window.analyticsService) window.analyticsService.trackProductView(${JSON.stringify(config).replace(/"/g, '&quot;')});" style="text-decoration: none; color: inherit; display: block; height: 100%;">
-            <div class="product-card-detail ${variant ? `product-card-${variant}` : ''}" data-product-id="${productId}">
+        <a href="${link}" class="product-card-link" title="${title} | ${dynamicKeywords}" onclick="if(window.analyticsService) window.analyticsService.trackProductView(${JSON.stringify(config).replace(/"/g, '&quot;')});" style="text-decoration: none; color: inherit; display: block; height: 100%;">
+            <div class="product-card-detail ${variant ? `product-card-${variant}` : ''}" data-product-id="${productId}" data-keywords="${dynamicKeywords}">
                 <div class="badge-stack">
                     ${badge ? `<div class="product-badge badge-standard">${badge}</div>` : ''}
                     ${config.productTag ? `<div class="product-tag">${config.productTag}</div>` : ''}
                 </div>
                 
                 <div class="product-card-image">
-                    <img src="${image}" alt="${title}" loading="lazy">
+                    <img src="${image}" alt="${title} - ${dynamicKeywords}" loading="lazy">
                     ${showWishlist ? `
                         <button class="wishlist-btn" onclick="event.preventDefault(); event.stopPropagation(); toggleWishlist('${productId}')" data-product-id="${productId}" aria-label="Add to wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

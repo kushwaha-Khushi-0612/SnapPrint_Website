@@ -473,8 +473,9 @@ function applyFilters() {
         let match = true;
 
         if (state.searchQuery) {
-            const matchesText = p.title.toLowerCase().includes(state.searchQuery) ||
-                                (p.description && p.description.toLowerCase().includes(state.searchQuery));
+            const keywords = state.searchQuery.split(/[\s,]+/).filter(k => k.length > 0);
+            const dataScope = ((p.title || '') + ' ' + (p.description || '') + ' ' + (p.categoryName || '') + ' ' + (p.subcategoryName || '')).toLowerCase();
+            const matchesText = keywords.every(kw => dataScope.includes(kw));
             if (!matchesText) match = false;
         }
 
