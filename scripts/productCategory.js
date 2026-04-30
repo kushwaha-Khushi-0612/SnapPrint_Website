@@ -367,11 +367,12 @@ async function renderPersonalizedSections() {
  * Create subcategory card HTML
  */
 function createSubcategoryCard(subcategory) {
+    const isActive = window.wishlistService?.has(subcategory.id) ? 'active' : '';
     return `
         <div class="subcategory-card">
             <div class="subcategory-card-image">
                 ${subcategory.image ? `<img src="${subcategory.image}" alt="${subcategory.name}" loading="lazy">` : ''}
-                <div class="subcategory-wishlist" onclick="event.stopPropagation(); toggleWishlist('${subcategory.id}')">
+                <div class="subcategory-wishlist ${isActive}" onclick="event.stopPropagation(); toggleWishlist('${subcategory.id}')">
                     <svg viewBox="0 0 24 24" stroke-width="2">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                     </svg>
@@ -411,11 +412,12 @@ function createSubcategoryCard(subcategory) {
  * Create color category card HTML
  */
 function createColorCard(color) {
+    const isActive = window.wishlistService?.has(color.id) ? 'active' : '';
     return `
         <div class="subcategory-card color-card" data-color="${color.color}">
             <div class="subcategory-card-image">
                 <img src="${color.image}" alt="${color.name}" loading="lazy">
-                <div class="subcategory-wishlist" onclick="event.stopPropagation(); toggleWishlist('${color.id}')">
+                <div class="subcategory-wishlist ${isActive}" onclick="event.stopPropagation(); toggleWishlist('${color.id}')">
                     <svg viewBox="0 0 24 24" stroke-width="2">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                     </svg>
@@ -455,11 +457,12 @@ function createColorCard(color) {
  * Create GSM category card HTML
  */
 function createGSMCard(gsm) {
+    const isActive = window.wishlistService?.has(gsm.id) ? 'active' : '';
     return `
         <div class="subcategory-card gsm-card">
             <div class="subcategory-card-image">
                 <img src="${gsm.image}" alt="${gsm.name}" loading="lazy">
-                <div class="subcategory-wishlist" onclick="event.stopPropagation(); toggleWishlist('${gsm.id}')">
+                <div class="subcategory-wishlist ${isActive}" onclick="event.stopPropagation(); toggleWishlist('${gsm.id}')">
                     <svg viewBox="0 0 24 24" stroke-width="2">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                     </svg>
@@ -582,17 +585,30 @@ function formatCurrency(amount) {
 }
 
 /**
- * Toggle wishlist
+ * Toggle wishlist for subcategories
  */
 function toggleWishlist(itemId) {
+    if (!window.wishlistService) return;
+    
+    // Check if user is logged in first
+    const user = window.authService?.getCurrentUser();
+    if (!user) {
+        window.dispatchEvent(new CustomEvent('wishlist:require-login'));
+        return;
+    }
+    
     const wishlistBtn = event.currentTarget;
-    wishlistBtn.classList.toggle('active');
+    const isNowActive = !wishlistBtn.classList.contains('active');
     
-    // Show feedback
-    const feedback = wishlistBtn.classList.contains('active') ? 'Added to wishlist' : 'Removed from wishlist';
-    showNotification(feedback);
-    
-    console.log('Wishlist toggled:', itemId);
+    if (isNowActive) {
+        wishlistBtn.classList.add('active');
+        window.wishlistService.add(itemId, 'subcategory');
+        showNotification('Added collection to wishlist');
+    } else {
+        wishlistBtn.classList.remove('active');
+        window.wishlistService.remove(itemId);
+        showNotification('Removed collection from wishlist');
+    }
 }
 
 /**

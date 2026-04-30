@@ -1,0 +1,37 @@
+{
+    "id": "usr_e51248f21",
+    "hash": "5983610742",
+    "phone": "8896538118",
+    "joinDate": "2026-04-30T02:47:58Z",
+    "name": "",
+    "email": "",
+    "addresses": {
+        "home": {
+            "address": "",
+            "pincode": ""
+        },
+        "office": {
+            "address": "",
+            "pincode": ""
+        },
+        "friends": {
+            "address": "",
+            "pincode": ""
+        }
+    },
+    "preference_category": "",
+    "avg_time_on_site": 0,
+    "avg_order_qty": 0,
+    "last_chosen_address": 1,
+    "analytics": {
+        "categoryInterests": {
+            "T-Shirts": 4,
+            "Decor": 8
+        },
+        "subcategoryInterests": [],
+        "badgeInterests": [],
+        "viewHistory": [],
+        "lastInteracted": 1777510544837
+    },
+    "lastSync": "2026-04-30 02:55:44"
+}

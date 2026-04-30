@@ -266,6 +266,7 @@ function setupQuantityControls() {
 function setupActionButtons() {
     const addToCartBtn = document.getElementById('add-to-cart-btn');
     const buyNowBtn = document.getElementById('buy-now-btn');
+    const wishlistBtn = document.getElementById('main-product-wishlist');
     
     addToCartBtn.addEventListener('click', () => {
         const size = document.querySelector('.size-btn.active')?.dataset.size || 'M';
@@ -282,6 +283,34 @@ function setupActionButtons() {
         
         alert(`Proceeding to checkout...\n\nProduct: ${productData.title}\nSize: ${size}\nColor: ${color}\nQuantity: ${quantity}\nTotal: ₹${productData.price * quantity}`);
     });
+
+    if (wishlistBtn && window.wishlistService) {
+        // Init state
+        if (window.wishlistService.has(productId)) wishlistBtn.classList.add('active');
+
+        wishlistBtn.addEventListener('click', () => {
+            const user = window.authService?.getCurrentUser();
+            if (!user) {
+                window.dispatchEvent(new CustomEvent('wishlist:require-login'));
+                return;
+            }
+
+            const isActive = wishlistBtn.classList.contains('active');
+            if (isActive) {
+                wishlistBtn.classList.remove('active');
+                window.wishlistService.remove(productId);
+            } else {
+                wishlistBtn.classList.add('active');
+                window.wishlistService.add(productId);
+            }
+        });
+
+        // Sync with global updates
+        window.addEventListener('wishlist:updated', () => {
+            if (window.wishlistService.has(productId)) wishlistBtn.classList.add('active');
+            else wishlistBtn.classList.remove('active');
+        });
+    }
 }
 
 /**

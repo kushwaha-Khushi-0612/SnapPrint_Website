@@ -1,0 +1,24 @@
+{
+    "usr_e51248f21": [
+        {
+            "productId": "p-sub-ringholder-1",
+            "itemType": "product",
+            "savedAt": 1777510090418
+        },
+        {
+            "productId": "sub-menclothing-graphic",
+            "itemType": "subcategory",
+            "savedAt": 1777510133803
+        },
+        {
+            "productId": "sub-menclothing-halfsleeves",
+            "itemType": "subcategory",
+            "savedAt": 1777510158572
+        },
+        {
+            "productId": "p-sub-vintage-5",
+            "itemType": "product",
+            "savedAt": 1777510567372
+        }
+    ]
+}

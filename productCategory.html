@@ -90,9 +90,10 @@
                 </div>
 
                 <div class="header-actions">
-                    <button class="header-btn">
+                    <button class="header-btn" id="wishlist-header-btn" onclick="window.location.href='wishlist.html'">
                         <img src="constants/icons/heart.svg" alt="Wishlist" class="icon">
                         <span>Wishlist</span>
+                        <span class="wishlist-badge" id="wishlist-badge" style="display:none;">0</span>
                     </button>
                     <button class="header-btn">
                         <img src="constants/icons/cart.svg" alt="Cart" class="icon">
@@ -318,6 +319,7 @@
 
     <!-- Scripts -->
     <script src="scripts/authService.js"></script>
+    <script src="scripts/wishlistService.js"></script>
     <script src="widgets/loginModal.js"></script>
     <script src="scripts/globalNavigation.js"></script>
     <script src="widgets/productCard.js"></script>
