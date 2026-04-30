@@ -124,4 +124,60 @@ document.addEventListener('DOMContentLoaded', () => {
         window.dispatchEvent(new CustomEvent('auth:logout'));
         window.location.href = 'index.html';
     });
+
+    // 7. Render Mini Wishlist
+    const renderMiniWishlist = async () => {
+        const view = document.getElementById('view-wishlist');
+        if (!view) return;
+
+        const savedItems = window.wishlistService?.getAll() || [];
+        if (savedItems.length === 0) {
+            view.innerHTML = `
+                <div class="profile-card placeholder-card">
+                    <img src="constants/icons/heart.svg" alt="" class="placeholder-icon">
+                    <h3>My Wishlist</h3>
+                    <p>Your wishlist is currently empty.</p>
+                    <a href="index.html" class="btn-primary" style="text-decoration: none; display: inline-block; margin-top: 16px;">Browse Products</a>
+                </div>
+            `;
+            return;
+        }
+
+        view.innerHTML = `<div class="profile-card"><div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;"><h3>Saved Items (${savedItems.length})</h3><a href="wishlist.html" style="color:#ff4d6d; text-decoration:none; font-weight:600; font-size:14px;">View All</a></div><div id="profile-wl-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:12px;"></div></div>`;
+        const grid = document.getElementById('profile-wl-grid');
+        
+        const db = window.dataService?.productsDB || await window.dataService?.init();
+        const allProducts = await window.dataService?.getAllProductsFlattened() || [];
+        let allSubcategories = [];
+        if (db?.categories) {
+            db.categories.forEach(cat => {
+                if (cat.sections) cat.sections.forEach(sec => allSubcategories.push(...sec.subcategories));
+                if (cat.subcategories) allSubcategories.push(...cat.subcategories);
+            });
+        }
+
+        // Show max 4 recent items
+        const recent = savedItems.sort((a,b) => b.savedAt - a.savedAt).slice(0, 4);
+
+        recent.forEach(saved => {
+            let itemData = saved.itemType === 'subcategory' ? allSubcategories.find(s => String(s.id) === String(saved.productId)) : allProducts.find(p => String(p.id) === String(saved.productId));
+            itemData = itemData || saved;
+
+            const isSub = saved.itemType === 'subcategory';
+            const link = isSub ? `searchPage.html?subcategory=${saved.productId}` : `productDetails.html?id=${saved.productId}`;
+
+            grid.innerHTML += `
+                <a href="${link}" style="text-decoration:none; color:inherit; display:flex; gap:12px; align-items:center; background:#f9fafb; padding:10px; border-radius:10px; border:1px solid #eaeaea; transition:all 0.2s;">
+                    <img src="${itemData.image || 'constants/products/placeholder.jpg'}" style="width:64px; height:64px; object-fit:cover; border-radius:6px; flex-shrink:0;">
+                    <div style="flex:1; min-width:0;">
+                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#888;">${isSub ? 'Collection' : 'Product'}</div>
+                        <div style="font-weight:600; font-size:14px; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:#111;">${itemData.name || itemData.title || 'Unknown'}</div>
+                    </div>
+                </a>
+            `;
+        });
+    };
+
+    renderMiniWishlist();
+    window.addEventListener('wishlist:updated', renderMiniWishlist);
 });

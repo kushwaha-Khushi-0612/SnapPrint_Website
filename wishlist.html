@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist | SnapPrint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/homepage.css">
+    <link rel="stylesheet" href="styles/loginModal.css">
+    <link rel="icon" type="image/x-icon" href="constants/images/favicon.ico">
+    <script src="scripts/dataService.js"></script>
+    <script src="scripts/analyticsService.js"></script>
+    <style>
+        /* ===== TOAST ===== */
+        #sp-toast-container { position:fixed; bottom:24px; right:24px; z-index:999999; display:flex; flex-direction:column; gap:10px; }
+        .sp-toast {
+            background:#1a1a1a; color:#fff; padding:14px 20px; border-radius:12px;
+            font-family:'Inter',sans-serif; font-size:14px; font-weight:500;
+            display:flex; align-items:center; gap:10px; min-width:260px;
+            box-shadow:0 8px 32px rgba(0,0,0,0.3);
+            animation: toastIn 0.35s cubic-bezier(0.34,1.56,0.64,1) both;
+        }
+        .sp-toast.out { animation: toastOut 0.3s ease both; }
+        .sp-toast.success { border-left:3px solid #22c55e; }
+        .sp-toast.error   { border-left:3px solid #ef4444; }
+        .sp-toast.info    { border-left:3px solid #6366f1; }
+        @keyframes toastIn  { from{opacity:0;transform:translateX(60px)} to{opacity:1;transform:translateX(0)} }
+        @keyframes toastOut { from{opacity:1;transform:translateX(0)} to{opacity:0;transform:translateX(60px)} }
+
+        /* ===== CONFIRM MODAL ===== */
+        #sp-confirm-overlay {
+            position:fixed; inset:0; z-index:99998; background:rgba(0,0,0,0.6);
+            display:flex; align-items:center; justify-content:center;
+            animation: fadeIn 0.2s ease;
+        }
+        @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+        .sp-confirm-box {
+            background:#fff; border-radius:16px; padding:32px 28px; max-width:360px; width:90%;
+            text-align:center; box-shadow:0 24px 60px rgba(0,0,0,0.2);
+            animation: scaleIn 0.25s cubic-bezier(0.34,1.56,0.64,1);
+        }
+        @keyframes scaleIn { from{transform:scale(0.85);opacity:0} to{transform:scale(1);opacity:1} }
+        .sp-confirm-box h4 { margin:0 0 8px; font-size:18px; }
+        .sp-confirm-box p  { margin:0 0 24px; color:#666; font-size:14px; }
+        .sp-confirm-actions { display:flex; gap:10px; justify-content:center; }
+        .sp-confirm-actions button { padding:10px 24px; border-radius:10px; font-size:14px; font-weight:600; cursor:pointer; border:none; transition:all 0.2s; }
+        .sp-btn-cancel  { background:#f1f5f9; color:#444; }
+        .sp-btn-confirm { background:#ef4444; color:#fff; }
+        .sp-btn-cancel:hover  { background:#e2e8f0; }
+        .sp-btn-confirm:hover { background:#dc2626; }
+
+        /* ===== HERO ===== */
+        .wl-hero { background:linear-gradient(135deg,#0f0f0f 0%,#1a1a2e 60%,#16213e 100%); padding:52px 40px 44px; position:relative; overflow:hidden; }
+        .wl-hero::before { content:''; position:absolute; top:-40%; right:-10%; width:500px; height:500px; background:radial-gradient(circle,rgba(159,122,234,0.15) 0%,transparent 70%); pointer-events:none; }
+        .wl-hero-inner { max-width:1200px; margin:0 auto; position:relative; z-index:1; }
+        .wl-hero h2 { font-size:32px; font-weight:800; color:#fff; margin:0 0 6px; display:flex; align-items:center; gap:14px; }
+        .wl-hero-icon { display:inline-flex; align-items:center; justify-content:center; width:46px; height:46px; background:rgba(255,80,100,0.15); border:1px solid rgba(255,80,100,0.3); border-radius:14px; animation:heartPulse 2s ease-in-out infinite; }
+        @keyframes heartPulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.1)} }
+        .wl-hero p { color:rgba(255,255,255,0.5); font-size:14px; margin:0 0 16px; }
+        .wl-count-pill { display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.75); padding:6px 14px; border-radius:999px; font-size:13px; font-weight:600; }
+
+        /* ===== STATES ===== */
+        .wl-wall, .wl-empty { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:80px 24px; gap:16px; text-align:center; }
+        .wl-wall .lock { font-size:56px; animation:floatUp 3s ease-in-out infinite; }
+        .wl-empty .emp { font-size:56px; animation:heartBeat2 2s ease-in-out infinite; }
+        @keyframes floatUp   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+        @keyframes heartBeat2{ 0%,100%{transform:scale(1)} 40%{transform:scale(1.15)} 60%{transform:scale(1)} }
+        .wl-wall h3, .wl-empty h3 { font-size:22px; font-weight:700; margin:0; }
+        .wl-wall p,  .wl-empty p  { color:#666; font-size:14px; max-width:340px; margin:0; }
+        .wl-cta { padding:13px 32px; border:none; border-radius:12px; font-size:14px; font-weight:600; cursor:pointer; transition:all 0.3s ease; }
+        .wl-cta-dark { background:#000; color:#fff; }
+        .wl-cta-grad { background:linear-gradient(135deg,#667eea,#764ba2); color:#fff; }
+        .wl-cta:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.2); }
+
+        /* ===== TOOLBAR + FILTERS ===== */
+        .wl-main { max-width:1400px; margin:0 auto; padding:32px 32px; }
+        .wl-toolbar { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:20px; }
+        .wl-toolbar-left { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+        .wl-toolbar h3 { font-size:17px; font-weight:700; margin:0; }
+        .wl-search { padding:9px 14px; border:1px solid #e2e8f0; border-radius:10px; font-size:14px; min-width:220px; outline:none; transition:border 0.2s; font-family:'Inter',sans-serif; }
+        .wl-search:focus { border-color:#6366f1; }
+        .wl-filter-select { padding:9px 14px; border:1px solid #e2e8f0; border-radius:10px; font-size:14px; outline:none; font-family:'Inter',sans-serif; cursor:pointer; background:#fff; }
+        .wl-clear-btn { padding:8px 18px; background:transparent; border:1px solid #ddd; border-radius:8px; font-size:13px; font-weight:500; color:#555; cursor:pointer; transition:all 0.2s; }
+        .wl-clear-btn:hover { border-color:#ef4444; color:#ef4444; }
+
+        /* ===== GRID ===== */
+        .wl-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:20px; }
+        .wl-card-wrap { position:relative; animation:cardIn 0.4s cubic-bezier(0.4,0,0.2,1) both; }
+        @keyframes cardIn { from{opacity:0;transform:translateY(18px) scale(0.96)} to{opacity:1;transform:translateY(0) scale(1)} }
+        .wl-card-wrap .wl-remove-btn {
+            position:absolute; top:10px; right:10px; z-index:10; width:30px; height:30px;
+            background:#fff; border:none; border-radius:50%; display:flex; align-items:center; justify-content:center;
+            cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.15); transition:all 0.2s; font-size:13px;
+        }
+        .wl-card-wrap .wl-remove-btn:hover { background:#ef4444; color:#fff; transform:scale(1.1); }
+        .wl-no-results { grid-column:1/-1; text-align:center; padding:48px 24px; color:#888; font-size:15px; }
+
+        /* ===== WISHLIST BADGE ===== */
+        .wishlist-badge { position:absolute; top:-6px; right:-6px; background:linear-gradient(135deg,#ff4d6d,#ff6b6b); color:#fff; font-size:10px; font-weight:700; min-width:18px; height:18px; border-radius:999px; display:flex; align-items:center; justify-content:center; padding:0 4px; pointer-events:none; box-shadow:0 2px 8px rgba(255,77,109,0.4); }
+        #wishlist-header-btn { position:relative; }
+
+        /* ===== COMPACT CARDS ===== */
+        .wl-grid-small { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:16px; }
+        .wl-card-compact { position:relative; background:#fff; border:1px solid #eaeaea; border-radius:12px; padding:12px; transition:all 0.2s; box-shadow:0 2px 8px rgba(0,0,0,0.03); animation:cardIn 0.4s cubic-bezier(0.4,0,0.2,1) both; }
+        .wl-card-compact:hover { border-color:#d1d5db; box-shadow:0 8px 24px rgba(0,0,0,0.08); transform:translateY(-2px); }
+        .wl-card-compact .wl-remove-btn { position:absolute; top:-8px; right:-8px; width:24px; height:24px; border-radius:50%; background:#fff; border:1px solid #eaeaea; color:#666; font-size:10px; cursor:pointer; display:flex; align-items:center; justify-content:center; opacity:0; transition:all 0.2s; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+        .wl-card-compact:hover .wl-remove-btn { opacity:1; }
+        .wl-card-compact .wl-remove-btn:hover { background:#ef4444; color:#fff; border-color:#ef4444; }
+
+        @media(max-width:768px){
+            .wl-hero { padding:36px 20px 32px; }
+            .wl-hero h2 { font-size:24px; }
+            .wl-main { padding:20px 16px; }
+            .wl-grid { grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:12px; }
+            .wl-grid-small { grid-template-columns: 1fr; gap:12px; } /* Force 1 column on mobile to prevent text squeezing */
+            .wl-card-compact .wl-remove-btn { opacity:1; } /* Always show remove button on touch devices */
+            .wl-search { min-width:160px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="sp-toast-container"></div>
+
+    <div class="main-container">
+        <header class="header">
+            <div class="header-top">
+                <button class="hamburger-menu" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+                <div class="logo" style="cursor:pointer" onclick="window.location.href='/'">
+                    <img src="constants/images/logo.jpeg" alt="SnapPrint" style="height:40px;width:auto;border-radius:6px;">
+                    <div class="logo-text-container" style="display:flex;flex-direction:column;text-align:left;justify-content:center;">
+                        <h1 style="margin:0;line-height:1;">SnapPrint</h1>
+                        <span class="tagline" style="line-height:1.2;margin-top:2px;">India's No.1 Custom Printing &amp; Accessories Brand</span>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products, categories...">
+                    <button class="search-btn"><img src="constants/icons/search.svg" alt="Search" class="icon"></button>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" id="wishlist-header-btn" onclick="window.location.href='wishlist.html'">
+                        <img src="constants/icons/heart.svg" alt="Wishlist" class="icon">
+                        <span>Wishlist</span>
+                        <span class="wishlist-badge" id="wishlist-badge" style="display:none;">0</span>
+                    </button>
+                    <button class="header-btn"><img src="constants/icons/cart.svg" alt="Cart" class="icon"><span>Cart</span></button>
+                    <button class="header-btn login-btn"><img src="constants/icons/user.svg" alt="Login" class="icon"><span>Login</span></button>
+                </div>
+            </div>
+        </header>
+
+        <section class="wl-hero">
+            <div class="wl-hero-inner">
+                <h2>
+                    <span class="wl-hero-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="#ff4d6d" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </span>
+                    My Wishlist
+                </h2>
+                <p>Your saved products, ready when you are.</p>
+                <div class="wl-count-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#ff4d6d" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span id="wl-count-text">0 items saved</span>
+                </div>
+            </div>
+        </section>
+
+        <div id="wl-content"></div>
+
+        <footer class="footer">
+            <div class="footer-bottom"><p>&copy; 2026 SnapPrint. All rights reserved.</p></div>
+        </footer>
+    </div>
+
+    <script src="scripts/authService.js"></script>
+    <script src="scripts/wishlistService.js"></script>
+    <script src="widgets/loginModal.js"></script>
+    <script src="scripts/globalNavigation.js"></script>
+    <script src="widgets/productCard.js"></script>
+    <script>
+    // ===== TOAST =====
+    function showToast(msg, type = 'info', duration = 3000) {
+        const icons = { success: '✅', error: '❌', info: 'ℹ️' };
+        const c = document.getElementById('sp-toast-container');
+        const t = document.createElement('div');
+        t.className = `sp-toast ${type}`;
+        t.innerHTML = `<span>${icons[type]||'ℹ️'}</span><span>${msg}</span>`;
+        c.appendChild(t);
+        setTimeout(() => { t.classList.add('out'); setTimeout(() => t.remove(), 350); }, duration);
+    }
+
+    // ===== CUSTOM CONFIRM =====
+    function showConfirm(title, message, onConfirm) {
+        const ov = document.createElement('div');
+        ov.id = 'sp-confirm-overlay';
+        ov.innerHTML = `<div class="sp-confirm-box">
+            <h4>${title}</h4><p>${message}</p>
+            <div class="sp-confirm-actions">
+                <button class="sp-btn-cancel" id="sp-cnl">Cancel</button>
+                <button class="sp-btn-confirm" id="sp-cnf">Remove All</button>
+            </div></div>`;
+        document.body.appendChild(ov);
+        document.getElementById('sp-cnl').onclick = () => ov.remove();
+        document.getElementById('sp-cnf').onclick = () => { ov.remove(); onConfirm(); };
+    }
+
+    // ===== STATE =====
+    let wlSearchQ = '';
+    let wlCategoryF = '';
+    let wlSortF = 'newest';
+
+    // ===== RENDER =====
+    async function renderWishlistPage() {
+        const user = window.authService?.getCurrentUser();
+        const savedItems = window.wishlistService?.getAll() || [];
+
+        const countEl = document.getElementById('wl-count-text');
+        if (countEl) countEl.textContent = savedItems.length === 0 ? '0 items saved' : `${savedItems.length} item${savedItems.length > 1 ? 's' : ''} saved`;
+
+        const content = document.getElementById('wl-content');
+
+        if (!user) {
+            content.innerHTML = `<div class="wl-wall">
+                <div class="lock">🔒</div>
+                <h3>Login to view your Wishlist</h3>
+                <p>Save your favourite products and access them anytime.</p>
+                <button class="wl-cta wl-cta-dark" onclick="window.loginModal?.open()">Login / Sign Up</button>
+            </div>`;
+            return;
+        }
+
+        if (savedItems.length === 0) {
+            content.innerHTML = `<div class="wl-empty">
+                <div class="emp">🤍</div>
+                <h3>Your wishlist is empty</h3>
+                <p>Tap ❤️ on any product to save it here!</p>
+                <button class="wl-cta wl-cta-grad" onclick="window.location.href='index.html'">Explore Products →</button>
+            </div>`;
+            return;
+        }
+
+        // Fetch DB
+        const db = window.dataService.productsDB || await window.dataService.init();
+        const allProducts = await window.dataService.getAllProductsFlattened();
+        let allSubcategories = [];
+        if (db && db.categories) {
+            db.categories.forEach(cat => {
+                if (cat.sections) cat.sections.forEach(sec => allSubcategories.push(...sec.subcategories));
+                if (cat.subcategories) allSubcategories.push(...cat.subcategories);
+            });
+        }
+
+        const allItems = savedItems.map(saved => {
+            let itemData = null;
+            if (saved.itemType === 'subcategory') {
+                itemData = allSubcategories.find(s => String(s.id) === String(saved.productId));
+            } else {
+                itemData = allProducts.find(p => String(p.id) === String(saved.productId));
+            }
+            if (!itemData && !saved.title) return null;
+            return { ...(itemData || saved), productId: saved.productId, itemType: saved.itemType || 'product', savedAt: saved.savedAt };
+        }).filter(Boolean);
+
+        // Filter + search + sort
+        let items = [...allItems];
+        if (wlSearchQ) {
+            const q = wlSearchQ.toLowerCase();
+            items = items.filter(p => (p.title||'').toLowerCase().includes(q) || (p.categoryName||'').toLowerCase().includes(q));
+        }
+        if (wlCategoryF) {
+            items = items.filter(p => (p.categoryName||'').toLowerCase() === wlCategoryF.toLowerCase());
+        }
+        if (wlSortF === 'newest')    items.sort((a,b) => (b.savedAt||0) - (a.savedAt||0));
+        if (wlSortF === 'oldest')    items.sort((a,b) => (a.savedAt||0) - (b.savedAt||0));
+        if (wlSortF === 'price-asc') items.sort((a,b) => (a.price||0) - (b.price||0));
+        if (wlSortF === 'price-desc')items.sort((a,b) => (b.price||0) - (a.price||0));
+        if (wlSortF === 'name')      items.sort((a,b) => (a.title||'').localeCompare(b.title||''));
+
+        const productItems = items.filter(i => i.itemType === 'product');
+        const collectionItems = items.filter(i => i.itemType === 'subcategory');
+
+        // Unique categories for filter dropdown
+        const cats = [...new Set(allItems.map(p => p.categoryName).filter(Boolean))];
+        const catOptions = cats.map(c => `<option value="${c}" ${wlCategoryF===c?'selected':''}>${c}</option>`).join('');
+
+        content.innerHTML = `<div class="wl-main">
+            <div class="wl-toolbar">
+                <div class="wl-toolbar-left">
+                    <h3>${allItems.length} Saved Item${allItems.length > 1 ? 's' : ''}</h3>
+                    <input class="wl-search" id="wl-search" type="text" placeholder="Search saved items…" value="${wlSearchQ}">
+                    ${cats.length > 1 ? `<select class="wl-filter-select" id="wl-cat-filter">
+                        <option value="">All Categories</option>${catOptions}
+                    </select>` : ''}
+                    <select class="wl-filter-select" id="wl-sort">
+                        <option value="newest"    ${wlSortF==='newest'    ?'selected':''}>Newest First</option>
+                        <option value="oldest"    ${wlSortF==='oldest'    ?'selected':''}>Oldest First</option>
+                        <option value="price-asc" ${wlSortF==='price-asc' ?'selected':''}>Price: Low → High</option>
+                        <option value="price-desc"${wlSortF==='price-desc'?'selected':''}>Price: High → Low</option>
+                        <option value="name"      ${wlSortF==='name'      ?'selected':''}>Name A–Z</option>
+                    </select>
+                </div>
+                <button class="wl-clear-btn" id="wl-clear-all-btn">Clear All</button>
+            </div>
+
+            ${collectionItems.length > 0 ? `
+                <h3 style="margin-top:20px; margin-bottom: 12px; font-size: 18px; color: #111;">Saved Collections</h3>
+                <div class="wl-grid wl-grid-small" id="wl-grid-collections"></div>
+            ` : ''}
+
+            ${productItems.length > 0 ? `
+                <h3 style="margin-top:${collectionItems.length > 0 ? '32px' : '20px'}; margin-bottom: 12px; font-size: 18px; color: #111;">Saved Products</h3>
+                <div class="wl-grid wl-grid-small" id="wl-grid-products"></div>
+            ` : ''}
+            
+            ${items.length === 0 ? `<div class="wl-no-results">No items match your search.</div>` : ''}
+        </div>`;
+
+        // Bind toolbar events
+        document.getElementById('wl-search').oninput = (e) => { wlSearchQ = e.target.value; renderWishlistPage(); };
+        const catSel = document.getElementById('wl-cat-filter');
+        if (catSel) catSel.onchange = (e) => { wlCategoryF = e.target.value; renderWishlistPage(); };
+        document.getElementById('wl-sort').onchange = (e) => { wlSortF = e.target.value; renderWishlistPage(); };
+        document.getElementById('wl-clear-all-btn').onclick = () => {
+            showConfirm('Clear Wishlist', 'Remove all saved items from your wishlist?', () => {
+                window.wishlistService.clear();
+                wlSearchQ = ''; wlCategoryF = ''; wlSortF = 'newest';
+                showToast('Wishlist cleared', 'info');
+            });
+        };
+
+        if (items.length === 0) return;
+
+        // Render compact cards
+        const renderCompactCard = (item, containerId) => {
+            const grid = document.getElementById(containerId);
+            if (!grid) return;
+            const wrapper = document.createElement('div');
+            wrapper.className = 'wl-card-compact';
+            
+            const isSub = item.itemType === 'subcategory';
+            const link = isSub ? `searchPage.html?subcategory=${item.id}` : `productDetails.html?id=${item.id}`;
+            const priceHtml = !isSub && item.price ? `<div style="font-weight:700; color:#111; margin-top:6px;">₹${item.price}</div>` : '';
+
+            wrapper.innerHTML = `
+                <button class="wl-remove-btn" title="Remove">✕</button>
+                <a href="${link}" style="text-decoration:none; color:inherit; display:flex; gap:16px; align-items:center;">
+                    <div style="width:84px; height:84px; flex-shrink:0; border-radius:10px; overflow:hidden; background:#f9fafb;">
+                        <img src="${item.image || 'constants/products/placeholder.jpg'}" style="width:100%; height:100%; object-fit:cover; transition:transform 0.3s ease;">
+                    </div>
+                    <div style="flex:1; min-width:0; padding-right:8px;">
+                        <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#888;">${isSub ? 'Collection' : (item.categoryName || 'Product')}</div>
+                        <div style="font-weight:600; font-size:15px; margin-top:4px; color:#111; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${item.name || item.title || 'Unknown'}</div>
+                        ${priceHtml}
+                    </div>
+                </a>
+            `;
+
+            wrapper.querySelector('.wl-remove-btn').onclick = (e) => {
+                e.preventDefault(); e.stopPropagation();
+                wrapper.style.opacity = '0';
+                wrapper.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    window.wishlistService.remove(item.productId || item.id);
+                    showToast(`Removed from wishlist`, 'info');
+                }, 280);
+            };
+
+            grid.appendChild(wrapper);
+        };
+
+        collectionItems.forEach(item => renderCompactCard(item, 'wl-grid-collections'));
+        productItems.forEach(item => renderCompactCard(item, 'wl-grid-products'));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        renderWishlistPage();
+        window.addEventListener('wishlist:updated', () => renderWishlistPage());
+        window.addEventListener('auth:login-success', () => renderWishlistPage());
+        window.addEventListener('auth:logout', () => renderWishlistPage());
+    });
+    </script>
+</body>
+</html>

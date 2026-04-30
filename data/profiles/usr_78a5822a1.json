@@ -8,16 +8,16 @@
     "pincode": "208024",
     "analytics": {
         "categoryInterests": {
-            "Hoodies": 47,
+            "Hoodies": 50,
             "Mugs & Cups": 7,
-            "Footwear": 37,
+            "Footwear": 39,
             "Phone Cases": 41,
-            "T-Shirts": 107,
+            "T-Shirts": 109,
             "Face Masks": 6,
             "Key Chains": 9,
             "Photo Frames": 2,
-            "Pendants": 7,
-            "Tote Bags": 6,
+            "Pendants": 8,
+            "Tote Bags": 7,
             "Decor": 4,
             "Men's Special": 10,
             "Women's Special": 8
@@ -37,18 +37,25 @@
             "V Neck": 4,
             "Silver": 1,
             "Raglan": 1,
-            "Holi": 1
+            "Holi": 1,
+            "Printed": 1,
+            "Layered": 1,
+            "Pullover": 1
         },
         "badgeInterests": {
-            "New Arrival": 3,
+            "New Arrival": 4,
             "Limited Edition": 5,
             "Special": 2,
             "Bestseller": 2,
             "Trending": 1,
             "Occasional": 1,
-            "50% OFF": 6
+            "50% OFF": 6,
+            "55% OFF": 1
         },
         "viewHistory": [
+            "p-sub-menclothing-pullover-2",
+            "p-sub-layered-8",
+            "sub-printed-21",
             "sub-menclothing-holi-24",
             "sub-menclothing-raglan-4",
             "p-sub-silver-8",
@@ -65,12 +72,11 @@
             "prod-hoodies-womenclothing-slimfit-4",
             "prod-keychains-wooden-1",
             "prod-footwear-womenclothing-outdoor-5",
-            "prod-footwear-womenclothing-slides-2",
-            "prod-mugs&cups-cartoon-4"
+            "prod-footwear-womenclothing-slides-2"
         ],
-        "lastInteracted": 1777475334280
+        "lastInteracted": 1777509664638
     },
-    "lastSync": "2026-04-29 17:08:54",
+    "lastSync": "2026-04-30 02:41:04",
     "availedCoupons": [
         "FESTIVE_PRINT",
         "PRINT_PRO",
