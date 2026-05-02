@@ -102,11 +102,9 @@ function renderCategories(categories, containerId) {
     // Add scroll reveal classes
     container.classList.add('reveal', 'reveal-up');
 
-    // Initialize Mobile Slider controls
+    // Initialize Mobile Slider controls (CSS handles visibility)
     setTimeout(() => {
-        if (window.innerWidth <= 768) {
-            initMobileCategorySlider(container);
-        }
+        initMobileCategorySlider(container);
     }, 100);
 }
 

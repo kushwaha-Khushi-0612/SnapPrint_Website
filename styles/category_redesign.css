@@ -227,8 +227,8 @@
         flex-wrap: nowrap;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        gap: 16px;
-        padding: 0 20px 20px 20px;
+        gap: 12px;
+        padding: 0 16px 16px 16px;
         scrollbar-width: none;
         grid-auto-rows: auto;
     }
@@ -239,7 +239,7 @@
 
     .category-unit {
         flex: 0 0 auto;
-        width: 82px; /* Increased width to accommodate 2 lines of text */
+        width: 76px; 
         padding: 0;
         border-radius: 0;
         box-shadow: none !important;
@@ -255,26 +255,30 @@
         position: relative;
         width: 72px;
         height: 72px;
-        border-radius: 50%; /* Perfect circle */
-        border: 2px solid #fff; /* Internal white ring to separate color */
-        box-shadow: 0 0 0 2px var(--theme-color, #ccc), 0 4px 10px rgba(0,0,0,0.1);
+        border-radius: 18px; /* Smooth rounded corners on the image itself */
+        border: none;
+        background-color: transparent !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* subtle drop shadow for depth */
         inset: auto;
         z-index: 1;
-        transition: transform 0.2s;
+        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 0; /* Remove padding */
+        object-fit: cover; /* Fill the shape completely with the image */
     }
 
     .category-unit:active .category-bg {
         transform: scale(0.92);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
     }
     
     .category-overlay {
-        display: none; /* No overlay on mobile icons */
+        display: none;
     }
     
     .category-content {
         position: relative;
         transform: none !important;
-        margin-top: 12px;
+        margin-top: 8px;
         text-align: center;
         width: 100%;
         padding: 0;
@@ -285,14 +289,11 @@
     .category-tall .category-name,
     .category-small .category-name {
         font-size: 0.75rem !important;
-        color: #333;
-        font-weight: 600;
+        color: #444;
+        font-weight: 500;
         text-shadow: none;
         margin-bottom: 0;
-        white-space: normal; /* Allow text to wrap */
-        display: -webkit-box;
-        -webkit-line-clamp: 2; /* Limit to 2 lines */
-        -webkit-box-orient: vertical;
+        white-space: nowrap; /* Single line */
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 100%;

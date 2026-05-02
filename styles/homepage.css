@@ -400,6 +400,123 @@ body {
     animation: fadeInUp 0.6s ease-out 0.4s both;
 }
 
+/* ========== COLORED FEATURED BLOCKS ========== */
+.colored-block-section {
+    padding: 24px;
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.colored-block-container {
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.bg-blue { background-color: #E5F3FE; }
+.bg-purple { background-color: #EFE8FF; }
+.bg-green { background-color: #E2F6EF; }
+.bg-red { background-color: #FEECEB; }
+.bg-orange { background-color: #FFF2E5; }
+
+.colored-block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.colored-block-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.colored-block-arrow {
+    width: 32px;
+    height: 32px;
+    background: var(--color-black);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.colored-block-arrow:hover {
+    transform: scale(1.1);
+}
+
+.colored-block-arrow svg {
+    width: 16px;
+    height: 16px;
+    stroke: white;
+}
+
+.colored-block-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.colored-block-card {
+    background: var(--color-white);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.colored-block-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.colored-block-img-container {
+    width: 100%;
+    aspect-ratio: 1;
+    padding: 12px;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colored-block-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.colored-block-info {
+    padding: 12px;
+}
+
+.colored-block-title {
+    font-size: 13px;
+    color: var(--gray-700);
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.colored-block-subtitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+@media (max-width: 768px) {
+    .colored-block-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -1659,7 +1776,7 @@ html {
 /* Main Wide Banner */
 .promo-banner-main {
     position: relative;
-    border-radius: 20px;
+    border-radius: 24px;
     height: 250px;
     background-size: cover;
     background-position: center;
@@ -1668,7 +1785,13 @@ html {
     padding: 40px;
     overflow: hidden;
     color: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 12px 40px -12px rgba(230, 40, 70, 0.5), inset 0 0 0 1px rgba(255,255,255,0.2);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+.promo-banner-main:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 24px 50px -12px rgba(230, 40, 70, 0.6), inset 0 0 0 1px rgba(255,255,255,0.3);
 }
 
 .promo-content-left {
@@ -1725,7 +1848,7 @@ html {
 
 .promo-banner-card {
     position: relative;
-    border-radius: 16px;
+    border-radius: 20px;
     height: 180px;
     background-size: cover;
     background-position: center;
@@ -1733,7 +1856,7 @@ html {
     display: flex;
     align-items: center;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    box-shadow: 0 8px 24px -8px rgba(0,0,0,0.15), inset 0 0 0 1px rgba(255,255,255,0.4);
     
     /* Animation base */
     width: 100%;
@@ -1753,8 +1876,8 @@ html {
     }
 
     .promo-row .promo-banner-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 20px 40px -10px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(255,255,255,0.6);
         z-index: 10;
     }
 }

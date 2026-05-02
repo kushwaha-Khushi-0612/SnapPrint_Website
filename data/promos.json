@@ -4,7 +4,7 @@
     "subtitle": "Get up to 50% OFF on all custom prints & corporate orders",
     "image": "constants/promos/discount_promo_bg.png",
     "buttonText": "Shop Now",
-    "link": "searchPage.html?offer=mega-fest",
+    "link": "searchPage.html?collection=Mega Print Festival",
     "gradient": "linear-gradient(to right, rgba(230, 40, 70, 0.9), rgba(230, 40, 70, 0.5))"
   },
   "secondaryPromos": [
@@ -13,7 +13,7 @@
       "subtitle": "Design your own unique style",
       "image": "constants/promos/womens_fashion_bg.png",
       "buttonText": "Order Now",
-      "link": "productCategory.html?category=Women's Special",
+      "link": "searchPage.html?collection=Women's Custom Wear",
       "gradient": "linear-gradient(to right, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0))"
     },
     {
@@ -21,7 +21,7 @@
       "subtitle": "Premium customized hoodies & tees",
       "image": "constants/promos/mens_fashion_bg.png",
       "buttonText": "Order Now",
-      "link": "productCategory.html?category=T-Shirts&subcategory=Oversized",
+      "link": "searchPage.html?collection=Men's Urban Streetwear",
       "gradient": "linear-gradient(to right, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0))"
     },
     {
@@ -29,7 +29,7 @@
       "subtitle": "Surprise her with memories...",
       "image": "",
       "buttonText": "Order Now",
-      "link": "searchPage.html?q=mothers+day",
+      "link": "searchPage.html?collection=Occasions",
       "gradient": "linear-gradient(135deg, #FFEBF0 0%, #FFD1E0 100%)",
       "textColorTitle": "#D81B60",
       "textColorSubtitle": "#ad1457",

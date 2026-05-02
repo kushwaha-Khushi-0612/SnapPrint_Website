@@ -13,6 +13,7 @@ let filterConfig = {};
 const state = {
     selectedCategory: '', // Now a single string mapped from the dropdown
     selectedSubcategories: [],
+    selectedCollections: [], // For homepage custom sections
     dynamicFilters: {}, // Maps filter ID to array of selected values (or min/max object for slider)
     sort: 'recommended',
     page: 1,
@@ -67,11 +68,14 @@ function parseURLParams() {
         const searchInput = document.getElementById('global-search-input');
         if (searchInput) searchInput.value = q;
     }
+    
+    const col = urlParams.get('collection');
+    if (col) state.selectedCollections = col.split(',').map(c => c.trim().toLowerCase());
 
     // Dynamic filters will dynamically read URL params in their render pass if needed, 
     // but for simple parsing, we can just scoop any remaining non-standard keys.
     for (const [key, value] of urlParams.entries()) {
-        if (!['category', 'subcategory', 'sort', 'page', 'q'].includes(key)) {
+        if (!['category', 'subcategory', 'sort', 'page', 'q', 'collection'].includes(key)) {
             // It's a dynamic filter (e.g., color=black,white or price=min,max)
             state.dynamicFilters[key] = value;
         }
@@ -107,6 +111,17 @@ function renderCategoryDropdown() {
     updateSubcategoryFilters();
     renderDynamicFilters();
     renderMobileCategories();
+    syncCollectionUI();
+}
+
+function syncCollectionUI() {
+    document.querySelectorAll('.search-sidebar input[data-filter-type="collection"]').forEach(cb => {
+        if (state.selectedCollections.includes(cb.value.toLowerCase())) {
+            cb.checked = true;
+        } else {
+            cb.checked = false;
+        }
+    });
 }
 
 function renderMobileCategories() {
@@ -414,6 +429,15 @@ function setupEventListeners() {
             }
             state.page = 1;
             applyFilters();
+        } else if (type === 'collection') {
+            const value = e.target.value.toLowerCase();
+            if (e.target.checked) {
+                if (!state.selectedCollections.includes(value)) state.selectedCollections.push(value);
+            } else {
+                state.selectedCollections = state.selectedCollections.filter(c => c !== value);
+            }
+            state.page = 1;
+            applyFilters();
         } else if (type === 'dynamic-checkbox') {
             const fid = e.target.dataset.filterId;
             const val = e.target.value.toLowerCase();
@@ -434,6 +458,7 @@ function setupEventListeners() {
         document.getElementById('category-select').value = "";
         state.selectedCategory = '';
         state.selectedSubcategories = [];
+        state.selectedCollections = [];
         state.dynamicFilters = {};
         state.searchQuery = '';
         state.page = 1;
@@ -488,6 +513,11 @@ function applyFilters() {
             const subId = (p.subcategoryId || '').toLowerCase();
             const matchSub = state.selectedSubcategories.some(reqSub => subName.includes(reqSub) || subId.includes(reqSub));
             if (!matchSub) match = false;
+        }
+
+        if (state.selectedCollections.length > 0 && match) {
+            const hasMatch = state.selectedCollections.some(reqCol => p.collections && p.collections.includes(reqCol.toLowerCase()));
+            if (!hasMatch) match = false;
         }
 
         // Apply Dynamic JSON mapping configurations
@@ -679,6 +709,9 @@ function updateURL() {
     
     let cleanSubs = Array.from(new Set(state.selectedSubcategories));
     if (cleanSubs.length > 0) url.searchParams.set('subcategory', cleanSubs.join(','));
+    
+    let cleanCols = Array.from(new Set(state.selectedCollections));
+    if (cleanCols.length > 0) url.searchParams.set('collection', cleanCols.join(','));
     
     Object.keys(state.dynamicFilters).forEach(fid => {
         if(state.dynamicFilters[fid]) {
