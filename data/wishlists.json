@@ -1,3 +1,14 @@
 {
-    "usr_e51248f21": []
+    "usr_e51248f21": [
+        {
+            "productId": "sub-printed-99",
+            "itemType": "product",
+            "savedAt": 1777704409195
+        },
+        {
+            "productId": "p-sub-necklaces-8",
+            "itemType": "product",
+            "savedAt": 1777718203643
+        }
+    ]
 }

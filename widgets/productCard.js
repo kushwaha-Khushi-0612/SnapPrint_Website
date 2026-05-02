@@ -39,7 +39,7 @@ function createProductCard(config) {
     } = config;
 
     // Calculate discount percentage
-    const discountPercent = originalPrice && originalPrice > price 
+    const discountPercent = originalPrice && originalPrice > price
         ? Math.round(((originalPrice - price) / originalPrice) * 100)
         : 0;
 
@@ -142,12 +142,12 @@ function renderProducts(products, containerId, options = {}) {
 
     const { variant = 'default', staggerAnimation = true } = options;
 
-    const html = products.map(product => 
+    const html = products.map(product =>
         createProductCard({ ...product, variant })
     ).join('');
-    
+
     container.innerHTML = html;
-    
+
     // Add reveal classes for scroll animation
     container.classList.add('reveal', 'reveal-up');
 
@@ -219,7 +219,7 @@ function heartBurst(button) {
             left: ${cx}px; top: ${cy}px;
             width: 7px; height: 7px;
             border-radius: 50%;
-            background: ${['#ff4d6d','#ff6b6b','#ff8fa3','#ffc2d1'][i % 4]};
+            background: ${['#ff4d6d', '#ff6b6b', '#ff8fa3', '#ffc2d1'][i % 4]};
             pointer-events: none; z-index: 99999;
             transform: translate(-50%, -50%);
             animation: particleFly 0.55s cubic-bezier(0.4,0,0.2,1) forwards;
@@ -234,7 +234,7 @@ function heartBurst(button) {
 }
 
 // Particle keyframe injection
-(function() {
+(function () {
     if (document.getElementById('heart-burst-style')) return;
     const s = document.createElement('style');
     s.id = 'heart-burst-style';
@@ -363,11 +363,11 @@ document.head.appendChild(style);
 
 // Export functions
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { 
-        createProductCard, 
-        renderProducts, 
-        addToWishlist, 
-        removeFromWishlist, 
+    module.exports = {
+        createProductCard,
+        renderProducts,
+        addToWishlist,
+        removeFromWishlist,
         getWishlist,
         initializeWishlistStates
     };

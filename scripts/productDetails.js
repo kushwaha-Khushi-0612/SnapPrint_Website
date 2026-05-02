@@ -46,59 +46,59 @@ const reviewsData = [
 // Initialize page
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('🚀 Loading Product Details Page...');
-    
+
     await window.dataService.init();
     await loadProductData();
-    
+
     if (productData) {
         // Setup image gallery
         setupImageGallery();
-        
+
         // Setup size selection
         setupSizeSelection();
-        
+
         // Setup color selection
         setupColorSelection();
-        
+
         // Setup quantity controls
         setupQuantityControls();
-        
+
         // Setup action buttons
         setupActionButtons();
-        
+
         // Setup customizer canvas
         setTimeout(() => setupCustomizer(), 500); // Small delay to let images load
-        
+
         // Setup tabs
         setupTabs();
-        
+
         // Load reviews (mock)
         loadReviews();
-        
+
         // Load product sections dynamically
         const categoryName = productData.categoryName || productData.category;
         let related = await window.dataService.getProductsByCategory(categoryName);
         if (related.length === 0) related = await window.dataService.getRandomProducts(10);
-        
+
         const shuffle = arr => [...arr].sort(() => 0.5 - Math.random());
-        
+
         renderProducts(shuffle(related).slice(0, 8), 'viral-products');
         renderProducts(await window.dataService.getRandomProducts(8), 'most-viewed-products');
         renderProducts(await window.dataService.getRandomProducts(12), 'mixed-category-products');
         renderProducts(shuffle(related).slice(0, 8), 'related-products');
         renderProducts(await window.dataService.getRandomProducts(6), 'customers-also-bought');
-        
+
         const prevViewed = await window.dataService.getRandomProducts(4);
         prevViewed.forEach(p => p.viewedTime = 'Viewed recently');
         renderProducts(prevViewed, 'previously-viewed');
-        
+
         const bundled = await window.dataService.getRandomProducts(4);
         bundled.forEach(p => p.badge = 'BUNDLE SAVE');
         renderProducts(bundled, 'bundled-offers');
-        
+
         renderProducts(await window.dataService.getRandomProducts(10), 'mixed-categories-final');
     }
-    
+
     console.log('✅ Product Details Page Ready!');
 });
 
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', async () => {
  */
 async function loadProductData() {
     productData = await window.dataService.getProductById(productId);
-    
+
     if (!productData) {
         console.error("Product not found:", productId);
         // Load a random product as fallback if dev test links are broken
@@ -141,7 +141,7 @@ async function loadProductData() {
         'Vibrant & long-lasting colors',
         'Custom verified print'
     ];
-    
+
     // Update breadcrumb
     const breadCat = document.getElementById('breadcrumb-category');
     if (breadCat) {
@@ -150,38 +150,38 @@ async function loadProductData() {
     }
     const breadProd = document.getElementById('breadcrumb-product');
     if (breadProd) breadProd.textContent = productData.title;
-    
+
     // Update product info
     document.getElementById('product-category').textContent = productData.category;
     document.getElementById('product-title').textContent = productData.title;
     document.getElementById('rating-value').textContent = productData.rating || 4.5;
-    
+
     let rvCount = productData.reviewCount || 100;
     document.getElementById('review-count').textContent = rvCount.toLocaleString();
-    if(document.getElementById('review-count-tab')) document.getElementById('review-count-tab').textContent = rvCount.toLocaleString();
-    
+    if (document.getElementById('review-count-tab')) document.getElementById('review-count-tab').textContent = rvCount.toLocaleString();
+
     // Calculate discount
     const discount = Math.round(((productData.originalPrice - productData.price) / productData.originalPrice) * 100);
     document.getElementById('discount-badge').textContent = `-${discount}%`;
     document.getElementById('current-price').textContent = `₹${productData.price}`;
     document.getElementById('original-price').textContent = `₹${productData.originalPrice}`;
-    
+
     // Update badge
     const badgeEl = document.getElementById('product-badge');
     if (productData.badge) {
         badgeEl.textContent = productData.badge;
         badgeEl.style.display = 'inline-block';
     } else {
-        if(badgeEl) badgeEl.style.display = 'none';
+        if (badgeEl) badgeEl.style.display = 'none';
     }
-    
+
     // Update description
     document.getElementById('product-description').textContent = productData.description;
-    
+
     // Update highlights
     const highlightsList = document.getElementById('product-highlights-list');
     if (highlightsList) highlightsList.innerHTML = productData.highlights.map(h => `<li>${h}</li>`).join('');
-    
+
     document.title = `${productData.title} - SnapPrint`;
 }
 
@@ -191,20 +191,32 @@ async function loadProductData() {
 function setupImageGallery() {
     const mainImage = document.getElementById('main-product-image');
     const thumbnailGallery = document.getElementById('thumbnail-gallery');
-    
+
     // Create thumbnails
     thumbnailGallery.innerHTML = productData.images.map((img, index) => `
-        <div class="thumbnail ${index === 0 ? 'active' : ''}" data-image="${img}">
+        <div class="thumbnail ${index === 0 ? 'active' : ''}" data-image="${img}" data-index="${index}">
             <img src="${img}" alt="Product view ${index + 1}">
         </div>
     `).join('');
-    
+
     // Add click handlers
     document.querySelectorAll('.thumbnail').forEach(thumb => {
         thumb.addEventListener('click', () => {
-            // Update main image
-            mainImage.src = thumb.dataset.image;
-            
+            const index = parseInt(thumb.dataset.index, 10);
+
+            // Map index to view name if possible
+            let viewName = 'front';
+            if (index === 1) viewName = 'back';
+            if (index === 2) viewName = 'left_sleeve';
+            if (index === 3) viewName = 'right_sleeve';
+
+            // Check if the switchView function exists globally (attached to window or scope)
+            if (typeof window.switchCustomizerView === 'function') {
+                window.switchCustomizerView(viewName);
+            } else {
+                mainImage.src = thumb.dataset.image;
+            }
+
             // Update active state
             document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
             thumb.classList.add('active');
@@ -217,7 +229,7 @@ function setupImageGallery() {
  */
 function setupSizeSelection() {
     const sizeButtons = document.querySelectorAll('.size-btn');
-    
+
     sizeButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             sizeButtons.forEach(b => b.classList.remove('active'));
@@ -231,7 +243,7 @@ function setupSizeSelection() {
  */
 function setupColorSelection() {
     const colorButtons = document.querySelectorAll('.color-btn');
-    
+
     colorButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             colorButtons.forEach(b => b.classList.remove('active'));
@@ -249,7 +261,7 @@ function setupQuantityControls() {
     const increaseBtn = document.getElementById('qty-increase');
     const totalPriceDisplay = document.getElementById('total-price-display');
     const base = productData.price || 649;
-    
+
     // Check if JSON has bulkPricing, else use fallback
     let tiers = productData.bulkPricing || [
         { min: 1, max: 5, price: base },
@@ -261,11 +273,11 @@ function setupQuantityControls() {
     // Populate UI table dynamically
     const tableHeaderRow = document.querySelector('.bulk-table thead tr');
     const tableBodyRow = document.querySelector('.bulk-table tbody tr');
-    
+
     if (tableHeaderRow && tableBodyRow) {
         tableHeaderRow.innerHTML = '<th>Qty:</th>';
         tableBodyRow.innerHTML = '<td>Price:</td>';
-        
+
         tiers.forEach((tier, index) => {
             const rangeStr = tier.max === 1000 ? `${tier.min}+` : `${tier.min}-${tier.max}`;
             tableHeaderRow.innerHTML += `<th>${rangeStr}</th>`;
@@ -276,17 +288,17 @@ function setupQuantityControls() {
     function updatePrice() {
         const qty = parseInt(qtyInput.value) || 1;
         let unitPrice = base;
-        
+
         for (const tier of tiers) {
             if (qty >= tier.min && qty <= tier.max) {
                 unitPrice = tier.price;
                 break;
             }
         }
-        
+
         totalPriceDisplay.textContent = `₹${unitPrice * qty}`;
     }
-    
+
     decreaseBtn.addEventListener('click', () => {
         const currentValue = parseInt(qtyInput.value);
         if (currentValue > 1) {
@@ -294,7 +306,7 @@ function setupQuantityControls() {
             updatePrice();
         }
     });
-    
+
     increaseBtn.addEventListener('click', () => {
         const currentValue = parseInt(qtyInput.value);
         if (currentValue < 100) {
@@ -302,7 +314,7 @@ function setupQuantityControls() {
             updatePrice();
         }
     });
-    
+
     qtyInput.addEventListener('input', updatePrice);
     updatePrice(); // Init
 }
@@ -314,20 +326,20 @@ function setupActionButtons() {
     const addToCartBtn = document.getElementById('add-to-cart-btn');
     const buyNowBtn = document.getElementById('buy-now-btn');
     const wishlistBtn = document.getElementById('main-product-wishlist');
-    
+
     addToCartBtn.addEventListener('click', () => {
         const size = document.querySelector('.size-btn.active')?.dataset.size || 'M';
         const color = document.querySelector('.color-btn.active')?.dataset.color || 'Black';
         const quantity = document.getElementById('qty-input').value;
-        
+
         alert(`Added to cart!\n\nProduct: ${productData.title}\nSize: ${size}\nColor: ${color}\nQuantity: ${quantity}`);
     });
-    
+
     buyNowBtn.addEventListener('click', () => {
         const size = document.querySelector('.size-btn.active')?.dataset.size || 'M';
         const color = document.querySelector('.color-btn.active')?.dataset.color || 'Black';
         const quantity = document.getElementById('qty-input').value;
-        
+
         alert(`Proceeding to checkout...\n\nProduct: ${productData.title}\nSize: ${size}\nColor: ${color}\nQuantity: ${quantity}\nTotal: ₹${productData.price * quantity}`);
     });
 
@@ -366,15 +378,15 @@ function setupActionButtons() {
 function setupTabs() {
     const tabHeaders = document.querySelectorAll('.tab-header');
     const tabContents = document.querySelectorAll('.tab-content');
-    
+
     tabHeaders.forEach(header => {
         header.addEventListener('click', () => {
             const tabName = header.dataset.tab;
-            
+
             // Update headers
             tabHeaders.forEach(h => h.classList.remove('active'));
             header.classList.add('active');
-            
+
             // Update contents
             tabContents.forEach(content => {
                 content.classList.remove('active');
@@ -391,7 +403,7 @@ function setupTabs() {
  */
 function loadReviews() {
     const reviewsList = document.getElementById('reviews-list');
-    
+
     reviewsList.innerHTML = reviewsData.map(review => `
         <div class="review-item">
             <div class="review-header">
@@ -418,7 +430,7 @@ function setupCustomizer() {
     const canvasEl = document.getElementById('product-canvas');
     const wrapper = document.querySelector('.canvas-wrapper');
     const mainImage = document.getElementById('main-product-image');
-    
+
     if (!canvasEl || !wrapper || !mainImage) return;
 
     // Make wrapper interactive
@@ -428,7 +440,7 @@ function setupCustomizer() {
     // Base dimensions on the main image
     const width = mainImage.clientWidth;
     const height = mainImage.clientHeight;
-    
+
     // We create a central print area (e.g., 60% of width, 80% of height)
     const printWidth = width * 0.6;
     const printHeight = height * 0.8;
@@ -454,7 +466,7 @@ function setupCustomizer() {
         left_sleeve: null,
         right_sleeve: null
     };
-    
+
     // Mock image for the back view if none exists
     const frontImgSrc = mainImage.src;
     const backImgSrc = productData.images && productData.images.length > 1 ? productData.images[1] : frontImgSrc;
@@ -476,11 +488,11 @@ function setupCustomizer() {
 
     // Show headers if this is a multi-sided product (e.g. T-shirt)
     if (productData.category && productData.category.toLowerCase().includes('t-shirt')) {
-        if(printSidesHeader) printSidesHeader.style.display = 'block';
-        if(viewSwitcherTabs) viewSwitcherTabs.style.display = 'flex';
+        if (printSidesHeader) printSidesHeader.style.display = 'block';
+        if (viewSwitcherTabs) viewSwitcherTabs.style.display = 'flex';
     } else {
-        if(printSidesHeader) printSidesHeader.style.display = 'none';
-        if(viewSwitcherTabs) viewSwitcherTabs.style.display = 'none';
+        if (printSidesHeader) printSidesHeader.style.display = 'none';
+        if (viewSwitcherTabs) viewSwitcherTabs.style.display = 'none';
     }
 
     function calculateDynamicPrice() {
@@ -488,11 +500,11 @@ function setupCustomizer() {
         if (backCheckbox && backCheckbox.checked) basePrice += 150;
         if (lSleeveCheckbox && lSleeveCheckbox.checked) basePrice += 50;
         if (rSleeveCheckbox && rSleeveCheckbox.checked) basePrice += 50;
-        
+
         document.getElementById('current-price').textContent = `₹${basePrice}`;
         // Update the global base price for the bulk pricing logic
         window.currentBasePrice = basePrice;
-        if(typeof updatePrice === 'function') updatePrice();
+        if (typeof updatePrice === 'function') updatePrice();
     }
 
     // Enable/Disable Back View
@@ -541,9 +553,9 @@ function setupCustomizer() {
     function switchView(viewName) {
         // Save current state
         canvasStates[currentView] = JSON.stringify(canvas.toJSON());
-        
+
         currentView = viewName;
-        
+
         // Update tabs
         viewTabs.forEach(tab => {
             tab.style.background = tab.dataset.view === viewName ? '#000' : 'transparent';
@@ -552,10 +564,10 @@ function setupCustomizer() {
         });
 
         // Swap Image
-        if(viewName === 'front') mainImage.src = frontImgSrc;
-        else if(viewName === 'back') mainImage.src = backImgSrc;
-        else if(viewName === 'left_sleeve') mainImage.src = lSleeveImgSrc;
-        else if(viewName === 'right_sleeve') mainImage.src = rSleeveImgSrc;
+        if (viewName === 'front') mainImage.src = frontImgSrc;
+        else if (viewName === 'back') mainImage.src = backImgSrc;
+        else if (viewName === 'left_sleeve') mainImage.src = lSleeveImgSrc;
+        else if (viewName === 'right_sleeve') mainImage.src = rSleeveImgSrc;
 
         // Load new state
         canvas.clear();
@@ -563,6 +575,9 @@ function setupCustomizer() {
             canvas.loadFromJSON(canvasStates[viewName], canvas.renderAll.bind(canvas));
         }
     }
+
+    // Export switchView globally so setupImageGallery can call it
+    window.switchCustomizerView = switchView;
 
     // Tab Listeners
     viewTabs.forEach(tab => {
@@ -584,7 +599,7 @@ function setupCustomizer() {
 
     // --- Add Image Modal Logic ---
     const imageModal = document.getElementById('add-image-modal');
-    
+
     document.getElementById('tool-add-image').addEventListener('click', () => {
         imageModal.classList.add('active');
     });
@@ -605,12 +620,12 @@ function setupCustomizer() {
         tab.addEventListener('click', () => {
             imgTabs.forEach(t => t.classList.remove('active'));
             imgTabContents.forEach(c => c.style.display = 'none');
-            
+
             tab.classList.add('active');
             const target = document.getElementById(`tab-${tab.dataset.tab}`);
             if (target) {
                 target.style.display = 'block';
-                
+
                 // Lazy load designs if clicked
                 if (tab.dataset.tab === 'designs' && document.getElementById('designs-grid').children.length === 0) {
                     loadMockDesigns();
@@ -641,19 +656,29 @@ function setupCustomizer() {
         reader.readAsDataURL(file);
     });
 
-    function loadMockDesigns() {
+    function loadMockDesigns(category = 'all') {
         const grid = document.getElementById('designs-grid');
-        // Emojis as mock cliparts
-        const emojis = ['😀','😎','❤️','✨','🔥','🎉','🎈','👑','⭐','💯','💪','🌟','⚽','🏀','🎸','🎵','🍕','🍔','🍩','☕'];
-        grid.innerHTML = emojis.map(e => `<div class="design-item">${e}</div>`).join('');
-        
+
+        const categories = {
+            'all': ['😀', '😎', '❤️', '✨', '🔥', '🎉', '🎈', '👑', '⭐', '💯', '💪', '🌟', '⚽', '🏀', '🎸', '🎵', '🍕', '🍔', '🍩', '☕'],
+            'animals': ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼', '🦁', '🐮', '🐷', '🐸'],
+            'birthday': ['🎂', '🎈', '🎉', '🎁', '🥳', '🎊', '🕯️', '🍰'],
+            'catchwords': ['WOW', 'OMG', 'SALE', 'NEW', 'HOT', 'YAY', 'COOL', 'WIN'],
+            'emoji': ['😀', '😎', '😂', '😍', '🤔', '😴', '😎', '🤓', '😇', '🤠']
+        };
+
+        const itemsToLoad = categories[category.toLowerCase()] || categories['all'];
+
+        grid.innerHTML = itemsToLoad.map(e => `<div class="design-item">${e}</div>`).join('');
+
         // Add to canvas on click
         grid.querySelectorAll('.design-item').forEach(item => {
             item.addEventListener('click', () => {
                 const text = new fabric.IText(item.textContent, {
                     left: 50,
                     top: 50,
-                    fontSize: 64
+                    fontSize: 64,
+                    fontFamily: 'Inter'
                 });
                 canvas.add(text);
                 canvas.centerObject(text);
@@ -663,6 +688,15 @@ function setupCustomizer() {
         });
     }
 
+    // Attach click listeners to design category pills
+    document.querySelectorAll('.cat-pill').forEach(pill => {
+        pill.addEventListener('click', (e) => {
+            document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+            e.target.classList.add('active');
+            loadMockDesigns(e.target.textContent.trim().toLowerCase());
+        });
+    });
+
     // Action Bar - Download
     const downloadBtn = document.getElementById('btn-download-design');
     if (downloadBtn) {
@@ -670,7 +704,7 @@ function setupCustomizer() {
             // Deselect to remove handles
             canvas.discardActiveObject();
             canvas.renderAll();
-            
+
             const dataURL = canvas.toDataURL({
                 format: 'png',
                 quality: 1
@@ -691,16 +725,19 @@ function setupCustomizer() {
         zoomBtn.addEventListener('click', () => {
             isZoomed = !isZoomed;
             const wrapper = document.querySelector('.canvas-wrapper');
+            const actionBar = document.querySelector('.floating-action-bar');
             if (isZoomed) {
-                wrapper.style.transform = 'scale(1.5)';
-                wrapper.style.zIndex = '50';
-                wrapper.style.backgroundColor = '#fff';
+                wrapper.style.transform = 'scale(1.4)';
+                wrapper.style.zIndex = '100';
+                wrapper.style.backgroundColor = 'rgba(255,255,255,0.95)';
                 zoomBtn.style.color = '#2563eb';
+                if (actionBar) actionBar.style.zIndex = '105'; // Keep action bar above zoom
             } else {
                 wrapper.style.transform = 'scale(1)';
                 wrapper.style.zIndex = '1';
                 wrapper.style.backgroundColor = 'transparent';
                 zoomBtn.style.color = 'inherit';
+                if (actionBar) actionBar.style.zIndex = '10';
             }
         });
     }
@@ -728,10 +765,10 @@ function setupCustomizer() {
             }
             const color = document.getElementById('qr-color').value.replace('#', '');
             const bg = document.getElementById('qr-bg').value.replace('#', '');
-            
+
             // Using a free QR code API
             const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(content)}&color=${color}&bgcolor=${bg}`;
-            
+
             btnGenerateQr.textContent = "Generating...";
             fabric.Image.fromURL(qrUrl, (img) => {
                 img.scaleToWidth(100);
@@ -748,25 +785,37 @@ function setupCustomizer() {
     const btnWebSearch = document.getElementById('btn-web-search');
     const searchInput = document.getElementById('web-search-input');
     const searchGrid = document.getElementById('search-results-grid');
-    
+
     if (btnWebSearch) {
-        btnWebSearch.addEventListener('click', () => {
+        btnWebSearch.addEventListener('click', async () => {
             const query = searchInput.value.trim();
             if (!query) return;
-            
+
             searchGrid.innerHTML = '<div style="grid-column: 1/-1; text-align:center;">Searching...</div>';
-            
-            // Mock fetching 12 random Unsplash images based on query
-            setTimeout(() => {
+
+            try {
+                // Use Wikimedia Commons API for real image search
+                const apiUrl = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages&generator=search&gsrsearch=${encodeURIComponent(query)}&gsrlimit=12&pithumbsize=400&origin=*`;
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
                 let html = '';
-                for(let i=0; i<12; i++) {
-                    const url = `https://source.unsplash.com/150x150/?${encodeURIComponent(query)}&sig=${i}`;
-                    html += `<div class="design-item" style="padding:0; overflow:hidden;">
-                                <img src="${url}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
-                             </div>`;
+                if (data.query && data.query.pages) {
+                    const pages = Object.values(data.query.pages);
+                    pages.forEach(page => {
+                        if (page.thumbnail && page.thumbnail.source) {
+                            html += `<div class="design-item" style="padding:0; overflow:hidden;">
+                                        <img src="${page.thumbnail.source}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
+                                     </div>`;
+                        }
+                    });
+                }
+
+                if (!html) {
+                    html = '<div style="grid-column: 1/-1; text-align:center;">No results found.</div>';
                 }
                 searchGrid.innerHTML = html;
-                
+
                 searchGrid.querySelectorAll('.design-item img').forEach(imgEl => {
                     imgEl.addEventListener('click', (e) => {
                         const url = e.target.src;
@@ -779,7 +828,10 @@ function setupCustomizer() {
                         }, { crossOrigin: 'anonymous' });
                     });
                 });
-            }, 800);
+            } catch (err) {
+                console.error("Search error", err);
+                searchGrid.innerHTML = '<div style="grid-column: 1/-1; text-align:center;">Error fetching images.</div>';
+            }
         });
     }
 
@@ -819,7 +871,7 @@ function setupCustomizer() {
             alert("Please draw something first!");
             return;
         }
-        
+
         // Export drawing to image and add to main canvas
         const dataUrl = drawingCanvas.toDataURL('png');
         fabric.Image.fromURL(dataUrl, (img) => {
@@ -844,7 +896,7 @@ function setupCustomizer() {
     const propsBox = document.getElementById('properties-box');
     const textControls = document.getElementById('prop-text-controls');
     const imgControls = document.getElementById('prop-image-controls');
-    
+
     const textInput = document.getElementById('prop-text-input');
     const fontSelect = document.getElementById('prop-font-select');
     const colorInput = document.getElementById('prop-color-input');
@@ -859,7 +911,7 @@ function setupCustomizer() {
     function updateProps() {
         const active = canvas.getActiveObject();
         if (!active) return;
-        
+
         propsBox.style.display = 'block';
 
         if (active.type === 'i-text') {
@@ -868,7 +920,7 @@ function setupCustomizer() {
             textInput.value = active.text;
             fontSelect.value = active.fontFamily;
             colorInput.value = active.fill;
-            
+
             // Advanced Text States
             document.getElementById('prop-bold').style.background = active.fontWeight === 'bold' ? '#e2e8f0' : '';
             document.getElementById('prop-italic').style.background = active.fontStyle === 'italic' ? '#e2e8f0' : '';
@@ -878,7 +930,7 @@ function setupCustomizer() {
             textControls.style.display = 'none';
             imgControls.style.display = 'block';
             opacitySlider.value = active.opacity;
-            
+
             // Image Filters
             document.getElementById('prop-filter-gray').checked = active.filters.some(f => f && f.type === 'Grayscale');
             document.getElementById('prop-filter-sepia').checked = active.filters.some(f => f && f.type === 'Sepia');

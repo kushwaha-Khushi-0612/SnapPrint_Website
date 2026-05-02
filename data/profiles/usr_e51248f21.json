@@ -25,33 +25,42 @@
     "last_chosen_address": 1,
     "analytics": {
         "categoryInterests": {
-            "T-Shirts": 11,
+            "T-Shirts": 12,
             "Decor": 8,
             "Men's Special": 6,
             "Phone Cases": 2,
             "Women's Special": 2,
-            "Jewelry": 2,
-            "Mugs & Cups": 2,
+            "Jewelry": 3,
+            "Mugs & Cups": 5,
             "Kids Clothing": 2,
             "Photo Frames": 2,
-            "Footwear": 5
+            "Footwear": 5,
+            "Key Chains": 2,
+            "Face Masks": 2
         },
         "subcategoryInterests": {
-            "Printed": 2,
+            "Printed": 5,
             "Flip Flops": 1,
-            "Full Sleeves": 1
+            "Full Sleeves": 1,
+            "Necklaces": 1,
+            "Graphic": 1
         },
         "badgeInterests": {
-            "50% OFF": 2,
-            "55% OFF": 1
+            "50% OFF": 6,
+            "55% OFF": 1,
+            "New Arrival": 1
         },
         "viewHistory": [
+            "sub-menclothing-graphic-1",
+            "p-sub-necklaces-8",
+            "sub-printed-30",
+            "sub-printed-143",
             "sub-printed-99",
             "sub-menclothing-fullsleeves-1",
             "p-sub-flipflops-1",
             "sub-printed-22"
         ],
-        "lastInteracted": 1777690597486
+        "lastInteracted": 1777719251994
     },
-    "lastSync": "2026-05-02 04:56:37"
+    "lastSync": "2026-05-02 12:54:12"
 }

@@ -4,7 +4,7 @@
  */
 
 // ===== GLOBAL TOAST SYSTEM =====
-(function() {
+(function () {
     if (document.getElementById('sp-toast-container')) return;
     const c = document.createElement('div');
     c.id = 'sp-toast-container';
@@ -27,13 +27,13 @@
     document.head.appendChild(style);
 })();
 
-window.showToast = function(msg, type = 'info', duration = 3000) {
+window.showToast = function (msg, type = 'info', duration = 3000) {
     const icons = { success: '✅', error: '❌', info: 'ℹ️' };
     let c = document.getElementById('sp-toast-container');
     if (!c) { c = document.createElement('div'); c.id = 'sp-toast-container'; document.body.appendChild(c); }
     const t = document.createElement('div');
     t.className = `sp-toast ${type}`;
-    t.innerHTML = `<span>${icons[type]||'ℹ️'}</span><span>${msg}</span>`;
+    t.innerHTML = `<span>${icons[type] || 'ℹ️'}</span><span>${msg}</span>`;
     c.appendChild(t);
     setTimeout(() => { t.classList.add('out'); setTimeout(() => t.remove(), 350); }, duration);
 };
@@ -80,7 +80,7 @@ function updateWishlistBadge() {
 }
 
 // Inject badge animation style once
-(function() {
+(function () {
     if (document.getElementById('badge-anim-style')) return;
     const s = document.createElement('style');
     s.id = 'badge-anim-style';
@@ -119,7 +119,7 @@ function updateNavigation() {
             <img src="constants/icons/user-check.svg" alt="Profile" class="icon" onerror="this.src='constants/icons/user.svg'">
             <span>Profile</span>
         `;
-        
+
         // Remove standard login click mechanism (if attached inline) and route to Profile
         loginBtn.onclick = (e) => {
             e.preventDefault();
@@ -131,7 +131,7 @@ function updateNavigation() {
             <img src="constants/icons/user.svg" alt="Login" class="icon">
             <span>Login</span>
         `;
-        
+
         // Ensure Modal triggers
         loginBtn.onclick = (e) => {
             e.preventDefault();
@@ -175,7 +175,7 @@ function initGlobalSearch() {
 
     const handleSearch = (val) => {
         if (!val.trim()) return;
-        
+
         // Save to search history
         let history = JSON.parse(localStorage.getItem('search_history') || '[]');
         history = history.filter(item => item !== val.trim()); // remove duplicate
@@ -211,9 +211,9 @@ function initGlobalSearch() {
                 html += `<div class="history-item" style="padding: 12px 16px; cursor: pointer; border-bottom: 1px solid #f1f1f1; display: flex; align-items: center; gap: 12px; font-size: 14px; color: #333;" onmouseover="this.style.background='#f8f9fa'" onmouseout="this.style.background='transparent'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> ${item}</div>`;
             });
             historyDropdown.innerHTML = html;
-            
+
             historyDropdown.querySelectorAll('.history-item').forEach((el, i) => {
-                el.addEventListener('mousedown', (e) => { 
+                el.addEventListener('mousedown', (e) => {
                     e.preventDefault();
                     input.value = history[i];
                     handleSearch(history[i]);
@@ -232,7 +232,7 @@ function initGlobalSearch() {
                 renderHistory();
             }
         });
-        
+
         input.addEventListener('blur', () => {
             historyDropdown.style.display = 'none';
         });
@@ -244,7 +244,7 @@ function initGlobalSearch() {
                 handleSearch(input.value);
             }
         });
-        
+
         if (searchBtns[index]) {
             searchBtns[index].addEventListener('click', (e) => {
                 e.preventDefault();
@@ -260,7 +260,7 @@ function initGlobalSearch() {
         imgBtn.style.cssText = 'position: absolute; right: 40px; background: none; border: none; color: #fff; cursor: pointer; padding: 8px; top: 50%; transform: translateY(-50%); opacity: 0.7; transition: opacity 0.2s;';
         imgBtn.title = "Search by Image (AI)";
         imgBtn.onmouseover = () => imgBtn.style.opacity = '1';
-        imgBtn.onmouseout  = () => imgBtn.style.opacity = '0.7';
+        imgBtn.onmouseout = () => imgBtn.style.opacity = '0.7';
 
         const fileInput = document.createElement('input');
         fileInput.type = 'file';
@@ -516,7 +516,7 @@ function initGlobalSearch() {
             // Stop typewriter, set final prediction
             if (overlay._twInterval) clearInterval(overlay._twInterval);
             const pred = document.getElementById('ai-pred-text');
-            if (pred) { pred.style.opacity = '0'; setTimeout(() => { if(pred) { pred.textContent = label; pred.style.opacity = '1'; } }, 200); }
+            if (pred) { pred.style.opacity = '0'; setTimeout(() => { if (pred) { pred.textContent = label; pred.style.opacity = '1'; } }, 200); }
 
             const area = document.getElementById('ai-chip-area');
             if (area) area.innerHTML = `<div class="ai-keyword-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ${label}</div>`;

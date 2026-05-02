@@ -5,11 +5,11 @@
 
 const ScrollReveal = {
     observer: null,
-    
+
     /**
      * Initialize the Intersection Observer
      */
-    init: function() {
+    init: function () {
         const options = {
             root: null,
             rootMargin: '0px 0px -100px 0px', // Trigger a bit before the element enters the viewport
@@ -27,7 +27,7 @@ const ScrollReveal = {
 
         // Initial scan
         this.refresh();
-        
+
         console.log('✨ ScrollReveal Initialized');
     },
 
@@ -35,12 +35,12 @@ const ScrollReveal = {
      * Reveal an element
      * @param {HTMLElement} element 
      */
-    reveal: function(element) {
+    reveal: function (element) {
         element.classList.add('revealed');
-        
+
         // If it's a grid, reveal its children with staggering
-        if (element.classList.contains('product-grid') || 
-            element.classList.contains('subcategory-grid') || 
+        if (element.classList.contains('product-grid') ||
+            element.classList.contains('subcategory-grid') ||
             element.classList.contains('category-grid')) {
             const children = element.children;
             for (let i = 0; i < children.length; i++) {
@@ -54,7 +54,7 @@ const ScrollReveal = {
     /**
      * Refresh the observer to find new elements
      */
-    refresh: function() {
+    refresh: function () {
         // Find all revealable elements
         const elements = document.querySelectorAll('.reveal, .product-grid, .subcategory-grid, .category-grid, .section-header, .banner-section');
         elements.forEach(el => {
@@ -68,9 +68,9 @@ const ScrollReveal = {
      * Manually observe specific elements
      * @param {NodeList|HTMLElement} elements 
      */
-    observe: function(elements) {
+    observe: function (elements) {
         if (!this.observer) this.init();
-        
+
         if (elements instanceof HTMLElement) {
             this.observer.observe(elements);
         } else {

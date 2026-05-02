@@ -91,10 +91,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             // Fetch discounts in parallel
             const discPromise = fetch('data/discounts.json').then(r => r.json()).catch(e => { console.warn(e); return null; });
-            
+
             // Pre-flatten database once
             await window.dataService.getAllProductsFlattened();
-            
+
             // Now run all random generators concurrently
             const [
                 featuredProducts, specialOccasions, flashSales, trendingProducts,
