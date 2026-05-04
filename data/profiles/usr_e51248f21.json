@@ -30,29 +30,31 @@
             "Men's Special": 6,
             "Phone Cases": 2,
             "Women's Special": 2,
-            "Jewelry": 3,
+            "Jewelry": 4,
             "Mugs & Cups": 5,
-            "Kids Clothing": 2,
+            "Kids Clothing": 4,
             "Photo Frames": 2,
             "Footwear": 5,
             "Key Chains": 2,
-            "Face Masks": 2
+            "Face Masks": 2,
+            "Hoodies": 1
         },
         "subcategoryInterests": {
-            "Printed": 5,
+            "Printed": 6,
             "Flip Flops": 1,
             "Full Sleeves": 1,
-            "Necklaces": 1,
+            "Necklaces": 2,
             "Graphic": 1
         },
         "badgeInterests": {
-            "50% OFF": 6,
+            "50% OFF": 7,
             "55% OFF": 1,
-            "New Arrival": 1
+            "New Arrival": 2
         },
         "viewHistory": [
-            "sub-menclothing-graphic-1",
             "p-sub-necklaces-8",
+            "sub-printed-56",
+            "sub-menclothing-graphic-1",
             "sub-printed-30",
             "sub-printed-143",
             "sub-printed-99",
@@ -60,7 +62,7 @@
             "p-sub-flipflops-1",
             "sub-printed-22"
         ],
-        "lastInteracted": 1777719251994
+        "lastInteracted": 1777886127613
     },
-    "lastSync": "2026-05-02 12:54:12"
+    "lastSync": "2026-05-04 11:15:27"
 }
