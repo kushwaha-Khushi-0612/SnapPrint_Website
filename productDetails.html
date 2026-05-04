@@ -151,7 +151,7 @@
                     </button>
 
                     <!-- Base Product Image (Background) -->
-                    <img id="main-product-image"
+                    <img id="main-product-image" crossorigin="anonymous"
                         src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop"
                         alt="Product">
 
@@ -185,7 +185,7 @@
                     <div class="floating-action-bar">
                         <div class="action-bar-scroller" style="overflow-x: auto; white-space: nowrap;">
                             <div class="action-bar-buttons" style="display: flex; gap: 8px;">
-                                <button class="action-btn">
+                                <button class="action-btn" id="btn-whatsapp-action">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2">
                                         <path
@@ -203,6 +203,14 @@
                                         <line x1="8" y1="11" x2="14" y2="11"></line>
                                     </svg>
                                     Zoom
+                                </button>
+                                <button class="action-btn" id="btn-copy-design">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    Copy
                                 </button>
                                 <button class="action-btn" id="btn-download-design">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -811,6 +819,11 @@
                         <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
                         <path d="M2 2l7.586 7.586"></path>
                     </svg> Drawing</button>
+                <button class="img-tab" data-tab="url"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg> Image URL</button>
             </div>
 
             <div class="image-modal-body">
@@ -825,6 +838,17 @@
                         </svg>
                         <span>Upload From Device</span>
                     </div>
+                </div>
+
+                <!-- Add from URL -->
+                <div class="img-tab-content" id="tab-url" style="display:none;">
+                    <div class="form-group" style="margin-bottom: 16px;">
+                        <label style="display:block; margin-bottom: 8px; font-weight: 500;">Image URL</label>
+                        <input type="text" id="custom-image-url-input" class="form-control"
+                            placeholder="Paste image URL here (e.g. https://...)"
+                            style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; font-size:13px; outline:none;">
+                    </div>
+                    <button class="btn-buy-now" id="btn-add-url-image" style="width: auto; padding: 10px 20px;">Add to Canvas</button>
                 </div>
 
                 <!-- Designs (Cliparts) -->

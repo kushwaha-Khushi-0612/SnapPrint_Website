@@ -167,6 +167,10 @@
     margin: 0 0 16px 0;
     color: #111;
     letter-spacing: -1px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .product-rating {

@@ -210,11 +210,18 @@ function setupImageGallery() {
             if (index === 2) viewName = 'left_sleeve';
             if (index === 3) viewName = 'right_sleeve';
 
-            // Check if the switchView function exists globally (attached to window or scope)
+            // Change the main product image to the thumbnail's image
+            mainImage.crossOrigin = 'anonymous';
+            mainImage.src = thumb.dataset.image;
+
+            // Update customizerImages for this view
+            if (window.customizerImages) {
+                window.customizerImages[viewName] = thumb.dataset.image;
+            }
+
+            // Trigger the view update so customization safe zone appears over the new image
             if (typeof window.switchCustomizerView === 'function') {
                 window.switchCustomizerView(viewName);
-            } else {
-                mainImage.src = thumb.dataset.image;
             }
 
             // Update active state
@@ -467,12 +474,14 @@ function setupCustomizer() {
         right_sleeve: null
     };
 
-    // Mock image for the back view if none exists
-    const frontImgSrc = mainImage.src;
-    const backImgSrc = productData.images && productData.images.length > 1 ? productData.images[1] : frontImgSrc;
-    // For sleeves, we'll just mock it with the front image for now if no specific sleeve image exists
-    const lSleeveImgSrc = frontImgSrc;
-    const rSleeveImgSrc = frontImgSrc;
+    // Use plain t-shirt images for T-shirt products as requested by user
+    const isTshirt = productData.category && (productData.category.toLowerCase().includes('t-shirt') || productData.category.toLowerCase().includes('tshirt'));
+    window.customizerImages = {
+        front: mainImage.src,
+        back: isTshirt ? "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&h=600&fit=crop" : (productData.images && productData.images.length > 1 ? productData.images[1] : mainImage.src),
+        left_sleeve: isTshirt ? "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&h=600&fit=crop" : mainImage.src,
+        right_sleeve: isTshirt ? "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&h=600&fit=crop" : mainImage.src
+    };
 
     const printSidesHeader = document.getElementById('print-sides-header');
     const viewSwitcherTabs = document.getElementById('view-switcher-tabs');
@@ -564,10 +573,11 @@ function setupCustomizer() {
         });
 
         // Swap Image
-        if (viewName === 'front') mainImage.src = frontImgSrc;
-        else if (viewName === 'back') mainImage.src = backImgSrc;
-        else if (viewName === 'left_sleeve') mainImage.src = lSleeveImgSrc;
-        else if (viewName === 'right_sleeve') mainImage.src = rSleeveImgSrc;
+        mainImage.crossOrigin = 'anonymous';
+        if (viewName === 'front') mainImage.src = window.customizerImages.front;
+        else if (viewName === 'back') mainImage.src = window.customizerImages.back;
+        else if (viewName === 'left_sleeve') mainImage.src = window.customizerImages.left_sleeve;
+        else if (viewName === 'right_sleeve') mainImage.src = window.customizerImages.right_sleeve;
 
         // Load new state
         canvas.clear();
@@ -656,6 +666,30 @@ function setupCustomizer() {
         reader.readAsDataURL(file);
     });
 
+    // URL Image Upload inside Modal
+    const btnAddUrlImage = document.getElementById('btn-add-url-image');
+    if (btnAddUrlImage) {
+        btnAddUrlImage.addEventListener('click', () => {
+            const url = document.getElementById('custom-image-url-input').value.trim();
+            if (!url) {
+                alert("Please paste a valid image URL.");
+                return;
+            }
+            fabric.Image.fromURL(url, (img) => {
+                if (!img) {
+                    alert("Failed to load image from URL. Please ensure it's a valid direct image link.");
+                    return;
+                }
+                img.scaleToWidth(printWidth * 0.5);
+                canvas.add(img);
+                canvas.centerObject(img);
+                canvas.setActiveObject(img);
+                imageModal.classList.remove('active');
+                document.getElementById('custom-image-url-input').value = '';
+            }, { crossOrigin: 'anonymous' });
+        });
+    }
+
     function loadMockDesigns(category = 'all') {
         const grid = document.getElementById('designs-grid');
 
@@ -697,6 +731,17 @@ function setupCustomizer() {
         });
     });
 
+    // Action Bar - WhatsApp
+    const waBtn = document.getElementById('btn-whatsapp-action');
+    if (waBtn) {
+        waBtn.addEventListener('click', () => {
+            const currentTitle = document.getElementById('product-title')?.textContent || 'SnapPrint Product';
+            const shareUrl = window.location.href;
+            const message = `Check out this amazing personalized product on SnapPrint: ${currentTitle} - ${shareUrl}`;
+            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`, '_blank');
+        });
+    }
+
     // Action Bar - Download
     const downloadBtn = document.getElementById('btn-download-design');
     if (downloadBtn) {
@@ -705,38 +750,247 @@ function setupCustomizer() {
             canvas.discardActiveObject();
             canvas.renderAll();
 
-            const dataURL = canvas.toDataURL({
-                format: 'png',
-                quality: 1
-            });
-            const link = document.createElement('a');
-            link.download = 'my-snapprint-design.png';
-            link.href = dataURL;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            const mainImg = document.getElementById('main-product-image');
+            const customizerContainer = document.getElementById('customizer-container');
+
+            if (mainImg && customizerContainer) {
+                try {
+                    const rect = customizerContainer.getBoundingClientRect();
+                    const imgRect = mainImg.getBoundingClientRect();
+
+                    const tempCanvas = document.createElement('canvas');
+                    tempCanvas.width = rect.width;
+                    tempCanvas.height = rect.height;
+                    const ctx = tempCanvas.getContext('2d');
+
+                    // Draw base background image exactly where it's positioned within the customizer-container
+                    const imgLeft = imgRect.left - rect.left;
+                    const imgTop = imgRect.top - rect.top;
+
+                    // Allow CORS fetching for this canvas drawing
+                    mainImg.crossOrigin = "anonymous";
+                    ctx.drawImage(mainImg, imgLeft, imgTop, imgRect.width, imgRect.height);
+
+                    // Draw Fabric canvas on top of it
+                    const fabricCanvasEl = canvas.lowerCanvasEl;
+                    const fabricDataUrl = canvas.toDataURL({
+                        format: 'png',
+                        quality: 1
+                    });
+
+                    const fabricImg = new Image();
+                    fabricImg.crossOrigin = "anonymous";
+                    fabricImg.onload = () => {
+                        try {
+                            const canvasRect = fabricCanvasEl.getBoundingClientRect();
+                            const top = canvasRect.top - rect.top;
+                            const left = canvasRect.left - rect.left;
+
+                            ctx.drawImage(fabricImg, left, top, canvasRect.width, canvasRect.height);
+
+                            // Download final composited image!
+                            const dataURL = tempCanvas.toDataURL('image/png');
+                            const link = document.createElement('a');
+                            link.download = 'my-snapprint-design-complete.png';
+                            link.href = dataURL;
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        } catch (errInner) {
+                            console.warn("Error drawing fabric canvas or generating data URL:", errInner);
+                            // Fallback if the canvas was tainted
+                            const fallbackUrl = canvas.toDataURL({ format: 'png', quality: 1 });
+                            const link = document.createElement('a');
+                            link.download = 'my-snapprint-design.png';
+                            link.href = fallbackUrl;
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        }
+                    };
+                    fabricImg.src = fabricDataUrl;
+                } catch (errOuter) {
+                    console.warn("Outer drawing error:", errOuter);
+                    // Absolute fallback
+                    const fallbackUrl = canvas.toDataURL({ format: 'png', quality: 1 });
+                    const link = document.createElement('a');
+                    link.download = 'my-snapprint-design.png';
+                    link.href = fallbackUrl;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            } else {
+                // Direct fallback if images are not found
+                const fallbackUrl = canvas.toDataURL({ format: 'png', quality: 1 });
+                const link = document.createElement('a');
+                link.download = 'my-snapprint-design.png';
+                link.href = fallbackUrl;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
         });
     }
+
+    // Action Bar - Copy Progress
+    const copyBtn = document.getElementById('btn-copy-design');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', async () => {
+            canvas.discardActiveObject();
+            canvas.renderAll();
+
+            const mainImg = document.getElementById('main-product-image');
+            const customizerContainer = document.getElementById('customizer-container');
+
+            let finalDataUrl = null;
+
+            if (mainImg && customizerContainer) {
+                try {
+                    const rect = customizerContainer.getBoundingClientRect();
+                    const imgRect = mainImg.getBoundingClientRect();
+
+                    const tempCanvas = document.createElement('canvas');
+                    tempCanvas.width = rect.width;
+                    tempCanvas.height = rect.height;
+                    const ctx = tempCanvas.getContext('2d');
+
+                    const imgLeft = imgRect.left - rect.left;
+                    const imgTop = imgRect.top - rect.top;
+
+                    mainImg.crossOrigin = "anonymous";
+                    ctx.drawImage(mainImg, imgLeft, imgTop, imgRect.width, imgRect.height);
+
+                    const fabricCanvasEl = canvas.lowerCanvasEl;
+                    const fabricDataUrl = canvas.toDataURL({
+                        format: 'png',
+                        quality: 1
+                    });
+
+                    const fabricImg = new Image();
+                    fabricImg.crossOrigin = "anonymous";
+                    
+                    const drawAndCopy = new Promise((resolve, reject) => {
+                        fabricImg.onload = () => {
+                            try {
+                                const canvasRect = fabricCanvasEl.getBoundingClientRect();
+                                const top = canvasRect.top - rect.top;
+                                const left = canvasRect.left - rect.left;
+
+                                ctx.drawImage(fabricImg, left, top, canvasRect.width, canvasRect.height);
+                                resolve(tempCanvas.toDataURL('image/png'));
+                            } catch (e) {
+                                reject(e);
+                            }
+                        };
+                        fabricImg.onerror = reject;
+                        fabricImg.src = fabricDataUrl;
+                    });
+
+                    finalDataUrl = await drawAndCopy;
+                } catch (err) {
+                    console.warn("Compositing before copy failed, falling back to pure canvas progress", err);
+                    finalDataUrl = canvas.toDataURL({ format: 'png', quality: 1 });
+                }
+            } else {
+                finalDataUrl = canvas.toDataURL({ format: 'png', quality: 1 });
+            }
+
+            try {
+                const response = await fetch(finalDataUrl);
+                const blob = await response.blob();
+                await navigator.clipboard.write([
+                    new ClipboardItem({ 'image/png': blob })
+                ]);
+                alert("Design progress copied to clipboard successfully!");
+            } catch (err) {
+                console.error("Failed to copy image to clipboard:", err);
+                alert("Failed to copy image to clipboard. Please try manually copying.");
+            }
+        });
+    }
+
+    // Keyboard Shortcuts (Ctrl+V Paste listener for images)
+    window.addEventListener('paste', (e) => {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+        const items = (e.clipboardData || e.originalEvent.clipboardData).items;
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].type.indexOf('image') !== -1) {
+                const blob = items[i].getAsFile();
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    fabric.Image.fromURL(event.target.result, (img) => {
+                        img.scaleToWidth(printWidth * 0.5);
+                        canvas.add(img);
+                        canvas.centerObject(img);
+                        canvas.setActiveObject(img);
+                        canvas.renderAll();
+                    });
+                };
+                reader.readAsDataURL(blob);
+                e.preventDefault();
+                break;
+            }
+        }
+    });
 
     // Action Bar - Zoom
     const zoomBtn = document.getElementById('btn-zoom-design');
     if (zoomBtn) {
         let isZoomed = false;
+        let zoomLevel = 1;
+        const wrapper = document.querySelector('.canvas-wrapper');
+        const actionBar = document.querySelector('.floating-action-bar');
+
+        if (wrapper) {
+            // Mouse wheel listener
+            wrapper.addEventListener('wheel', (e) => {
+                if (!isZoomed) return;
+                e.preventDefault();
+                if (e.deltaY < 0) {
+                    zoomLevel = Math.min(3, zoomLevel + 0.1);
+                } else {
+                    zoomLevel = Math.max(1, zoomLevel - 0.1);
+                }
+                wrapper.style.transform = `scale(${zoomLevel})`;
+                wrapper.style.cursor = zoomLevel > 1 ? 'zoom-out' : 'zoom-in';
+            }, { passive: false });
+        }
+
         zoomBtn.addEventListener('click', () => {
             isZoomed = !isZoomed;
-            const wrapper = document.querySelector('.canvas-wrapper');
-            const actionBar = document.querySelector('.floating-action-bar');
             if (isZoomed) {
-                wrapper.style.transform = 'scale(1.4)';
+                zoomLevel = 1.4;
+                wrapper.style.transform = `scale(${zoomLevel})`;
                 wrapper.style.zIndex = '100';
-                wrapper.style.backgroundColor = 'rgba(255,255,255,0.95)';
+                wrapper.style.cursor = 'zoom-in';
                 zoomBtn.style.color = '#2563eb';
+                zoomBtn.innerHTML = `
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <polyline points="9 21 3 21 3 15"></polyline>
+                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                    </svg>
+                    Zoom Mode
+                `;
                 if (actionBar) actionBar.style.zIndex = '105'; // Keep action bar above zoom
             } else {
+                zoomLevel = 1;
                 wrapper.style.transform = 'scale(1)';
                 wrapper.style.zIndex = '1';
-                wrapper.style.backgroundColor = 'transparent';
+                wrapper.style.cursor = 'default';
                 zoomBtn.style.color = 'inherit';
+                zoomBtn.innerHTML = `
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                    Zoom
+                `;
                 if (actionBar) actionBar.style.zIndex = '10';
             }
         });
