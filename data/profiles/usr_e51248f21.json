@@ -36,24 +36,24 @@
             "Photo Frames": 2,
             "Footwear": 5,
             "Key Chains": 2,
-            "Face Masks": 2,
+            "Face Masks": 3,
             "Hoodies": 1
         },
         "subcategoryInterests": {
-            "Printed": 6,
+            "Printed": 7,
             "Flip Flops": 1,
             "Full Sleeves": 1,
             "Necklaces": 2,
             "Graphic": 1
         },
         "badgeInterests": {
-            "50% OFF": 7,
+            "50% OFF": 8,
             "55% OFF": 1,
             "New Arrival": 2
         },
         "viewHistory": [
-            "p-sub-necklaces-8",
             "sub-printed-56",
+            "p-sub-necklaces-8",
             "sub-menclothing-graphic-1",
             "sub-printed-30",
             "sub-printed-143",
@@ -62,7 +62,7 @@
             "p-sub-flipflops-1",
             "sub-printed-22"
         ],
-        "lastInteracted": 1777886127613
+        "lastInteracted": 1777890310878
     },
-    "lastSync": "2026-05-04 11:15:27"
+    "lastSync": "2026-05-04 12:25:10"
 }

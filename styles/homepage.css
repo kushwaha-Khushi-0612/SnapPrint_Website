@@ -2043,3 +2043,55 @@ html {
         height: 160px;
     }
 }
+
+/* Homepage regular product grid card height fix for absolute uniformity */
+.product-grid .product-card-detail {
+    height: 330px !important; /* Absolute fixed card height */
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+}
+
+.product-grid .product-card-image {
+    height: 180px !important;
+    aspect-ratio: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    padding: 12px !important;
+}
+
+.product-grid .product-card-image img {
+    max-height: 100% !important;
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+.product-grid .product-card-info {
+    height: 150px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+    padding: 12px 14px !important;
+}
+
+/* Also truncate titles properly */
+.product-grid .product-card-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+    height: 38px !important;
+    margin-bottom: 6px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+.product-grid .product-card-description {
+    display: none !important;
+}

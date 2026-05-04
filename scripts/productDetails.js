@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         bundled.forEach(p => p.badge = 'BUNDLE SAVE');
         renderProducts(bundled, 'bundled-offers');
 
-        renderProducts(await window.dataService.getRandomProducts(10), 'mixed-categories-final');
+        renderProducts(await window.dataService.getRandomProducts(24), 'mixed-categories-final');
     }
 
     console.log('✅ Product Details Page Ready!');
