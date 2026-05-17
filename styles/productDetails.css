@@ -99,8 +99,7 @@
 .wishlist-btn {
     position: absolute;
     top: 20px;
-    left: 80px;
-    /* moved from right to next to badge */
+    left: 20px; /* Positioned top-left of the mockup container */
     background: white;
     border: none;
     width: 40px;
@@ -1709,8 +1708,7 @@
 
 .floating-action-bar {
     position: absolute;
-    bottom: 60px;
-    /* Above the view tabs */
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -2174,8 +2172,8 @@
 /* Premium Floating Pill Switcher Panel Styles */
 .view-switcher-tabs {
     position: absolute !important;
-    bottom: 15px !important; /* Positioned at bottom for perfect thumb access & zero top-level collisions */
-    top: auto !important;
+    top: 15px !important; /* Elegant top floating pill switcher */
+    bottom: auto !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 50;
@@ -2225,8 +2223,8 @@
 /* Mobile Responsive Customizer Switcher Overrides */
 @media (max-width: 768px) {
     .view-switcher-tabs {
-        bottom: 12px !important; /* Easy-reach dynamic thumb tab zone */
-        top: auto !important;
+        top: 12px !important; /* Centered top floating pill switcher for mobile */
+        bottom: auto !important;
         gap: 3px !important;
         padding: 3px 5px !important; /* Micro padded spacing */
         max-width: 90% !important;
@@ -2275,7 +2273,7 @@
 
     /* Floating Action Bar decluttering - hide text, only show icons */
     .floating-action-bar {
-        bottom: 50px !important;
+        bottom: 12px !important; /* Perfect floating bottom bar */
         padding: 4px 8px !important;
         border-radius: 20px !important;
     }
