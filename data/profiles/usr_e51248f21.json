@@ -25,10 +25,10 @@
     "last_chosen_address": 1,
     "analytics": {
         "categoryInterests": {
-            "T-Shirts": 21,
-            "Decor": 8,
+            "T-Shirts": 30,
+            "Decor": 11,
             "Men's Special": 6,
-            "Phone Cases": 5,
+            "Phone Cases": 6,
             "Women's Special": 2,
             "Jewelry": 4,
             "Mugs & Cups": 7,
@@ -37,14 +37,14 @@
             "Footwear": 5,
             "Key Chains": 2,
             "Face Masks": 4,
-            "Hoodies": 8,
+            "Hoodies": 11,
             "Tote Bags": 2,
             "Pendants": 1
         },
         "subcategoryInterests": {
             "Printed": 13,
             "Flip Flops": 1,
-            "Full Sleeves": 2,
+            "Full Sleeves": 3,
             "Necklaces": 2,
             "Graphic": 2,
             "Zip-Up": 1,
@@ -52,20 +52,29 @@
             "Handmade": 1,
             "Insulated": 1,
             "Lightweight": 1,
-            "Oversized": 2,
+            "Oversized": 3,
             "Wall Hanging": 1,
-            "Statement": 1
+            "Statement": 1,
+            "Crystals": 1,
+            "Custom": 1,
+            "Shockproof": 1,
+            "Holi": 1
         },
         "badgeInterests": {
-            "50% OFF": 12,
+            "50% OFF": 13,
             "55% OFF": 7,
             "New Arrival": 3,
             "Bestseller": 1,
-            "65% OFF": 1
+            "65% OFF": 3
         },
         "viewHistory": [
-            "sub-menclothing-graphic-4",
+            "sub-menclothing-holi-5",
+            "sub-oversized-4",
+            "p-sub-shockproof-5",
             "sub-menclothing-fullsleeves-0",
+            "p-sub-menclothing-custom-1",
+            "p-sub-crystals-1",
+            "sub-menclothing-graphic-4",
             "sub-oversized-119",
             "p-sub-statement-8",
             "p-sub-wallhanging-5",
@@ -78,14 +87,9 @@
             "p-sub-insulated-2",
             "p-sub-handmade-3",
             "sub-customized-5",
-            "sub-printed-125",
-            "sub-printed-13",
-            "p-sub-womenclothing-zipup-2",
-            "sub-printed-56",
-            "p-sub-necklaces-8",
-            "sub-menclothing-graphic-1"
+            "sub-printed-125"
         ],
-        "lastInteracted": 1779012844689
+        "lastInteracted": 1779027401982
     },
-    "lastSync": "2026-05-17 12:14:04"
+    "lastSync": "2026-05-17 16:16:41"
 }

@@ -15,47 +15,118 @@ let productData = null;
 function getCategoryViewsAndImages(category, originalImages) {
     const cat = (category || '').toLowerCase();
     
-    // Curated high-quality lifestyle/mockup templates
-    const placeholders = {
+    // Curated high-quality mockups and lifestyle templates for EVERY category (exactly 4 images each!)
+    const galleryConfigs = {
         tshirt: {
-            front: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop",
-            back: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&h=600&fit=crop",
-            left_sleeve: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&h=600&fit=crop",
-            right_sleeve: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&h=600&fit=crop"
+            views: ['front', 'back', 'left_sleeve', 'right_sleeve'],
+            images: [
+                "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop", // Front mockup (Customizable)
+                "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&h=600&fit=crop", // Back mockup (Customizable)
+                "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&h=600&fit=crop", // Left Sleeve mockup (Customizable)
+                "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&h=600&fit=crop&q=80" // Right Sleeve mockup (Customizable)
+            ]
         },
         hoodie: {
-            front: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=600&fit=crop",
-            back: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=600&fit=crop&q=80"
+            views: ['front', 'back'],
+            images: [
+                "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=600&fit=crop", // Front mockup (Customizable)
+                "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=600&fit=crop&q=80", // Back mockup (Customizable)
+                "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&h=600&fit=crop", // Sleeve angled angle (Lifestyle)
+                "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&h=600&fit=crop&q=80" // Studio backdrop lifestyle (Lifestyle)
+            ]
         },
         cap: {
-            front: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&h=600&fit=crop",
-            top: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&h=600&fit=crop"
+            views: ['front'],
+            images: [
+                "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&h=600&fit=crop", // Front panel mockup (Customizable)
+                "https://images.unsplash.com/photo-1534215754734-18e55d13ce35?w=600&h=600&fit=crop", // Side profile angle (Lifestyle)
+                "https://images.unsplash.com/photo-1572375995501-4b0894d53c69?w=600&h=600&fit=crop", // Angled back buckle (Lifestyle)
+                "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=600&fit=crop"  // Lifestyle model wear (Lifestyle)
+            ]
+        },
+        bottle: {
+            views: ['front'],
+            images: [
+                "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&h=600&fit=crop", // Front print zone mockup (Customizable)
+                "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=600&fit=crop", // Detailed zoom lid cap (Lifestyle)
+                "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=600&fit=crop", // Dynamic backdrop side (Lifestyle)
+                "https://images.unsplash.com/photo-1577937927133-66ef06acdf18?w=600&h=600&fit=crop"  // Lifestyle outdoor desk (Lifestyle)
+            ]
         },
         mug: {
-            front: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=600&fit=crop",
-            back: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=600&fit=crop&q=80",
-            wrap: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=600&fit=crop"
+            views: ['front', 'back', 'wrap'],
+            images: [
+                "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=600&fit=crop", // Front mockup (Customizable)
+                "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=600&fit=crop&q=80", // Back mockup (Customizable)
+                "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=600&fit=crop", // Full wrap printing area (Customizable)
+                "https://images.unsplash.com/photo-1577937927133-66ef06acdf18?w=600&h=600&fit=crop"  // Lifestyle coffee setting (Lifestyle)
+            ]
         },
         phonecase: {
-            back: "https://images.unsplash.com/photo-1580870013141-3bad09490e04?w=600&h=600&fit=crop"
+            views: ['back'],
+            images: [
+                "https://images.unsplash.com/photo-1580870013141-3bad09490e04?w=600&h=600&fit=crop", // Back case custom zone (Customizable)
+                "https://images.unsplash.com/photo-1601784551446-20c9e09cd90f?w=600&h=600&fit=crop", // Front glass view (Lifestyle)
+                "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=600&fit=crop", // Symmetrical side bumper (Lifestyle)
+                "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&h=600&fit=crop"  // Lifestyle hand holding case (Lifestyle)
+            ]
         },
         mask: {
-            front: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=600&fit=crop"
+            views: ['front'],
+            images: [
+                "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=600&fit=crop", // Front flat printed mask (Customizable)
+                "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=600&fit=crop", // Curved layout side (Lifestyle)
+                "https://images.unsplash.com/photo-1586942593568-293c15d51b8d?w=600&h=600&fit=crop", // Lifestyle wear zoom (Lifestyle)
+                "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=600&h=600&fit=crop"  // Close-up fabric texture (Lifestyle)
+            ]
+        },
+        keychain: {
+            views: ['front'],
+            images: [
+                "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=600&h=600&fit=crop", // Metal keyring template (Customizable)
+                "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=600&h=600&fit=crop", // Detailed leather keychain zoom (Angled)
+                "https://images.unsplash.com/photo-1548883354-7622d03aca27?w=600&h=600&fit=crop", // Premium lifestyle leather keyring (Lifestyle)
+                "https://images.unsplash.com/photo-1522273400909-fd1a8f77637e?w=600&h=600&fit=crop"  // Keyring hanging on backpack (Lifestyle)
+            ]
+        },
+        decor: {
+            views: ['front'],
+            images: [
+                "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=600&h=600&fit=crop", // Acrylic/stone photo print stand (Customizable)
+                "https://images.unsplash.com/photo-1544273677-c433136021d4?w=600&h=600&fit=crop", // Angle close up (Lifestyle)
+                "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=600&h=600&fit=crop", // Dynamic backdrop shelf (Lifestyle)
+                "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=600&fit=crop"  // Interior living room zoom (Lifestyle)
+            ]
         }
     };
 
-    let key = 'tshirt';
+    let key = 'decor'; // SAFE DEFAULT: Unknown categories default to high-end single-view decor/gift items!
     if (cat.includes('hoodie')) key = 'hoodie';
     else if (cat.includes('cap') || cat.includes('hat')) key = 'cap';
-    else if (cat.includes('mug')) key = 'mug';
+    else if (cat.includes('bottle') || cat.includes('sipper') || cat.includes('drink') || cat.includes('flask')) key = 'bottle';
+    else if (cat.includes('mug') || cat.includes('cup')) key = 'mug';
     else if (cat.includes('phone') || cat.includes('case')) key = 'phonecase';
     else if (cat.includes('mask')) key = 'mask';
-    else if (cat.includes('t-shirt') || cat.includes('tshirt') || cat.includes('tee')) key = 'tshirt';
-    else key = 'tshirt';
+    else if (cat.includes('keychain') || cat.includes('key chain') || cat.includes('key_chain') || cat.includes('key')) key = 'keychain';
+    else if (cat.includes('t-shirt') || cat.includes('tshirt') || cat.includes('tee') || cat.includes('shirt')) key = 'tshirt';
+    else if (cat.includes('decor') || cat.includes('frame') || cat.includes('stone') || cat.includes('crystal') || cat.includes('canvas')) key = 'decor';
 
-    const config = placeholders[key];
-    const views = Object.keys(config);
-    const images = views.map(view => config[view]);
+    const selected = galleryConfigs[key] || galleryConfigs['decor'];
+    const views = selected.views;
+    
+    // Copy template images array to avoid mutating the master gallery config
+    const images = [...selected.images];
+
+    // Inject the actual product database image as the customizable primary angle (images[0])
+    if (originalImages && originalImages.length > 0) {
+        images[0] = originalImages[0];
+    }
+
+    // Map each customizable view to its respective mockup template image
+    const config = {};
+    views.forEach((view, idx) => {
+        config[view] = images[idx];
+    });
 
     return { views, images, config };
 }
@@ -199,6 +270,14 @@ async function loadProductData() {
         'Custom verified print'
     ];
 
+    // Dynamically show/hide sizes and color selections for non-apparel products
+    const sizeSelectionEl = document.querySelector('.size-selection');
+    const colorSelectionEl = document.querySelector('.color-selection');
+    const isApparel = catDetails.views.length > 1; // Shirts, Mugs, Hoodies have multiple print views! Single view products don't need size/color selections.
+    
+    if (sizeSelectionEl) sizeSelectionEl.style.display = isApparel ? 'block' : 'none';
+    if (colorSelectionEl) colorSelectionEl.style.display = isApparel ? 'block' : 'none';
+
     // Update breadcrumb
     const breadCat = document.getElementById('breadcrumb-category');
     if (breadCat) {
@@ -249,6 +328,29 @@ function setupImageGallery() {
     const mainImage = document.getElementById('main-product-image');
     const thumbnailGallery = document.getElementById('thumbnail-gallery');
 
+    // Force default main image source to match the category's first preview image immediately on page load!
+    if (mainImage && productData.images && productData.images.length > 0) {
+        const primarySrc = productData.images[0];
+        if (primarySrc && primarySrc.includes('unsplash.com')) {
+            mainImage.crossOrigin = 'anonymous';
+        } else {
+            mainImage.removeAttribute('crossorigin');
+            mainImage.crossOrigin = null;
+        }
+        mainImage.src = primarySrc;
+    }
+
+    // Create a gorgeous floating "Lifestyle Preview Only" badge overlay inside customizer container
+    let badge = document.getElementById('preview-only-badge');
+    if (!badge) {
+        badge = document.createElement('div');
+        badge.id = 'preview-only-badge';
+        badge.style.cssText = 'display: none; position: absolute; top: 15px; left: 15px; background: rgba(15, 23, 42, 0.85); color: #fff; padding: 6px 12px; font-size: 10px; font-weight: 700; border-radius: 20px; z-index: 100; backdrop-filter: blur(4px); letter-spacing: 0.5px; text-transform: uppercase; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.1);';
+        badge.textContent = 'Preview Angle';
+        const container = document.getElementById('customizer-container');
+        if (container) container.appendChild(badge);
+    }
+
     // Create thumbnails
     thumbnailGallery.innerHTML = productData.images.map((img, index) => `
         <div class="thumbnail ${index === 0 ? 'active' : ''}" data-image="${img}" data-index="${index}">
@@ -261,29 +363,64 @@ function setupImageGallery() {
         thumb.addEventListener('click', () => {
             const index = parseInt(thumb.dataset.index, 10);
 
-            // Map index to view name dynamically based on category views
-            let viewName = 'front';
-            if (productData.views && productData.views[index]) {
-                viewName = productData.views[index];
-            }
-
             // Change the main product image to the thumbnail's image
-            mainImage.crossOrigin = 'anonymous';
-            mainImage.src = thumb.dataset.image;
-
-            // Update customizerImages for this view
-            if (window.customizerImages) {
-                window.customizerImages[viewName] = thumb.dataset.image;
+            const clickedSrc = thumb.dataset.image;
+            if (clickedSrc && clickedSrc.includes('unsplash.com')) {
+                mainImage.crossOrigin = 'anonymous';
+            } else {
+                mainImage.removeAttribute('crossorigin');
+                mainImage.crossOrigin = null;
             }
+            mainImage.src = clickedSrc;
 
-            // Trigger the view update so customization safe zone appears over the new image
-            if (typeof window.switchCustomizerView === 'function') {
-                window.switchCustomizerView(viewName);
-            }
-
-            // Update active state
+            // Update active state class for thumbnails
             document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
             thumb.classList.add('active');
+
+            const wrapper = document.querySelector('.canvas-wrapper');
+            const toolbar = document.querySelector('.floating-toolbar');
+            const badge = document.getElementById('preview-only-badge');
+
+            if (productData.views.length > 1) {
+                // MULTI-VIEW CATEGORY (e.g. T-shirts/Hoodies where every side is customizable)
+                const viewName = productData.views[index] || productData.views[0];
+
+                // Switch customizer view
+                if (typeof window.switchCustomizerView === 'function') {
+                    window.switchCustomizerView(viewName);
+                }
+
+                if (wrapper) wrapper.style.display = 'block';
+                if (toolbar) toolbar.style.display = 'flex';
+                if (badge) badge.style.display = 'none';
+
+            } else {
+                // SINGLE-VIEW CATEGORY (e.g. Cap, Bottle, Phonecase, Mask)
+                const viewName = productData.views[0];
+
+                if (index === 0) {
+                    // Customizable primary angle
+                    if (wrapper) wrapper.style.display = 'block';
+                    if (toolbar) toolbar.style.display = 'flex';
+                    if (badge) badge.style.display = 'none';
+
+                    // Ensure customizer canvas matches background
+                    if (window.customizerImages) {
+                        window.customizerImages[viewName] = thumb.dataset.image;
+                    }
+                    if (typeof window.switchCustomizerView === 'function') {
+                        window.switchCustomizerView(viewName);
+                    }
+                } else {
+                    // Secondary non-customizable lifestyle/detail angles
+                    if (wrapper) wrapper.style.display = 'none';
+                    if (toolbar) toolbar.style.display = 'none';
+                    if (badge) {
+                        badge.style.display = 'block';
+                        badge.textContent = index === 1 ? 'Angled View' : index === 2 ? 'Detail Close-up' : 'Lifestyle Preview';
+                    }
+                }
+            }
         });
     });
 }
@@ -351,17 +488,44 @@ function setupQuantityControls() {
 
     function updatePrice() {
         const qty = parseInt(qtyInput.value) || 1;
-        let unitPrice = base;
+        
+        // Sum up the active print area surcharge (flat ₹50 per extra selected side)
+        let surcharge = 0;
+        const checkboxes = document.querySelectorAll('.print-area-checkbox');
+        checkboxes.forEach(cb => {
+            if (cb.checked) surcharge += 50;
+        });
+
+        const baseWithSurcharge = base + surcharge;
+        let unitPrice = baseWithSurcharge;
+
+        // Dynamic quantity tier discount calculation on top of customizable base price!
+        tiers.forEach((tier, index) => {
+            const cell = document.getElementById(`price-tier-${index + 1}`);
+            if (cell) {
+                const discountRatio = tier.price / base;
+                const calculatedTierPrice = Math.round(baseWithSurcharge * (discountRatio || 1));
+                cell.textContent = `₹${calculatedTierPrice}`;
+            }
+        });
 
         for (const tier of tiers) {
             if (qty >= tier.min && qty <= tier.max) {
-                unitPrice = tier.price;
+                const discountRatio = tier.price / base;
+                unitPrice = Math.round(baseWithSurcharge * (discountRatio || 1));
                 break;
             }
         }
 
         totalPriceDisplay.textContent = `₹${unitPrice * qty}`;
+
+        // Sync product page main price display
+        const mainPriceEl = document.getElementById('current-price');
+        if (mainPriceEl) mainPriceEl.textContent = `₹${baseWithSurcharge}`;
     }
+
+    // Export so other components (print checkboxes) can invoke pricing updates
+    window.updatePrice = updatePrice;
 
     decreaseBtn.addEventListener('click', () => {
         const currentValue = parseInt(qtyInput.value);
@@ -642,38 +806,41 @@ function setupCustomizer() {
 
     // Populate Print Area Checkboxes dynamically!
     if (printAreasContainer && productData.views) {
-        printAreasContainer.innerHTML = productData.views.map((view, idx) => {
-            let displayName = view.replace('_', ' ').toUpperCase();
-            if (displayName === 'LEFT SLEEVE') displayName = 'L-SLEEVE';
-            if (displayName === 'RIGHT SLEEVE') displayName = 'R-SLEEVE';
-            
-            if (idx === 0) {
+        if (productData.views.length > 1) {
+            if (printSidesHeader) printSidesHeader.style.display = 'block';
+            printAreasContainer.innerHTML = productData.views.map((view, idx) => {
+                let displayName = view.replace('_', ' ').toUpperCase();
+                if (displayName === 'LEFT SLEEVE') displayName = 'L-SLEEVE';
+                if (displayName === 'RIGHT SLEEVE') displayName = 'R-SLEEVE';
+                
+                if (idx === 0) {
+                    return `
+                        <label style="display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; cursor: pointer;">
+                            <input type="checkbox" id="side-${view}-cb" checked disabled style="width: 16px; height: 16px; accent-color: #000;">
+                            ${displayName} (Included)
+                        </label>
+                    `;
+                }
+                
+                // Flat premium ₹50 surcharge per additional location
+                let priceText = "+₹50";
+                
                 return `
                     <label style="display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; cursor: pointer;">
-                        <input type="checkbox" id="side-${view}-cb" checked disabled style="width: 16px; height: 16px; accent-color: #000;">
-                        ${displayName} (Included)
+                        <input type="checkbox" id="side-${view}-cb" class="print-area-checkbox" data-view="${view}" style="width: 16px; height: 16px; accent-color: #000;">
+                        ${displayName} (${priceText})
                     </label>
                 `;
-            }
-            let priceText = "+₹150";
-            if (view.includes('sleeve')) priceText = "+₹50";
-            else if (view.includes('top')) priceText = "+₹100";
-            else if (view.includes('wrap')) priceText = "+₹200";
-            
-            return `
-                <label style="display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; cursor: pointer;">
-                    <input type="checkbox" id="side-${view}-cb" class="print-area-checkbox" data-view="${view}" style="width: 16px; height: 16px; accent-color: #000;">
-                    ${displayName} (${priceText})
-                </label>
-            `;
-        }).join('');
+            }).join('');
+        } else {
+            if (printSidesHeader) printSidesHeader.style.display = 'none';
+        }
     }
 
     // Build Switcher Tab Buttons dynamically!
     if (viewSwitcherTabs && productData.views) {
         if (productData.views.length > 1) {
-            if (printSidesHeader) printSidesHeader.style.display = 'block';
-            viewSwitcherTabs.style.display = 'flex';
+            viewSwitcherTabs.style.setProperty('display', 'flex', 'important');
             
             viewSwitcherTabs.innerHTML = productData.views.map((view, idx) => {
                 let displayName = view.replace('_', ' ').toUpperCase();
@@ -687,27 +854,15 @@ function setupCustomizer() {
                 return `<button class="view-tab ${isActive ? 'active' : ''}" data-view="${view}">${displayName}</button>`;
             }).join('');
         } else {
-            if (printSidesHeader) printSidesHeader.style.display = 'none';
-            viewSwitcherTabs.style.display = 'none';
+            viewSwitcherTabs.style.setProperty('display', 'none', 'important');
+            viewSwitcherTabs.innerHTML = ''; // Wipe out hardcoded T-shirt buttons for single-view categories!
         }
     }
 
     function calculateDynamicPrice() {
-        let basePrice = productData.price;
-        const checkboxes = document.querySelectorAll('.print-area-checkbox');
-        checkboxes.forEach(cb => {
-            if (cb.checked) {
-                const view = cb.dataset.view;
-                if (view.includes('sleeve')) basePrice += 50;
-                else if (view.includes('top')) basePrice += 100;
-                else if (view.includes('wrap')) basePrice += 200;
-                else basePrice += 150;
-            }
-        });
-
-        document.getElementById('current-price').textContent = `₹${basePrice}`;
-        window.currentBasePrice = basePrice;
-        if (typeof updatePrice === 'function') updatePrice();
+        if (typeof window.updatePrice === 'function') {
+            window.updatePrice();
+        }
     }
 
     // Setup print-area-checkbox listeners to show/hide dynamic view tabs
@@ -747,9 +902,15 @@ function setupCustomizer() {
         });
 
         // Swap Image dynamically
-        mainImage.crossOrigin = 'anonymous';
-        if (window.customizerImages[viewName]) {
-            mainImage.src = window.customizerImages[viewName];
+        const viewSrc = window.customizerImages[viewName];
+        if (viewSrc) {
+            if (viewSrc.includes('unsplash.com')) {
+                mainImage.crossOrigin = 'anonymous';
+            } else {
+                mainImage.removeAttribute('crossorigin');
+                mainImage.crossOrigin = null;
+            }
+            mainImage.src = viewSrc;
         }
 
         // Sync main thumbnail active state as well
@@ -949,8 +1110,14 @@ function setupCustomizer() {
 
                 // Swap mockup background image source temporarily
                 const originalSrc = mainImg.src;
-                mainImg.crossOrigin = "anonymous";
-                mainImg.src = window.customizerImages[viewName] || originalSrc;
+                const targetSrc = window.customizerImages[viewName] || originalSrc;
+                if (targetSrc && targetSrc.includes('unsplash.com')) {
+                    mainImg.crossOrigin = "anonymous";
+                } else {
+                    mainImg.removeAttribute('crossorigin');
+                    mainImg.crossOrigin = null;
+                }
+                mainImg.src = targetSrc;
 
                 // Wait for the background image to fully load
                 await new Promise((res) => {

@@ -380,7 +380,7 @@ function createSubcategoryCard(subcategory) {
             </div>
             <div class="subcategory-card-content">
                 <h3 class="subcategory-name">${subcategory.name}</h3>
-                <p class="subcategory-description">${subcategory.description}</p>
+                <p class="subcategory-description">${subcategory.description || ''}</p>
                 <div class="subcategory-footer">
                     <div class="subcategory-count">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -425,7 +425,7 @@ function createColorCard(color) {
             </div>
             <div class="subcategory-card-content">
                 <h3 class="subcategory-name">${color.name}</h3>
-                <p class="subcategory-description">${color.description}</p>
+                <p class="subcategory-description">${color.description || ''}</p>
                 <div class="subcategory-footer">
                     <div class="subcategory-count">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -470,7 +470,7 @@ function createGSMCard(gsm) {
             </div>
             <div class="subcategory-card-content">
                 <h3 class="subcategory-name">${gsm.name} - ${gsm.gsm}GSM</h3>
-                <p class="subcategory-description">${gsm.description}</p>
+                <p class="subcategory-description">${gsm.description || ''}</p>
                 <div class="subcategory-footer">
                     <div class="subcategory-count">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
