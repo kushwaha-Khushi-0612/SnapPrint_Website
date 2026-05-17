@@ -2174,20 +2174,20 @@
 /* Premium Floating Pill Switcher Panel Styles */
 .view-switcher-tabs {
     position: absolute !important;
-    top: 15px !important;
+    bottom: 15px !important; /* Positioned at bottom for perfect thumb access & zero top-level collisions */
+    top: auto !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-    bottom: auto !important;
     z-index: 50;
     display: flex !important;
-    gap: 6px !important;
-    background: rgba(255, 255, 255, 0.9) !important;
-    padding: 5px !important;
-    border-radius: 30px !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    gap: 5px !important;
+    background: rgba(255, 255, 255, 0.95) !important; /* Premium high-contrast backdrop */
+    padding: 4px 6px !important; /* Generous end spacing to prevent edge clipping */
+    border-radius: 40px !important; /* Perfectly rounded outer pill capsule */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important; /* Delicate shadow border */
     max-width: 92% !important;
     width: auto !important;
     white-space: nowrap !important;
@@ -2196,45 +2196,48 @@
 }
 
 .view-tab {
-    padding: 6px 14px !important;
+    padding: 6px 12px !important;
     font-size: 11px !important;
-    font-weight: 700 !important;
-    border-radius: 20px !important;
+    font-weight: 600 !important;
+    border-radius: 30px !important; /* Smooth capsule tabs */
     border: none !important;
     background: transparent !important;
-    color: #444 !important;
+    color: #475569 !important; /* Soft premium slate gray text */
     cursor: pointer !important;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
     flex: none !important;
-    border-bottom: none !important; /* Remove any default border-bottom line */
+    border-bottom: none !important;
 }
 
 .view-tab:hover {
-    color: #000 !important;
-    background: rgba(0, 0, 0, 0.05) !important;
+    color: #0f172a !important;
+    background: rgba(15, 23, 42, 0.04) !important;
 }
 
 .view-tab.active {
-    background: #000 !important;
-    color: #fff !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+    background: #0f172a !important; /* Bold active state */
+    color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15) !important;
 }
 
 /* Mobile Responsive Customizer Switcher Overrides */
 @media (max-width: 768px) {
     .view-switcher-tabs {
-        top: 10px !important;
-        gap: 4px !important;
-        padding: 4px !important;
-        max-width: 95% !important;
+        bottom: 12px !important; /* Easy-reach dynamic thumb tab zone */
+        top: auto !important;
+        gap: 3px !important;
+        padding: 3px 5px !important; /* Micro padded spacing */
+        max-width: 90% !important;
+        border-radius: 30px !important;
     }
     
     .view-tab {
-        padding: 5px 9px !important;
-        font-size: 9px !important;
-        letter-spacing: 0.2px !important;
+        padding: 4.5px 8px !important; /* Ultra compact tab size */
+        font-size: 8.5px !important; /* Sleek, readable micro typography */
+        letter-spacing: 0.3px !important;
+        border-radius: 20px !important;
     }
 
     /* Declutter toolbar and floating customizer tools */
