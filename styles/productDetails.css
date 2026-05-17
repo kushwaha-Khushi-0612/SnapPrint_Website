@@ -2225,16 +2225,16 @@
     .view-switcher-tabs {
         top: 12px !important; /* Centered top floating pill switcher for mobile */
         bottom: auto !important;
-        gap: 3px !important;
-        padding: 3px 5px !important; /* Micro padded spacing */
-        max-width: 90% !important;
+        gap: 2.5px !important;
+        padding: 3px 4px !important; /* Micro padded spacing */
+        max-width: 95% !important;
         border-radius: 30px !important;
     }
     
     .view-tab {
-        padding: 4.5px 8px !important; /* Ultra compact tab size */
-        font-size: 8.5px !important; /* Sleek, readable micro typography */
-        letter-spacing: 0.3px !important;
+        padding: 4px 6.5px !important; /* Ultra compact tab size */
+        font-size: 8px !important; /* Sleek, readable micro typography */
+        letter-spacing: 0.2px !important;
         border-radius: 20px !important;
     }
 

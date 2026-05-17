@@ -677,8 +677,12 @@ function setupCustomizer() {
             
             viewSwitcherTabs.innerHTML = productData.views.map((view, idx) => {
                 let displayName = view.replace('_', ' ').toUpperCase();
-                if (displayName === 'LEFT SLEEVE') displayName = 'L-SLEEVE';
-                if (displayName === 'RIGHT SLEEVE') displayName = 'R-SLEEVE';
+                if (displayName === 'LEFT SLEEVE') {
+                    displayName = window.innerWidth < 768 ? 'L-SLV' : 'L-SLEEVE';
+                }
+                if (displayName === 'RIGHT SLEEVE') {
+                    displayName = window.innerWidth < 768 ? 'R-SLV' : 'R-SLEEVE';
+                }
                 const isActive = view === currentView;
                 return `<button class="view-tab ${isActive ? 'active' : ''}" data-view="${view}">${displayName}</button>`;
             }).join('');
