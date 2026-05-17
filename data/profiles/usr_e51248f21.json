@@ -25,39 +25,52 @@
     "last_chosen_address": 1,
     "analytics": {
         "categoryInterests": {
-            "T-Shirts": 14,
+            "T-Shirts": 21,
             "Decor": 8,
             "Men's Special": 6,
-            "Phone Cases": 4,
+            "Phone Cases": 5,
             "Women's Special": 2,
             "Jewelry": 4,
             "Mugs & Cups": 7,
             "Kids Clothing": 4,
-            "Photo Frames": 3,
+            "Photo Frames": 4,
             "Footwear": 5,
             "Key Chains": 2,
             "Face Masks": 4,
-            "Hoodies": 5
+            "Hoodies": 8,
+            "Tote Bags": 2,
+            "Pendants": 1
         },
         "subcategoryInterests": {
-            "Printed": 12,
+            "Printed": 13,
             "Flip Flops": 1,
-            "Full Sleeves": 1,
+            "Full Sleeves": 2,
             "Necklaces": 2,
-            "Graphic": 1,
+            "Graphic": 2,
             "Zip-Up": 1,
             "Customized": 1,
             "Handmade": 1,
             "Insulated": 1,
-            "Lightweight": 1
+            "Lightweight": 1,
+            "Oversized": 2,
+            "Wall Hanging": 1,
+            "Statement": 1
         },
         "badgeInterests": {
-            "50% OFF": 9,
-            "55% OFF": 6,
-            "New Arrival": 2,
-            "Bestseller": 1
+            "50% OFF": 12,
+            "55% OFF": 7,
+            "New Arrival": 3,
+            "Bestseller": 1,
+            "65% OFF": 1
         },
         "viewHistory": [
+            "sub-menclothing-graphic-4",
+            "sub-menclothing-fullsleeves-0",
+            "sub-oversized-119",
+            "p-sub-statement-8",
+            "p-sub-wallhanging-5",
+            "sub-oversized-163",
+            "sub-printed-87",
             "sub-printed-131",
             "p-sub-womenclothing-lightweight-5",
             "sub-printed-149",
@@ -70,15 +83,9 @@
             "p-sub-womenclothing-zipup-2",
             "sub-printed-56",
             "p-sub-necklaces-8",
-            "sub-menclothing-graphic-1",
-            "sub-printed-30",
-            "sub-printed-143",
-            "sub-printed-99",
-            "sub-menclothing-fullsleeves-1",
-            "p-sub-flipflops-1",
-            "sub-printed-22"
+            "sub-menclothing-graphic-1"
         ],
-        "lastInteracted": 1777925565207
+        "lastInteracted": 1779012844689
     },
-    "lastSync": "2026-05-04 22:12:45"
+    "lastSync": "2026-05-17 12:14:04"
 }

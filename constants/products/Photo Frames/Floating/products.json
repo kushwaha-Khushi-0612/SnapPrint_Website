@@ -1,37 +1,146 @@
 [
     {
-        "id": "sub-floating-0",
-        "sku_id": "SKU-SUBFLOATING0",
-        "title": "Floating Astronaut Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Relaxed fit oversized Floating T-Shirt for a modern street-style look. Floating Astronaut Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "id": "p-sub-floating-1",
+        "title": "Floating Photo Frames Sample 1",
         "price": 599,
-        "originalPrice": 1198,
-        "rating": "4.1",
-        "reviewCount": 55,
-        "color": "Free Color",
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-floating1/400/400",
+        "rating": "4.2",
+        "reviewCount": 109,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d95_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Oversized",
-            "Men"
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-floating-2",
+        "title": "Floating Photo Frames Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-floating2/400/400",
+        "rating": "4.2",
+        "reviewCount": 135,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
         ],
-        "status": "",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Oversized Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-floating-3",
+        "title": "Floating Photo Frames Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-floating3/400/400",
+        "rating": "4.2",
+        "reviewCount": 115,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-floating-4",
+        "title": "Floating Photo Frames Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-floating4/400/400",
+        "rating": "4.2",
+        "reviewCount": 154,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-floating-5",
+        "title": "Floating Photo Frames Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-floating5/400/400",
+        "rating": "4.2",
+        "reviewCount": 23,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-floating-6",
+        "title": "Floating Photo Frames Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-floating6/400/400",
+        "rating": "4.2",
+        "reviewCount": 137,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-floating-7",
+        "title": "Floating Photo Frames Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-floating7/400/400",
+        "rating": "4.2",
+        "reviewCount": 42,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-floating-8",
+        "title": "Floating Photo Frames Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-floating8/400/400",
+        "rating": "4.2",
+        "reviewCount": 118,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
     }
 ]

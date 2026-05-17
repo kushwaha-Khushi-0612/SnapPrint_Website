@@ -1,208 +1,146 @@
 [
     {
-        "id": "sub-minimalist-0",
-        "sku_id": "SKU-SUBMINIMALIST0",
-        "title": "Minimalistic Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Classic half-sleeve Minimalist, perfect for everyday wear. Minimalistic Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "id": "p-sub-minimalist-1",
+        "title": "Minimalist Key Chains Sample 1",
         "price": 599,
-        "originalPrice": 1331,
-        "rating": "4.0",
-        "reviewCount": 771,
-        "color": "Black",
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-minimalist1/400/400",
+        "rating": "4.2",
+        "reviewCount": 131,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "55% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d119_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Oversized",
-            "Men"
-        ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Oversized Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
+        "badge": null,
+        "can_beCustomised": 1
     },
     {
-        "id": "sub-minimalist-1",
-        "sku_id": "SKU-SUBMINIMALIST1",
-        "title": "Minimalistic Name Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Classic half-sleeve Minimalist, perfect for everyday wear. Minimalistic Name Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "price": 449,
-        "originalPrice": 898,
-        "rating": "4.5",
-        "reviewCount": 485,
-        "color": "Black",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_men_pat_d169_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
-    },
-    {
-        "id": "sub-minimalist-2",
-        "sku_id": "SKU-SUBMINIMALIST2",
-        "title": "Minimalistic Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Classic half-sleeve Minimalist, perfect for everyday wear. Minimalistic Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "price": 499,
-        "originalPrice": 998,
-        "rating": "4.5",
-        "reviewCount": 533,
-        "color": "Free Color",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_men_pat_d119_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
-    },
-    {
-        "id": "sub-minimalist-3",
-        "sku_id": "SKU-SUBMINIMALIST3",
-        "title": "Minimalistic Name V Neck Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Classic half-sleeve Minimalist, perfect for everyday wear. Minimalistic Name V Neck Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "price": 499,
-        "originalPrice": 998,
-        "rating": "4.3",
-        "reviewCount": 702,
-        "color": "Free Color",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_vneck_men_pat_d169_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
-    },
-    {
-        "id": "sub-minimalist-4",
-        "sku_id": "SKU-SUBMINIMALIST4",
-        "title": "Minimalistic V Neck Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Classic half-sleeve Minimalist, perfect for everyday wear. Minimalistic V Neck Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "price": 499,
-        "originalPrice": 998,
-        "rating": "4.4",
-        "reviewCount": 129,
-        "color": "Black",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_vneck_men_pat_d119_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
-    },
-    {
-        "id": "sub-minimalist-5",
-        "sku_id": "SKU-SUBMINIMALIST5",
-        "title": "Minimalistic Name Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Classic half-sleeve Minimalist, perfect for everyday wear. Minimalistic Name Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "id": "p-sub-minimalist-2",
+        "title": "Minimalist Key Chains Sample 2",
         "price": 599,
-        "originalPrice": 1331,
-        "rating": "4.0",
-        "reviewCount": 526,
-        "color": "Free Color",
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-minimalist2/400/400",
+        "rating": "4.2",
+        "reviewCount": 51,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "55% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d169_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Oversized",
-            "Men"
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-minimalist-3",
+        "title": "Minimalist Key Chains Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-minimalist3/400/400",
+        "rating": "4.2",
+        "reviewCount": 58,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
         ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Oversized Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-minimalist-4",
+        "title": "Minimalist Key Chains Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-minimalist4/400/400",
+        "rating": "4.2",
+        "reviewCount": 192,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-minimalist-5",
+        "title": "Minimalist Key Chains Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-minimalist5/400/400",
+        "rating": "4.2",
+        "reviewCount": 124,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-minimalist-6",
+        "title": "Minimalist Key Chains Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-minimalist6/400/400",
+        "rating": "4.2",
+        "reviewCount": 20,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-minimalist-7",
+        "title": "Minimalist Key Chains Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-minimalist7/400/400",
+        "rating": "4.2",
+        "reviewCount": 205,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-minimalist-8",
+        "title": "Minimalist Key Chains Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-minimalist8/400/400",
+        "rating": "4.2",
+        "reviewCount": 71,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
     }
 ]

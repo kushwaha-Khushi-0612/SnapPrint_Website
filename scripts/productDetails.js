@@ -9,6 +9,57 @@ const productId = urlParams.get('id') || 'prod-001';
 /// Global state
 let productData = null;
 
+/**
+ * Helper to get clean views and high-quality lifestyle/template image placeholders per product category
+ */
+function getCategoryViewsAndImages(category, originalImages) {
+    const cat = (category || '').toLowerCase();
+    
+    // Curated high-quality lifestyle/mockup templates
+    const placeholders = {
+        tshirt: {
+            front: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop",
+            back: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&h=600&fit=crop",
+            left_sleeve: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&h=600&fit=crop",
+            right_sleeve: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&h=600&fit=crop"
+        },
+        hoodie: {
+            front: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=600&fit=crop",
+            back: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=600&fit=crop&q=80"
+        },
+        cap: {
+            front: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&h=600&fit=crop",
+            top: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&h=600&fit=crop"
+        },
+        mug: {
+            front: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=600&fit=crop",
+            back: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=600&fit=crop&q=80",
+            wrap: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=600&fit=crop"
+        },
+        phonecase: {
+            back: "https://images.unsplash.com/photo-1580870013141-3bad09490e04?w=600&h=600&fit=crop"
+        },
+        mask: {
+            front: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=600&fit=crop"
+        }
+    };
+
+    let key = 'tshirt';
+    if (cat.includes('hoodie')) key = 'hoodie';
+    else if (cat.includes('cap') || cat.includes('hat')) key = 'cap';
+    else if (cat.includes('mug')) key = 'mug';
+    else if (cat.includes('phone') || cat.includes('case')) key = 'phonecase';
+    else if (cat.includes('mask')) key = 'mask';
+    else if (cat.includes('t-shirt') || cat.includes('tshirt') || cat.includes('tee')) key = 'tshirt';
+    else key = 'tshirt';
+
+    const config = placeholders[key];
+    const views = Object.keys(config);
+    const images = views.map(view => config[view]);
+
+    return { views, images, config };
+}
+
 // Sample reviews data
 const reviewsData = [
     {
@@ -127,6 +178,12 @@ async function loadProductData() {
 
     // Fill missing mock data since JSON might be sparse
     productData.category = productData.categoryName || 'T-Shirts';
+
+    // Resolve dynamic multi-view customizer images based on product category
+    const catDetails = getCategoryViewsAndImages(productData.category, productData.images);
+    productData.images = catDetails.images;
+    productData.views = catDetails.views;
+    productData.viewPlaceholders = catDetails.config;
     productData.categoryLink = `productCategory.html?category=${encodeURIComponent(productData.category)}`;
     productData.description = productData.description || 'Premium quality print material.';
     productData.sizes = ['S', 'M', 'L', 'XL', 'XXL'];
@@ -204,11 +261,11 @@ function setupImageGallery() {
         thumb.addEventListener('click', () => {
             const index = parseInt(thumb.dataset.index, 10);
 
-            // Map index to view name if possible
+            // Map index to view name dynamically based on category views
             let viewName = 'front';
-            if (index === 1) viewName = 'back';
-            if (index === 2) viewName = 'left_sleeve';
-            if (index === 3) viewName = 'right_sleeve';
+            if (productData.views && productData.views[index]) {
+                viewName = productData.views[index];
+            }
 
             // Change the main product image to the thumbnail's image
             mainImage.crossOrigin = 'anonymous';
@@ -431,6 +488,99 @@ function loadReviews() {
 }
 
 /**
+ * Helper to make a floating panel draggable within its parent container
+ */
+function makeElementDraggable(elmnt, dragHandle) {
+    let initialMouseX = 0, initialMouseY = 0;
+    let initialElementTop = 0, initialElementLeft = 0;
+    
+    if (dragHandle) {
+        dragHandle.style.cursor = 'move';
+        dragHandle.onmousedown = dragMouseDown;
+        dragHandle.ontouchstart = dragTouchStart;
+    } else {
+        elmnt.style.cursor = 'move';
+        elmnt.onmousedown = dragMouseDown;
+        elmnt.ontouchstart = dragTouchStart;
+    }
+
+    function dragMouseDown(e) {
+        e = e || window.event;
+        if (e.button !== 0) return; // Only left mouse button drag
+        e.preventDefault();
+        
+        initialMouseX = e.clientX;
+        initialMouseY = e.clientY;
+        initialElementTop = elmnt.offsetTop;
+        initialElementLeft = elmnt.offsetLeft;
+        
+        document.addEventListener('mousemove', elementDrag);
+        document.addEventListener('mouseup', closeDragElement);
+    }
+
+    function dragTouchStart(e) {
+        e = e || window.event;
+        const touch = e.touches[0];
+        
+        initialMouseX = touch.clientX;
+        initialMouseY = touch.clientY;
+        initialElementTop = elmnt.offsetTop;
+        initialElementLeft = elmnt.offsetLeft;
+        
+        document.addEventListener('touchmove', elementTouchDrag, { passive: false });
+        document.addEventListener('touchend', closeDragElement);
+    }
+
+    function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        
+        const deltaX = e.clientX - initialMouseX;
+        const deltaY = e.clientY - initialMouseY;
+        
+        updateElementPosition(initialElementTop + deltaY, initialElementLeft + deltaX);
+    }
+
+    function elementTouchDrag(e) {
+        e = e || window.event;
+        e.preventDefault(); // Prevents page scrolling while dragging the panel!
+        const touch = e.touches[0];
+        
+        const deltaX = touch.clientX - initialMouseX;
+        const deltaY = touch.clientY - initialMouseY;
+
+        updateElementPosition(initialElementTop + deltaY, initialElementLeft + deltaX);
+    }
+
+    function updateElementPosition(top, left) {
+        const container = elmnt.offsetParent;
+        if (!container) return;
+
+        const containerWidth = container.clientWidth;
+        const containerHeight = container.clientHeight;
+        const elementWidth = elmnt.clientWidth;
+        const elementHeight = elmnt.clientHeight;
+
+        // Keep it safely constrained within container bounds
+        let newTop = Math.max(0, Math.min(top, containerHeight - elementHeight));
+        let newLeft = Math.max(0, Math.min(left, containerWidth - elementWidth));
+
+        elmnt.style.top = newTop + "px";
+        elmnt.style.left = newLeft + "px";
+        elmnt.style.bottom = "auto";
+        elmnt.style.right = "auto";
+        elmnt.style.transform = 'none';
+    }
+
+    function closeDragElement() {
+        document.removeEventListener('mousemove', elementDrag);
+        document.removeEventListener('mouseup', closeDragElement);
+        document.removeEventListener('touchmove', elementTouchDrag);
+        document.removeEventListener('touchend', closeDragElement);
+    }
+}
+
+/**
  * Setup Fabric.js Customizer
  */
 function setupCustomizer() {
@@ -448,8 +598,8 @@ function setupCustomizer() {
     const width = mainImage.clientWidth;
     const height = mainImage.clientHeight;
 
-    // We create a central print area (e.g., 60% of width, 80% of height)
-    const printWidth = width * 0.6;
+    // Expand the Fabric canvas print area to align perfectly with the 80% green Safe Zone boundaries
+    const printWidth = width * 0.8;
     const printHeight = height * 0.8;
 
     const canvas = new fabric.Canvas('product-canvas', {
@@ -458,105 +608,125 @@ function setupCustomizer() {
         preserveObjectStacking: true
     });
 
-    // Style the canvas container
+    // Style the canvas container to blend seamlessly with the green safe zone box
     const container = document.querySelector('.canvas-container');
     if (container) {
-        container.style.border = '1px dashed rgba(0,0,0,0.3)';
-        container.style.boxShadow = '0 0 0 9999px rgba(255,255,255,0.4)'; // Dim outside
+        container.style.border = 'none'; // Avoid double borders, the green safe zone indicator is our clean boundary!
+        container.style.boxShadow = 'none'; // Remove washed background overlay to keep concrete mockup backdrop fully clean!
     }
 
     // --- Multi-View Logic ---
     let currentView = 'front';
-    const canvasStates = {
-        front: null,
-        back: null,
-        left_sleeve: null,
-        right_sleeve: null
-    };
+    const canvasStates = {};
+    
+    // Initialize canvasStates dynamically for all views in productData.views
+    if (productData.views) {
+        productData.views.forEach(view => {
+            canvasStates[view] = null;
+        });
+        currentView = productData.views[0];
+    } else {
+        productData.views = ['front'];
+        canvasStates['front'] = null;
+    }
 
-    // Use plain t-shirt images for T-shirt products as requested by user
-    const isTshirt = productData.category && (productData.category.toLowerCase().includes('t-shirt') || productData.category.toLowerCase().includes('tshirt'));
-    window.customizerImages = {
-        front: mainImage.src,
-        back: isTshirt ? "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&h=600&fit=crop" : (productData.images && productData.images.length > 1 ? productData.images[1] : mainImage.src),
-        left_sleeve: isTshirt ? "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&h=600&fit=crop" : mainImage.src,
-        right_sleeve: isTshirt ? "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&h=600&fit=crop" : mainImage.src
-    };
+    // Set up window.customizerImages dynamically using resolved category views
+    window.customizerImages = {};
+    productData.views.forEach((view, idx) => {
+        window.customizerImages[view] = productData.images[idx] || (productData.viewPlaceholders && productData.viewPlaceholders[view]);
+    });
 
     const printSidesHeader = document.getElementById('print-sides-header');
     const viewSwitcherTabs = document.getElementById('view-switcher-tabs');
-    const backCheckbox = document.getElementById('side-back-cb');
-    const lSleeveCheckbox = document.getElementById('side-lsleeve-cb');
-    const rSleeveCheckbox = document.getElementById('side-rsleeve-cb');
-    const viewTabs = document.querySelectorAll('.view-tab');
+    const printAreasContainer = document.getElementById('print-areas-container');
 
-    // Hide optional tabs initially
-    document.querySelector('.view-tab[data-view="back"]').style.display = 'none';
-    document.querySelector('.view-tab[data-view="left_sleeve"]').style.display = 'none';
-    document.querySelector('.view-tab[data-view="right_sleeve"]').style.display = 'none';
+    // Populate Print Area Checkboxes dynamically!
+    if (printAreasContainer && productData.views) {
+        printAreasContainer.innerHTML = productData.views.map((view, idx) => {
+            let displayName = view.replace('_', ' ').toUpperCase();
+            if (displayName === 'LEFT SLEEVE') displayName = 'L-SLEEVE';
+            if (displayName === 'RIGHT SLEEVE') displayName = 'R-SLEEVE';
+            
+            if (idx === 0) {
+                return `
+                    <label style="display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; cursor: pointer;">
+                        <input type="checkbox" id="side-${view}-cb" checked disabled style="width: 16px; height: 16px; accent-color: #000;">
+                        ${displayName} (Included)
+                    </label>
+                `;
+            }
+            let priceText = "+₹150";
+            if (view.includes('sleeve')) priceText = "+₹50";
+            else if (view.includes('top')) priceText = "+₹100";
+            else if (view.includes('wrap')) priceText = "+₹200";
+            
+            return `
+                <label style="display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; cursor: pointer;">
+                    <input type="checkbox" id="side-${view}-cb" class="print-area-checkbox" data-view="${view}" style="width: 16px; height: 16px; accent-color: #000;">
+                    ${displayName} (${priceText})
+                </label>
+            `;
+        }).join('');
+    }
 
-    // Show headers if this is a multi-sided product (e.g. T-shirt)
-    if (productData.category && productData.category.toLowerCase().includes('t-shirt')) {
-        if (printSidesHeader) printSidesHeader.style.display = 'block';
-        if (viewSwitcherTabs) viewSwitcherTabs.style.display = 'flex';
-    } else {
-        if (printSidesHeader) printSidesHeader.style.display = 'none';
-        if (viewSwitcherTabs) viewSwitcherTabs.style.display = 'none';
+    // Build Switcher Tab Buttons dynamically!
+    if (viewSwitcherTabs && productData.views) {
+        if (productData.views.length > 1) {
+            if (printSidesHeader) printSidesHeader.style.display = 'block';
+            viewSwitcherTabs.style.display = 'flex';
+            
+            viewSwitcherTabs.innerHTML = productData.views.map((view, idx) => {
+                let displayName = view.replace('_', ' ').toUpperCase();
+                if (displayName === 'LEFT SLEEVE') displayName = 'L-SLEEVE';
+                if (displayName === 'RIGHT SLEEVE') displayName = 'R-SLEEVE';
+                const isActive = view === currentView;
+                return `<button class="view-tab ${isActive ? 'active' : ''}" data-view="${view}">${displayName}</button>`;
+            }).join('');
+        } else {
+            if (printSidesHeader) printSidesHeader.style.display = 'none';
+            viewSwitcherTabs.style.display = 'none';
+        }
     }
 
     function calculateDynamicPrice() {
         let basePrice = productData.price;
-        if (backCheckbox && backCheckbox.checked) basePrice += 150;
-        if (lSleeveCheckbox && lSleeveCheckbox.checked) basePrice += 50;
-        if (rSleeveCheckbox && rSleeveCheckbox.checked) basePrice += 50;
+        const checkboxes = document.querySelectorAll('.print-area-checkbox');
+        checkboxes.forEach(cb => {
+            if (cb.checked) {
+                const view = cb.dataset.view;
+                if (view.includes('sleeve')) basePrice += 50;
+                else if (view.includes('top')) basePrice += 100;
+                else if (view.includes('wrap')) basePrice += 200;
+                else basePrice += 150;
+            }
+        });
 
         document.getElementById('current-price').textContent = `₹${basePrice}`;
-        // Update the global base price for the bulk pricing logic
         window.currentBasePrice = basePrice;
         if (typeof updatePrice === 'function') updatePrice();
     }
 
-    // Enable/Disable Back View
-    if (backCheckbox) {
-        backCheckbox.addEventListener('change', (e) => {
-            const backTab = document.querySelector('.view-tab[data-view="back"]');
-            if (e.target.checked) {
-                backTab.style.display = 'block';
-            } else {
-                backTab.style.display = 'none';
-                if (currentView === 'back') switchView('front');
+    // Setup print-area-checkbox listeners to show/hide dynamic view tabs
+    const checkboxes = document.querySelectorAll('.print-area-checkbox');
+    checkboxes.forEach(cb => {
+        const view = cb.dataset.view;
+        const tab = document.querySelector(`.view-tab[data-view="${view}"]`);
+        
+        // Hide optional views' switcher tabs initially
+        if (tab) {
+            tab.style.display = 'none';
+        }
+        
+        cb.addEventListener('change', (e) => {
+            if (tab) {
+                tab.style.display = e.target.checked ? 'block' : 'none';
+                if (!e.target.checked && currentView === view) {
+                    switchView(productData.views[0]);
+                }
             }
             calculateDynamicPrice();
         });
-    }
-
-    // Enable/Disable Left Sleeve
-    if (lSleeveCheckbox) {
-        lSleeveCheckbox.addEventListener('change', (e) => {
-            const tab = document.querySelector('.view-tab[data-view="left_sleeve"]');
-            if (e.target.checked) {
-                tab.style.display = 'block';
-            } else {
-                tab.style.display = 'none';
-                if (currentView === 'left_sleeve') switchView('front');
-            }
-            calculateDynamicPrice();
-        });
-    }
-
-    // Enable/Disable Right Sleeve
-    if (rSleeveCheckbox) {
-        rSleeveCheckbox.addEventListener('change', (e) => {
-            const tab = document.querySelector('.view-tab[data-view="right_sleeve"]');
-            if (e.target.checked) {
-                tab.style.display = 'block';
-            } else {
-                tab.style.display = 'none';
-                if (currentView === 'right_sleeve') switchView('front');
-            }
-            calculateDynamicPrice();
-        });
-    }
+    });
 
     // Switch View function
     function switchView(viewName) {
@@ -565,19 +735,25 @@ function setupCustomizer() {
 
         currentView = viewName;
 
-        // Update tabs
+        // Update tabs active state
+        const viewTabs = document.querySelectorAll('.view-tab');
         viewTabs.forEach(tab => {
-            tab.style.background = tab.dataset.view === viewName ? '#000' : 'transparent';
-            tab.style.color = tab.dataset.view === viewName ? '#fff' : '#000';
-            tab.classList.toggle('active', tab.dataset.view === viewName);
+            const isTabActive = tab.dataset.view === viewName;
+            tab.classList.toggle('active', isTabActive);
         });
 
-        // Swap Image
+        // Swap Image dynamically
         mainImage.crossOrigin = 'anonymous';
-        if (viewName === 'front') mainImage.src = window.customizerImages.front;
-        else if (viewName === 'back') mainImage.src = window.customizerImages.back;
-        else if (viewName === 'left_sleeve') mainImage.src = window.customizerImages.left_sleeve;
-        else if (viewName === 'right_sleeve') mainImage.src = window.customizerImages.right_sleeve;
+        if (window.customizerImages[viewName]) {
+            mainImage.src = window.customizerImages[viewName];
+        }
+
+        // Sync main thumbnail active state as well
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            const index = parseInt(thumb.dataset.index, 10);
+            const thumbView = productData.views[index];
+            thumb.classList.toggle('active', thumbView === viewName);
+        });
 
         // Load new state
         canvas.clear();
@@ -589,7 +765,8 @@ function setupCustomizer() {
     // Export switchView globally so setupImageGallery can call it
     window.switchCustomizerView = switchView;
 
-    // Tab Listeners
+    // Attach Click listeners to all viewTabs
+    const viewTabs = document.querySelectorAll('.view-tab');
     viewTabs.forEach(tab => {
         tab.addEventListener('click', () => switchView(tab.dataset.view));
     });
@@ -742,90 +919,201 @@ function setupCustomizer() {
         });
     }
 
-    // Action Bar - Download
+    // Helper to generate a composited high-resolution image for a specific view
+    async function generateCompositedImage(viewName) {
+        // Save current canvas state first if switching views
+        if (viewName === currentView) {
+            canvasStates[currentView] = JSON.stringify(canvas.toJSON());
+        }
+
+        return new Promise(async (resolve) => {
+            try {
+                const currentJSON = JSON.stringify(canvas.toJSON());
+                const savedView = currentView;
+
+                // Deselect active object to avoid drawing handles
+                canvas.discardActiveObject();
+                canvas.renderAll();
+
+                const mainImg = document.getElementById('main-product-image');
+                const customizerContainer = document.getElementById('customizer-container');
+
+                if (!mainImg || !customizerContainer) {
+                    resolve(canvas.toDataURL({ format: 'png', quality: 1 }));
+                    return;
+                }
+
+                // Swap mockup background image source temporarily
+                const originalSrc = mainImg.src;
+                mainImg.crossOrigin = "anonymous";
+                mainImg.src = window.customizerImages[viewName] || originalSrc;
+
+                // Wait for the background image to fully load
+                await new Promise((res) => {
+                    if (mainImg.complete) res();
+                    else {
+                        mainImg.onload = res;
+                        mainImg.onerror = res;
+                    }
+                });
+
+                // Load Fabric canvas state of the target view temporarily
+                const targetJSON = canvasStates[viewName] || '{"objects":[],"background":""}';
+                canvas.clear();
+                
+                await new Promise((res) => {
+                    canvas.loadFromJSON(targetJSON, () => {
+                        canvas.renderAll();
+                        res();
+                    });
+                });
+
+                // Setup offscreen compositing canvas
+                const rect = customizerContainer.getBoundingClientRect();
+                const imgRect = mainImg.getBoundingClientRect();
+
+                const tempCanvas = document.createElement('canvas');
+                tempCanvas.width = rect.width;
+                tempCanvas.height = rect.height;
+                const ctx = tempCanvas.getContext('2d');
+
+                const imgLeft = imgRect.left - rect.left;
+                const imgTop = imgRect.top - rect.top;
+
+                ctx.drawImage(mainImg, imgLeft, imgTop, imgRect.width, imgRect.height);
+
+                const fabricCanvasEl = canvas.lowerCanvasEl;
+                const fabricDataUrl = canvas.toDataURL({ format: 'png', quality: 1 });
+
+                const fabricImg = new Image();
+                fabricImg.crossOrigin = "anonymous";
+                fabricImg.onload = () => {
+                    try {
+                        const canvasRect = fabricCanvasEl.getBoundingClientRect();
+                        const top = canvasRect.top - rect.top;
+                        const left = canvasRect.left - rect.left;
+
+                        ctx.drawImage(fabricImg, left, top, canvasRect.width, canvasRect.height);
+                        
+                        // Restore original state completely
+                        mainImg.src = originalSrc;
+                        canvas.clear();
+                        canvas.loadFromJSON(currentJSON, () => {
+                            canvas.renderAll();
+                            resolve(tempCanvas.toDataURL('image/png'));
+                        });
+                    } catch (e) {
+                        mainImg.src = originalSrc;
+                        canvas.clear();
+                        canvas.loadFromJSON(currentJSON, () => {
+                            canvas.renderAll();
+                            resolve(canvas.toDataURL({ format: 'png', quality: 1 }));
+                        });
+                    }
+                };
+                fabricImg.onerror = () => {
+                    mainImg.src = originalSrc;
+                    canvas.clear();
+                    canvas.loadFromJSON(currentJSON, () => {
+                        canvas.renderAll();
+                        resolve(canvas.toDataURL({ format: 'png', quality: 1 }));
+                    });
+                };
+                fabricImg.src = fabricDataUrl;
+
+            } catch (err) {
+                console.warn("Compositing target view failed", viewName, err);
+                resolve(canvas.toDataURL({ format: 'png', quality: 1 }));
+            }
+        });
+    }
+
+    // Action Bar - Download (Supports Single-View Image & Multi-View ZIP Bundling!)
     const downloadBtn = document.getElementById('btn-download-design');
     if (downloadBtn) {
-        downloadBtn.addEventListener('click', () => {
-            // Deselect to remove handles
-            canvas.discardActiveObject();
-            canvas.renderAll();
+        downloadBtn.addEventListener('click', async () => {
+            // Find all active print views
+            const activeViews = [productData.views[0]]; // Primary view is always included
+            const printCheckboxes = document.querySelectorAll('.print-area-checkbox');
+            printCheckboxes.forEach(cb => {
+                if (cb.checked) {
+                    activeViews.push(cb.dataset.view);
+                }
+            });
 
-            const mainImg = document.getElementById('main-product-image');
-            const customizerContainer = document.getElementById('customizer-container');
+            if (activeViews.length > 1) {
+                // MULTI-VIEW BUNDLING: Download as a high-quality ZIP!
+                
+                // 1. Create a premium full-screen blur loader overlay
+                const loader = document.createElement('div');
+                loader.style = "position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); color: #fff; z-index: 99999; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; gap: 16px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: all 0.3s ease;";
+                loader.innerHTML = `
+                    <div style="width: 50px; height: 50px; border: 5px solid rgba(255,255,255,0.2); border-top: 5px solid #fff; border-radius: 50%; animation: zip-spin 1s linear infinite;"></div>
+                    <div style="font-size: 18px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;">Compositing Print Designs</div>
+                    <div id="zip-status-text" style="font-size: 13px; opacity: 0.7; color: #a1a1aa; font-weight: 500;">Resolving zip packages...</div>
+                    <style>
+                        @keyframes zip-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+                    </style>
+                `;
+                document.body.appendChild(loader);
 
-            if (mainImg && customizerContainer) {
                 try {
-                    const rect = customizerContainer.getBoundingClientRect();
-                    const imgRect = mainImg.getBoundingClientRect();
+                    // 2. Load JSZip dynamically from cdnjs if not already loaded
+                    if (typeof JSZip === 'undefined') {
+                        const script = document.createElement('script');
+                        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+                        document.head.appendChild(script);
+                        await new Promise((resolve) => script.onload = resolve);
+                    }
 
-                    const tempCanvas = document.createElement('canvas');
-                    tempCanvas.width = rect.width;
-                    tempCanvas.height = rect.height;
-                    const ctx = tempCanvas.getContext('2d');
+                    const zip = new JSZip();
 
-                    // Draw base background image exactly where it's positioned within the customizer-container
-                    const imgLeft = imgRect.left - rect.left;
-                    const imgTop = imgRect.top - rect.top;
-
-                    // Allow CORS fetching for this canvas drawing
-                    mainImg.crossOrigin = "anonymous";
-                    ctx.drawImage(mainImg, imgLeft, imgTop, imgRect.width, imgRect.height);
-
-                    // Draw Fabric canvas on top of it
-                    const fabricCanvasEl = canvas.lowerCanvasEl;
-                    const fabricDataUrl = canvas.toDataURL({
-                        format: 'png',
-                        quality: 1
-                    });
-
-                    const fabricImg = new Image();
-                    fabricImg.crossOrigin = "anonymous";
-                    fabricImg.onload = () => {
-                        try {
-                            const canvasRect = fabricCanvasEl.getBoundingClientRect();
-                            const top = canvasRect.top - rect.top;
-                            const left = canvasRect.left - rect.left;
-
-                            ctx.drawImage(fabricImg, left, top, canvasRect.width, canvasRect.height);
-
-                            // Download final composited image!
-                            const dataURL = tempCanvas.toDataURL('image/png');
-                            const link = document.createElement('a');
-                            link.download = 'my-snapprint-design-complete.png';
-                            link.href = dataURL;
-                            document.body.appendChild(link);
-                            link.click();
-                            document.body.removeChild(link);
-                        } catch (errInner) {
-                            console.warn("Error drawing fabric canvas or generating data URL:", errInner);
-                            // Fallback if the canvas was tainted
-                            const fallbackUrl = canvas.toDataURL({ format: 'png', quality: 1 });
-                            const link = document.createElement('a');
-                            link.download = 'my-snapprint-design.png';
-                            link.href = fallbackUrl;
-                            document.body.appendChild(link);
-                            link.click();
-                            document.body.removeChild(link);
+                    // 3. Composite and capture each active view
+                    for (const view of activeViews) {
+                        const statusEl = document.getElementById('zip-status-text');
+                        if (statusEl) {
+                            statusEl.textContent = `Processing view: ${view.replace('_', ' ').toUpperCase()}...`;
                         }
-                    };
-                    fabricImg.src = fabricDataUrl;
-                } catch (errOuter) {
-                    console.warn("Outer drawing error:", errOuter);
-                    // Absolute fallback
-                    const fallbackUrl = canvas.toDataURL({ format: 'png', quality: 1 });
+                        const dataUrl = await generateCompositedImage(view);
+                        const base64Data = dataUrl.split(',')[1];
+                        const filename = `${productData.category || 'product'}-${view}-design.png`;
+                        zip.file(filename, base64Data, { base64: true });
+                    }
+
+                    // 4. Generate the ZIP blob and download it
+                    const statusEl = document.getElementById('zip-status-text');
+                    if (statusEl) {
+                        statusEl.textContent = "Compiling ZIP Archive...";
+                    }
+                    const content = await zip.generateAsync({ type: 'blob' });
+                    
                     const link = document.createElement('a');
-                    link.download = 'my-snapprint-design.png';
-                    link.href = fallbackUrl;
+                    link.download = `${productData.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-designs.zip`;
+                    link.href = URL.createObjectURL(content);
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
+
+                } catch (err) {
+                    console.error("Multi-view zip compilation failed:", err);
+                    alert("ZIP compiling failed. Downloading current active view as fallback.");
+                    // Fallback to active view download
+                    const dataUrl = await generateCompositedImage(currentView);
+                    const link = document.createElement('a');
+                    link.download = 'my-snapprint-design-fallback.png';
+                    link.href = dataUrl;
+                    link.click();
+                } finally {
+                    // Remove loader
+                    document.body.removeChild(loader);
                 }
+
             } else {
-                // Direct fallback if images are not found
-                const fallbackUrl = canvas.toDataURL({ format: 'png', quality: 1 });
+                // SINGLE-VIEW: Download just the active Front view
+                const dataUrl = await generateCompositedImage(currentView);
                 const link = document.createElement('a');
-                link.download = 'my-snapprint-design.png';
-                link.href = fallbackUrl;
+                link.download = `${productData.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${currentView}-design.png`;
+                link.href = dataUrl;
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
@@ -833,79 +1121,21 @@ function setupCustomizer() {
         });
     }
 
-    // Action Bar - Copy Progress
+    // Action Bar - Copy Design (Copies ONLY the current active view design progress!)
     const copyBtn = document.getElementById('btn-copy-design');
     if (copyBtn) {
         copyBtn.addEventListener('click', async () => {
-            canvas.discardActiveObject();
-            canvas.renderAll();
-
-            const mainImg = document.getElementById('main-product-image');
-            const customizerContainer = document.getElementById('customizer-container');
-
-            let finalDataUrl = null;
-
-            if (mainImg && customizerContainer) {
-                try {
-                    const rect = customizerContainer.getBoundingClientRect();
-                    const imgRect = mainImg.getBoundingClientRect();
-
-                    const tempCanvas = document.createElement('canvas');
-                    tempCanvas.width = rect.width;
-                    tempCanvas.height = rect.height;
-                    const ctx = tempCanvas.getContext('2d');
-
-                    const imgLeft = imgRect.left - rect.left;
-                    const imgTop = imgRect.top - rect.top;
-
-                    mainImg.crossOrigin = "anonymous";
-                    ctx.drawImage(mainImg, imgLeft, imgTop, imgRect.width, imgRect.height);
-
-                    const fabricCanvasEl = canvas.lowerCanvasEl;
-                    const fabricDataUrl = canvas.toDataURL({
-                        format: 'png',
-                        quality: 1
-                    });
-
-                    const fabricImg = new Image();
-                    fabricImg.crossOrigin = "anonymous";
-
-                    const drawAndCopy = new Promise((resolve, reject) => {
-                        fabricImg.onload = () => {
-                            try {
-                                const canvasRect = fabricCanvasEl.getBoundingClientRect();
-                                const top = canvasRect.top - rect.top;
-                                const left = canvasRect.left - rect.left;
-
-                                ctx.drawImage(fabricImg, left, top, canvasRect.width, canvasRect.height);
-                                resolve(tempCanvas.toDataURL('image/png'));
-                            } catch (e) {
-                                reject(e);
-                            }
-                        };
-                        fabricImg.onerror = reject;
-                        fabricImg.src = fabricDataUrl;
-                    });
-
-                    finalDataUrl = await drawAndCopy;
-                } catch (err) {
-                    console.warn("Compositing before copy failed, falling back to pure canvas progress", err);
-                    finalDataUrl = canvas.toDataURL({ format: 'png', quality: 1 });
-                }
-            } else {
-                finalDataUrl = canvas.toDataURL({ format: 'png', quality: 1 });
-            }
-
+            const finalDataUrl = await generateCompositedImage(currentView);
             try {
                 const response = await fetch(finalDataUrl);
                 const blob = await response.blob();
                 await navigator.clipboard.write([
                     new ClipboardItem({ 'image/png': blob })
                 ]);
-                alert("Design progress copied to clipboard successfully!");
+                alert("Current view design copied to clipboard successfully!");
             } catch (err) {
                 console.error("Failed to copy image to clipboard:", err);
-                alert("Failed to copy image to clipboard. Please try manually copying.");
+                alert("Clipboard copy failed. Please right click the preview or try manually.");
             }
         });
     }
@@ -1156,6 +1386,21 @@ function setupCustomizer() {
     const colorInput = document.getElementById('prop-color-input');
     const opacitySlider = document.getElementById('prop-opacity-slider');
 
+    // Drag dragging panel trigger
+    const propHeader = propsBox.querySelector('.prop-header');
+    if (propsBox && propHeader) {
+        makeElementDraggable(propsBox, propHeader);
+    }
+
+    // Dismiss active object on close click
+    const closePropsBtn = document.getElementById('tool-close-props');
+    if (closePropsBtn) {
+        closePropsBtn.addEventListener('click', () => {
+            canvas.discardActiveObject();
+            canvas.renderAll();
+        });
+    }
+
     canvas.on('selection:created', updateProps);
     canvas.on('selection:updated', updateProps);
     canvas.on('selection:cleared', () => {
@@ -1167,6 +1412,25 @@ function setupCustomizer() {
         if (!active) return;
 
         propsBox.style.display = 'block';
+
+        // Set high-end responsive starting position on first select
+        if (propsBox.dataset.hasBeenPositioned !== "true") {
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                propsBox.style.top = "70px";
+                propsBox.style.left = "10px";
+                propsBox.style.bottom = "auto";
+                propsBox.style.right = "auto";
+                propsBox.style.width = "calc(100% - 20px)";
+            } else {
+                propsBox.style.top = "80px";
+                propsBox.style.left = "20px";
+                propsBox.style.bottom = "auto";
+                propsBox.style.right = "auto";
+                propsBox.style.width = "280px";
+            }
+            propsBox.dataset.hasBeenPositioned = "true";
+        }
 
         if (active.type === 'i-text') {
             textControls.style.display = 'block';

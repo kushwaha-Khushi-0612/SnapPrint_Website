@@ -1,12 +1,12 @@
 [
     {
         "id": "p-sub-transparent-1",
-        "title": "Transparent Face Masks Sample 1",
+        "title": "Transparent Phone Cases Sample 1",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent1/400/400",
         "rating": "4.2",
-        "reviewCount": 78,
+        "reviewCount": 147,
         "color": "White",
         "availableSizes": [
             "S",
@@ -19,12 +19,12 @@
     },
     {
         "id": "p-sub-transparent-2",
-        "title": "Transparent Face Masks Sample 2",
+        "title": "Transparent Phone Cases Sample 2",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent2/400/400",
         "rating": "4.2",
-        "reviewCount": 69,
+        "reviewCount": 32,
         "color": "White",
         "availableSizes": [
             "S",
@@ -37,12 +37,12 @@
     },
     {
         "id": "p-sub-transparent-3",
-        "title": "Transparent Face Masks Sample 3",
+        "title": "Transparent Phone Cases Sample 3",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent3/400/400",
         "rating": "4.2",
-        "reviewCount": 203,
+        "reviewCount": 67,
         "color": "White",
         "availableSizes": [
             "S",
@@ -55,12 +55,12 @@
     },
     {
         "id": "p-sub-transparent-4",
-        "title": "Transparent Face Masks Sample 4",
+        "title": "Transparent Phone Cases Sample 4",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent4/400/400",
         "rating": "4.2",
-        "reviewCount": 115,
+        "reviewCount": 187,
         "color": "White",
         "availableSizes": [
             "S",
@@ -73,12 +73,12 @@
     },
     {
         "id": "p-sub-transparent-5",
-        "title": "Transparent Face Masks Sample 5",
+        "title": "Transparent Phone Cases Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent5/400/400",
         "rating": "4.2",
-        "reviewCount": 200,
+        "reviewCount": 32,
         "color": "White",
         "availableSizes": [
             "S",
@@ -91,12 +91,12 @@
     },
     {
         "id": "p-sub-transparent-6",
-        "title": "Transparent Face Masks Sample 6",
+        "title": "Transparent Phone Cases Sample 6",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent6/400/400",
         "rating": "4.2",
-        "reviewCount": 136,
+        "reviewCount": 218,
         "color": "White",
         "availableSizes": [
             "S",
@@ -109,12 +109,12 @@
     },
     {
         "id": "p-sub-transparent-7",
-        "title": "Transparent Face Masks Sample 7",
+        "title": "Transparent Phone Cases Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent7/400/400",
         "rating": "4.2",
-        "reviewCount": 76,
+        "reviewCount": 155,
         "color": "White",
         "availableSizes": [
             "S",
@@ -127,12 +127,12 @@
     },
     {
         "id": "p-sub-transparent-8",
-        "title": "Transparent Face Masks Sample 8",
+        "title": "Transparent Phone Cases Sample 8",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent8/400/400",
         "rating": "4.2",
-        "reviewCount": 44,
+        "reviewCount": 96,
         "color": "White",
         "availableSizes": [
             "S",

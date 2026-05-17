@@ -1,72 +1,146 @@
 [
     {
-        "id": "sub-mini-0",
-        "sku_id": "SKU-SUBMINI0",
-        "title": "Minimalistic Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Relaxed fit oversized Mini T-Shirt for a modern street-style look. Minimalistic Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "id": "p-sub-mini-1",
+        "title": "Mini Tote Bags Sample 1",
         "price": 599,
-        "originalPrice": 1331,
-        "rating": "4.3",
-        "reviewCount": 530,
-        "color": "Free Color",
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-mini1/400/400",
+        "rating": "4.2",
+        "reviewCount": 110,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "55% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d119_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Oversized",
-            "Men"
-        ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Oversized Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
+        "badge": null,
+        "can_beCustomised": 1
     },
     {
-        "id": "sub-mini-1",
-        "sku_id": "SKU-SUBMINI1",
-        "title": "Minimalistic Name Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Relaxed fit oversized Mini T-Shirt for a modern street-style look. Minimalistic Name Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "id": "p-sub-mini-2",
+        "title": "Mini Tote Bags Sample 2",
         "price": 599,
-        "originalPrice": 1331,
-        "rating": "4.9",
-        "reviewCount": 403,
-        "color": "Free Color",
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-mini2/400/400",
+        "rating": "4.2",
+        "reviewCount": 164,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "55% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d169_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Oversized",
-            "Men"
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-mini-3",
+        "title": "Mini Tote Bags Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-mini3/400/400",
+        "rating": "4.2",
+        "reviewCount": 146,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
         ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Oversized Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-mini-4",
+        "title": "Mini Tote Bags Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-mini4/400/400",
+        "rating": "4.2",
+        "reviewCount": 199,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-mini-5",
+        "title": "Mini Tote Bags Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-mini5/400/400",
+        "rating": "4.2",
+        "reviewCount": 168,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-mini-6",
+        "title": "Mini Tote Bags Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-mini6/400/400",
+        "rating": "4.2",
+        "reviewCount": 123,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-mini-7",
+        "title": "Mini Tote Bags Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-mini7/400/400",
+        "rating": "4.2",
+        "reviewCount": 65,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-mini-8",
+        "title": "Mini Tote Bags Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-mini8/400/400",
+        "rating": "4.2",
+        "reviewCount": 64,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
     }
 ]

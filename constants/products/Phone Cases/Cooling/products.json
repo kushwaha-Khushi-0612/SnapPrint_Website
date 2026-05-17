@@ -1,194 +1,146 @@
 [
     {
-        "id": "sub-cooling-0",
-        "sku_id": "SKU-SUBCOOLING0",
-        "title": "Black Customized Jockey Men’s Regular Fit Round Neck Raglan Sleeved T-Shirt With Breathable Mesh For Enhanced Cooling",
-        "description": "Personalized Cooling - add your own touch to this premium design. Black Customized Jockey Men’s Regular Fit Round Neck Raglan Sleeved T-Shirt With Breathable Mesh For Enhanced Cooling",
-        "price": 1998,
-        "originalPrice": 3996,
-        "rating": "4.3",
-        "reviewCount": 523,
-        "color": "Black",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FYPB0842H96W6_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "Premium Blend",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
-    },
-    {
-        "id": "sub-cooling-1",
-        "sku_id": "SKU-SUBCOOLING1",
-        "title": "Grey Customized Jockey Men’s Regular Fit Round Neck Sleeved T-Shirt With Breathable Mesh For Enhanced Cooling",
-        "description": "Personalized Cooling - add your own touch to this premium design. Grey Customized Jockey Men’s Regular Fit Round Neck Sleeved T-Shirt With Breathable Mesh For Enhanced Cooling",
-        "price": 1746,
-        "originalPrice": 3492,
-        "rating": "4.9",
-        "reviewCount": 627,
-        "color": "Grey",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FYPB0842H2TL5_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "Premium Blend",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
-    },
-    {
-        "id": "sub-cooling-2",
-        "sku_id": "SKU-SUBCOOLING2",
-        "title": "Red Customized Jockey Men’s Regular Fit Round Neck Raglan Sleeved T-Shirt With Breathable Mesh For Enhanced Cooling",
-        "description": "Personalized Cooling - add your own touch to this premium design. Red Customized Jockey Men’s Regular Fit Round Neck Raglan Sleeved T-Shirt With Breathable Mesh For Enhanced Cooling",
-        "price": 1998,
-        "originalPrice": 3996,
-        "rating": "4.6",
-        "reviewCount": 715,
-        "color": "Red",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FYPB0842HF8G6_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "Premium Blend",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
-    },
-    {
-        "id": "sub-cooling-3",
-        "sku_id": "SKU-SUBCOOLING3",
-        "title": "White Customized Jockey Men’s Regular Fit Round Neck Sleeved T-Shirt With Breathable Mesh For Enhanced Cooling",
-        "description": "Personalized Cooling - add your own touch to this premium design. White Customized Jockey Men’s Regular Fit Round Neck Sleeved T-Shirt With Breathable Mesh For Enhanced Cooling",
-        "price": 1998,
-        "originalPrice": 3996,
-        "rating": "4.7",
-        "reviewCount": 318,
+        "id": "p-sub-cooling-1",
+        "title": "Cooling Phone Cases Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cooling1/400/400",
+        "rating": "4.2",
+        "reviewCount": 141,
         "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FYPB0842H1CGG_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "Premium Blend",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
+        "badge": null,
+        "can_beCustomised": 1
     },
     {
-        "id": "sub-cooling-4",
-        "sku_id": "SKU-SUBCOOLING4",
-        "title": "Blue Customized Jockey Men’s Regular Fit Round Neck Raglan Sleeved T-Shirt With Breathable Mesh For Enhanced Cooling",
-        "description": "Personalized Cooling - add your own touch to this premium design. Blue Customized Jockey Men’s Regular Fit Round Neck Raglan Sleeved T-Shirt With Breathable Mesh For Enhanced Cooling",
-        "price": 1998,
-        "originalPrice": 3996,
-        "rating": "4.1",
-        "reviewCount": 690,
-        "color": "Blue",
+        "id": "p-sub-cooling-2",
+        "title": "Cooling Phone Cases Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cooling2/400/400",
+        "rating": "4.2",
+        "reviewCount": 95,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FYPB0842H2459_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "Premium Blend",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
+        "badge": null,
+        "can_beCustomised": 1
     },
     {
-        "id": "sub-cooling-5",
-        "sku_id": "SKU-SUBCOOLING5",
-        "title": "Navy Customized Jockey Men’s Regular Fit Round Neck Raglan Sleeved T-Shirt With Breathable Mesh For Enhanced Cooling",
-        "description": "Personalized Cooling - add your own touch to this premium design. Navy Customized Jockey Men’s Regular Fit Round Neck Raglan Sleeved T-Shirt With Breathable Mesh For Enhanced Cooling",
-        "price": 1998,
-        "originalPrice": 3996,
-        "rating": "4.0",
-        "reviewCount": 645,
-        "color": "Navy",
+        "id": "p-sub-cooling-3",
+        "title": "Cooling Phone Cases Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cooling3/400/400",
+        "rating": "4.2",
+        "reviewCount": 116,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FYPB0842HQ9HH_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Men"
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cooling-4",
+        "title": "Cooling Phone Cases Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cooling4/400/400",
+        "rating": "4.2",
+        "reviewCount": 55,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
         ],
-        "status": "",
-        "features": {
-            "fabric": "Premium Blend",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cooling-5",
+        "title": "Cooling Phone Cases Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cooling5/400/400",
+        "rating": "4.2",
+        "reviewCount": 62,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cooling-6",
+        "title": "Cooling Phone Cases Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cooling6/400/400",
+        "rating": "4.2",
+        "reviewCount": 211,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cooling-7",
+        "title": "Cooling Phone Cases Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cooling7/400/400",
+        "rating": "4.2",
+        "reviewCount": 37,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cooling-8",
+        "title": "Cooling Phone Cases Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cooling8/400/400",
+        "rating": "4.2",
+        "reviewCount": 47,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
     }
 ]

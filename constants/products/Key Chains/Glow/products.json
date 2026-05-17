@@ -1,200 +1,146 @@
 [
     {
-        "id": "sub-glow-0",
-        "sku_id": "SKU-SUBGLOW0",
-        "title": "Green Glow Customized Jockey Men’s Regular Fit Round Neck Raglan Sleeves Graphic Print Design T-Shirt",
-        "description": "Personalized Glow - add your own touch to this premium design. Green Glow Customized Jockey Men’s Regular Fit Round Neck Raglan Sleeves Graphic Print Design T-Shirt",
-        "price": 1993,
-        "originalPrice": 3986,
-        "rating": "4.7",
-        "reviewCount": 619,
-        "color": "Green",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB085BMJ2PQ_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "Premium Blend",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
-    },
-    {
-        "id": "sub-glow-1",
-        "sku_id": "SKU-SUBGLOW1",
-        "title": "Black Customized Cotton Graphic Printed T-Shirt for Men Glow in Dark",
-        "description": "Personalized Glow - add your own touch to this premium design. Black Customized Cotton Graphic Printed T-Shirt for Men Glow in Dark",
-        "price": 998,
-        "originalPrice": 1996,
-        "rating": "4.1",
-        "reviewCount": 75,
-        "color": "Black",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB097C3KGJL_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
-    },
-    {
-        "id": "sub-glow-2",
-        "sku_id": "SKU-SUBGLOW2",
-        "title": "Black Customized Men’s Cotton We Are Venom Graphic Printed T-Shirt Glow in Dark",
-        "description": "Personalized Glow - add your own touch to this premium design. Black Customized Men’s Cotton We Are Venom Graphic Printed T-Shirt Glow in Dark",
-        "price": 998,
-        "originalPrice": 1996,
-        "rating": "4.1",
-        "reviewCount": 219,
-        "color": "Black",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB08TC93QVH_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
-    },
-    {
-        "id": "sub-glow-3",
-        "sku_id": "SKU-SUBGLOW3",
-        "title": "Black Howling Wolf Customized Men’s Cotton Graphic Printed T-Shirt Glow in Dark",
-        "description": "Personalized Glow - add your own touch to this premium design. Black Howling Wolf Customized Men’s Cotton Graphic Printed T-Shirt Glow in Dark",
-        "price": 998,
-        "originalPrice": 1996,
-        "rating": "4.3",
-        "reviewCount": 613,
-        "color": "Black",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB08TCB1JN9_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
-    },
-    {
-        "id": "sub-glow-4",
-        "sku_id": "SKU-SUBGLOW4",
-        "title": "Black Voodoo Skull Customized Cotton Graphic Printed T-Shirt for Men Glow in Dark",
-        "description": "Personalized Glow - add your own touch to this premium design. Black Voodoo Skull Customized Cotton Graphic Printed T-Shirt for Men Glow in Dark",
-        "price": 998,
-        "originalPrice": 1996,
-        "rating": "4.9",
-        "reviewCount": 364,
-        "color": "Black",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB08TCBW1R6_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
-    },
-    {
-        "id": "sub-glow-5",
-        "sku_id": "SKU-SUBGLOW5",
-        "title": "Navy Blue Customized Men’s Cotton Half Sleeve Mahakal Graphic Printed T-Shirt Glow in Dark",
-        "description": "Classic half-sleeve Glow, perfect for everyday wear. Navy Blue Customized Men’s Cotton Half Sleeve Mahakal Graphic Printed T-Shirt Glow in Dark",
-        "price": 1398,
-        "originalPrice": 2796,
+        "id": "p-sub-glow-1",
+        "title": "Glow Key Chains Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-glow1/400/400",
         "rating": "4.2",
-        "reviewCount": 371,
-        "color": "Navy",
+        "reviewCount": 158,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB093PW8CS8_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Men"
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-glow-2",
+        "title": "Glow Key Chains Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-glow2/400/400",
+        "rating": "4.2",
+        "reviewCount": 109,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
         ],
-        "status": "",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-glow-3",
+        "title": "Glow Key Chains Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-glow3/400/400",
+        "rating": "4.2",
+        "reviewCount": 143,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-glow-4",
+        "title": "Glow Key Chains Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-glow4/400/400",
+        "rating": "4.2",
+        "reviewCount": 88,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-glow-5",
+        "title": "Glow Key Chains Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-glow5/400/400",
+        "rating": "4.2",
+        "reviewCount": 186,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-glow-6",
+        "title": "Glow Key Chains Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-glow6/400/400",
+        "rating": "4.2",
+        "reviewCount": 168,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-glow-7",
+        "title": "Glow Key Chains Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-glow7/400/400",
+        "rating": "4.2",
+        "reviewCount": 52,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-glow-8",
+        "title": "Glow Key Chains Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-glow8/400/400",
+        "rating": "4.2",
+        "reviewCount": 93,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
     }
 ]

@@ -1,203 +1,146 @@
 [
     {
-        "id": "sub-cotton-0",
-        "sku_id": "SKU-SUBCOTTON0",
-        "title": "Olive Green Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
-        "description": "Classic half-sleeve Cotton T-Shirt, perfect for everyday wear. Olive Green Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
+        "id": "p-sub-cotton-1",
+        "title": "Cotton Tote Bags Sample 1",
         "price": 599,
-        "originalPrice": 1711,
-        "rating": "4.4",
-        "reviewCount": 376,
-        "color": "Black",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "65% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F02%2FOliveGreen_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Half Sleeve",
-            "Men",
-            "Trending"
-        ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
-    },
-    {
-        "id": "sub-cotton-1",
-        "sku_id": "SKU-SUBCOTTON1",
-        "title": "Black Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
-        "description": "Classic half-sleeve Cotton T-Shirt, perfect for everyday wear. Black Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
-        "price": 599,
-        "originalPrice": 1711,
-        "rating": "4.7",
-        "reviewCount": 153,
-        "color": "Black",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "65% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F02%2FBlack_o-1.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Half Sleeve",
-            "Men",
-            "Trending"
-        ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
-    },
-    {
-        "id": "sub-cotton-2",
-        "sku_id": "SKU-SUBCOTTON2",
-        "title": "White Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
-        "description": "Classic half-sleeve Cotton T-Shirt, perfect for everyday wear. White Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
-        "price": 599,
-        "originalPrice": 1711,
-        "rating": "4.0",
-        "reviewCount": 758,
-        "color": "Black",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "badge": "65% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F02%2FWhite_o-2.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Half Sleeve",
-            "Men",
-            "Trending"
-        ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
-    },
-    {
-        "id": "sub-cotton-3",
-        "sku_id": "SKU-SUBCOTTON3",
-        "title": "Blue Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
-        "description": "Classic half-sleeve Cotton T-Shirt, perfect for everyday wear. Blue Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
-        "price": 599,
-        "originalPrice": 1331,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cotton1/400/400",
         "rating": "4.2",
-        "reviewCount": 312,
-        "color": "Blue",
+        "reviewCount": 154,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "55% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F02%2FBLue_o-1.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Half Sleeve",
-            "Men"
-        ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
+        "badge": null,
+        "can_beCustomised": 1
     },
     {
-        "id": "sub-cotton-4",
-        "sku_id": "SKU-SUBCOTTON4",
-        "title": "Red Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
-        "description": "Classic half-sleeve Cotton T-Shirt, perfect for everyday wear. Red Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
+        "id": "p-sub-cotton-2",
+        "title": "Cotton Tote Bags Sample 2",
         "price": 599,
-        "originalPrice": 1198,
-        "rating": "4.8",
-        "reviewCount": 63,
-        "color": "Black",
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cotton2/400/400",
+        "rating": "4.2",
+        "reviewCount": 24,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F02%2FRed_o-1.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Half Sleeve",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
+        "badge": null,
+        "can_beCustomised": 1
     },
     {
-        "id": "sub-cotton-5",
-        "sku_id": "SKU-SUBCOTTON5",
-        "title": "Grey Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
-        "description": "Classic half-sleeve Cotton T-Shirt, perfect for everyday wear. Grey Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
+        "id": "p-sub-cotton-3",
+        "title": "Cotton Tote Bags Sample 3",
         "price": 599,
-        "originalPrice": 1331,
-        "rating": "4.0",
-        "reviewCount": 264,
-        "color": "Grey",
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cotton3/400/400",
+        "rating": "4.2",
+        "reviewCount": 132,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "55% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=https%3A%2F%2Fwww.yourprint.in%2Fwp-content%2Fuploads%2F2022%2F02%2FGrey_o-1.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Half Sleeve",
-            "Men"
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cotton-4",
+        "title": "Cotton Tote Bags Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cotton4/400/400",
+        "rating": "4.2",
+        "reviewCount": 142,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
         ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cotton-5",
+        "title": "Cotton Tote Bags Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cotton5/400/400",
+        "rating": "4.2",
+        "reviewCount": 151,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cotton-6",
+        "title": "Cotton Tote Bags Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cotton6/400/400",
+        "rating": "4.2",
+        "reviewCount": 81,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cotton-7",
+        "title": "Cotton Tote Bags Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cotton7/400/400",
+        "rating": "4.2",
+        "reviewCount": 203,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cotton-8",
+        "title": "Cotton Tote Bags Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cotton8/400/400",
+        "rating": "4.2",
+        "reviewCount": 52,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
     }
 ]

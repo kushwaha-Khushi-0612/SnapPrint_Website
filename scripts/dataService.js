@@ -62,8 +62,8 @@ const dataService = {
                                     if (['Decor', 'Photo Frames', 'Jewelry', 'Key Chains', 'Mugs & Cups'].includes(cat.name)) p.collections.push('Occasions');
                                     if (["Men's Special", "Women's Special", "Kids Clothing", "T-Shirts"].includes(cat.name) || ["Men's Special", "Women's Special"].includes(sub.name)) p.collections.push('Heart Winning T-Shirts');
                                     if (["Face Masks", "Key Chains", "Jewelry", "Decor"].includes(cat.name)) p.collections.push('Trendy Accessories');
-                                    if ((cat.name === 'Hoodies' && parentSection === 'Women Clothing') || sub.name.includes("Women")) p.collections.push("Women's Custom Wear");
-                                    if ((cat.name === 'Hoodies' && parentSection === 'Men Clothing') || sub.name.includes("Men")) p.collections.push("Men's Urban Streetwear");
+                                    if (cat.name === 'Hoodies' && (parentSection === 'Women Clothing' || sub.name.includes("Women"))) p.collections.push("Women's Custom Wear");
+                                    if (cat.name === 'Hoodies' && (parentSection === 'Men Clothing' || sub.name.includes("Men"))) p.collections.push("Men's Urban Streetwear");
 
                                     p.link = `productDetails.html?id=${p.id}`;
                                     allProds.push(p);
@@ -171,8 +171,8 @@ const dataService = {
                                 if (['Decor', 'Photo Frames', 'Jewelry', 'Key Chains', 'Mugs & Cups'].includes(cat.name)) p.collections.push('Occasions');
                                 if (["Men's Special", "Women's Special", "Kids Clothing", "T-Shirts"].includes(cat.name) || ["Men's Special", "Women's Special"].includes(sub.name)) p.collections.push('Heart Winning T-Shirts');
                                 if (["Face Masks", "Key Chains", "Jewelry", "Decor"].includes(cat.name)) p.collections.push('Trendy Accessories');
-                                if ((cat.name === 'Hoodies' && parentSection === 'Women Clothing') || sub.name.includes("Women")) p.collections.push("Women's Custom Wear");
-                                if ((cat.name === 'Hoodies' && parentSection === 'Men Clothing') || sub.name.includes("Men")) p.collections.push("Men's Urban Streetwear");
+                                if (cat.name === 'Hoodies' && (parentSection === 'Women Clothing' || sub.name.includes("Women"))) p.collections.push("Women's Custom Wear");
+                                if (cat.name === 'Hoodies' && (parentSection === 'Men Clothing' || sub.name.includes("Men"))) p.collections.push("Men's Urban Streetwear");
 
                                 p.link = `productDetails.html?id=${p.id}`;
                                 categoryProds.push(p);

@@ -1,12 +1,12 @@
 [
     {
         "id": "p-sub-photo-1",
-        "title": "Photo Key Chains Sample 1",
+        "title": "Photo Mugs & Cups Sample 1",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-photo1/400/400",
         "rating": "4.2",
-        "reviewCount": 138,
+        "reviewCount": 47,
         "color": "White",
         "availableSizes": [
             "S",
@@ -19,12 +19,12 @@
     },
     {
         "id": "p-sub-photo-2",
-        "title": "Photo Key Chains Sample 2",
+        "title": "Photo Mugs & Cups Sample 2",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-photo2/400/400",
         "rating": "4.2",
-        "reviewCount": 208,
+        "reviewCount": 81,
         "color": "White",
         "availableSizes": [
             "S",
@@ -37,12 +37,12 @@
     },
     {
         "id": "p-sub-photo-3",
-        "title": "Photo Key Chains Sample 3",
+        "title": "Photo Mugs & Cups Sample 3",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-photo3/400/400",
         "rating": "4.2",
-        "reviewCount": 102,
+        "reviewCount": 207,
         "color": "White",
         "availableSizes": [
             "S",
@@ -55,12 +55,12 @@
     },
     {
         "id": "p-sub-photo-4",
-        "title": "Photo Key Chains Sample 4",
+        "title": "Photo Mugs & Cups Sample 4",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-photo4/400/400",
         "rating": "4.2",
-        "reviewCount": 100,
+        "reviewCount": 162,
         "color": "White",
         "availableSizes": [
             "S",
@@ -73,12 +73,12 @@
     },
     {
         "id": "p-sub-photo-5",
-        "title": "Photo Key Chains Sample 5",
+        "title": "Photo Mugs & Cups Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-photo5/400/400",
         "rating": "4.2",
-        "reviewCount": 120,
+        "reviewCount": 83,
         "color": "White",
         "availableSizes": [
             "S",
@@ -91,12 +91,12 @@
     },
     {
         "id": "p-sub-photo-6",
-        "title": "Photo Key Chains Sample 6",
+        "title": "Photo Mugs & Cups Sample 6",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-photo6/400/400",
         "rating": "4.2",
-        "reviewCount": 77,
+        "reviewCount": 90,
         "color": "White",
         "availableSizes": [
             "S",
@@ -109,12 +109,12 @@
     },
     {
         "id": "p-sub-photo-7",
-        "title": "Photo Key Chains Sample 7",
+        "title": "Photo Mugs & Cups Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-photo7/400/400",
         "rating": "4.2",
-        "reviewCount": 184,
+        "reviewCount": 136,
         "color": "White",
         "availableSizes": [
             "S",
@@ -127,12 +127,12 @@
     },
     {
         "id": "p-sub-photo-8",
-        "title": "Photo Key Chains Sample 8",
+        "title": "Photo Mugs & Cups Sample 8",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-photo8/400/400",
         "rating": "4.2",
-        "reviewCount": 32,
+        "reviewCount": 181,
         "color": "White",
         "availableSizes": [
             "S",

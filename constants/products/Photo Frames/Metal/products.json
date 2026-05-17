@@ -1,12 +1,12 @@
 [
     {
         "id": "p-sub-metal-1",
-        "title": "Metal Key Chains Sample 1",
+        "title": "Metal Photo Frames Sample 1",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-metal1/400/400",
         "rating": "4.2",
-        "reviewCount": 91,
+        "reviewCount": 168,
         "color": "White",
         "availableSizes": [
             "S",
@@ -19,12 +19,12 @@
     },
     {
         "id": "p-sub-metal-2",
-        "title": "Metal Key Chains Sample 2",
+        "title": "Metal Photo Frames Sample 2",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-metal2/400/400",
         "rating": "4.2",
-        "reviewCount": 42,
+        "reviewCount": 200,
         "color": "White",
         "availableSizes": [
             "S",
@@ -37,12 +37,12 @@
     },
     {
         "id": "p-sub-metal-3",
-        "title": "Metal Key Chains Sample 3",
+        "title": "Metal Photo Frames Sample 3",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-metal3/400/400",
         "rating": "4.2",
-        "reviewCount": 162,
+        "reviewCount": 121,
         "color": "White",
         "availableSizes": [
             "S",
@@ -55,12 +55,12 @@
     },
     {
         "id": "p-sub-metal-4",
-        "title": "Metal Key Chains Sample 4",
+        "title": "Metal Photo Frames Sample 4",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-metal4/400/400",
         "rating": "4.2",
-        "reviewCount": 212,
+        "reviewCount": 194,
         "color": "White",
         "availableSizes": [
             "S",
@@ -73,12 +73,12 @@
     },
     {
         "id": "p-sub-metal-5",
-        "title": "Metal Key Chains Sample 5",
+        "title": "Metal Photo Frames Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-metal5/400/400",
         "rating": "4.2",
-        "reviewCount": 47,
+        "reviewCount": 45,
         "color": "White",
         "availableSizes": [
             "S",
@@ -91,12 +91,12 @@
     },
     {
         "id": "p-sub-metal-6",
-        "title": "Metal Key Chains Sample 6",
+        "title": "Metal Photo Frames Sample 6",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-metal6/400/400",
         "rating": "4.2",
-        "reviewCount": 107,
+        "reviewCount": 34,
         "color": "White",
         "availableSizes": [
             "S",
@@ -109,12 +109,12 @@
     },
     {
         "id": "p-sub-metal-7",
-        "title": "Metal Key Chains Sample 7",
+        "title": "Metal Photo Frames Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-metal7/400/400",
         "rating": "4.2",
-        "reviewCount": 71,
+        "reviewCount": 97,
         "color": "White",
         "availableSizes": [
             "S",
@@ -127,12 +127,12 @@
     },
     {
         "id": "p-sub-metal-8",
-        "title": "Metal Key Chains Sample 8",
+        "title": "Metal Photo Frames Sample 8",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-metal8/400/400",
         "rating": "4.2",
-        "reviewCount": 127,
+        "reviewCount": 82,
         "color": "White",
         "availableSizes": [
             "S",

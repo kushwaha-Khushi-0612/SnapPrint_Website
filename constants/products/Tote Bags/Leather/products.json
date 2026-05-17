@@ -1,12 +1,12 @@
 [
     {
         "id": "p-sub-leather-1",
-        "title": "Leather Key Chains Sample 1",
+        "title": "Leather Tote Bags Sample 1",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-leather1/400/400",
         "rating": "4.2",
-        "reviewCount": 182,
+        "reviewCount": 35,
         "color": "White",
         "availableSizes": [
             "S",
@@ -19,12 +19,12 @@
     },
     {
         "id": "p-sub-leather-2",
-        "title": "Leather Key Chains Sample 2",
+        "title": "Leather Tote Bags Sample 2",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-leather2/400/400",
         "rating": "4.2",
-        "reviewCount": 155,
+        "reviewCount": 49,
         "color": "White",
         "availableSizes": [
             "S",
@@ -37,12 +37,12 @@
     },
     {
         "id": "p-sub-leather-3",
-        "title": "Leather Key Chains Sample 3",
+        "title": "Leather Tote Bags Sample 3",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-leather3/400/400",
         "rating": "4.2",
-        "reviewCount": 151,
+        "reviewCount": 120,
         "color": "White",
         "availableSizes": [
             "S",
@@ -55,12 +55,12 @@
     },
     {
         "id": "p-sub-leather-4",
-        "title": "Leather Key Chains Sample 4",
+        "title": "Leather Tote Bags Sample 4",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-leather4/400/400",
         "rating": "4.2",
-        "reviewCount": 205,
+        "reviewCount": 31,
         "color": "White",
         "availableSizes": [
             "S",
@@ -73,12 +73,12 @@
     },
     {
         "id": "p-sub-leather-5",
-        "title": "Leather Key Chains Sample 5",
+        "title": "Leather Tote Bags Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-leather5/400/400",
         "rating": "4.2",
-        "reviewCount": 202,
+        "reviewCount": 40,
         "color": "White",
         "availableSizes": [
             "S",
@@ -91,12 +91,12 @@
     },
     {
         "id": "p-sub-leather-6",
-        "title": "Leather Key Chains Sample 6",
+        "title": "Leather Tote Bags Sample 6",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-leather6/400/400",
         "rating": "4.2",
-        "reviewCount": 38,
+        "reviewCount": 115,
         "color": "White",
         "availableSizes": [
             "S",
@@ -109,12 +109,12 @@
     },
     {
         "id": "p-sub-leather-7",
-        "title": "Leather Key Chains Sample 7",
+        "title": "Leather Tote Bags Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-leather7/400/400",
         "rating": "4.2",
-        "reviewCount": 189,
+        "reviewCount": 208,
         "color": "White",
         "availableSizes": [
             "S",
@@ -127,12 +127,12 @@
     },
     {
         "id": "p-sub-leather-8",
-        "title": "Leather Key Chains Sample 8",
+        "title": "Leather Tote Bags Sample 8",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-leather8/400/400",
         "rating": "4.2",
-        "reviewCount": 110,
+        "reviewCount": 26,
         "color": "White",
         "availableSizes": [
             "S",

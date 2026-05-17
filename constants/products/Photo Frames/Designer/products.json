@@ -1,12 +1,12 @@
 [
     {
         "id": "p-sub-designer-1",
-        "title": "Designer Face Masks Sample 1",
+        "title": "Designer Photo Frames Sample 1",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-designer1/400/400",
         "rating": "4.2",
-        "reviewCount": 193,
+        "reviewCount": 44,
         "color": "White",
         "availableSizes": [
             "S",
@@ -19,12 +19,12 @@
     },
     {
         "id": "p-sub-designer-2",
-        "title": "Designer Face Masks Sample 2",
+        "title": "Designer Photo Frames Sample 2",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-designer2/400/400",
         "rating": "4.2",
-        "reviewCount": 161,
+        "reviewCount": 206,
         "color": "White",
         "availableSizes": [
             "S",
@@ -37,12 +37,12 @@
     },
     {
         "id": "p-sub-designer-3",
-        "title": "Designer Face Masks Sample 3",
+        "title": "Designer Photo Frames Sample 3",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-designer3/400/400",
         "rating": "4.2",
-        "reviewCount": 64,
+        "reviewCount": 129,
         "color": "White",
         "availableSizes": [
             "S",
@@ -55,12 +55,12 @@
     },
     {
         "id": "p-sub-designer-4",
-        "title": "Designer Face Masks Sample 4",
+        "title": "Designer Photo Frames Sample 4",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-designer4/400/400",
         "rating": "4.2",
-        "reviewCount": 103,
+        "reviewCount": 194,
         "color": "White",
         "availableSizes": [
             "S",
@@ -73,12 +73,12 @@
     },
     {
         "id": "p-sub-designer-5",
-        "title": "Designer Face Masks Sample 5",
+        "title": "Designer Photo Frames Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-designer5/400/400",
         "rating": "4.2",
-        "reviewCount": 92,
+        "reviewCount": 99,
         "color": "White",
         "availableSizes": [
             "S",
@@ -91,12 +91,12 @@
     },
     {
         "id": "p-sub-designer-6",
-        "title": "Designer Face Masks Sample 6",
+        "title": "Designer Photo Frames Sample 6",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-designer6/400/400",
         "rating": "4.2",
-        "reviewCount": 80,
+        "reviewCount": 35,
         "color": "White",
         "availableSizes": [
             "S",
@@ -109,12 +109,12 @@
     },
     {
         "id": "p-sub-designer-7",
-        "title": "Designer Face Masks Sample 7",
+        "title": "Designer Photo Frames Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-designer7/400/400",
         "rating": "4.2",
-        "reviewCount": 62,
+        "reviewCount": 198,
         "color": "White",
         "availableSizes": [
             "S",
@@ -127,12 +127,12 @@
     },
     {
         "id": "p-sub-designer-8",
-        "title": "Designer Face Masks Sample 8",
+        "title": "Designer Photo Frames Sample 8",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-designer8/400/400",
         "rating": "4.2",
-        "reviewCount": 211,
+        "reviewCount": 148,
         "color": "White",
         "availableSizes": [
             "S",

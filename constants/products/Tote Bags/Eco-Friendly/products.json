@@ -1,12 +1,12 @@
 [
     {
         "id": "p-sub-ecofriendly-1",
-        "title": "Eco-Friendly Mugs & Cups Sample 1",
+        "title": "Eco-Friendly Tote Bags Sample 1",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly1/400/400",
         "rating": "4.2",
-        "reviewCount": 52,
+        "reviewCount": 138,
         "color": "White",
         "availableSizes": [
             "S",
@@ -19,12 +19,12 @@
     },
     {
         "id": "p-sub-ecofriendly-2",
-        "title": "Eco-Friendly Mugs & Cups Sample 2",
+        "title": "Eco-Friendly Tote Bags Sample 2",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly2/400/400",
         "rating": "4.2",
-        "reviewCount": 194,
+        "reviewCount": 128,
         "color": "White",
         "availableSizes": [
             "S",
@@ -37,12 +37,12 @@
     },
     {
         "id": "p-sub-ecofriendly-3",
-        "title": "Eco-Friendly Mugs & Cups Sample 3",
+        "title": "Eco-Friendly Tote Bags Sample 3",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly3/400/400",
         "rating": "4.2",
-        "reviewCount": 143,
+        "reviewCount": 38,
         "color": "White",
         "availableSizes": [
             "S",
@@ -55,12 +55,12 @@
     },
     {
         "id": "p-sub-ecofriendly-4",
-        "title": "Eco-Friendly Mugs & Cups Sample 4",
+        "title": "Eco-Friendly Tote Bags Sample 4",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly4/400/400",
         "rating": "4.2",
-        "reviewCount": 198,
+        "reviewCount": 134,
         "color": "White",
         "availableSizes": [
             "S",
@@ -73,12 +73,12 @@
     },
     {
         "id": "p-sub-ecofriendly-5",
-        "title": "Eco-Friendly Mugs & Cups Sample 5",
+        "title": "Eco-Friendly Tote Bags Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly5/400/400",
         "rating": "4.2",
-        "reviewCount": 136,
+        "reviewCount": 121,
         "color": "White",
         "availableSizes": [
             "S",
@@ -91,12 +91,12 @@
     },
     {
         "id": "p-sub-ecofriendly-6",
-        "title": "Eco-Friendly Mugs & Cups Sample 6",
+        "title": "Eco-Friendly Tote Bags Sample 6",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly6/400/400",
         "rating": "4.2",
-        "reviewCount": 27,
+        "reviewCount": 57,
         "color": "White",
         "availableSizes": [
             "S",
@@ -109,12 +109,12 @@
     },
     {
         "id": "p-sub-ecofriendly-7",
-        "title": "Eco-Friendly Mugs & Cups Sample 7",
+        "title": "Eco-Friendly Tote Bags Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly7/400/400",
         "rating": "4.2",
-        "reviewCount": 116,
+        "reviewCount": 57,
         "color": "White",
         "availableSizes": [
             "S",
@@ -127,12 +127,12 @@
     },
     {
         "id": "p-sub-ecofriendly-8",
-        "title": "Eco-Friendly Mugs & Cups Sample 8",
+        "title": "Eco-Friendly Tote Bags Sample 8",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly8/400/400",
         "rating": "4.2",
-        "reviewCount": 79,
+        "reviewCount": 57,
         "color": "White",
         "availableSizes": [
             "S",

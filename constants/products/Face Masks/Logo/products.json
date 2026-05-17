@@ -1,107 +1,146 @@
 [
     {
-        "id": "sub-logo-0",
-        "sku_id": "SKU-SUBLOGO0",
-        "title": "Logo Name Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Relaxed fit oversized Logo T-Shirt for a modern street-style look. Logo Name Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "id": "p-sub-logo-1",
+        "title": "Logo Face Masks Sample 1",
         "price": 599,
-        "originalPrice": 1331,
-        "rating": "4.1",
-        "reviewCount": 266,
-        "color": "Black",
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-logo1/400/400",
+        "rating": "4.2",
+        "reviewCount": 91,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "55% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d179_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Oversized",
-            "Men"
-        ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Oversized Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
+        "badge": null,
+        "can_beCustomised": 1
     },
     {
-        "id": "sub-logo-1",
-        "sku_id": "SKU-SUBLOGO1",
-        "title": "Name Logo Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Relaxed fit oversized Logo T-Shirt for a modern street-style look. Name Logo Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "id": "p-sub-logo-2",
+        "title": "Logo Face Masks Sample 2",
         "price": 599,
-        "originalPrice": 1331,
-        "rating": "4.8",
-        "reviewCount": 259,
-        "color": "Black",
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-logo2/400/400",
+        "rating": "4.2",
+        "reviewCount": 61,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "55% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d154_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Oversized",
-            "Men"
-        ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Oversized Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
+        "badge": null,
+        "can_beCustomised": 1
     },
     {
-        "id": "sub-logo-2",
-        "sku_id": "SKU-SUBLOGO2",
-        "title": "Name with Logo Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Relaxed fit oversized Logo T-Shirt for a modern street-style look. Name with Logo Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "id": "p-sub-logo-3",
+        "title": "Logo Face Masks Sample 3",
         "price": 599,
-        "originalPrice": 1331,
-        "rating": "4.1",
-        "reviewCount": 299,
-        "color": "Free Color",
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-logo3/400/400",
+        "rating": "4.2",
+        "reviewCount": 142,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "55% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d175_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Oversized",
-            "Men"
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-logo-4",
+        "title": "Logo Face Masks Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-logo4/400/400",
+        "rating": "4.2",
+        "reviewCount": 206,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
         ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Oversized Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-logo-5",
+        "title": "Logo Face Masks Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-logo5/400/400",
+        "rating": "4.2",
+        "reviewCount": 181,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-logo-6",
+        "title": "Logo Face Masks Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-logo6/400/400",
+        "rating": "4.2",
+        "reviewCount": 115,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-logo-7",
+        "title": "Logo Face Masks Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-logo7/400/400",
+        "rating": "4.2",
+        "reviewCount": 206,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-logo-8",
+        "title": "Logo Face Masks Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-logo8/400/400",
+        "rating": "4.2",
+        "reviewCount": 63,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
     }
 ]

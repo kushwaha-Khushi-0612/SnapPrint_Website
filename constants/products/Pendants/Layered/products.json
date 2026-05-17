@@ -1,12 +1,12 @@
 [
     {
         "id": "p-sub-layered-1",
-        "title": "Layered Face Masks Sample 1",
+        "title": "Layered Pendants Sample 1",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-layered1/400/400",
         "rating": "4.2",
-        "reviewCount": 161,
+        "reviewCount": 50,
         "color": "White",
         "availableSizes": [
             "S",
@@ -19,12 +19,12 @@
     },
     {
         "id": "p-sub-layered-2",
-        "title": "Layered Face Masks Sample 2",
+        "title": "Layered Pendants Sample 2",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-layered2/400/400",
         "rating": "4.2",
-        "reviewCount": 44,
+        "reviewCount": 138,
         "color": "White",
         "availableSizes": [
             "S",
@@ -37,12 +37,12 @@
     },
     {
         "id": "p-sub-layered-3",
-        "title": "Layered Face Masks Sample 3",
+        "title": "Layered Pendants Sample 3",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-layered3/400/400",
         "rating": "4.2",
-        "reviewCount": 88,
+        "reviewCount": 91,
         "color": "White",
         "availableSizes": [
             "S",
@@ -55,12 +55,12 @@
     },
     {
         "id": "p-sub-layered-4",
-        "title": "Layered Face Masks Sample 4",
+        "title": "Layered Pendants Sample 4",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-layered4/400/400",
         "rating": "4.2",
-        "reviewCount": 178,
+        "reviewCount": 46,
         "color": "White",
         "availableSizes": [
             "S",
@@ -73,12 +73,12 @@
     },
     {
         "id": "p-sub-layered-5",
-        "title": "Layered Face Masks Sample 5",
+        "title": "Layered Pendants Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-layered5/400/400",
         "rating": "4.2",
-        "reviewCount": 41,
+        "reviewCount": 133,
         "color": "White",
         "availableSizes": [
             "S",
@@ -91,12 +91,12 @@
     },
     {
         "id": "p-sub-layered-6",
-        "title": "Layered Face Masks Sample 6",
+        "title": "Layered Pendants Sample 6",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-layered6/400/400",
         "rating": "4.2",
-        "reviewCount": 110,
+        "reviewCount": 177,
         "color": "White",
         "availableSizes": [
             "S",
@@ -109,12 +109,12 @@
     },
     {
         "id": "p-sub-layered-7",
-        "title": "Layered Face Masks Sample 7",
+        "title": "Layered Pendants Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-layered7/400/400",
         "rating": "4.2",
-        "reviewCount": 164,
+        "reviewCount": 148,
         "color": "White",
         "availableSizes": [
             "S",
@@ -127,12 +127,12 @@
     },
     {
         "id": "p-sub-layered-8",
-        "title": "Layered Face Masks Sample 8",
+        "title": "Layered Pendants Sample 8",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-layered8/400/400",
         "rating": "4.2",
-        "reviewCount": 133,
+        "reviewCount": 169,
         "color": "White",
         "availableSizes": [
             "S",

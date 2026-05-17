@@ -1,107 +1,146 @@
 [
     {
-        "id": "sub-kids-0",
-        "sku_id": "SKU-SUBKIDS0",
-        "title": "Cool Kids Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Classic half-sleeve Kids, perfect for everyday wear. Cool Kids Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "price": 729,
-        "originalPrice": 1458,
-        "rating": "4.4",
-        "reviewCount": 693,
-        "color": "Black",
+        "id": "p-sub-kids-1",
+        "title": "Kids Face Masks Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-kids1/400/400",
+        "rating": "4.2",
+        "reviewCount": 70,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d92_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Oversized",
-            "Men"
-        ],
-        "status": "",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Oversized Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
+        "badge": null,
+        "can_beCustomised": 1
     },
     {
-        "id": "sub-kids-1",
-        "sku_id": "SKU-SUBKIDS1",
-        "title": "Cool Kids Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Classic half-sleeve Kids, perfect for everyday wear. Cool Kids Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "price": 629,
-        "originalPrice": 1797,
-        "rating": "4.7",
-        "reviewCount": 141,
-        "color": "Black",
+        "id": "p-sub-kids-2",
+        "title": "Kids Face Masks Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-kids2/400/400",
+        "rating": "4.2",
+        "reviewCount": 46,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "65% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_men_pat_d92_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Men",
-            "Trending"
-        ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
+        "badge": null,
+        "can_beCustomised": 1
     },
     {
-        "id": "sub-kids-2",
-        "sku_id": "SKU-SUBKIDS2",
-        "title": "Cool Kids V Neck Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Classic half-sleeve Kids, perfect for everyday wear. Cool Kids V Neck Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "price": 629,
-        "originalPrice": 1797,
-        "rating": "4.7",
-        "reviewCount": 242,
-        "color": "Free Color",
+        "id": "p-sub-kids-3",
+        "title": "Kids Face Masks Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-kids3/400/400",
+        "rating": "4.2",
+        "reviewCount": 205,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "65% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_vneck_men_pat_d92_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Men",
-            "Trending"
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-kids-4",
+        "title": "Kids Face Masks Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-kids4/400/400",
+        "rating": "4.2",
+        "reviewCount": 56,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
         ],
-        "status": "Special Offer",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-kids-5",
+        "title": "Kids Face Masks Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-kids5/400/400",
+        "rating": "4.2",
+        "reviewCount": 102,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-kids-6",
+        "title": "Kids Face Masks Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-kids6/400/400",
+        "rating": "4.2",
+        "reviewCount": 185,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-kids-7",
+        "title": "Kids Face Masks Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-kids7/400/400",
+        "rating": "4.2",
+        "reviewCount": 70,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-kids-8",
+        "title": "Kids Face Masks Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-kids8/400/400",
+        "rating": "4.2",
+        "reviewCount": 101,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
     }
 ]

@@ -1,37 +1,146 @@
 [
     {
-        "id": "sub-open-0",
-        "sku_id": "SKU-SUBOPEN0",
-        "title": "Open Heart Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
-        "description": "Relaxed fit oversized Open T-Shirt for a modern street-style look. Open Heart Oversized Hip Hop Customized Printed Men’s Half Sleeves Cotton T-Shirt",
+        "id": "p-sub-open-1",
+        "title": "Open Tote Bags Sample 1",
         "price": 599,
-        "originalPrice": 1198,
-        "rating": "4.6",
-        "reviewCount": 258,
-        "color": "Free Color",
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-open1/400/400",
+        "rating": "4.2",
+        "reviewCount": 83,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2Fd-i-o%2FTshirts%2FMen%2Ftshirt_hs_oversized_men_pat_d70_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable",
-            "Printed",
-            "Half Sleeve",
-            "Oversized",
-            "Men"
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-open-2",
+        "title": "Open Tote Bags Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-open2/400/400",
+        "rating": "4.2",
+        "reviewCount": 70,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
         ],
-        "status": "",
-        "features": {
-            "fabric": "100% Cotton",
-            "fit": "Oversized Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Graphic Print"
-        }
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-open-3",
+        "title": "Open Tote Bags Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-open3/400/400",
+        "rating": "4.2",
+        "reviewCount": 45,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-open-4",
+        "title": "Open Tote Bags Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-open4/400/400",
+        "rating": "4.2",
+        "reviewCount": 162,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-open-5",
+        "title": "Open Tote Bags Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-open5/400/400",
+        "rating": "4.2",
+        "reviewCount": 207,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-open-6",
+        "title": "Open Tote Bags Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-open6/400/400",
+        "rating": "4.2",
+        "reviewCount": 84,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-open-7",
+        "title": "Open Tote Bags Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-open7/400/400",
+        "rating": "4.2",
+        "reviewCount": 60,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-open-8",
+        "title": "Open Tote Bags Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-open8/400/400",
+        "rating": "4.2",
+        "reviewCount": 53,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
     }
 ]

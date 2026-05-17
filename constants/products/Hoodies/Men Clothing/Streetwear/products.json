@@ -1,33 +1,146 @@
 [
     {
-        "id": "sub-menclothing-streetwear-0",
-        "sku_id": "SKU-SUBMENCLOTHINGSTREETWEAR0",
-        "title": "Black Customized Travis Scott Astroworld T-Shirt, Hip Hop Merchandise Graphic Streetwear",
-        "description": "Personalized Streetwear - add your own touch to this premium design. Black Customized Travis Scott Astroworld T-Shirt, Hip Hop Merchandise Graphic Streetwear",
-        "price": 998,
-        "originalPrice": 1996,
-        "rating": "4.9",
-        "reviewCount": 141,
-        "color": "Black",
+        "id": "p-sub-menclothing-streetwear-1",
+        "title": "Streetwear Hoodies Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-streetwear1/400/400",
+        "rating": "4.2",
+        "reviewCount": 198,
+        "color": "White",
         "availableSizes": [
             "S",
             "M",
             "L",
-            "XL",
-            "XXL"
+            "XL"
         ],
-        "badge": "50% OFF",
-        "image": "https://static.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3%2FyP-mplace%2FT-Shirts%2FMens_T-Shirts%2FGraphic_T-Shirts%2FYPB0BQF6K115_o.jpg&resizeTo=450&format=webp",
-        "can_beCustomised": 1,
-        "tags": [
-            "Customizable"
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-streetwear-2",
+        "title": "Streetwear Hoodies Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-streetwear2/400/400",
+        "rating": "4.2",
+        "reviewCount": 22,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
         ],
-        "status": "",
-        "features": {
-            "fabric": "Premium Blend",
-            "fit": "Regular Fit",
-            "sleeve": "Half Sleeve",
-            "pattern": "Solid"
-        }
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-streetwear-3",
+        "title": "Streetwear Hoodies Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-streetwear3/400/400",
+        "rating": "4.2",
+        "reviewCount": 203,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-streetwear-4",
+        "title": "Streetwear Hoodies Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-streetwear4/400/400",
+        "rating": "4.2",
+        "reviewCount": 81,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-streetwear-5",
+        "title": "Streetwear Hoodies Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-streetwear5/400/400",
+        "rating": "4.2",
+        "reviewCount": 194,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-streetwear-6",
+        "title": "Streetwear Hoodies Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-streetwear6/400/400",
+        "rating": "4.2",
+        "reviewCount": 115,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-streetwear-7",
+        "title": "Streetwear Hoodies Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-streetwear7/400/400",
+        "rating": "4.2",
+        "reviewCount": 117,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-menclothing-streetwear-8",
+        "title": "Streetwear Hoodies Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-menclothing-streetwear8/400/400",
+        "rating": "4.2",
+        "reviewCount": 145,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
     }
 ]
