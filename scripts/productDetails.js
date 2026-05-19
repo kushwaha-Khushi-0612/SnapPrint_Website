@@ -1476,6 +1476,38 @@ function setupCustomizer() {
         return btoa(unescape(encodeURIComponent(JSON.stringify(data))));
     }
 
+    function showToast(message, type = 'success') {
+        const toastId = 'toast-container-notification';
+        let container = document.getElementById(toastId);
+        if (!container) {
+            container = document.createElement('div');
+            container.id = toastId;
+            container.style.cssText = 'position: fixed; bottom: 20px; right: 20px; z-index: 999999; display: flex; flex-direction: column; gap: 10px; pointer-events: none;';
+            document.body.appendChild(container);
+        }
+        const toast = document.createElement('div');
+        toast.style.cssText = `background: ${type === 'success' ? '#10b981' : '#3b82f6'}; color: white; padding: 14px 24px; border-radius: 8px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 500; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2); opacity: 0; transform: translateY(20px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; gap: 10px;`;
+        
+        const icon = document.createElement('span');
+        icon.innerHTML = type === 'success' ? '✓' : 'ℹ';
+        icon.style.cssText = `background: rgba(255,255,255,0.2); width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold;`;
+        
+        toast.appendChild(icon);
+        toast.appendChild(document.createTextNode(message));
+        container.appendChild(toast);
+        
+        requestAnimationFrame(() => {
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateY(0)';
+        });
+        
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateY(20px)';
+            setTimeout(() => toast.remove(), 300);
+        }, 3500);
+    }
+
     // Action Bar - Wishlist (Mock Saving Custom Design)
     const wishlistBtn = document.getElementById('main-product-wishlist');
     if (wishlistBtn) {
@@ -1502,6 +1534,7 @@ function setupCustomizer() {
             }
 
             if (hasProgress) {
+                showToast("Saving custom design...", "info");
                 // Get webp preview with progressed thing
                 const pngDataUrl = await generateCompositedImage(currentView);
                 const img = new Image();
@@ -1512,8 +1545,10 @@ function setupCustomizer() {
                     tempCv.getContext('2d').drawImage(img, 0, 0, tempCv.width, tempCv.height);
                     const webpPreview = tempCv.toDataURL('image/webp', 0.5);
 
+                    const targetId = resumeId || ('design_' + Math.random().toString(36).substr(2, 9));
+
                     const designData = {
-                        id: 'design_' + Math.random().toString(36).substr(2, 9),
+                        id: targetId,
                         productId: productId,
                         title: productData.title,
                         preview: webpPreview,
@@ -1522,14 +1557,19 @@ function setupCustomizer() {
                     };
                     
                     let savedDesigns = JSON.parse(localStorage.getItem('my_custom_designs') || '[]');
-                    savedDesigns.push(designData);
+                    const existingIndex = savedDesigns.findIndex(d => d.id === targetId);
+                    if (existingIndex > -1) {
+                        savedDesigns[existingIndex] = designData;
+                    } else {
+                        savedDesigns.push(designData);
+                    }
                     localStorage.setItem('my_custom_designs', JSON.stringify(savedDesigns));
                     
-                    alert("Custom design progress saved to 'My Designs' in your profile for 3 days!");
+                    showToast("Custom design progress saved to 'My Designs'!");
                 };
                 img.src = pngDataUrl;
             } else {
-                alert("Product saved to your wishlist / profile!");
+                showToast("Product saved to your wishlist!");
             }
         });
     }
