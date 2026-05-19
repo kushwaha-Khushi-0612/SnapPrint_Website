@@ -221,6 +221,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h4 style="margin:0; font-size:14px; color:#111;">${design.title || 'Custom Product'}</h4>
                         <div style="margin-top:12px; display:flex; gap:8px;">
                             <a href="productDetails.html?id=${design.productId}&resume=${design.id}" class="btn-primary" style="flex:1; padding:8px; font-size:12px; text-decoration:none; text-align:center; border-radius:6px;">Edit Design</a>
+                            <button class="btn-delete-design" data-id="${design.id}" style="padding:8px 12px; background:#fee2e2; color:#ef4444; border:none; border-radius:6px; cursor:pointer; display:flex; align-items:center; justify-content:center;" title="Delete Design">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -229,6 +232,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         html += `</div></div>`;
         view.innerHTML = html;
+
+        const deleteBtns = view.querySelectorAll('.btn-delete-design');
+        deleteBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const idToRemove = btn.dataset.id;
+                if (confirm("Are you sure you want to delete this custom design?")) {
+                    let stored = JSON.parse(localStorage.getItem('my_custom_designs') || '[]');
+                    stored = stored.filter(d => d.id !== idToRemove);
+                    localStorage.setItem('my_custom_designs', JSON.stringify(stored));
+                    renderMyDesigns(); // Re-render instantly
+                }
+            });
+        });
     };
 
     renderMyDesigns();
