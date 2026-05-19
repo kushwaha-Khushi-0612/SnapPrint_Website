@@ -180,4 +180,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderMiniWishlist();
     window.addEventListener('wishlist:updated', renderMiniWishlist);
+
+    // 8. Render My Designs
+    const renderMyDesigns = () => {
+        const view = document.getElementById('view-designs');
+        if (!view) return;
+
+        let savedDesigns = [];
+        try {
+            savedDesigns = JSON.parse(localStorage.getItem('my_custom_designs') || '[]');
+            const now = Date.now();
+            // Filter out expired ones
+            const validDesigns = savedDesigns.filter(d => d.expiry > now);
+            if (validDesigns.length !== savedDesigns.length) {
+                savedDesigns = validDesigns;
+                localStorage.setItem('my_custom_designs', JSON.stringify(savedDesigns));
+            }
+        } catch (e) { }
+
+        if (savedDesigns.length === 0) {
+            view.innerHTML = `
+                <div class="profile-card placeholder-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="placeholder-icon" style="color: #8b5cf6;"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+                    <h3>My Custom Designs</h3>
+                    <p>Start creating your first design today!</p>
+                </div>
+            `;
+            return;
+        }
+
+        let html = `<div class="profile-card"><div style="margin-bottom:16px;"><h3>My Custom Designs</h3><p style="color:#666; font-size:13px; margin-top:4px;">Designs are saved for 3 days.</p></div><div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:16px;">`;
+
+        savedDesigns.forEach(design => {
+            html += `
+                <div class="design-card" style="border:1px solid #eaeaea; border-radius:12px; overflow:hidden; background:#fff; transition: transform 0.2s; cursor:pointer;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+                    <div style="position:relative; width:100%; padding-top:100%; background:#f9fafb;">
+                        <img src="${design.preview}" alt="Design Preview" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:contain; padding:12px;">
+                    </div>
+                    <div style="padding:12px;">
+                        <h4 style="margin:0; font-size:14px; color:#111;">${design.title || 'Custom Product'}</h4>
+                        <div style="margin-top:12px; display:flex; gap:8px;">
+                            <a href="productDetails.html?id=${design.productId}&resume=${design.id}" class="btn-primary" style="flex:1; padding:8px; font-size:12px; text-decoration:none; text-align:center; border-radius:6px;">Edit Design</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        html += `</div></div>`;
+        view.innerHTML = html;
+    };
+
+    renderMyDesigns();
 });

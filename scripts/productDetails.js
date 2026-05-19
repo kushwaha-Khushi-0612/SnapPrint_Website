@@ -936,6 +936,48 @@ function setupCustomizer() {
         tab.addEventListener('click', () => switchView(tab.dataset.view));
     });
 
+    function generateUniqueId() {
+        return 'id_' + Math.random().toString(36).substr(2, 9);
+    }
+
+    const resumeId = urlParams.get('resume');
+    if (resumeId) {
+        let savedDesigns = [];
+        try {
+            savedDesigns = JSON.parse(localStorage.getItem('my_custom_designs') || '[]');
+        } catch(e){}
+        const designToResume = savedDesigns.find(d => d.id === resumeId);
+        if (designToResume && designToResume.state) {
+            async function decompressData(dataStr) {
+                try {
+                    if (typeof DecompressionStream !== 'undefined' && dataStr.startsWith('data:')) {
+                        const res = await fetch(dataStr);
+                        const blob = await res.blob();
+                        const ds = new DecompressionStream('gzip');
+                        const decompressedStream = blob.stream().pipeThrough(ds);
+                        const outRes = new Response(decompressedStream);
+                        const text = await outRes.text();
+                        return JSON.parse(text);
+                    }
+                } catch(e) { console.error("DecompressionStream error:", e); }
+                try {
+                    return JSON.parse(decodeURIComponent(escape(atob(dataStr))));
+                } catch(e) { console.error("Base64 decode error:", e); return null; }
+            }
+            
+            decompressData(designToResume.state).then(states => {
+                if (states) {
+                    for (const v in states) {
+                        canvasStates[v] = states[v];
+                    }
+                    if (canvasStates[currentView]) {
+                        canvas.loadFromJSON(canvasStates[currentView], canvas.renderAll.bind(canvas));
+                    }
+                }
+            }).catch(e => console.error("Resume load error:", e));
+        }
+    }
+
     // --- Tools Setup ---
     document.getElementById('tool-add-text').addEventListener('click', () => {
         const text = new fabric.IText('Your Text', {
@@ -943,7 +985,8 @@ function setupCustomizer() {
             top: 50,
             fontFamily: 'Inter',
             fontSize: 24,
-            fill: '#000000'
+            fill: '#000000',
+            id: generateUniqueId()
         });
         canvas.add(text);
         canvas.setActiveObject(text);
@@ -997,13 +1040,30 @@ function setupCustomizer() {
 
         const reader = new FileReader();
         reader.onload = (f) => {
-            fabric.Image.fromURL(f.target.result, (img) => {
-                img.scaleToWidth(printWidth * 0.5); // Scale to 50% of print area
-                canvas.add(img);
-                canvas.centerObject(img);
-                canvas.setActiveObject(img);
-                imageModal.classList.remove('active'); // Close modal on add
-            });
+            const imgEl = new Image();
+            imgEl.onload = () => {
+                const tempCv = document.createElement('canvas');
+                tempCv.width = imgEl.width;
+                tempCv.height = imgEl.height;
+                tempCv.getContext('2d').drawImage(imgEl, 0, 0);
+                const compressedDataUrl = tempCv.toDataURL('image/webp', 0.6); // Very compressed webp
+                
+                // Save to local cache 'uploads' simulating a folder
+                let localUploads = JSON.parse(localStorage.getItem('user_uploads') || '{}');
+                const imgId = generateUniqueId();
+                localUploads[imgId] = compressedDataUrl;
+                localStorage.setItem('user_uploads', JSON.stringify(localUploads));
+
+                fabric.Image.fromURL(compressedDataUrl, (img) => {
+                    img.scaleToWidth(printWidth * 0.5); // Scale to 50% of print area
+                    img.id = imgId;
+                    canvas.add(img);
+                    canvas.centerObject(img);
+                    canvas.setActiveObject(img);
+                    imageModal.classList.remove('active'); // Close modal on add
+                });
+            };
+            imgEl.src = f.target.result;
         };
         reader.readAsDataURL(file);
     });
@@ -1023,6 +1083,7 @@ function setupCustomizer() {
                     return;
                 }
                 img.scaleToWidth(printWidth * 0.5);
+                img.id = generateUniqueId();
                 canvas.add(img);
                 canvas.centerObject(img);
                 canvas.setActiveObject(img);
@@ -1054,7 +1115,8 @@ function setupCustomizer() {
                     left: 50,
                     top: 50,
                     fontSize: 64,
-                    fontFamily: 'Inter'
+                    fontFamily: 'Inter',
+                    id: generateUniqueId()
                 });
                 canvas.add(text);
                 canvas.centerObject(text);
@@ -1397,15 +1459,78 @@ function setupCustomizer() {
         });
     }
 
+    async function compressData(data) {
+        try {
+            if (typeof CompressionStream !== 'undefined') {
+                const stream = new Blob([JSON.stringify(data)], { type: 'application/json' }).stream();
+                const compressedReadableStream = stream.pipeThrough(new CompressionStream('gzip'));
+                const compressedResponse = new Response(compressedReadableStream);
+                const blob = await compressedResponse.blob();
+                return new Promise(resolve => {
+                    const reader = new FileReader();
+                    reader.onload = () => resolve(reader.result);
+                    reader.readAsDataURL(blob);
+                });
+            }
+        } catch(e) {}
+        return btoa(unescape(encodeURIComponent(JSON.stringify(data))));
+    }
+
     // Action Bar - Wishlist (Mock Saving Custom Design)
     const wishlistBtn = document.getElementById('main-product-wishlist');
     if (wishlistBtn) {
-        wishlistBtn.addEventListener('click', () => {
+        wishlistBtn.addEventListener('click', async () => {
             wishlistBtn.style.color = '#ef4444';
-            alert("Custom design saved to your wishlist / profile!");
-            // In a real app, this would serialize canvas JSON and save to user profile.
+            
+            // Call standard wishlist
+            if (window.wishlistService && !window.wishlistService.has(productId)) {
+                window.wishlistService.add(productId);
+            }
+            
+            // Save current progress
             canvasStates[currentView] = JSON.stringify(canvas.toJSON());
-            localStorage.setItem('saved_custom_design', JSON.stringify(canvasStates));
+            
+            let hasProgress = false;
+            for (const view in canvasStates) {
+                if (canvasStates[view]) {
+                    const state = JSON.parse(canvasStates[view]);
+                    if (state.objects && state.objects.length > 0) {
+                        hasProgress = true;
+                        break;
+                    }
+                }
+            }
+
+            if (hasProgress) {
+                // Get webp preview with progressed thing
+                const pngDataUrl = await generateCompositedImage(currentView);
+                const img = new Image();
+                img.onload = async () => {
+                    const tempCv = document.createElement('canvas');
+                    tempCv.width = img.width / 2; // Resize to lower storage
+                    tempCv.height = img.height / 2;
+                    tempCv.getContext('2d').drawImage(img, 0, 0, tempCv.width, tempCv.height);
+                    const webpPreview = tempCv.toDataURL('image/webp', 0.5);
+
+                    const designData = {
+                        id: 'design_' + Math.random().toString(36).substr(2, 9),
+                        productId: productId,
+                        title: productData.title,
+                        preview: webpPreview,
+                        state: await compressData(canvasStates),
+                        expiry: Date.now() + (3 * 24 * 60 * 60 * 1000) // 3 days
+                    };
+                    
+                    let savedDesigns = JSON.parse(localStorage.getItem('my_custom_designs') || '[]');
+                    savedDesigns.push(designData);
+                    localStorage.setItem('my_custom_designs', JSON.stringify(savedDesigns));
+                    
+                    alert("Custom design progress saved to 'My Designs' in your profile for 3 days!");
+                };
+                img.src = pngDataUrl;
+            } else {
+                alert("Product saved to your wishlist / profile!");
+            }
         });
     }
 

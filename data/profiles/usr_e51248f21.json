@@ -25,7 +25,7 @@
     "last_chosen_address": 1,
     "analytics": {
         "categoryInterests": {
-            "T-Shirts": 30,
+            "T-Shirts": 37,
             "Decor": 11,
             "Men's Special": 6,
             "Phone Cases": 6,
@@ -34,17 +34,18 @@
             "Mugs & Cups": 7,
             "Kids Clothing": 4,
             "Photo Frames": 4,
-            "Footwear": 5,
-            "Key Chains": 2,
+            "Footwear": 6,
+            "Key Chains": 3,
             "Face Masks": 4,
             "Hoodies": 11,
             "Tote Bags": 2,
-            "Pendants": 1
+            "Pendants": 1,
+            "Frames": 1
         },
         "subcategoryInterests": {
             "Printed": 13,
             "Flip Flops": 1,
-            "Full Sleeves": 3,
+            "Full Sleeves": 4,
             "Necklaces": 2,
             "Graphic": 2,
             "Zip-Up": 1,
@@ -58,20 +59,29 @@
             "Crystals": 1,
             "Custom": 1,
             "Shockproof": 1,
-            "Holi": 1
+            "Holi": 2,
+            "Wooden": 1,
+            "Desk Frame": 1,
+            "Slides": 1,
+            "Plain": 1
         },
         "badgeInterests": {
-            "50% OFF": 13,
+            "50% OFF": 14,
             "55% OFF": 7,
             "New Arrival": 3,
             "Bestseller": 1,
-            "65% OFF": 3
+            "65% OFF": 4
         },
         "viewHistory": [
+            "sub-menclothing-holi-15",
+            "sub-menclothing-plain-1",
+            "p-sub-slides-7",
+            "p-sub-deskframe-5",
+            "p-sub-wooden-1",
+            "sub-menclothing-fullsleeves-0",
             "sub-menclothing-holi-5",
             "sub-oversized-4",
             "p-sub-shockproof-5",
-            "sub-menclothing-fullsleeves-0",
             "p-sub-menclothing-custom-1",
             "p-sub-crystals-1",
             "sub-menclothing-graphic-4",
@@ -82,14 +92,9 @@
             "sub-printed-87",
             "sub-printed-131",
             "p-sub-womenclothing-lightweight-5",
-            "sub-printed-149",
-            "sub-printed-117",
-            "p-sub-insulated-2",
-            "p-sub-handmade-3",
-            "sub-customized-5",
-            "sub-printed-125"
+            "sub-printed-149"
         ],
-        "lastInteracted": 1779027401982
+        "lastInteracted": 1779213599706
     },
-    "lastSync": "2026-05-17 16:16:41"
+    "lastSync": "2026-05-19 19:59:59"
 }
