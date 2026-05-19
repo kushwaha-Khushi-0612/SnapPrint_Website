@@ -181,6 +181,85 @@ document.addEventListener('DOMContentLoaded', () => {
     renderMiniWishlist();
     window.addEventListener('wishlist:updated', renderMiniWishlist);
 
+    function showToast(message, type = 'success') {
+        const toastId = 'toast-container-notification';
+        let container = document.getElementById(toastId);
+        if (!container) {
+            container = document.createElement('div');
+            container.id = toastId;
+            container.style.cssText = 'position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 999999; display: flex; flex-direction: column; gap: 12px; pointer-events: none; width: 90%; max-width: 400px;';
+            document.body.appendChild(container);
+        }
+        
+        const toast = document.createElement('div');
+        const bgColor = type === 'success' ? 'linear-gradient(135deg, #10b981, #059669)' : 
+                        type === 'error' ? 'linear-gradient(135deg, #ef4444, #dc2626)' : 
+                        'linear-gradient(135deg, #3b82f6, #2563eb)';
+        
+        toast.style.cssText = `background: ${bgColor}; color: white; padding: 14px 20px; border-radius: 12px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 500; box-shadow: 0 10px 30px -5px rgba(0,0,0,0.3); opacity: 0; transform: translateY(30px) scale(0.95); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; align-items: center; gap: 12px; backdrop-filter: blur(10px);`;
+        
+        const icon = document.createElement('span');
+        icon.innerHTML = type === 'success' ? '✓' : type === 'error' ? '✕' : 'ℹ';
+        icon.style.cssText = `background: rgba(255,255,255,0.25); width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold; font-size: 14px; flex-shrink: 0;`;
+        
+        toast.appendChild(icon);
+        toast.appendChild(document.createTextNode(message));
+        container.appendChild(toast);
+        
+        requestAnimationFrame(() => {
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateY(0) scale(1)';
+        });
+        
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateY(20px) scale(0.95)';
+            setTimeout(() => toast.remove(), 400);
+        }, 3500);
+    }
+
+    function showConfirmModal(title, message, onConfirm) {
+        const overlay = document.createElement('div');
+        overlay.style.cssText = `position: fixed; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(8px); z-index: 999999; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; transition: opacity 0.3s ease;`;
+        
+        const modal = document.createElement('div');
+        modal.style.cssText = `background: white; width: 100%; max-width: 380px; border-radius: 20px; padding: 24px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); transform: translateY(20px) scale(0.95); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); font-family: Inter, sans-serif;`;
+        
+        modal.innerHTML = `
+            <div style="display:flex; justify-content:center; margin-bottom:16px;">
+                <div style="width: 56px; height: 56px; border-radius: 50%; background: #fee2e2; color: #ef4444; display:flex; align-items:center; justify-content:center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>
+                </div>
+            </div>
+            <h3 style="margin: 0 0 8px 0; text-align: center; font-size: 18px; color: #111;">${title}</h3>
+            <p style="margin: 0 0 24px 0; text-align: center; font-size: 14px; color: #666; line-height: 1.5;">${message}</p>
+            <div style="display: flex; gap: 12px;">
+                <button id="confirm-cancel" style="flex:1; padding: 12px; border-radius: 10px; border: 1px solid #e5e7eb; background: #fff; color: #374151; font-weight: 600; font-size: 14px; cursor: pointer; transition: background 0.2s;">Cancel</button>
+                <button id="confirm-ok" style="flex:1; padding: 12px; border-radius: 10px; border: none; background: linear-gradient(135deg, #ef4444, #dc2626); color: #fff; font-weight: 600; font-size: 14px; cursor: pointer; transition: opacity 0.2s; box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);">Delete</button>
+            </div>
+        `;
+        
+        overlay.appendChild(modal);
+        document.body.appendChild(overlay);
+        
+        requestAnimationFrame(() => {
+            overlay.style.opacity = '1';
+            modal.style.transform = 'translateY(0) scale(1)';
+        });
+        
+        const close = () => {
+            overlay.style.opacity = '0';
+            modal.style.transform = 'translateY(20px) scale(0.95)';
+            setTimeout(() => overlay.remove(), 300);
+        };
+        
+        modal.querySelector('#confirm-cancel').addEventListener('click', close);
+        modal.querySelector('#confirm-ok').addEventListener('click', () => {
+            close();
+            onConfirm();
+        });
+    }
+
     // 8. Render My Designs
     const renderMyDesigns = () => {
         const view = document.getElementById('view-designs');
@@ -238,12 +317,17 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const idToRemove = btn.dataset.id;
-                if (confirm("Are you sure you want to delete this custom design?")) {
-                    let stored = JSON.parse(localStorage.getItem('my_custom_designs') || '[]');
-                    stored = stored.filter(d => d.id !== idToRemove);
-                    localStorage.setItem('my_custom_designs', JSON.stringify(stored));
-                    renderMyDesigns(); // Re-render instantly
-                }
+                showConfirmModal(
+                    "Delete Design?", 
+                    "This action cannot be undone. Are you sure you want to permanently delete this custom design?",
+                    () => {
+                        let stored = JSON.parse(localStorage.getItem('my_custom_designs') || '[]');
+                        stored = stored.filter(d => d.id !== idToRemove);
+                        localStorage.setItem('my_custom_designs', JSON.stringify(stored));
+                        renderMyDesigns(); // Re-render instantly
+                        showToast("Design deleted successfully!", "success");
+                    }
+                );
             });
         });
     };
