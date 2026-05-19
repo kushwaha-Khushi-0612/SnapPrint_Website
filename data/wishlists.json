@@ -24,6 +24,11 @@
             "productId": "sub-menclothing-holi-15",
             "itemType": "product",
             "savedAt": 1779213614119
+        },
+        {
+            "productId": "sub-menclothing-cottonpolo-1",
+            "itemType": "product",
+            "savedAt": 1779214241117
         }
     ]
 }

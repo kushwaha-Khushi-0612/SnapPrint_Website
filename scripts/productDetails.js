@@ -904,7 +904,7 @@ function setupCustomizer() {
         // Swap Image dynamically
         const viewSrc = window.customizerImages[viewName];
         if (viewSrc) {
-            if (viewSrc.includes('unsplash.com')) {
+            if (viewSrc.startsWith('http')) {
                 mainImage.crossOrigin = 'anonymous';
             } else {
                 mainImage.removeAttribute('crossorigin');
@@ -1173,7 +1173,7 @@ function setupCustomizer() {
                 // Swap mockup background image source temporarily
                 const originalSrc = mainImg.src;
                 const targetSrc = window.customizerImages[viewName] || originalSrc;
-                if (targetSrc && targetSrc.includes('unsplash.com')) {
+                if (targetSrc && targetSrc.startsWith('http')) {
                     mainImg.crossOrigin = "anonymous";
                 } else {
                     mainImg.removeAttribute('crossorigin');
