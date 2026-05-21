@@ -192,23 +192,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         const toast = document.createElement('div');
-        const bgColor = type === 'success' ? 'linear-gradient(135deg, #10b981, #059669)' : 
-                        type === 'error' ? 'linear-gradient(135deg, #ef4444, #dc2626)' : 
-                        'linear-gradient(135deg, #3b82f6, #2563eb)';
+        toast.style.cssText = `background: rgba(17, 17, 17, 0.95); color: #fff; border-radius: 12px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 500; box-shadow: 0 10px 30px -5px rgba(0,0,0,0.4); opacity: 0; transform: translateY(30px) scale(0.95); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; flex-direction: column; overflow: hidden; backdrop-filter: blur(10px);`;
         
-        toast.style.cssText = `background: ${bgColor}; color: white; padding: 14px 20px; border-radius: 12px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 500; box-shadow: 0 10px 30px -5px rgba(0,0,0,0.3); opacity: 0; transform: translateY(30px) scale(0.95); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; align-items: center; gap: 12px; backdrop-filter: blur(10px);`;
+        const content = document.createElement('div');
+        content.style.cssText = 'padding: 14px 20px; display: flex; align-items: center; gap: 12px;';
         
+        const iconColor = type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#fff';
         const icon = document.createElement('span');
         icon.innerHTML = type === 'success' ? '✓' : type === 'error' ? '✕' : 'ℹ';
-        icon.style.cssText = `background: rgba(255,255,255,0.25); width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold; font-size: 14px; flex-shrink: 0;`;
+        icon.style.cssText = `background: ${iconColor}; color: ${type === 'info' ? '#111' : '#fff'}; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold; font-size: 13px; flex-shrink: 0; box-shadow: 0 2px 8px ${iconColor}40;`;
         
-        toast.appendChild(icon);
-        toast.appendChild(document.createTextNode(message));
+        content.appendChild(icon);
+        content.appendChild(document.createTextNode(message));
+        toast.appendChild(content);
+
+        const progressBarContainer = document.createElement('div');
+        progressBarContainer.style.cssText = 'width: 100%; height: 3px; background: rgba(255,255,255,0.1);';
+        
+        const progressBar = document.createElement('div');
+        progressBar.style.cssText = `width: 100%; height: 100%; background: ${iconColor}; transform-origin: left; transition: transform 3.5s linear;`;
+        progressBarContainer.appendChild(progressBar);
+        
+        toast.appendChild(progressBarContainer);
         container.appendChild(toast);
         
         requestAnimationFrame(() => {
             toast.style.opacity = '1';
             toast.style.transform = 'translateY(0) scale(1)';
+            requestAnimationFrame(() => {
+                progressBar.style.transform = 'scaleX(0)';
+            });
         });
         
         setTimeout(() => {

@@ -321,6 +321,17 @@ async function loadProductData() {
     document.title = `${productData.title} - SnapPrint`;
 }
 
+// Helper to ensure external images don't block canvas due to restrictive CORS policies
+function getCorsProxyUrl(url) {
+    if (!url || !url.startsWith('http')) return url;
+    if (url.includes('unsplash.com')) return url; // Unsplash supports wildcard CORS natively
+    
+    // Route through our local PHP proxy to reliably fetch binary images while bypassing CDN blocks
+    const currentDomain = window.location.origin;
+    const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+    return `${currentDomain}${basePath}/proxy.php?url=` + encodeURIComponent(url);
+}
+
 /**
  * Setup image gallery
  */
@@ -331,13 +342,8 @@ function setupImageGallery() {
     // Force default main image source to match the category's first preview image immediately on page load!
     if (mainImage && productData.images && productData.images.length > 0) {
         const primarySrc = productData.images[0];
-        if (primarySrc && primarySrc.includes('unsplash.com')) {
-            mainImage.crossOrigin = 'anonymous';
-        } else {
-            mainImage.removeAttribute('crossorigin');
-            mainImage.crossOrigin = null;
-        }
-        mainImage.src = primarySrc;
+        mainImage.crossOrigin = 'anonymous';
+        mainImage.src = getCorsProxyUrl(primarySrc);
     }
 
     // Create a gorgeous floating "Lifestyle Preview Only" badge overlay inside customizer container
@@ -365,13 +371,8 @@ function setupImageGallery() {
 
             // Change the main product image to the thumbnail's image
             const clickedSrc = thumb.dataset.image;
-            if (clickedSrc && clickedSrc.includes('unsplash.com')) {
-                mainImage.crossOrigin = 'anonymous';
-            } else {
-                mainImage.removeAttribute('crossorigin');
-                mainImage.crossOrigin = null;
-            }
-            mainImage.src = clickedSrc;
+            mainImage.crossOrigin = 'anonymous';
+            mainImage.src = getCorsProxyUrl(clickedSrc);
 
             // Update active state class for thumbnails
             document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
@@ -904,13 +905,8 @@ function setupCustomizer() {
         // Swap Image dynamically
         const viewSrc = window.customizerImages[viewName];
         if (viewSrc) {
-            if (viewSrc.startsWith('http')) {
-                mainImage.crossOrigin = 'anonymous';
-            } else {
-                mainImage.removeAttribute('crossorigin');
-                mainImage.crossOrigin = null;
-            }
-            mainImage.src = viewSrc;
+            mainImage.crossOrigin = 'anonymous';
+            mainImage.src = getCorsProxyUrl(viewSrc);
         }
 
         // Sync main thumbnail active state as well
@@ -1173,13 +1169,8 @@ function setupCustomizer() {
                 // Swap mockup background image source temporarily
                 const originalSrc = mainImg.src;
                 const targetSrc = window.customizerImages[viewName] || originalSrc;
-                if (targetSrc && targetSrc.startsWith('http')) {
-                    mainImg.crossOrigin = "anonymous";
-                } else {
-                    mainImg.removeAttribute('crossorigin');
-                    mainImg.crossOrigin = null;
-                }
-                mainImg.src = targetSrc;
+                mainImg.crossOrigin = 'anonymous';
+                mainImg.src = getCorsProxyUrl(targetSrc);
 
                 // Wait for the background image to fully load
                 await new Promise((res) => {
@@ -1482,29 +1473,47 @@ function setupCustomizer() {
         if (!container) {
             container = document.createElement('div');
             container.id = toastId;
-            container.style.cssText = 'position: fixed; bottom: 20px; right: 20px; z-index: 999999; display: flex; flex-direction: column; gap: 10px; pointer-events: none;';
+            container.style.cssText = 'position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 999999; display: flex; flex-direction: column; gap: 12px; pointer-events: none; width: 90%; max-width: 400px;';
             document.body.appendChild(container);
         }
+        
         const toast = document.createElement('div');
-        toast.style.cssText = `background: ${type === 'success' ? '#10b981' : '#3b82f6'}; color: white; padding: 14px 24px; border-radius: 8px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 500; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2); opacity: 0; transform: translateY(20px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; gap: 10px;`;
+        toast.style.cssText = `background: rgba(17, 17, 17, 0.95); color: #fff; border-radius: 12px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 500; box-shadow: 0 10px 30px -5px rgba(0,0,0,0.4); opacity: 0; transform: translateY(30px) scale(0.95); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; flex-direction: column; overflow: hidden; backdrop-filter: blur(10px);`;
         
+        const content = document.createElement('div');
+        content.style.cssText = 'padding: 14px 20px; display: flex; align-items: center; gap: 12px;';
+        
+        const iconColor = type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#fff';
         const icon = document.createElement('span');
-        icon.innerHTML = type === 'success' ? '✓' : 'ℹ';
-        icon.style.cssText = `background: rgba(255,255,255,0.2); width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold;`;
+        icon.innerHTML = type === 'success' ? '✓' : type === 'error' ? '✕' : 'ℹ';
+        icon.style.cssText = `background: ${iconColor}; color: ${type === 'info' ? '#111' : '#fff'}; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold; font-size: 13px; flex-shrink: 0; box-shadow: 0 2px 8px ${iconColor}40;`;
         
-        toast.appendChild(icon);
-        toast.appendChild(document.createTextNode(message));
+        content.appendChild(icon);
+        content.appendChild(document.createTextNode(message));
+        toast.appendChild(content);
+
+        const progressBarContainer = document.createElement('div');
+        progressBarContainer.style.cssText = 'width: 100%; height: 3px; background: rgba(255,255,255,0.1);';
+        
+        const progressBar = document.createElement('div');
+        progressBar.style.cssText = `width: 100%; height: 100%; background: ${iconColor}; transform-origin: left; transition: transform 3.5s linear;`;
+        progressBarContainer.appendChild(progressBar);
+        
+        toast.appendChild(progressBarContainer);
         container.appendChild(toast);
         
         requestAnimationFrame(() => {
             toast.style.opacity = '1';
-            toast.style.transform = 'translateY(0)';
+            toast.style.transform = 'translateY(0) scale(1)';
+            requestAnimationFrame(() => {
+                progressBar.style.transform = 'scaleX(0)';
+            });
         });
         
         setTimeout(() => {
             toast.style.opacity = '0';
-            toast.style.transform = 'translateY(20px)';
-            setTimeout(() => toast.remove(), 300);
+            toast.style.transform = 'translateY(20px) scale(0.95)';
+            setTimeout(() => toast.remove(), 400);
         }, 3500);
     }
 

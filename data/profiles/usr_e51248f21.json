@@ -25,10 +25,10 @@
     "last_chosen_address": 1,
     "analytics": {
         "categoryInterests": {
-            "T-Shirts": 38,
+            "T-Shirts": 44,
             "Decor": 11,
             "Men's Special": 6,
-            "Phone Cases": 6,
+            "Phone Cases": 7,
             "Women's Special": 2,
             "Jewelry": 4,
             "Mugs & Cups": 7,
@@ -47,18 +47,18 @@
             "Flip Flops": 1,
             "Full Sleeves": 4,
             "Necklaces": 2,
-            "Graphic": 2,
+            "Graphic": 3,
             "Zip-Up": 1,
             "Customized": 1,
             "Handmade": 1,
             "Insulated": 1,
             "Lightweight": 1,
-            "Oversized": 3,
+            "Oversized": 4,
             "Wall Hanging": 1,
             "Statement": 1,
             "Crystals": 1,
             "Custom": 1,
-            "Shockproof": 1,
+            "Shockproof": 2,
             "Holi": 2,
             "Wooden": 1,
             "Desk Frame": 1,
@@ -67,13 +67,16 @@
             "Cotton Polo": 1
         },
         "badgeInterests": {
-            "50% OFF": 15,
-            "55% OFF": 7,
+            "50% OFF": 16,
+            "55% OFF": 8,
             "New Arrival": 3,
             "Bestseller": 1,
             "65% OFF": 4
         },
         "viewHistory": [
+            "p-sub-shockproof-5",
+            "sub-menclothing-graphic-0",
+            "sub-oversized-1",
             "sub-menclothing-cottonpolo-1",
             "sub-menclothing-holi-15",
             "sub-menclothing-plain-1",
@@ -83,7 +86,6 @@
             "sub-menclothing-fullsleeves-0",
             "sub-menclothing-holi-5",
             "sub-oversized-4",
-            "p-sub-shockproof-5",
             "p-sub-menclothing-custom-1",
             "p-sub-crystals-1",
             "sub-menclothing-graphic-4",
@@ -91,11 +93,9 @@
             "p-sub-statement-8",
             "p-sub-wallhanging-5",
             "sub-oversized-163",
-            "sub-printed-87",
-            "sub-printed-131",
-            "p-sub-womenclothing-lightweight-5"
+            "sub-printed-87"
         ],
-        "lastInteracted": 1779214212857
+        "lastInteracted": 1779347227275
     },
-    "lastSync": "2026-05-19 20:10:12"
+    "lastSync": "2026-05-21 09:07:07"
 }
