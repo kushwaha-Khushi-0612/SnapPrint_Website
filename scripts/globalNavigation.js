@@ -206,11 +206,21 @@ function initGlobalSearch() {
                 historyDropdown.style.display = 'none';
                 return;
             }
-            let html = '<div style="padding: 10px 16px; font-size: 11px; color: #888; background: #fafafa; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; font-weight: 600; text-transform: uppercase;"><span>Recent Searches</span><span style="cursor:pointer; color: #ff4757;" onclick="localStorage.removeItem(\'search_history\'); this.parentElement.parentElement.style.display=\'none\'">Clear</span></div>';
+            let html = '<div style="padding: 10px 16px; font-size: 11px; color: #888; background: #fafafa; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; font-weight: 600; text-transform: uppercase;"><span>Recent Searches</span><span class="clear-history-btn" style="cursor:pointer; color: #ff4757;">Clear</span></div>';
             history.forEach(item => {
                 html += `<div class="history-item" style="padding: 12px 16px; cursor: pointer; border-bottom: 1px solid #f1f1f1; display: flex; align-items: center; gap: 12px; font-size: 14px; color: #333;" onmouseover="this.style.background='#f8f9fa'" onmouseout="this.style.background='transparent'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> ${item}</div>`;
             });
             historyDropdown.innerHTML = html;
+
+            const clearBtn = historyDropdown.querySelector('.clear-history-btn');
+            if (clearBtn) {
+                clearBtn.addEventListener('mousedown', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    localStorage.removeItem('search_history');
+                    historyDropdown.style.display = 'none';
+                });
+            }
 
             historyDropdown.querySelectorAll('.history-item').forEach((el, i) => {
                 el.addEventListener('mousedown', (e) => {
