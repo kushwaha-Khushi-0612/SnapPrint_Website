@@ -83,17 +83,31 @@ function renderCategories(categories, containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    // Prioritize specific categories to appear first
-    const topCategories = ["Men's Special", "Women's Special", "T-Shirts"];
+    // Perfect order to ensure the CSS grid has no empty spaces at the bottom
+    const perfectOrder = [
+        "Men's Special",
+        "Women's Special",
+        "T-Shirts",
+        "Decor",
+        "Face Masks",
+        "Footwear",
+        "Jewelry",
+        "Hoodies",
+        "Key Chains",
+        "Kids Clothing",
+        "Phone Cases",
+        "Mugs & Cups",
+        "Pendants",
+        "Photo Frames",
+        "Tote Bags"
+    ];
 
     categories.sort((a, b) => {
-        const aIndex = topCategories.indexOf(a.name);
-        const bIndex = topCategories.indexOf(b.name);
-
-        if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-        if (aIndex !== -1) return -1;
-        if (bIndex !== -1) return 1;
-        return 0; // Maintain relative order for others
+        let aIndex = perfectOrder.indexOf(a.name);
+        let bIndex = perfectOrder.indexOf(b.name);
+        if (aIndex === -1) aIndex = 999;
+        if (bIndex === -1) bIndex = 999;
+        return aIndex - bIndex;
     });
 
     const html = categories.map(category => createCategoryUnit(category)).join('');

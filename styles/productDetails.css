@@ -120,7 +120,8 @@
 .wishlist-btn {
     position: absolute;
     top: 20px;
-    left: 20px; /* Positioned top-left of the mockup container */
+    left: 20px;
+    /* Positioned top-left of the mockup container */
     background: white;
     border: none;
     width: 40px;
@@ -170,7 +171,7 @@
     border: 3px solid transparent;
     background: #fff;
     padding: 3px;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -185,7 +186,7 @@
 .thumbnail.active {
     border-color: #000 !important;
     transform: scale(0.96);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Product Info Redesign */
@@ -848,6 +849,7 @@
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
+
     .breadcrumb::-webkit-scrollbar {
         display: none;
     }
@@ -870,7 +872,7 @@
     .current-price {
         font-size: 28px;
     }
-    
+
     .original-price {
         font-size: 18px;
     }
@@ -882,7 +884,7 @@
     }
 
     /* Print Options layout fix */
-    .print-options > div {
+    .print-options>div {
         flex-direction: column;
         gap: 10px !important;
     }
@@ -893,6 +895,7 @@
         height: 50px;
         font-size: 14px;
     }
+
     .color-btn {
         width: 38px;
         height: 38px;
@@ -902,12 +905,15 @@
     .bulk-pricing-section {
         padding: 16px 12px;
     }
+
     .bulk-table {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
-    .bulk-table th, .bulk-table td {
+
+    .bulk-table th,
+    .bulk-table td {
         padding: 8px;
         font-size: 13px;
     }
@@ -947,22 +953,25 @@
         gap: 12px;
         padding: 0;
     }
-    
+
     /* Delivery info fix */
     .delivery-info {
         padding: 16px;
     }
+
     .pincode-input {
         width: 100%;
         margin-bottom: 8px;
         margin-right: 0;
     }
-    .delivery-item > div:first-of-type {
+
+    .delivery-item>div:first-of-type {
         display: flex;
         width: 100%;
         gap: 8px;
     }
-    .delivery-item > div:first-of-type .pincode-input {
+
+    .delivery-item>div:first-of-type .pincode-input {
         margin-bottom: 0;
     }
 }
@@ -2106,9 +2115,11 @@
     top: 80px;
     left: 20px;
     z-index: 90;
-    width: 230px !important; /* Compact sleek width */
+    width: 230px !important;
+    /* Compact sleek width */
     margin: 0 !important;
-    padding: 10px 12px !important; /* Balanced close spacing */
+    padding: 10px 12px !important;
+    /* Balanced close spacing */
     background: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(16px) !important;
     -webkit-backdrop-filter: blur(16px);
@@ -2130,7 +2141,8 @@
 }
 
 .floating-props #prop-text-input {
-    height: 38px !important; /* Shorter text area perfect for quick entries */
+    height: 38px !important;
+    /* Shorter text area perfect for quick entries */
     font-size: 12px !important;
     padding: 6px !important;
     margin-bottom: 6px !important;
@@ -2189,18 +2201,18 @@
     .qty-control-row span {
         white-space: nowrap !important;
     }
-    
+
     .product-actions {
         flex-direction: column !important;
         gap: 8px !important;
     }
-    
-    .product-actions > button {
+
+    .product-actions>button {
         width: 100% !important;
         margin-right: 0 !important;
         flex: none !important;
     }
-    
+
     .quantity-selector span {
         white-space: nowrap !important;
     }
@@ -2209,20 +2221,25 @@
 /* Premium Floating Pill Switcher Panel Styles */
 .view-switcher-tabs {
     position: absolute !important;
-    top: 15px !important; /* Elegant top floating pill switcher */
+    top: 15px !important;
+    /* Elegant top floating pill switcher */
     bottom: auto !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 50;
     display: flex !important;
     gap: 5px !important;
-    background: rgba(255, 255, 255, 0.95) !important; /* Premium high-contrast backdrop */
-    padding: 4px 6px !important; /* Generous end spacing to prevent edge clipping */
-    border-radius: 40px !important; /* Perfectly rounded outer pill capsule */
+    background: rgba(255, 255, 255, 0.95) !important;
+    /* Premium high-contrast backdrop */
+    padding: 4px 6px !important;
+    /* Generous end spacing to prevent edge clipping */
+    border-radius: 40px !important;
+    /* Perfectly rounded outer pill capsule */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.8) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(0, 0, 0, 0.06) !important; /* Delicate shadow border */
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    /* Delicate shadow border */
     max-width: 92% !important;
     width: auto !important;
     white-space: nowrap !important;
@@ -2234,10 +2251,12 @@
     padding: 6px 12px !important;
     font-size: 11px !important;
     font-weight: 600 !important;
-    border-radius: 30px !important; /* Smooth capsule tabs */
+    border-radius: 30px !important;
+    /* Smooth capsule tabs */
     border: none !important;
     background: transparent !important;
-    color: #475569 !important; /* Soft premium slate gray text */
+    color: #475569 !important;
+    /* Soft premium slate gray text */
     cursor: pointer !important;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
     text-transform: uppercase !important;
@@ -2252,7 +2271,8 @@
 }
 
 .view-tab.active {
-    background: #0f172a !important; /* Bold active state */
+    background: #0f172a !important;
+    /* Bold active state */
     color: #ffffff !important;
     box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15) !important;
 }
@@ -2260,17 +2280,21 @@
 /* Mobile Responsive Customizer Switcher Overrides */
 @media (max-width: 768px) {
     .view-switcher-tabs {
-        top: 12px !important; /* Centered top floating pill switcher for mobile */
+        top: 12px !important;
+        /* Centered top floating pill switcher for mobile */
         bottom: auto !important;
         gap: 2.5px !important;
-        padding: 3px 4px !important; /* Micro padded spacing */
+        padding: 3px 4px !important;
+        /* Micro padded spacing */
         max-width: 95% !important;
         border-radius: 30px !important;
     }
-    
+
     .view-tab {
-        padding: 4px 6.5px !important; /* Ultra compact tab size */
-        font-size: 8px !important; /* Sleek, readable micro typography */
+        padding: 4px 6.5px !important;
+        /* Ultra compact tab size */
+        font-size: 8px !important;
+        /* Sleek, readable micro typography */
         letter-spacing: 0.2px !important;
         border-radius: 20px !important;
     }
@@ -2280,16 +2304,19 @@
         top: 10px !important;
         right: 10px !important;
     }
+
     .floating-tool-group {
         padding: 4px !important;
         border-radius: 8px !important;
         gap: 4px !important;
     }
+
     .floating-btn {
         width: 34px !important;
         height: 34px !important;
         border-radius: 6px !important;
     }
+
     .floating-btn svg {
         width: 16px !important;
         height: 16px !important;
@@ -2301,8 +2328,9 @@
         left: 10px !important;
         width: 32px !important;
         height: 32px !important;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.12) !important;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12) !important;
     }
+
     .wishlist-btn svg {
         width: 16px !important;
         height: 16px !important;
@@ -2319,16 +2347,20 @@
 
     /* Floating Action Bar decluttering - hide text, only show icons */
     .floating-action-bar {
-        bottom: 12px !important; /* Perfect floating bottom bar */
+        bottom: 12px !important;
+        /* Perfect floating bottom bar */
         padding: 4px 8px !important;
         border-radius: 20px !important;
     }
+
     .floating-action-bar .btn-text {
         display: none !important;
     }
+
     .floating-action-bar .action-bar-buttons {
         gap: 4px !important;
     }
+
     .floating-action-bar .action-btn {
         width: 34px !important;
         height: 34px !important;
@@ -2338,6 +2370,7 @@
         justify-content: center !important;
         padding: 0 !important;
     }
+
     .floating-action-bar .action-btn svg {
         width: 15px !important;
         height: 15px !important;
@@ -2347,15 +2380,17 @@
     .floating-props {
         top: 70px;
         left: 10px;
-        width: 210px !important; /* Narrow and compact so it does not block the mobile viewport! */
+        width: 210px !important;
+        /* Narrow and compact so it does not block the mobile viewport! */
         max-width: none !important;
         border-radius: 12px !important;
-        padding: 8px 10px !important; /* Extra tight spacing for mobile */
+        padding: 8px 10px !important;
+        /* Extra tight spacing for mobile */
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
         z-index: 99 !important;
         margin: 0 !important;
     }
-    
+
     .floating-props .prop-header {
         margin-bottom: 6px !important;
         padding-bottom: 4px !important;
@@ -2368,7 +2403,274 @@
     }
 
     .floating-props #prop-text-input {
-        height: 32px !important; /* Compact textarea perfect for single-line mobile input */
+        height: 32px !important;
+        /* Compact textarea perfect for single-line mobile input */
+        font-size: 11px !important;
+        padding: 4px 6px !important;
+        margin-bottom: 4px !important;
+        border-radius: 6px !important;
+    }
+
+    .floating-props #prop-font-select {
+        padding: 2px 4px !important;
+        font-size: 10px !important;
+        height: 24px !important;
+        max-width: 120px !important;
+        border-radius: 5px !important;
+    }
+
+    .floating-props #prop-color-input {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .floating-props .icon-btn {
+        padding: 3px 5px !important;
+        font-size: 10px !important;
+        border-radius: 5px !important;
+    }
+
+    .floating-props .icon-btn svg {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    .floating-props .prop-row {
+        gap: 4px !important;
+    }
+
+    .floating-props label {
+        font-size: 9px !important;
+        font-weight: 500 !important;
+    }
+
+    .floating-props label input[type="checkbox"] {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    .floating-props input[type="range"] {
+        height: 2px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .floating-props .prop-row[style*="border-top"] {
+        margin-top: 6px !important;
+        padding-top: 4px !important;
+    }
+}
+
+padding-top: 6px !important;
+}
+
+@media (max-width: 768px) {
+    .qty-control-row span {
+        white-space: nowrap !important;
+    }
+
+    .product-actions {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+
+    .product-actions>button {
+        width: 100% !important;
+        margin-right: 0 !important;
+        flex: none !important;
+    }
+
+    .quantity-selector span {
+        white-space: nowrap !important;
+    }
+}
+
+/* Premium Floating Pill Switcher Panel Styles */
+.view-switcher-tabs {
+    position: absolute !important;
+    top: 15px !important;
+    /* Elegant top floating pill switcher */
+    bottom: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 50;
+    display: flex !important;
+    gap: 5px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    /* Premium high-contrast backdrop */
+    padding: 4px 6px !important;
+    /* Generous end spacing to prevent edge clipping */
+    border-radius: 40px !important;
+    /* Perfectly rounded outer pill capsule */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    /* Delicate shadow border */
+    max-width: 92% !important;
+    width: auto !important;
+    white-space: nowrap !important;
+    justify-content: center !important;
+    overflow: visible !important;
+}
+
+.view-tab {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    border-radius: 30px !important;
+    /* Smooth capsule tabs */
+    border: none !important;
+    background: transparent !important;
+    color: #475569 !important;
+    /* Soft premium slate gray text */
+    cursor: pointer !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    flex: none !important;
+    border-bottom: none !important;
+}
+
+.view-tab:hover {
+    color: #0f172a !important;
+    background: rgba(15, 23, 42, 0.04) !important;
+}
+
+.view-tab.active {
+    background: #0f172a !important;
+    /* Bold active state */
+    color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15) !important;
+}
+
+/* Mobile Responsive Customizer Switcher Overrides */
+@media (max-width: 768px) {
+    .view-switcher-tabs {
+        top: 12px !important;
+        /* Centered top floating pill switcher for mobile */
+        bottom: auto !important;
+        gap: 2.5px !important;
+        padding: 3px 4px !important;
+        /* Micro padded spacing */
+        max-width: 95% !important;
+        border-radius: 30px !important;
+    }
+
+    .view-tab {
+        padding: 4px 6.5px !important;
+        /* Ultra compact tab size */
+        font-size: 8px !important;
+        /* Sleek, readable micro typography */
+        letter-spacing: 0.2px !important;
+        border-radius: 20px !important;
+    }
+
+    /* Declutter toolbar and floating customizer tools */
+    .floating-toolbar {
+        top: 10px !important;
+        right: 10px !important;
+    }
+
+    .floating-tool-group {
+        padding: 4px !important;
+        border-radius: 8px !important;
+        gap: 4px !important;
+    }
+
+    .floating-btn {
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 6px !important;
+    }
+
+    .floating-btn svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    /* Shrink and align wishlist button inside customizer */
+    .wishlist-btn {
+        top: 10px !important;
+        left: 10px !important;
+        width: 32px !important;
+        height: 32px !important;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    .wishlist-btn svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    /* Adjust preview angle badge position and size on mobile */
+    #preview-only-badge {
+        top: 10px !important;
+        right: 10px !important;
+        left: auto !important;
+        font-size: 8px !important;
+        padding: 4px 8px !important;
+    }
+
+    /* Floating Action Bar decluttering - hide text, only show icons */
+    .floating-action-bar {
+        bottom: 12px !important;
+        /* Perfect floating bottom bar */
+        padding: 4px 8px !important;
+        border-radius: 20px !important;
+    }
+
+    .floating-action-bar .btn-text {
+        display: none !important;
+    }
+
+    .floating-action-bar .action-bar-buttons {
+        gap: 4px !important;
+    }
+
+    .floating-action-bar .action-btn {
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+    }
+
+    .floating-action-bar .action-btn svg {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    /* Mobile properties panel overrides */
+    .floating-props {
+        top: 70px;
+        left: 10px;
+        width: 210px !important;
+        /* Narrow and compact so it does not block the mobile viewport! */
+        max-width: none !important;
+        border-radius: 12px !important;
+        padding: 8px 10px !important;
+        /* Extra tight spacing for mobile */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+        z-index: 99 !important;
+        margin: 0 !important;
+    }
+
+    .floating-props .prop-header {
+        margin-bottom: 6px !important;
+        padding-bottom: 4px !important;
+        font-size: 11px !important;
+    }
+
+    .floating-props .prop-header svg {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    .floating-props #prop-text-input {
+        height: 32px !important;
+        /* Compact textarea perfect for single-line mobile input */
         font-size: 11px !important;
         padding: 4px 6px !important;
         margin-bottom: 4px !important;

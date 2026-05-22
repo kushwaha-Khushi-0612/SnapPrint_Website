@@ -142,9 +142,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Fetch discounts in parallel
             const discPromise = fetch('data/discounts.json').then(r => r.json()).catch(e => { console.warn(e); return null; });
 
-            // Pre-flatten database once
-            await window.dataService.getAllProductsFlattened();
-
             // Now run all random generators concurrently
             const [
                 featuredProducts, specialOccasions, flashSales, trendingProducts,
@@ -226,8 +223,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     })();
 
-    // Add scroll animations
-    addScrollAnimations();
     // Add smooth scroll to anchor links
     addSmoothScroll();
 
@@ -296,29 +291,6 @@ function initHeroSlider() {
     }
 }
 
-/**
- * Add scroll animations for elements
- */
-function addScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animation = 'fadeInUp 0.6s ease-out both';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Observe sections
-    document.querySelectorAll('.products-section, .banner-section').forEach(section => {
-        observer.observe(section);
-    });
-}
 
 /**
  * Add smooth scroll behavior to anchor links

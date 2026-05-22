@@ -147,7 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const grid = document.getElementById('profile-wl-grid');
         
         const db = window.dataService?.productsDB || await window.dataService?.init();
-        const allProducts = await window.dataService?.getAllProductsFlattened() || [];
         let allSubcategories = [];
         if (db?.categories) {
             db.categories.forEach(cat => {
@@ -159,12 +158,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show max 4 recent items
         const recent = savedItems.sort((a,b) => b.savedAt - a.savedAt).slice(0, 4);
 
-        recent.forEach(saved => {
-            let itemData = saved.itemType === 'subcategory' ? allSubcategories.find(s => String(s.id) === String(saved.productId)) : allProducts.find(p => String(p.id) === String(saved.productId));
-            itemData = itemData || saved;
+        // Fetch details for the 4 recent items in parallel
+        const resolvedPromises = recent.map(async (saved) => {
+            let itemData = null;
+            if (saved.itemType === 'subcategory') {
+                itemData = allSubcategories.find(s => String(s.id) === String(saved.productId));
+            } else {
+                itemData = await window.dataService.getProductById(saved.productId);
+            }
+            if (!itemData && !saved.title) return null;
+            return { ...(itemData || saved), productId: saved.productId, itemType: saved.itemType || 'product', savedAt: saved.savedAt };
+        });
 
-            const isSub = saved.itemType === 'subcategory';
-            const link = isSub ? `searchPage.html?subcategory=${saved.productId}` : `productDetails.html?id=${saved.productId}`;
+        const resolvedItems = (await Promise.all(resolvedPromises)).filter(Boolean);
+
+        resolvedItems.forEach(itemData => {
+            const isSub = itemData.itemType === 'subcategory';
+            const link = isSub ? `searchPage.html?subcategory=${itemData.productId}` : `productDetails.html?id=${itemData.productId}`;
 
             grid.innerHTML += `
                 <a href="${link}" style="text-decoration:none; color:inherit; display:flex; gap:12px; align-items:center; background:#f9fafb; padding:10px; border-radius:10px; border:1px solid #eaeaea; transition:all 0.2s;">

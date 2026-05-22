@@ -165,8 +165,8 @@ function renderProducts(products, containerId, options = {}) {
  * @param {HTMLElement} container
  */
 function attachWishlistListeners(container) {
-    // First sync existing state
-    initializeWishlistStates();
+    // First sync existing state ONLY within the loaded container!
+    initializeWishlistStates(container);
 
     const wishlistButtons = container.querySelectorAll('.wishlist-btn');
     wishlistButtons.forEach(button => {
@@ -256,10 +256,11 @@ function heartBurst(button) {
     document.head.appendChild(s);
 })();
 
-function initializeWishlistStates() {
+function initializeWishlistStates(targetContainer = document) {
     if (!window.wishlistService) return;
     const ids = window.wishlistService.getIds();
-    document.querySelectorAll('.wishlist-btn').forEach(btn => {
+    const container = targetContainer || document;
+    container.querySelectorAll('.wishlist-btn').forEach(btn => {
         const productId = btn.dataset.productId;
         if (!productId) return; // Skip buttons without a product ID (e.g. the main product details wishlist button)
         if (ids.includes(String(productId))) {

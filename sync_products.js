@@ -115,6 +115,94 @@ function syncAndMigrate() {
     
     console.log('Localized product architecture enforced successfully.');
     
+    // Generate unified products_all.json
+    console.log('Generating unified products_all.json...');
+    const allProducts = [];
+    newCategories.forEach(cat => {
+        const process = (subs, parentSection) => {
+            subs.forEach(sub => {
+                const subPath = parentSection
+                    ? path.join(CONSTANTS_DIR, cat.name, parentSection, sub.name)
+                    : path.join(CONSTANTS_DIR, cat.name, sub.name);
+                const localizedJsonPath = path.join(subPath, 'products.json');
+                if (fs.existsSync(localizedJsonPath)) {
+                    try {
+                        const products = JSON.parse(fs.readFileSync(localizedJsonPath, 'utf8'));
+                        products.forEach(p => {
+                            p.categoryName = cat.name;
+                            p.subcategoryName = sub.name;
+                            p.subcategoryId = sub.id;
+                            if (parentSection) p.parentSection = parentSection;
+                            
+                            // Normalize image path
+                            if (!p.image && p.baseImagePath && p.images && p.images.length > 0) {
+                                p.image = p.baseImagePath + p.images[0];
+                            } else if (!p.image) {
+                                p.image = 'constants/products/placeholder.jpg';
+                            }
+                            
+                            // Add collections attributes dynamically
+                            p.collections = ['Mega Print Festival'];
+                            const discount = p.originalPrice ? ((p.originalPrice - p.price) / p.originalPrice) * 100 : 0;
+                            if (discount >= 40 || p.badge === 'Sale') p.collections.push('Flash Sales');
+                            if (discount >= 30) p.collections.push('Deals');
+                            if (p.rating >= 4.5 || p.badge === 'Bestseller') p.collections.push('Top Selection');
+                            if (['Decor', 'Photo Frames', 'Jewelry', 'Key Chains', 'Mugs & Cups'].includes(cat.name)) p.collections.push('Occasions');
+                            if (["Men's Special", "Women's Special", "Kids Clothing", "T-Shirts"].includes(cat.name) || ["Men's Special", "Women's Special"].includes(sub.name)) p.collections.push('Heart Winning T-Shirts');
+                            if (["Face Masks", "Key Chains", "Jewelry", "Decor"].includes(cat.name)) p.collections.push('Trendy Accessories');
+                            if (cat.name === 'Hoodies' && (parentSection === 'Women Clothing' || sub.name.includes("Women"))) p.collections.push("Women's Custom Wear");
+                            if (cat.name === 'Hoodies' && (parentSection === 'Men Clothing' || sub.name.includes("Men"))) p.collections.push("Men's Urban Streetwear");
+                            
+                            p.link = `productDetails.html?id=${p.id}`;
+                            allProducts.push(p);
+                        });
+                    } catch (e) {
+                        console.error('Failed to parse ' + localizedJsonPath, e);
+                    }
+                }
+            });
+        };
+        if (cat.sections) {
+            cat.sections.forEach(sec => process(sec.subcategories, sec.name));
+        } else if (cat.subcategories) {
+            process(cat.subcategories, null);
+        }
+    });
+    
+    const dataDir = path.dirname(PRODUCTS_DB_PATH);
+    if (!fs.existsSync(dataDir)) {
+        fs.mkdirSync(dataDir, { recursive: true });
+    }
+    fs.writeFileSync(path.join(dataDir, 'products_all.json'), JSON.stringify(allProducts, null, 4));
+    console.log(`Unified products_all.json generated successfully with ${allProducts.length} products.`);
+
+    // Generate curated products_homepage.json
+    console.log('Generating curated products_homepage.json...');
+    const homepageProducts = [];
+    const subcategoryGroups = {};
+
+    allProducts.forEach(p => {
+        const subId = p.subcategoryId;
+        if (!subcategoryGroups[subId]) {
+            subcategoryGroups[subId] = [];
+        }
+        subcategoryGroups[subId].push(p);
+    });
+
+    Object.keys(subcategoryGroups).forEach(subId => {
+        const list = subcategoryGroups[subId];
+        const sorted = [...list].sort((a, b) => {
+            const aScore = (a.badge ? 2 : 0) + parseFloat(a.rating || 4.0);
+            const bScore = (b.badge ? 2 : 0) + parseFloat(b.rating || 4.0);
+            return bScore - aScore;
+        });
+        const topProds = sorted.slice(0, 2);
+        homepageProducts.push(...topProds);
+    });
+
+    fs.writeFileSync(path.join(dataDir, 'products_homepage.json'), JSON.stringify(homepageProducts, null, 4));
+    console.log(`Curated products_homepage.json generated successfully with ${homepageProducts.length} products.`);
+
     // Optional: Clean up the old data directory
     if (fs.existsSync(OLD_DATA_DIR)) {
         console.log('Cleaning up legacy data directory...');

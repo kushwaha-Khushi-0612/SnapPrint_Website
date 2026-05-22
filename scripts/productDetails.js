@@ -197,28 +197,45 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Load reviews (mock)
         loadReviews();
 
-        // Load product sections dynamically
-        const categoryName = productData.categoryName || productData.category;
-        let related = await window.dataService.getProductsByCategory(categoryName);
-        if (related.length === 0) related = await window.dataService.getRandomProducts(10);
+        // Load product sections dynamically in a deferred block
+        const loadDeferredRecommendations = async () => {
+            try {
+                const categoryName = productData.categoryName || productData.category;
+                let related = await window.dataService.getProductsByCategory(categoryName);
+                if (related.length === 0) related = await window.dataService.getRandomProducts(10);
 
-        const shuffle = arr => [...arr].sort(() => 0.5 - Math.random());
+                const shuffle = arr => [...arr].sort(() => 0.5 - Math.random());
 
-        renderProducts(shuffle(related).slice(0, 8), 'viral-products');
-        renderProducts(await window.dataService.getRandomProducts(8), 'most-viewed-products');
-        renderProducts(await window.dataService.getRandomProducts(12), 'mixed-category-products');
-        renderProducts(shuffle(related).slice(0, 8), 'related-products');
-        renderProducts(await window.dataService.getRandomProducts(6), 'customers-also-bought');
+                renderProducts(shuffle(related).slice(0, 8), 'viral-products');
+                renderProducts(await window.dataService.getRandomProducts(8), 'most-viewed-products');
+                renderProducts(await window.dataService.getRandomProducts(12), 'mixed-category-products');
+                renderProducts(shuffle(related).slice(0, 8), 'related-products');
+                renderProducts(await window.dataService.getRandomProducts(6), 'customers-also-bought');
 
-        const prevViewed = await window.dataService.getRandomProducts(4);
-        prevViewed.forEach(p => p.viewedTime = 'Viewed recently');
-        renderProducts(prevViewed, 'previously-viewed');
+                const prevViewed = await window.dataService.getRandomProducts(4);
+                prevViewed.forEach(p => p.viewedTime = 'Viewed recently');
+                renderProducts(prevViewed, 'previously-viewed');
 
-        const bundled = await window.dataService.getRandomProducts(4);
-        bundled.forEach(p => p.badge = 'BUNDLE SAVE');
-        renderProducts(bundled, 'bundled-offers');
+                const bundled = await window.dataService.getRandomProducts(4);
+                bundled.forEach(p => p.badge = 'BUNDLE SAVE');
+                renderProducts(bundled, 'bundled-offers');
 
-        renderProducts(await window.dataService.getRandomProducts(24), 'mixed-categories-final');
+                renderProducts(await window.dataService.getRandomProducts(24), 'mixed-categories-final');
+
+                // Refresh ScrollReveal to detect newly rendered elements below the fold
+                if (window.ScrollReveal && window.ScrollReveal.refresh) {
+                    window.ScrollReveal.refresh();
+                }
+            } catch (err) {
+                console.error('Error in deferred recommendation loading:', err);
+            }
+        };
+
+        if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(() => loadDeferredRecommendations(), { timeout: 2000 });
+        } else {
+            setTimeout(loadDeferredRecommendations, 200);
+        }
     }
 
     console.log('✅ Product Details Page Ready!');

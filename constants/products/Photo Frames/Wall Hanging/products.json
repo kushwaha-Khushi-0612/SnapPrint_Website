@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": null,
+        "badge": "Limited Edition",
         "can_beCustomised": 1
     },
     {
@@ -50,7 +50,7 @@
             "L",
             "XL"
         ],
-        "badge": "Bestseller",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -68,7 +68,7 @@
             "L",
             "XL"
         ],
-        "badge": "New Arrival",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -86,7 +86,7 @@
             "L",
             "XL"
         ],
-        "badge": null,
+        "badge": "Trending",
         "can_beCustomised": 1
     },
     {
@@ -104,7 +104,7 @@
             "L",
             "XL"
         ],
-        "badge": "Bestseller",
+        "badge": "Top Rated",
         "can_beCustomised": 1
     },
     {
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": null,
+        "badge": "Hot Deal",
         "can_beCustomised": 1
     },
     {
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "New Arrival",
+        "badge": "Staff Pick",
         "can_beCustomised": 1
     }
 ]

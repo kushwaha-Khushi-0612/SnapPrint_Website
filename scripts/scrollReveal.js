@@ -38,15 +38,13 @@ const ScrollReveal = {
     reveal: function (element) {
         element.classList.add('revealed');
 
-        // If it's a grid, reveal its children with staggering
+        // If it's a grid, reveal its children (CSS will handle the staggered delays on the compositor thread!)
         if (element.classList.contains('product-grid') ||
             element.classList.contains('subcategory-grid') ||
             element.classList.contains('category-grid')) {
             const children = element.children;
             for (let i = 0; i < children.length; i++) {
-                setTimeout(() => {
-                    children[i].classList.add('revealed');
-                }, i * 80); // 80ms stagger
+                children[i].classList.add('revealed');
             }
         }
     },
@@ -56,7 +54,7 @@ const ScrollReveal = {
      */
     refresh: function () {
         // Find all revealable elements
-        const elements = document.querySelectorAll('.reveal, .product-grid, .subcategory-grid, .category-grid, .section-header, .banner-section');
+        const elements = document.querySelectorAll('.reveal, .product-grid, .subcategory-grid, .category-grid, .section-header, .banner-section, .products-section');
         elements.forEach(el => {
             if (!el.classList.contains('revealed')) {
                 this.observer.observe(el);

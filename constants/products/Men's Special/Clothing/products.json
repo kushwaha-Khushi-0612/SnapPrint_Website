@@ -1,12 +1,12 @@
 [
     {
-        "id": "p-sub-wallart-1",
-        "title": "Wall Art Frames Sample 1",
+        "id": "p-sub-clothing-1",
+        "title": "Clothing Men's Special Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-wallart1/400/400",
+        "image": "https://picsum.photos/seed/sub-clothing1/400/400",
         "rating": "4.2",
-        "reviewCount": 200,
+        "reviewCount": 145,
         "color": "White",
         "availableSizes": [
             "S",
@@ -18,13 +18,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-wallart-2",
-        "title": "Wall Art Frames Sample 2",
+        "id": "p-sub-clothing-2",
+        "title": "Clothing Men's Special Sample 2",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-wallart2/400/400",
+        "image": "https://picsum.photos/seed/sub-clothing2/400/400",
         "rating": "4.2",
-        "reviewCount": 60,
+        "reviewCount": 26,
         "color": "White",
         "availableSizes": [
             "S",
@@ -36,13 +36,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-wallart-3",
-        "title": "Wall Art Frames Sample 3",
+        "id": "p-sub-clothing-3",
+        "title": "Clothing Men's Special Sample 3",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-wallart3/400/400",
+        "image": "https://picsum.photos/seed/sub-clothing3/400/400",
         "rating": "4.2",
-        "reviewCount": 166,
+        "reviewCount": 165,
         "color": "White",
         "availableSizes": [
             "S",
@@ -54,13 +54,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-wallart-4",
-        "title": "Wall Art Frames Sample 4",
+        "id": "p-sub-clothing-4",
+        "title": "Clothing Men's Special Sample 4",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-wallart4/400/400",
+        "image": "https://picsum.photos/seed/sub-clothing4/400/400",
         "rating": "4.2",
-        "reviewCount": 210,
+        "reviewCount": 154,
         "color": "White",
         "availableSizes": [
             "S",
@@ -72,13 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-wallart-5",
-        "title": "Wall Art Frames Sample 5",
+        "id": "p-sub-clothing-5",
+        "title": "Clothing Men's Special Sample 5",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-wallart5/400/400",
+        "image": "https://picsum.photos/seed/sub-clothing5/400/400",
         "rating": "4.2",
-        "reviewCount": 22,
+        "reviewCount": 115,
         "color": "White",
         "availableSizes": [
             "S",
@@ -90,13 +90,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-wallart-6",
-        "title": "Wall Art Frames Sample 6",
+        "id": "p-sub-clothing-6",
+        "title": "Clothing Men's Special Sample 6",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-wallart6/400/400",
+        "image": "https://picsum.photos/seed/sub-clothing6/400/400",
         "rating": "4.2",
-        "reviewCount": 99,
+        "reviewCount": 77,
         "color": "White",
         "availableSizes": [
             "S",
@@ -108,13 +108,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-wallart-7",
-        "title": "Wall Art Frames Sample 7",
+        "id": "p-sub-clothing-7",
+        "title": "Clothing Men's Special Sample 7",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-wallart7/400/400",
+        "image": "https://picsum.photos/seed/sub-clothing7/400/400",
         "rating": "4.2",
-        "reviewCount": 47,
+        "reviewCount": 135,
         "color": "White",
         "availableSizes": [
             "S",
@@ -126,13 +126,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-wallart-8",
-        "title": "Wall Art Frames Sample 8",
+        "id": "p-sub-clothing-8",
+        "title": "Clothing Men's Special Sample 8",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-wallart8/400/400",
+        "image": "https://picsum.photos/seed/sub-clothing8/400/400",
         "rating": "4.2",
-        "reviewCount": 216,
+        "reviewCount": 33,
         "color": "White",
         "availableSizes": [
             "S",

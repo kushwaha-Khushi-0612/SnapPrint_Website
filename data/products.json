@@ -227,36 +227,6 @@
             ]
         },
         {
-            "id": "cat-frames",
-            "name": "Frames",
-            "subcategories": [
-                {
-                    "id": "sub-collage",
-                    "name": "Collage",
-                    "image": "https://picsum.photos/seed/sub-collage1/400/400",
-                    "description": "Collage Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Frames/Collage/products.json"
-                },
-                {
-                    "id": "sub-deskframe",
-                    "name": "Desk Frame",
-                    "image": "https://picsum.photos/seed/sub-deskframe1/400/400",
-                    "description": "Desk Frame Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Frames/Desk Frame/products.json"
-                },
-                {
-                    "id": "sub-wallart",
-                    "name": "Wall Art",
-                    "image": "https://picsum.photos/seed/sub-wallart1/400/400",
-                    "description": "Wall Art Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Frames/Wall Art/products.json"
-                }
-            ]
-        },
-        {
             "id": "cat-hoodies",
             "name": "Hoodies",
             "sections": [
@@ -829,36 +799,6 @@
             ]
         },
         {
-            "id": "cat-keychains",
-            "name": "Key Chains",
-            "subcategories": [
-                {
-                    "id": "sub-acrylic",
-                    "name": "Acrylic",
-                    "image": "https://picsum.photos/seed/sub-acrylic1/400/400",
-                    "description": "Acrylic Keychains ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Keychains/Acrylic/products.json"
-                },
-                {
-                    "id": "sub-metal",
-                    "name": "Metal",
-                    "image": "https://picsum.photos/seed/sub-metal1/400/400",
-                    "description": "Metal Keychains ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Keychains/Metal/products.json"
-                },
-                {
-                    "id": "sub-wood",
-                    "name": "Wood",
-                    "image": "https://picsum.photos/seed/sub-wood1/400/400",
-                    "description": "Wood Keychains ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Keychains/Wood/products.json"
-                }
-            ]
-        },
-        {
             "id": "cat-kidsclothing",
             "name": "Kids Clothing",
             "subcategories": [
@@ -881,54 +821,16 @@
             ]
         },
         {
-            "id": "cat-masks",
-            "name": "Masks",
+            "id": "cat-mensspecial",
+            "name": "Men's Special",
             "subcategories": [
                 {
-                    "id": "sub-cotton",
-                    "name": "Cotton",
-                    "image": "https://picsum.photos/seed/sub-cotton1/400/400",
-                    "description": "Cotton Masks ",
+                    "id": "sub-clothing",
+                    "name": "Clothing",
+                    "image": "https://picsum.photos/seed/sub-clothing1/400/400",
+                    "description": "Clothing Men's Special ",
                     "productCount": "8+",
-                    "dataFile": "constants/products/Masks/Cotton/products.json"
-                },
-                {
-                    "id": "sub-layered",
-                    "name": "Layered",
-                    "image": "https://picsum.photos/seed/sub-layered1/400/400",
-                    "description": "Layered Masks ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Masks/Layered/products.json"
-                }
-            ]
-        },
-        {
-            "id": "cat-mugs",
-            "name": "Mugs",
-            "subcategories": [
-                {
-                    "id": "sub-ceramic",
-                    "name": "Ceramic",
-                    "image": "https://picsum.photos/seed/sub-ceramic1/400/400",
-                    "description": "Ceramic Mugs ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs/Ceramic/products.json"
-                },
-                {
-                    "id": "sub-magicmug",
-                    "name": "Magic Mug",
-                    "image": "https://picsum.photos/seed/sub-magicmug1/400/400",
-                    "description": "Magic Mug Mugs ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs/Magic Mug/products.json"
-                },
-                {
-                    "id": "sub-travelmug",
-                    "name": "Travel Mug",
-                    "image": "https://picsum.photos/seed/sub-travelmug1/400/400",
-                    "description": "Travel Mug Mugs ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs/Travel Mug/products.json"
+                    "dataFile": "constants/products/Men's Special/Clothing/products.json"
                 }
             ]
         },
@@ -1774,9 +1676,9 @@
                         {
                             "id": "sub-menclothing-vneck",
                             "name": "V Neck",
-                            "image": "https://picsum.photos/seed/sub-menclothing-vneck0/400/400",
+                            "image": "",
                             "description": "V Neck T-Shirts for Men Clothing",
-                            "productCount": "16+",
+                            "productCount": "0+",
                             "dataFile": "constants/products/T-Shirts/Men Clothing/V Neck/products.json"
                         }
                     ]
@@ -1950,6 +1852,20 @@
                     "description": "Zipper Tote Bags ",
                     "productCount": "8+",
                     "dataFile": "constants/products/Tote Bags/Zipper/products.json"
+                }
+            ]
+        },
+        {
+            "id": "cat-womensspecial",
+            "name": "Women's Special",
+            "subcategories": [
+                {
+                    "id": "sub-clothing",
+                    "name": "Clothing",
+                    "image": "https://picsum.photos/seed/sub-clothing1/400/400",
+                    "description": "Clothing Women's Special ",
+                    "productCount": "8+",
+                    "dataFile": "constants/products/Women's Special/Clothing/products.json"
                 }
             ]
         }
