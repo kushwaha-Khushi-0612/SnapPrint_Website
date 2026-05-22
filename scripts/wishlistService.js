@@ -91,7 +91,7 @@ const wishlistService = (function () {
         _dispatch('wishlist:updated', { action: 'clear' });
     }
 
-    // Load from server into localStorage on login
+    // Load from server into localStorage on login and merge guest items
     async function loadFromServer() {
         const user = window.authService?.getCurrentUser();
         if (!user?.id) return;
@@ -99,8 +99,39 @@ const wishlistService = (function () {
             const res = await fetch(`api/wishlist.php?userId=${user.id}`);
             if (!res.ok) return;
             const data = await res.json();
-            if (Array.isArray(data.items) && data.items.length > 0) {
-                localStorage.setItem(_storageKey(), JSON.stringify(data.items));
+            
+            let serverItems = Array.isArray(data.items) ? data.items : [];
+            
+            // Check for guest items to merge
+            let guestItems = [];
+            try {
+                guestItems = JSON.parse(localStorage.getItem('snapprint_wishlist_guest') || '[]');
+            } catch {
+                guestItems = [];
+            }
+            
+            if (guestItems.length > 0) {
+                // Merge guest items into server items
+                // Avoid duplicates based on productId or id
+                const merged = [...serverItems];
+                guestItems.forEach(guest => {
+                    const guestId = String(guest.productId || guest.id);
+                    if (!merged.some(item => String(item.productId || item.id) === guestId)) {
+                        merged.push(guest);
+                    }
+                });
+                
+                // Save merged items to current user's local storage and sync to server
+                localStorage.setItem(_storageKey(), JSON.stringify(merged));
+                _syncToServer(user.id, merged);
+                
+                // Clear the guest wishlist
+                localStorage.removeItem('snapprint_wishlist_guest');
+                
+                _dispatch('wishlist:updated', { action: 'loaded' });
+            } else {
+                // Standard flow: overwrite local storage with server items
+                localStorage.setItem(_storageKey(), JSON.stringify(serverItems));
                 _dispatch('wishlist:updated', { action: 'loaded' });
             }
         } catch (e) {
@@ -108,7 +139,25 @@ const wishlistService = (function () {
         }
     }
 
-    return { getAll, getIds, has, add, remove, toggle, clear, loadFromServer };
+    function validateAndPrune(validProductIds, validSubcategoryIds) {
+        const items = getAll();
+        const cleaned = items.filter(saved => {
+            const idStr = String(saved.productId || saved.id);
+            if (saved.itemType === 'subcategory') {
+                return validSubcategoryIds.includes(idStr);
+            } else {
+                return validProductIds.includes(idStr);
+            }
+        });
+        
+        if (cleaned.length !== items.length) {
+            console.log(`[Wishlist] Pruned ${items.length - cleaned.length} invalid items.`);
+            _save(cleaned);
+            _dispatch('wishlist:updated', { action: 'pruned' });
+        }
+    }
+
+    return { getAll, getIds, has, add, remove, toggle, clear, loadFromServer, validateAndPrune };
 })();
 
 window.wishlistService = wishlistService;

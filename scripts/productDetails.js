@@ -351,7 +351,7 @@ function setupImageGallery() {
     if (!badge) {
         badge = document.createElement('div');
         badge.id = 'preview-only-badge';
-        badge.style.cssText = 'display: none; position: absolute; top: 15px; left: 15px; background: rgba(15, 23, 42, 0.85); color: #fff; padding: 6px 12px; font-size: 10px; font-weight: 700; border-radius: 20px; z-index: 100; backdrop-filter: blur(4px); letter-spacing: 0.5px; text-transform: uppercase; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.1);';
+        badge.style.cssText = 'display: none; position: absolute; top: 15px; right: 15px; background: rgba(15, 23, 42, 0.85); color: #fff; padding: 6px 12px; font-size: 10px; font-weight: 700; border-radius: 20px; z-index: 100; backdrop-filter: blur(4px); letter-spacing: 0.5px; text-transform: uppercase; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.1);';
         badge.textContent = 'Preview Angle';
         const container = document.getElementById('customizer-container');
         if (container) container.appendChild(badge);

@@ -75,6 +75,7 @@ if ($action === 'sendOTP') {
         }
     }
     
+    if (!$foundUser) {
         // Create new user index
         $userId = 'usr_' . substr(md5(uniqid(mt_rand(), true)), 0, 9);
         $userHash = substr(str_shuffle("0123456789"), 0, 16); // Simple 16-digit hash mock
@@ -104,6 +105,7 @@ if ($action === 'sendOTP') {
             'last_chosen_address' => 1
         ]);
         file_put_contents($profilesDir . '/' . $userId . '.json', json_encode($profile, JSON_PRETTY_PRINT));
+    }
     
     // Load full profile
     $profileFile = $profilesDir . '/' . $foundUser['id'] . '.json';

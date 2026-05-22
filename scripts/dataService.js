@@ -10,9 +10,28 @@ const dataService = {
     init: async function () {
         if (this.productsDB) return this.productsDB;
 
+        // Try getting from sessionStorage
+        try {
+            const cached = sessionStorage.getItem('snapprint_products_db_cache');
+            if (cached) {
+                this.productsDB = JSON.parse(cached);
+                return this.productsDB;
+            }
+        } catch (e) {
+            console.warn('[DataService] Failed to read from sessionStorage:', e);
+        }
+
         try {
             const response = await fetch('data/products.json');
             this.productsDB = await response.json();
+            
+            // Save to sessionStorage
+            try {
+                sessionStorage.setItem('snapprint_products_db_cache', JSON.stringify(this.productsDB));
+            } catch (e) {
+                console.warn('[DataService] Failed to write to sessionStorage:', e);
+            }
+
             return this.productsDB;
         } catch (error) {
             console.error('Failed to load products.json:', error);
@@ -22,6 +41,44 @@ const dataService = {
 
     getAllProductsFlattened: async function () {
         if (this.cachedAllProducts) return this.cachedAllProducts;
+
+        // Try getting from sessionStorage
+        try {
+            const cached = sessionStorage.getItem('snapprint_flat_products_cache');
+            if (cached) {
+                this.cachedAllProducts = JSON.parse(cached);
+                
+                // Still trigger validateAndPrune after loading from cache
+                if (window.wishlistService && window.wishlistService.validateAndPrune) {
+                    await this.init(); // Make sure productsDB is loaded
+                    const validProductIds = this.cachedAllProducts.map(p => String(p.id));
+                    const validSubcategoryIds = [];
+                    if (this.productsDB && this.productsDB.categories) {
+                        this.productsDB.categories.forEach(cat => {
+                            if (cat.sections) {
+                                cat.sections.forEach(sec => {
+                                    if (sec.subcategories) {
+                                        sec.subcategories.forEach(sub => {
+                                            validSubcategoryIds.push(String(sub.id));
+                                        });
+                                    }
+                                });
+                            }
+                            if (cat.subcategories) {
+                                cat.subcategories.forEach(sub => {
+                                    validSubcategoryIds.push(String(sub.id));
+                                });
+                            }
+                        });
+                    }
+                    window.wishlistService.validateAndPrune(validProductIds, validSubcategoryIds);
+                }
+
+                return this.cachedAllProducts;
+            }
+        } catch (e) {
+            console.warn('[DataService] Failed to read flat cache from sessionStorage:', e);
+        }
 
         await this.init();
 
@@ -98,6 +155,37 @@ const dataService = {
         // Wait for all external files to be loaded
         await Promise.all(fetchPromises);
         this.cachedAllProducts = allProds;
+
+        // Save to sessionStorage
+        try {
+            sessionStorage.setItem('snapprint_flat_products_cache', JSON.stringify(allProds));
+        } catch (e) {
+            console.warn('[DataService] Failed to write flat cache to sessionStorage:', e);
+        }
+
+        // Auto-prune wishlist
+        if (window.wishlistService && window.wishlistService.validateAndPrune) {
+            const validProductIds = allProds.map(p => String(p.id));
+            const validSubcategoryIds = [];
+            this.productsDB.categories.forEach(cat => {
+                if (cat.sections) {
+                    cat.sections.forEach(sec => {
+                        if (sec.subcategories) {
+                            sec.subcategories.forEach(sub => {
+                                validSubcategoryIds.push(String(sub.id));
+                            });
+                        }
+                    });
+                }
+                if (cat.subcategories) {
+                    cat.subcategories.forEach(sub => {
+                        validSubcategoryIds.push(String(sub.id));
+                    });
+                }
+            });
+            window.wishlistService.validateAndPrune(validProductIds, validSubcategoryIds);
+        }
+
         return allProds;
     },
 

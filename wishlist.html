@@ -6,7 +6,7 @@
     <title>My Wishlist | SnapPrint</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/homepage.css">
     <link rel="stylesheet" href="styles/loginModal.css">
     <link rel="icon" type="image/x-icon" href="https://snapprint.in/constants/images/favicon.ico">
@@ -15,110 +15,693 @@
     <script src="scripts/dataService.js"></script>
     <script src="scripts/analyticsService.js"></script>
     <style>
+        /* ===== GLOBAL TYPOGRAPHY OVERRIDE & PREMIUM BLACK & MONOCHROME LIGHT CANVAS ===== */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fafafa;
+            color: #000000;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .main-container {
+            background: #ffffff !important;
+            box-shadow: 0 0 80px rgba(0, 0, 0, 0.035) !important;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #000000;
+        }
+        
         /* ===== TOAST ===== */
         #sp-toast-container { position:fixed; bottom:24px; right:24px; z-index:999999; display:flex; flex-direction:column; gap:10px; }
         .sp-toast {
-            background:#1a1a1a; color:#fff; padding:14px 20px; border-radius:12px;
-            font-family:'Inter',sans-serif; font-size:14px; font-weight:500;
-            display:flex; align-items:center; gap:10px; min-width:260px;
-            box-shadow:0 8px 32px rgba(0,0,0,0.3);
-            animation: toastIn 0.35s cubic-bezier(0.34,1.56,0.64,1) both;
+            background: rgba(255, 255, 255, 0.96); color:#000000; padding:14px 22px; border-radius:14px;
+            font-family:'Inter',sans-serif; font-size:14px; font-weight:600;
+            display:flex; align-items:center; gap:12px; min-width:300px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.02);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            animation: toastIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
         }
-        .sp-toast.out { animation: toastOut 0.3s ease both; }
-        .sp-toast.success { border-left:3px solid #22c55e; }
-        .sp-toast.error   { border-left:3px solid #ef4444; }
-        .sp-toast.info    { border-left:3px solid #6366f1; }
-        @keyframes toastIn  { from{opacity:0;transform:translateX(60px)} to{opacity:1;transform:translateX(0)} }
-        @keyframes toastOut { from{opacity:1;transform:translateX(0)} to{opacity:0;transform:translateX(60px)} }
-
+        .sp-toast.out { animation: toastOut 0.25s ease both; }
+        .sp-toast.success { border-left:4px solid #16a34a; }
+        .sp-toast.error   { border-left:4px solid #000000; }
+        .sp-toast.info    { border-left:4px solid #333333; }
+        @keyframes toastIn  { from{opacity:0;transform:translateY(20px) scale(0.95)} to{opacity:1;transform:translateY(0) scale(1)} }
+        @keyframes toastOut { from{opacity:1;transform:translateY(0) scale(1)} to{opacity:0;transform:translateY(20px) scale(0.95)} }
+ 
         /* ===== CONFIRM MODAL ===== */
         #sp-confirm-overlay {
-            position:fixed; inset:0; z-index:99998; background:rgba(0,0,0,0.6);
+            position:fixed; inset:0; z-index:99998; background:rgba(0, 0, 0, 0.4);
             display:flex; align-items:center; justify-content:center;
-            animation: fadeIn 0.2s ease;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            animation: fadeIn 0.3s ease;
         }
         @keyframes fadeIn { from{opacity:0} to{opacity:1} }
         .sp-confirm-box {
-            background:#fff; border-radius:16px; padding:32px 28px; max-width:360px; width:90%;
-            text-align:center; box-shadow:0 24px 60px rgba(0,0,0,0.2);
-            animation: scaleIn 0.25s cubic-bezier(0.34,1.56,0.64,1);
+            background: rgba(255, 255, 255, 0.96); border-radius:24px; padding:36px 32px; max-width:400px; width:90%;
+            text-align:center; box-shadow: 0 32px 80px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        @keyframes scaleIn { from{transform:scale(0.85);opacity:0} to{transform:scale(1);opacity:1} }
-        .sp-confirm-box h4 { margin:0 0 8px; font-size:18px; }
-        .sp-confirm-box p  { margin:0 0 24px; color:#666; font-size:14px; }
-        .sp-confirm-actions { display:flex; gap:10px; justify-content:center; }
-        .sp-confirm-actions button { padding:10px 24px; border-radius:10px; font-size:14px; font-weight:600; cursor:pointer; border:none; transition:all 0.2s; }
-        .sp-btn-cancel  { background:#f1f5f9; color:#444; }
-        .sp-btn-confirm { background:#ef4444; color:#fff; }
-        .sp-btn-cancel:hover  { background:#e2e8f0; }
-        .sp-btn-confirm:hover { background:#dc2626; }
-
-        /* ===== HERO ===== */
-        .wl-hero { background:linear-gradient(135deg,#0f0f0f 0%,#1a1a2e 60%,#16213e 100%); padding:52px 40px 44px; position:relative; overflow:hidden; }
-        .wl-hero::before { content:''; position:absolute; top:-40%; right:-10%; width:500px; height:500px; background:radial-gradient(circle,rgba(159,122,234,0.15) 0%,transparent 70%); pointer-events:none; }
-        .wl-hero-inner { max-width:1200px; margin:0 auto; position:relative; z-index:1; }
-        .wl-hero h2 { font-size:32px; font-weight:800; color:#fff; margin:0 0 6px; display:flex; align-items:center; gap:14px; }
-        .wl-hero-icon { display:inline-flex; align-items:center; justify-content:center; width:46px; height:46px; background:rgba(255,80,100,0.15); border:1px solid rgba(255,80,100,0.3); border-radius:14px; animation:heartPulse 2s ease-in-out infinite; }
-        @keyframes heartPulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.1)} }
-        .wl-hero p { color:rgba(255,255,255,0.5); font-size:14px; margin:0 0 16px; }
-        .wl-count-pill { display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.75); padding:6px 14px; border-radius:999px; font-size:13px; font-weight:600; }
-
+        @keyframes scaleIn { from{transform:scale(0.92);opacity:0} to{transform:scale(1);opacity:1} }
+        .sp-confirm-box h4 { margin:0 0 12px; font-size:22px; font-weight: 800; color: #000000; letter-spacing: -0.6px; }
+        .sp-confirm-box p  { margin:0 0 28px; color:rgba(0, 0, 0, 0.6); font-size:14px; line-height: 1.6; font-weight: 550; }
+        .sp-confirm-actions { display:flex; gap:14px; justify-content:center; }
+        .sp-confirm-actions button { padding:14px 28px; border-radius:14px; font-size:14px; font-weight:600; cursor:pointer; border:none; transition:all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+        .sp-btn-cancel  { background: rgba(0, 0, 0, 0.04); color: rgba(0, 0, 0, 0.7); border: 1px solid rgba(0, 0, 0, 0.08); }
+        .sp-btn-confirm { background: linear-gradient(135deg, #000000 0%, #222222 100%); color:#fff; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); }
+        .sp-btn-cancel:hover  { background: rgba(0, 0, 0, 0.08); color: #000000; transform: translateY(-1px); }
+        .sp-btn-confirm:hover { background: linear-gradient(135deg, #222222 0%, #444444 100%); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); }
+ 
+        /* ===== PREMIUM MONOCHROME HERO SECTION ===== */
+        .wl-hero {
+            background: linear-gradient(135deg, #ffffff 0%, #fafafa 50%, #f4f4f4 100%);
+            padding: 42px 40px 38px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        .wl-hero::before {
+            content:''; position:absolute; inset:0;
+            background-image: radial-gradient(rgba(0, 0, 0, 0.03) 1.5px, transparent 1.5px);
+            background-size: 22px 22px;
+            pointer-events:none;
+            opacity: 0.95;
+        }
+ 
+        /* Rich Glowing Multi-Layered Atmospheric Orbs */
+        .wl-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(95px);
+            pointer-events: none;
+            opacity: 0.25;
+            mix-blend-mode: multiply;
+            animation: orbFloat 14s infinite alternate ease-in-out;
+        }
+        .wl-orb-1 {
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0) 70%);
+            top: -120px;
+            right: 10%;
+            animation-delay: 0s;
+        }
+        .wl-orb-2 {
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+            bottom: -60px;
+            left: 6%;
+            animation-delay: -4s;
+            animation-duration: 18s;
+        }
+        .wl-orb-3 {
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0) 70%);
+            top: 40%;
+            right: 25%;
+            animation-delay: -8s;
+            animation-duration: 15s;
+            opacity: 0.2;
+        }
+        @keyframes orbFloat {
+            0% { transform: translateY(0) rotate(0deg) scale(1); }
+            100% { transform: translateY(-28px) rotate(18deg) scale(1.12); }
+        }
+ 
+        .wl-hero-inner { max-width:1200px; margin:0 auto; position:relative; z-index:2; }
+        .wl-hero h2 {
+            font-size: 34px;
+            font-weight: 900;
+            color: #000000;
+            margin: 0 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            letter-spacing: -1.2px;
+            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.02);
+        }
+        .wl-hero-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            animation: heartPulseGentle 2s ease-in-out infinite;
+        }
+        @keyframes heartPulseGentle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+        .wl-hero p { color: rgba(0, 0, 0, 0.6); font-size:15px; margin:0 0 16px; font-weight: 550; letter-spacing: -0.2px; }
+        
+        .wl-count-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            color: #000000;
+            padding: 8px 18px;
+            border-radius: 99px;
+            font-size: 12.5px;
+            font-weight: 800;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .wl-count-pill:hover {
+            background: #ffffff;
+            border-color: #000000;
+            color: #333333;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+ 
         /* ===== STATES ===== */
-        .wl-wall, .wl-empty { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:80px 24px; gap:16px; text-align:center; }
-        .wl-wall .lock { font-size:56px; animation:floatUp 3s ease-in-out infinite; }
-        .wl-empty .emp { font-size:56px; animation:heartBeat2 2s ease-in-out infinite; }
-        @keyframes floatUp   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
-        @keyframes heartBeat2{ 0%,100%{transform:scale(1)} 40%{transform:scale(1.15)} 60%{transform:scale(1)} }
-        .wl-wall h3, .wl-empty h3 { font-size:22px; font-weight:700; margin:0; }
-        .wl-wall p,  .wl-empty p  { color:#666; font-size:14px; max-width:340px; margin:0; }
-        .wl-cta { padding:13px 32px; border:none; border-radius:12px; font-size:14px; font-weight:600; cursor:pointer; transition:all 0.3s ease; }
-        .wl-cta-dark { background:#000; color:#fff; }
-        .wl-cta-grad { background:linear-gradient(135deg,#667eea,#764ba2); color:#fff; }
-        .wl-cta:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.2); }
-
-        /* ===== TOOLBAR + FILTERS ===== */
-        .wl-main { max-width:1400px; margin:0 auto; padding:32px 32px; }
-        .wl-toolbar { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:20px; }
-        .wl-toolbar-left { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
-        .wl-toolbar h3 { font-size:17px; font-weight:700; margin:0; }
-        .wl-search { padding:9px 14px; border:1px solid #e2e8f0; border-radius:10px; font-size:14px; min-width:220px; outline:none; transition:border 0.2s; font-family:'Inter',sans-serif; }
-        .wl-search:focus { border-color:#6366f1; }
-        .wl-filter-select { padding:9px 14px; border:1px solid #e2e8f0; border-radius:10px; font-size:14px; outline:none; font-family:'Inter',sans-serif; cursor:pointer; background:#fff; }
-        .wl-clear-btn { padding:8px 18px; background:transparent; border:1px solid #ddd; border-radius:8px; font-size:13px; font-weight:500; color:#555; cursor:pointer; transition:all 0.2s; }
-        .wl-clear-btn:hover { border-color:#ef4444; color:#ef4444; }
-
-        /* ===== GRID ===== */
-        .wl-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:20px; }
-        .wl-card-wrap { position:relative; animation:cardIn 0.4s cubic-bezier(0.4,0,0.2,1) both; }
-        @keyframes cardIn { from{opacity:0;transform:translateY(18px) scale(0.96)} to{opacity:1;transform:translateY(0) scale(1)} }
-        .wl-card-wrap .wl-remove-btn {
-            position:absolute; top:10px; right:10px; z-index:10; width:30px; height:30px;
-            background:#fff; border:none; border-radius:50%; display:flex; align-items:center; justify-content:center;
-            cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.15); transition:all 0.2s; font-size:13px;
+        .wl-wall, .wl-empty {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 92px 24px;
+            gap: 24px;
+            text-align: center;
+            background: transparent;
+            min-height: 480px;
+            position: relative;
+            z-index: 2;
         }
-        .wl-card-wrap .wl-remove-btn:hover { background:#ef4444; color:#fff; transform:scale(1.1); }
-        .wl-no-results { grid-column:1/-1; text-align:center; padding:48px 24px; color:#888; font-size:15px; }
-
-        /* ===== WISHLIST BADGE ===== */
-        .wishlist-badge { position:absolute; top:-6px; right:-6px; background:linear-gradient(135deg,#ff4d6d,#ff6b6b); color:#fff; font-size:10px; font-weight:700; min-width:18px; height:18px; border-radius:999px; display:flex; align-items:center; justify-content:center; padding:0 4px; pointer-events:none; box-shadow:0 2px 8px rgba(255,77,109,0.4); }
+        .wl-empty-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 28px;
+            padding: 64px 48px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.05), 0 4px 20px rgba(0, 0, 0, 0.01);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 26px;
+            animation: cardIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .wl-wall .lock {
+            font-size: 58px; margin-bottom: 4px;
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.06));
+            animation:floatUp 3s ease-in-out infinite;
+        }
+        .wl-empty .emp {
+            font-size: 58px; margin-bottom: 4px;
+            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.08));
+            animation:heartBeat2 2s ease-in-out infinite;
+        }
+        @keyframes floatUp   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+        @keyframes heartBeat2{ 0%,100%{transform:scale(1)} 40%{transform:scale(1.1)} 60%{transform:scale(1)} }
+        .wl-wall h3, .wl-empty h3 { font-size:24px; font-weight:800; margin:0; color: #000000; letter-spacing: -0.6px; }
+        .wl-wall p,  .wl-empty p  { color:rgba(0, 0, 0, 0.6); font-size:14.5px; max-width:380px; margin:0; line-height: 1.6; font-weight: 550; }
+        
+        .wl-cta { padding:14px 38px; border:none; border-radius:14px; font-size:14px; font-weight:700; cursor:pointer; transition:all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+        .wl-cta-dark { background: #000000; color: #ffffff; border: 1px solid #000000; }
+        .wl-cta-grad { background: linear-gradient(135deg, #000000 0%, #222222 100%); color:#fff; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); }
+        .wl-cta:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0, 0, 0, 0.12); }
+        .wl-cta-dark:hover { background: #222222; border-color: #222222; box-shadow:0 8px 24px rgba(0, 0, 0, 0.12); }
+  
+        /* ===== TOOLBAR + FILTERS ===== */
+        .wl-main { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            padding: 32px 32px 64px;
+            background: #ffffff;
+            position: relative;
+        }
+        .wl-main::before {
+            content:''; position:absolute; inset:0;
+            background-image: radial-gradient(rgba(0, 0, 0, 0.02) 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+            pointer-events:none;
+            opacity: 0.9;
+        }
+        .wl-toolbar { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            flex-wrap: wrap; 
+            gap: 22px; 
+            margin-bottom: 28px; 
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 14px 20px;
+            border-radius: 24px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.01);
+            position: relative;
+            z-index: 100;
+        }
+        .wl-toolbar-left { display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+        .wl-toolbar h3 { font-size:22px; font-weight:800; margin:0; color: #000000; letter-spacing: -0.6px; }
+        
+        .wl-search {
+            padding: 13px 20px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 14px;
+            font-size: 14px;
+            min-width: 280px;
+            outline: none;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            font-family: 'Inter', sans-serif;
+            background: rgba(255, 255, 255, 0.8);
+            color: #000000;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+            font-weight: 550;
+        }
+        .wl-search::placeholder {
+            color: rgba(0, 0, 0, 0.4);
+        }
+        .wl-search:focus {
+            border-color: #000000;
+            transform: translateY(-1px);
+            box-shadow: 0 0 22px rgba(0, 0, 0, 0.08);
+            background: #ffffff;
+        }
+        
+        /* ===== EXQUISITE ULTRA-PREMIUM DROPDOWN STYLING ===== */
+        .wl-custom-select {
+            position: relative;
+            display: inline-block;
+        }
+        .wl-select-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 13px 20px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 14px;
+            font-size: 14.5px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            color: #000000;
+            background: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            outline: none;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            min-width: 200px;
+            gap: 14px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+        }
+        .wl-select-toggle:hover {
+            border-color: rgba(0, 0, 0, 0.35);
+            color: #000000;
+            background: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+        }
+        .wl-custom-select.active .wl-select-toggle {
+            border-color: #000000;
+            color: #000000;
+            background: #ffffff;
+            box-shadow: 0 0 24px rgba(0, 0, 0, 0.08);
+            transform: translateY(-1px);
+        }
+        .wl-select-toggle svg {
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            color: rgba(0, 0, 0, 0.4);
+            flex-shrink: 0;
+        }
+        .wl-custom-select.active .wl-select-toggle svg {
+            transform: rotate(180deg);
+            color: #000000;
+        }
+        .wl-select-options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 10px;
+            background: rgba(255, 255, 255, 0.94);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 18px;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12), 0 8px 32px rgba(0, 0, 0, 0.04);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            z-index: 9999;
+            min-width: 230px;
+            padding: 8px;
+            opacity: 0;
+            transform: translateY(12px) scale(0.95);
+            visibility: hidden;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow: hidden;
+        }
+        .wl-custom-select.active .wl-select-options {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            visibility: visible;
+        }
+        .wl-select-option {
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.85);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2px;
+        }
+        .wl-select-option:last-child {
+            margin-bottom: 0;
+        }
+        .wl-select-option:hover {
+            background: rgba(0, 0, 0, 0.05);
+            color: #000000;
+        }
+        .wl-select-option.selected {
+            background: linear-gradient(135deg, #000000 0%, #222222 100%);
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        }
+        
+        .wl-clear-btn {
+            padding: 13px 26px;
+            background: rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 14px;
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #000000;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(4px);
+        }
+        .wl-clear-btn:hover {
+            border-color: #000000;
+            color: #ffffff;
+            background: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+ 
+        /* ===== GRID HEADING ===== */
+        .wl-grid-heading {
+            font-size: 22px;
+            font-weight: 850;
+            color: #000000;
+            letter-spacing: -0.9px;
+            margin-top: 36px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .wl-grid-heading::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 18px;
+            background: linear-gradient(to bottom, #000000, #333333);
+            border-radius: 3px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        }
+ 
+        /* ===== CARDS ===== */
+        .wl-grid-premium {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .wl-card-premium {
+            position: relative;
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 22px;
+            padding: 16px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.01);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            animation: cardIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        @keyframes cardIn { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+        .wl-card-premium:hover {
+            transform: translateY(-8px) scale(1.015);
+            border-color: rgba(0, 0, 0, 0.28);
+            background: #ffffff;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.02);
+        }
+        
+        /* Image Container */
+        .wl-img-container {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fdfdfd;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        .wl-img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .wl-card-premium:hover .wl-img-container img {
+            transform: scale(1.08);
+        }
+ 
+        /* Overlay Badges */
+        .wl-badge-premium {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: linear-gradient(135deg, #000000 0%, #222222 100%);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 5px 12px;
+            border-radius: 8px;
+            z-index: 2;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+ 
+        /* Removal Trigger */
+        .wl-heart-remove {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            z-index: 5;
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+        .wl-heart-remove svg {
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            fill: #000000;
+        }
+        .wl-heart-remove:hover {
+            background: #000000;
+            border-color: #000000;
+            transform: scale(1.12) rotate(12deg);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+        }
+        .wl-heart-remove:hover svg {
+            fill: #ffffff;
+            transform: scale(1.1);
+        }
+ 
+        /* Slide-up Action Details Overlay */
+        .wl-action-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+            padding: 40px 16px 16px;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 3;
+        }
+        .wl-card-premium:hover .wl-action-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .wl-action-btn {
+            background: linear-gradient(135deg, #000000 0%, #222222 100%);
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 13.5px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            width: 100%;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+        }
+        .wl-action-btn:hover {
+            background: linear-gradient(135deg, #222222 0%, #444444 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+ 
+        /* Info block styling */
+        .wl-info-block {
+            padding: 16px 4px 4px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .wl-cat-tag {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(0, 0, 0, 0.5);
+            margin-bottom: 8px;
+        }
+        .wl-prod-title {
+            font-weight: 700;
+            font-size: 15.5px;
+            line-height: 1.45;
+            color: #000000;
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 44px;
+            transition: color 0.2s ease;
+        }
+        .wl-card-premium:hover .wl-prod-title {
+            color: #333333;
+        }
+        .wl-price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-top: auto;
+            padding-top: 14px;
+        }
+        .wl-price-current {
+            font-size: 19px;
+            font-weight: 800;
+            color: #000000;
+        }
+        .wl-price-original {
+            font-size: 13.5px;
+            font-weight: 600;
+            text-decoration: line-through;
+            color: rgba(0, 0, 0, 0.4);
+        }
+        .wl-discount-pill {
+            font-size: 11.5px;
+            font-weight: 800;
+            color: #16a34a;
+            background: rgba(22, 163, 74, 0.08);
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-left: auto;
+        }
+ 
+        .wl-no-results { grid-column:1/-1; text-align:center; padding:72px 24px; color:rgba(0, 0, 0, 0.4); font-size:16px; font-weight: 600; }
+        
         #wishlist-header-btn { position:relative; }
-
-        /* ===== COMPACT CARDS ===== */
-        .wl-grid-small { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:16px; }
-        .wl-card-compact { position:relative; background:#fff; border:1px solid #eaeaea; border-radius:12px; padding:12px; transition:all 0.2s; box-shadow:0 2px 8px rgba(0,0,0,0.03); animation:cardIn 0.4s cubic-bezier(0.4,0,0.2,1) both; }
-        .wl-card-compact:hover { border-color:#d1d5db; box-shadow:0 8px 24px rgba(0,0,0,0.08); transform:translateY(-2px); }
-        .wl-card-compact .wl-remove-btn { position:absolute; top:-8px; right:-8px; width:24px; height:24px; border-radius:50%; background:#fff; border:1px solid #eaeaea; color:#666; font-size:10px; cursor:pointer; display:flex; align-items:center; justify-content:center; opacity:0; transition:all 0.2s; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-        .wl-card-compact:hover .wl-remove-btn { opacity:1; }
-        .wl-card-compact .wl-remove-btn:hover { background:#ef4444; color:#fff; border-color:#ef4444; }
-
+ 
         @media(max-width:768px){
-            .wl-hero { padding:36px 20px 32px; }
+            .wl-hero { padding:28px 20px 24px; }
             .wl-hero h2 { font-size:24px; }
-            .wl-main { padding:20px 16px; }
-            .wl-grid { grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:12px; }
-            .wl-grid-small { grid-template-columns: 1fr; gap:12px; } /* Force 1 column on mobile to prevent text squeezing */
-            .wl-card-compact .wl-remove-btn { opacity:1; } /* Always show remove button on touch devices */
-            .wl-search { min-width:160px; }
+            .wl-main { padding:20px 12px 40px; }
+            .wl-toolbar { padding: 12px; border-radius: 20px; gap: 16px; }
+            .wl-toolbar-left { gap: 12px; }
+            .wl-search { min-width: 100%; }
+            .wl-custom-select { width: 100%; }
+            .wl-select-toggle { width: 100%; }
+            .wl-select-options { width: 100%; }
+            .wl-clear-btn { width: 100%; text-align: center; }
+            .wl-grid-premium {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+            .wl-card-premium {
+                padding: 10px;
+                border-radius: 18px;
+            }
+            .wl-img-container {
+                border-radius: 12px;
+            }
+            .wl-prod-title {
+                font-size: 14px;
+                height: 40px;
+            }
+            .wl-price-current {
+                font-size: 16px;
+            }
+            .wl-price-original {
+                font-size: 12px;
+            }
+            .wl-heart-remove {
+                width: 34px;
+                height: 34px;
+                top: 10px;
+                right: 10px;
+            }
+            .wl-heart-remove svg {
+                width: 14px;
+                height: 14px;
+            }
+            .wl-action-overlay {
+                display: none; /* Hide hover details on touch devices */
+            }
         }
     </style>
     <meta name="robots" content="noindex, nofollow">
@@ -164,16 +747,21 @@
         </header>
 
         <section class="wl-hero">
+            <!-- Glowing Red/Crimson Background Orbs -->
+            <div class="wl-orb wl-orb-1"></div>
+            <div class="wl-orb wl-orb-2"></div>
+            <div class="wl-orb wl-orb-3"></div>
+            
             <div class="wl-hero-inner">
                 <h2>
                     <span class="wl-hero-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="#ff4d6d" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#000000" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     </span>
                     My Wishlist
                 </h2>
                 <p>Your saved products, ready when you are.</p>
                 <div class="wl-count-pill">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#ff4d6d" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#000000" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     <span id="wl-count-text">0 items saved</span>
                 </div>
             </div>
@@ -221,32 +809,69 @@
     let wlCategoryF = '';
     let wlSortF = 'newest';
 
+    // ===== DROPDOWN UTILS =====
+    function getSortLabel(val) {
+        const labels = {
+            'newest': 'Newest First',
+            'oldest': 'Oldest First',
+            'price-asc': 'Price: Low → High',
+            'price-desc': 'Price: High → Low',
+            'name': 'Name A–Z'
+        };
+        return labels[val] || 'Sort By';
+    }
+
+    function toggleCustomSelect(id) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        
+        document.querySelectorAll('.wl-custom-select').forEach(other => {
+            if (other.id !== id) other.classList.remove('active');
+        });
+        el.classList.toggle('active');
+    }
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.wl-custom-select')) {
+            document.querySelectorAll('.wl-custom-select').forEach(other => {
+                other.classList.remove('active');
+            });
+        }
+    });
+
     // ===== RENDER =====
     async function renderWishlistPage() {
         const user = window.authService?.getCurrentUser();
         const savedItems = window.wishlistService?.getAll() || [];
 
-        const countEl = document.getElementById('wl-count-text');
-        if (countEl) countEl.textContent = savedItems.length === 0 ? '0 items saved' : `${savedItems.length} item${savedItems.length > 1 ? 's' : ''} saved`;
-
         const content = document.getElementById('wl-content');
 
         if (!user) {
+            const countEl = document.getElementById('wl-count-text');
+            if (countEl) countEl.textContent = '0 items saved';
+
             content.innerHTML = `<div class="wl-wall">
-                <div class="lock">🔒</div>
-                <h3>Login to view your Wishlist</h3>
-                <p>Save your favourite products and access them anytime.</p>
-                <button class="wl-cta wl-cta-dark" onclick="window.loginModal?.open()">Login / Sign Up</button>
+                <div class="wl-empty-card">
+                    <div class="lock">🔒</div>
+                    <h3>Unlock Your Wishlist</h3>
+                    <p>Save your favourite customized t-shirts, mugs, and premium accessories to access them instantly across all devices.</p>
+                    <button class="wl-cta wl-cta-dark" onclick="window.loginModal?.open()">Login / Sign Up</button>
+                </div>
             </div>`;
             return;
         }
 
         if (savedItems.length === 0) {
+            const countEl = document.getElementById('wl-count-text');
+            if (countEl) countEl.textContent = '0 items saved';
+
             content.innerHTML = `<div class="wl-empty">
-                <div class="emp">🤍</div>
-                <h3>Your wishlist is empty</h3>
-                <p>Tap ❤️ on any product to save it here!</p>
-                <button class="wl-cta wl-cta-grad" onclick="window.location.href='index.html'">Explore Products →</button>
+                <div class="wl-empty-card">
+                    <div class="emp" style="color: #000000;">🖤</div>
+                    <h3>Your wishlist is empty</h3>
+                    <p>Start exploring our massive catalog of personalized products and tap the 🖤 icon to save your favorites here!</p>
+                    <button class="wl-cta wl-cta-grad" onclick="window.location.href='index.html'">Explore Products →</button>
+                </div>
             </div>`;
             return;
         }
@@ -273,11 +898,26 @@
             return { ...(itemData || saved), productId: saved.productId, itemType: saved.itemType || 'product', savedAt: saved.savedAt };
         }).filter(Boolean);
 
+        const countEl = document.getElementById('wl-count-text');
+        if (countEl) countEl.textContent = allItems.length === 0 ? '0 items saved' : `${allItems.length} item${allItems.length > 1 ? 's' : ''} saved`;
+
+        if (allItems.length === 0) {
+            content.innerHTML = `<div class="wl-empty">
+                <div class="wl-empty-card">
+                    <div class="emp" style="color: #000000;">🖤</div>
+                    <h3>Your wishlist is empty</h3>
+                    <p>Start exploring our massive catalog of personalized products and tap the 🖤 icon to save your favorites here!</p>
+                    <button class="wl-cta wl-cta-grad" onclick="window.location.href='index.html'">Explore Products →</button>
+                </div>
+            </div>`;
+            return;
+        }
+
         // Filter + search + sort
         let items = [...allItems];
         if (wlSearchQ) {
             const q = wlSearchQ.toLowerCase();
-            items = items.filter(p => (p.title||'').toLowerCase().includes(q) || (p.categoryName||'').toLowerCase().includes(q));
+            items = items.filter(p => (p.title||p.name||'').toLowerCase().includes(q) || (p.categoryName||'').toLowerCase().includes(q));
         }
         if (wlCategoryF) {
             items = items.filter(p => (p.categoryName||'').toLowerCase() === wlCategoryF.toLowerCase());
@@ -286,52 +926,108 @@
         if (wlSortF === 'oldest')    items.sort((a,b) => (a.savedAt||0) - (b.savedAt||0));
         if (wlSortF === 'price-asc') items.sort((a,b) => (a.price||0) - (b.price||0));
         if (wlSortF === 'price-desc')items.sort((a,b) => (b.price||0) - (a.price||0));
-        if (wlSortF === 'name')      items.sort((a,b) => (a.title||'').localeCompare(b.title||''));
+        if (wlSortF === 'name')      items.sort((a,b) => (a.title||a.name||'').localeCompare(b.title||b.name||''));
 
         const productItems = items.filter(i => i.itemType === 'product');
         const collectionItems = items.filter(i => i.itemType === 'subcategory');
 
         // Unique categories for filter dropdown
         const cats = [...new Set(allItems.map(p => p.categoryName).filter(Boolean))];
-        const catOptions = cats.map(c => `<option value="${c}" ${wlCategoryF===c?'selected':''}>${c}</option>`).join('');
 
         content.innerHTML = `<div class="wl-main">
             <div class="wl-toolbar">
                 <div class="wl-toolbar-left">
                     <h3>${allItems.length} Saved Item${allItems.length > 1 ? 's' : ''}</h3>
                     <input class="wl-search" id="wl-search" type="text" placeholder="Search saved items…" value="${wlSearchQ}">
-                    ${cats.length > 1 ? `<select class="wl-filter-select" id="wl-cat-filter">
-                        <option value="">All Categories</option>${catOptions}
-                    </select>` : ''}
-                    <select class="wl-filter-select" id="wl-sort">
-                        <option value="newest"    ${wlSortF==='newest'    ?'selected':''}>Newest First</option>
-                        <option value="oldest"    ${wlSortF==='oldest'    ?'selected':''}>Oldest First</option>
-                        <option value="price-asc" ${wlSortF==='price-asc' ?'selected':''}>Price: Low → High</option>
-                        <option value="price-desc"${wlSortF==='price-desc'?'selected':''}>Price: High → Low</option>
-                        <option value="name"      ${wlSortF==='name'      ?'selected':''}>Name A–Z</option>
-                    </select>
+                    
+                    ${cats.length > 1 ? `
+                    <div class="wl-custom-select" id="wl-cat-select">
+                        <button class="wl-select-toggle" onclick="toggleCustomSelect('wl-cat-select')">
+                            <span>${wlCategoryF || 'All Categories'}</span>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="wl-select-options">
+                            <div class="wl-select-option ${!wlCategoryF?'selected':''}" data-value="">
+                                <span>All Categories</span>
+                                ${!wlCategoryF ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
+                            </div>
+                            ${cats.map(c => `
+                                <div class="wl-select-option ${wlCategoryF===c?'selected':''}" data-value="${c}">
+                                    <span>${c}</span>
+                                    ${wlCategoryF===c ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+
+                    <div class="wl-custom-select" id="wl-sort-select">
+                        <button class="wl-select-toggle" onclick="toggleCustomSelect('wl-sort-select')">
+                            <span>${getSortLabel(wlSortF)}</span>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="wl-select-options">
+                            <div class="wl-select-option ${wlSortF==='newest'?'selected':''}" data-value="newest">
+                                <span>Newest First</span>
+                                ${wlSortF==='newest' ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
+                            </div>
+                            <div class="wl-select-option ${wlSortF==='oldest'?'selected':''}" data-value="oldest">
+                                <span>Oldest First</span>
+                                ${wlSortF==='oldest' ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
+                            </div>
+                            <div class="wl-select-option ${wlSortF==='price-asc'?'selected':''}" data-value="price-asc">
+                                <span>Price: Low → High</span>
+                                ${wlSortF==='price-asc' ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
+                            </div>
+                            <div class="wl-select-option ${wlSortF==='price-desc'?'selected':''}" data-value="price-desc">
+                                <span>Price: High → Low</span>
+                                ${wlSortF==='price-desc' ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
+                            </div>
+                            <div class="wl-select-option ${wlSortF==='name'?'selected':''}" data-value="name">
+                                <span>Name A–Z</span>
+                                ${wlSortF==='name' ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <button class="wl-clear-btn" id="wl-clear-all-btn">Clear All</button>
             </div>
 
             ${collectionItems.length > 0 ? `
-                <h3 style="margin-top:20px; margin-bottom: 12px; font-size: 18px; color: #111;">Saved Collections</h3>
-                <div class="wl-grid wl-grid-small" id="wl-grid-collections"></div>
+                <h3 class="wl-grid-heading">Saved Collections</h3>
+                <div class="wl-grid-premium" id="wl-grid-collections"></div>
             ` : ''}
 
             ${productItems.length > 0 ? `
-                <h3 style="margin-top:${collectionItems.length > 0 ? '32px' : '20px'}; margin-bottom: 12px; font-size: 18px; color: #111;">Saved Products</h3>
-                <div class="wl-grid wl-grid-small" id="wl-grid-products"></div>
+                <h3 class="wl-grid-heading">Saved Products</h3>
+                <div class="wl-grid-premium" id="wl-grid-products"></div>
             ` : ''}
             
             ${items.length === 0 ? `<div class="wl-no-results">No items match your search.</div>` : ''}
         </div>`;
 
-        // Bind toolbar events
+        // Bind search input event
         document.getElementById('wl-search').oninput = (e) => { wlSearchQ = e.target.value; renderWishlistPage(); };
-        const catSel = document.getElementById('wl-cat-filter');
-        if (catSel) catSel.onchange = (e) => { wlCategoryF = e.target.value; renderWishlistPage(); };
-        document.getElementById('wl-sort').onchange = (e) => { wlSortF = e.target.value; renderWishlistPage(); };
+        
+        // Bind custom select dropdown click options
+        document.querySelectorAll('#wl-sort-select .wl-select-option').forEach(opt => {
+            opt.onclick = () => {
+                wlSortF = opt.getAttribute('data-value');
+                renderWishlistPage();
+            };
+        });
+
+        const catSelect = document.getElementById('wl-cat-select');
+        if (catSelect) {
+            catSelect.querySelectorAll('.wl-select-option').forEach(opt => {
+                opt.onclick = () => {
+                    wlCategoryF = opt.getAttribute('data-value');
+                    renderWishlistPage();
+                };
+            });
+        }
+
+        // Bind Clear All event
         document.getElementById('wl-clear-all-btn').onclick = () => {
             showConfirm('Clear Wishlist', 'Remove all saved items from your wishlist?', () => {
                 window.wishlistService.clear();
@@ -342,46 +1038,82 @@
 
         if (items.length === 0) return;
 
-        // Render compact cards
-        const renderCompactCard = (item, containerId) => {
+        // Render premium vertical cards
+        const renderPremiumCard = (item, containerId) => {
             const grid = document.getElementById(containerId);
             if (!grid) return;
             const wrapper = document.createElement('div');
-            wrapper.className = 'wl-card-compact';
+            wrapper.className = 'wl-card-premium';
             
             const isSub = item.itemType === 'subcategory';
             const link = isSub ? `searchPage.html?subcategory=${item.id}` : `productDetails.html?id=${item.id}`;
-            const priceHtml = !isSub && item.price ? `<div style="font-weight:700; color:#111; margin-top:6px;">₹${item.price}</div>` : '';
+            
+            // Build prices and discounts
+            let priceRowHtml = '';
+            if (!isSub && item.price) {
+                const discPill = item.originalPrice && item.originalPrice > item.price
+                    ? `<span class="wl-discount-pill">${Math.round(((item.originalPrice - item.price) / item.originalPrice) * 100)}% OFF</span>`
+                    : '';
+                const origHtml = item.originalPrice && item.originalPrice > item.price
+                    ? `<span class="wl-price-original">₹${item.originalPrice}</span>`
+                    : '';
+                priceRowHtml = `
+                    <div class="wl-price-row">
+                        <span class="wl-price-current">₹${item.price}</span>
+                        ${origHtml}
+                        ${discPill}
+                    </div>
+                `;
+            }
+
+            // Overlay Badges
+            let badgeHtml = '';
+            if (item.badge) {
+                badgeHtml = `<span class="wl-badge-premium">${item.badge}</span>`;
+            } else if (item.rating >= 4.5) {
+                badgeHtml = `<span class="wl-badge-premium">★ ${item.rating}</span>`;
+            }
 
             wrapper.innerHTML = `
-                <button class="wl-remove-btn" title="Remove">✕</button>
-                <a href="${link}" style="text-decoration:none; color:inherit; display:flex; gap:16px; align-items:center;">
-                    <div style="width:84px; height:84px; flex-shrink:0; border-radius:10px; overflow:hidden; background:#f9fafb;">
-                        <img src="${item.image || 'constants/products/placeholder.jpg'}" style="width:100%; height:100%; object-fit:cover; transition:transform 0.3s ease;">
+                <button class="wl-heart-remove" title="Remove from Wishlist">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#000000" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+                <div class="wl-img-container">
+                    ${badgeHtml}
+                    <img src="${item.image || 'constants/products/placeholder.jpg'}" alt="${item.name || item.title || 'Product'}" loading="lazy">
+                    <div class="wl-action-overlay">
+                        <button class="wl-action-btn" onclick="window.location.href='${link}'">
+                            ${isSub ? 'Explore Collection' : 'Customize Now'}
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                        </button>
                     </div>
-                    <div style="flex:1; min-width:0; padding-right:8px;">
-                        <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#888;">${isSub ? 'Collection' : (item.categoryName || 'Product')}</div>
-                        <div style="font-weight:600; font-size:15px; margin-top:4px; color:#111; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${item.name || item.title || 'Unknown'}</div>
-                        ${priceHtml}
-                    </div>
-                </a>
+                </div>
+                <div class="wl-info-block">
+                    <span class="wl-cat-tag">${isSub ? 'Collection' : (item.categoryName || 'Custom Print')}</span>
+                    <h4 class="wl-prod-title" onclick="window.location.href='${link}'" style="cursor:pointer">${item.name || item.title || 'Customized Item'}</h4>
+                    ${priceRowHtml}
+                </div>
             `;
 
-            wrapper.querySelector('.wl-remove-btn').onclick = (e) => {
+            wrapper.querySelector('.wl-heart-remove').onclick = (e) => {
                 e.preventDefault(); e.stopPropagation();
+                
+                // Add removal transition styles
+                wrapper.style.transform = 'scale(0.8) translateY(12px)';
                 wrapper.style.opacity = '0';
-                wrapper.style.transform = 'scale(0.9)';
+                wrapper.style.filter = 'blur(8px)';
+                
                 setTimeout(() => {
                     window.wishlistService.remove(item.productId || item.id);
                     showToast(`Removed from wishlist`, 'info');
-                }, 280);
+                }, 350);
             };
 
             grid.appendChild(wrapper);
         };
 
-        collectionItems.forEach(item => renderCompactCard(item, 'wl-grid-collections'));
-        productItems.forEach(item => renderCompactCard(item, 'wl-grid-products'));
+        collectionItems.forEach(item => renderPremiumCard(item, 'wl-grid-collections'));
+        productItems.forEach(item => renderPremiumCard(item, 'wl-grid-products'));
     }
 
     document.addEventListener('DOMContentLoaded', () => {
