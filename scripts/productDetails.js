@@ -573,8 +573,15 @@ function setupActionButtons() {
     });
 
     if (wishlistBtn && window.wishlistService) {
-        // Init state
-        if (window.wishlistService.has(productId)) wishlistBtn.classList.add('active');
+        // Assign productId to the main wishlist button's dataset for unified sync handling
+        wishlistBtn.setAttribute('data-product-id', productId);
+        
+        // Sync states immediately
+        if (window.wishlistService.has(productId)) {
+            wishlistBtn.classList.add('active');
+        } else {
+            wishlistBtn.classList.remove('active');
+        }
 
         wishlistBtn.addEventListener('click', () => {
             const user = window.authService?.getCurrentUser();
@@ -595,9 +602,15 @@ function setupActionButtons() {
 
         // Sync with global updates
         window.addEventListener('wishlist:updated', () => {
-            if (window.wishlistService.has(productId)) wishlistBtn.classList.add('active');
-            else wishlistBtn.classList.remove('active');
+            if (window.wishlistService.has(productId)) {
+                wishlistBtn.classList.add('active');
+            } else {
+                wishlistBtn.classList.remove('active');
+            }
         });
+
+        // Explicitly trigger synchronization
+        window.initializeWishlistStates?.();
     }
 }
 
@@ -1521,12 +1534,12 @@ function setupCustomizer() {
     const wishlistBtn = document.getElementById('main-product-wishlist');
     if (wishlistBtn) {
         wishlistBtn.addEventListener('click', async () => {
-            wishlistBtn.style.color = '#ef4444';
-            
-            // Call standard wishlist
-            if (window.wishlistService && !window.wishlistService.has(productId)) {
-                window.wishlistService.add(productId);
+            if (!window.wishlistService || !window.wishlistService.has(productId)) {
+                // If not in wishlist, the user was removing it. Do not re-add or save customizer state.
+                return;
             }
+            // Wishlist state is handled by CSS active classes
+            wishlistBtn.style.color = '';
             
             // Save current progress
             canvasStates[currentView] = JSON.stringify(canvas.toJSON());

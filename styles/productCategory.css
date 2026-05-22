@@ -636,9 +636,13 @@
     fill: none;
 }
 
+.subcategory-wishlist.active {
+    background: #000000 !important;
+}
+
 .subcategory-wishlist.active svg {
-    fill: #ff4444;
-    stroke: #ff4444;
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
 }
 
 .subcategory-card-content {

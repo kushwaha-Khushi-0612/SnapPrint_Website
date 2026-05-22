@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderRelatedProducts();
         renderPreviouslyViewed();
         renderMixedCategories();
+        initializeSubcategoryWishlistStates();
     }
 
     console.log('✅ Product Category Page Ready!');
@@ -372,7 +373,7 @@ function createSubcategoryCard(subcategory) {
         <div class="subcategory-card">
             <div class="subcategory-card-image">
                 ${subcategory.image ? `<img src="${subcategory.image}" alt="${subcategory.name}" loading="lazy">` : ''}
-                <div class="subcategory-wishlist ${isActive}" onclick="event.stopPropagation(); toggleWishlist('${subcategory.id}')">
+                <div class="subcategory-wishlist ${isActive}" data-id="${subcategory.id}" onclick="event.stopPropagation(); toggleWishlist(this, '${subcategory.id}')">
                     <svg viewBox="0 0 24 24" stroke-width="2">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                     </svg>
@@ -417,7 +418,7 @@ function createColorCard(color) {
         <div class="subcategory-card color-card" data-color="${color.color}">
             <div class="subcategory-card-image">
                 <img src="${color.image}" alt="${color.name}" loading="lazy">
-                <div class="subcategory-wishlist ${isActive}" onclick="event.stopPropagation(); toggleWishlist('${color.id}')">
+                <div class="subcategory-wishlist ${isActive}" data-id="${color.id}" onclick="event.stopPropagation(); toggleWishlist(this, '${color.id}')">
                     <svg viewBox="0 0 24 24" stroke-width="2">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                     </svg>
@@ -462,7 +463,7 @@ function createGSMCard(gsm) {
         <div class="subcategory-card gsm-card">
             <div class="subcategory-card-image">
                 <img src="${gsm.image}" alt="${gsm.name}" loading="lazy">
-                <div class="subcategory-wishlist ${isActive}" onclick="event.stopPropagation(); toggleWishlist('${gsm.id}')">
+                <div class="subcategory-wishlist ${isActive}" data-id="${gsm.id}" onclick="event.stopPropagation(); toggleWishlist(this, '${gsm.id}')">
                     <svg viewBox="0 0 24 24" stroke-width="2">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                     </svg>
@@ -587,7 +588,7 @@ function formatCurrency(amount) {
 /**
  * Toggle wishlist for subcategories
  */
-function toggleWishlist(itemId) {
+function toggleWishlist(btn, itemId) {
     if (!window.wishlistService) return;
 
     // Check if user is logged in first
@@ -597,7 +598,7 @@ function toggleWishlist(itemId) {
         return;
     }
 
-    const wishlistBtn = event.currentTarget;
+    const wishlistBtn = btn || event.currentTarget;
     const isNowActive = !wishlistBtn.classList.contains('active');
 
     if (isNowActive) {
@@ -648,4 +649,28 @@ function showNotification(message) {
         setTimeout(() => notification.remove(), 300);
     }, 2000);
 }
+
+function initializeSubcategoryWishlistStates() {
+    if (!window.wishlistService) return;
+    const ids = window.wishlistService.getIds();
+    document.querySelectorAll('.subcategory-wishlist').forEach(btn => {
+        const id = btn.getAttribute('data-id');
+        if (id && ids.includes(String(id))) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+}
+
+// Global listeners for subcategory/category/color/GSM wishlist sync
+window.addEventListener('wishlist:updated', () => {
+    initializeSubcategoryWishlistStates();
+});
+window.addEventListener('auth:login-success', () => {
+    initializeSubcategoryWishlistStates();
+});
+window.addEventListener('auth:logout', () => {
+    initializeSubcategoryWishlistStates();
+});
 

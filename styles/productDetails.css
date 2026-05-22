@@ -137,7 +137,23 @@
 
 .wishlist-btn:hover {
     transform: scale(1.1);
-    color: #ef4444;
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+.wishlist-btn:hover svg {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
+.wishlist-btn.active {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+.wishlist-btn.active svg {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
 }
 
 .thumbnail-gallery {

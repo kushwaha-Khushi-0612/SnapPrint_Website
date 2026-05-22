@@ -219,7 +219,7 @@ function heartBurst(button) {
             left: ${cx}px; top: ${cy}px;
             width: 7px; height: 7px;
             border-radius: 50%;
-            background: ${['#ff4d6d', '#ff6b6b', '#ff8fa3', '#ffc2d1'][i % 4]};
+            background: ${['#000000', '#333333', '#666666', '#cccccc'][i % 4]};
             pointer-events: none; z-index: 99999;
             transform: translate(-50%, -50%);
             animation: particleFly 0.55s cubic-bezier(0.4,0,0.2,1) forwards;
@@ -250,26 +250,41 @@ function heartBurst(button) {
             60%     { transform: translateX(-4px) rotate(-5deg); }
             80%     { transform: translateX(4px) rotate(5deg); }
         }
-        .wishlist-btn.active svg { fill: #ff4d6d; stroke: #ff4d6d; }
-        .wishlist-btn.active { background: #fff0f3 !important; }
+        .wishlist-btn.active svg { fill: #ffffff !important; stroke: #ffffff !important; }
+        .wishlist-btn.active { background: #000000 !important; }
     `;
     document.head.appendChild(s);
 })();
 
-/**
- * Sync wishlist button states from wishlistService
- */
 function initializeWishlistStates() {
     if (!window.wishlistService) return;
     const ids = window.wishlistService.getIds();
     document.querySelectorAll('.wishlist-btn').forEach(btn => {
-        if (ids.includes(btn.dataset.productId)) {
+        const productId = btn.dataset.productId;
+        if (!productId) return; // Skip buttons without a product ID (e.g. the main product details wishlist button)
+        if (ids.includes(String(productId))) {
             btn.classList.add('active');
         } else {
             btn.classList.remove('active');
         }
     });
 }
+
+window.initializeWishlistStates = initializeWishlistStates;
+
+// Auto-listen to global updates to synchronize all product card hearts in real-time
+window.addEventListener('wishlist:updated', () => {
+    initializeWishlistStates();
+});
+window.addEventListener('auth:login-success', () => {
+    initializeWishlistStates();
+});
+window.addEventListener('auth:logout', () => {
+    initializeWishlistStates();
+});
+document.addEventListener('DOMContentLoaded', () => {
+    initializeWishlistStates();
+});
 
 // Add heart beat animation and additional styles
 const style = document.createElement('style');
