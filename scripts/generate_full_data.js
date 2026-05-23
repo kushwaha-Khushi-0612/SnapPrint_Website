@@ -22,7 +22,7 @@ const categoriesBase = [
         subcategories: ["Hard", "Silicone", "TPU", "Transparent", "Printed", "Matte", "Glossy", "Shockproof", "Rugged", "Flip", "Wallet", "Magnetic", "Magsafe", "Ring Holder", "Kickstand", "Waterproof", "Cooling", "Leather", "Custom", "3D"]
     },
     {
-        name: "Mugs & Cups",
+        name: "Mugs and Sippers",
         subcategories: ["Ceramic", "Coffee", "Tea", "Travel", "Stainless Steel", "Glass", "Double Wall", "Insulated", "Printed", "Photo", "Magic (Heat Sensitive)", "Matte Finish", "Glossy", "Minimalist", "Designer", "Cartoon", "Couple", "Office", "Beer", "Espresso", "Handmade", "Eco-Friendly", "Custom"]
     },
     {

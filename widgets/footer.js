@@ -201,7 +201,7 @@
             <ul>
               ${link("productCategory.html?category=T-Shirts","T-Shirts")}
               ${link("productCategory.html?category=Hoodies","Hoodies")}
-              ${link("productCategory.html?category=Mugs%20%26%20Cups","Mugs & Cups")}
+              ${link("productCategory.html?category=Mugs%20and%20Sippers","Mugs and Sippers")}
               ${link("productCategory.html?category=Phone%20Accessories","Phone Accessories")}
               ${link("productCategory.html?category=Photo%20Frames","Photo Frames")}
               ${link("productCategory.html?category=Key%20Chains","Key Chains")}

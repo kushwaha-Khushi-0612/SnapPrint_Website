@@ -67,7 +67,7 @@ function loadHeroImages() {
             'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=1200&h=600&fit=crop'
         ],
-        'Mugs': [
+        'Mugs and Sippers': [
             'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1609505833958-16f65ffb5ad1?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?w=1200&h=600&fit=crop'
@@ -133,7 +133,7 @@ async function loadCategoryData() {
         'T-Shirts': 'constants/icons/tshirt.svg',
         'Hoodies': 'constants/icons/hoodie.svg',
         'Phone Accessories': 'constants/icons/phone-case.svg',
-        'Mugs': 'constants/icons/mug.svg',
+        'Mugs and Sippers': 'constants/icons/mug.svg',
         'Frames': 'constants/icons/frame.svg',
         'Keychains': 'constants/icons/keychain.svg',
         'Tote Bags': 'constants/icons/tote-bag.svg',
@@ -179,7 +179,7 @@ function updatePageHeader() {
             title: 'Custom Kids Clothing India | Personalized Kids T-Shirts & Wear – SnapPrint',
             desc: 'Shop custom kids clothing online in India. Print names, photos, and designs on kids t-shirts and outfits. Safe fabric, vibrant prints, and quick delivery.'
         },
-        'Mugs': {
+        'Mugs and Sippers': {
             title: 'Custom Mugs Printing Online India | Personalized Photo Mugs – SnapPrint',
             desc: 'Design custom mugs with photos, names, or quotes. Perfect gifts for birthdays, anniversaries, and special occasions. Order personalized mugs online today!'
         },

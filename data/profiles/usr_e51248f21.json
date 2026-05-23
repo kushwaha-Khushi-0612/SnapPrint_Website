@@ -25,15 +25,15 @@
     "last_chosen_address": 1,
     "analytics": {
         "categoryInterests": {
-            "T-Shirts": 94,
-            "Decor": 11,
-            "Men's Special": 99,
+            "T-Shirts": 97,
+            "Decor": 19,
+            "Men's Special": 102,
             "Phone Cases": 10,
-            "Women's Special": 26,
-            "Jewelry": 11,
-            "Mugs & Cups": 9,
-            "Kids Clothing": 8,
-            "Photo Frames": 5,
+            "Women's Special": 30,
+            "Jewelry": 13,
+            "Mugs & Cups": 11,
+            "Kids Clothing": 11,
+            "Photo Frames": 21,
             "Footwear": 6,
             "Key Chains": 10,
             "Face Masks": 6,
@@ -42,7 +42,8 @@
             "Pendants": 1,
             "Frames": 1,
             "Caps": 3,
-            "Phone Accessories": 18
+            "Phone Accessories": 22,
+            "Mugs and Sippers": 45
         },
         "subcategoryInterests": {
             "Printed": 13,
@@ -78,29 +79,41 @@
             "Raglan": 1,
             "Silk": 1,
             "Men Hoodies": 1,
-            "Womens Crop Tops": 1,
+            "Womens Crop Tops": 2,
             "Baseball Caps": 1,
             "Women T-Shirts": 1,
             "Men Tank Top Vest": 1,
-            "Aprons": 5,
+            "Aprons": 7,
             "Clothing": 1,
-            "V Neck": 1
+            "V Neck": 1,
+            "Womens Polo Shirts": 1,
+            "Tumblers": 1,
+            "Caricature Photo Frames": 2,
+            "Henley": 1
         },
         "badgeInterests": {
-            "50% OFF": 18,
+            "50% OFF": 19,
             "55% OFF": 11,
             "New Arrival": 7,
-            "Bestseller": 10,
-            "65% OFF": 6,
+            "Bestseller": 13,
+            "65% OFF": 7,
             "Limited Edition": 1,
             "Hot Deal": 1,
-            "Top Rated": 1
+            "Top Rated": 1,
+            "Sale": 2,
+            "Trending": 1
         },
         "viewHistory": [
+            "sub-menclothing-henley-9",
+            "p-caricature-frames-10",
+            "p-tumblers-11",
+            "p-wts-59",
+            "p-apron-men-357",
+            "p-apron-kids-5",
+            "p-wts-78",
             "p-vneck-5",
             "p-apron-men-402",
             "p-mens-shirts-new-47",
-            "p-apron-men-357",
             "p-apron-men-460",
             "p-tanktop-men-0",
             "p-wts-31",
@@ -110,15 +123,9 @@
             "p-sub-silk-1",
             "sub-menclothing-fullsleeves-0",
             "p-sub-insulated-2",
-            "sub-menclothing-raglan-3",
-            "p-sub-rubber-6",
-            "p-sub-menclothing-crop-6",
-            "p-sub-necklaces-3",
-            "p-sub-resin-3",
-            "p-sub-laptop-6",
-            "sub-menclothing-cottonpolo-4"
+            "sub-menclothing-raglan-3"
         ],
-        "lastInteracted": 1779533096355
+        "lastInteracted": 1779557108152
     },
-    "lastSync": "2026-05-23 12:44:56"
+    "lastSync": "2026-05-23 19:25:08"
 }

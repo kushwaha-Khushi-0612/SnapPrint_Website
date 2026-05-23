@@ -42,7 +42,7 @@ function buildAllProducts() {
                             if (discount >= 40 || p.badge === 'Sale') p.collections.push('Flash Sales');
                             if (discount >= 30) p.collections.push('Deals');
                             if (p.rating >= 4.5 || p.badge === 'Bestseller') p.collections.push('Top Selection');
-                            if (['Decor', 'Photo Frames', 'Jewelry', 'Key Chains', 'Mugs & Cups'].includes(cat.name)) p.collections.push('Occasions');
+                            if (['Decor', 'Photo Frames', 'Jewelry', 'Key Chains', 'Mugs and Sippers'].includes(cat.name)) p.collections.push('Occasions');
                             if (["Men's Special", "Women's Special", "Kids Clothing", "T-Shirts"].includes(cat.name) || ["Men's Special", "Women's Special"].includes(sub.name)) p.collections.push('Heart Winning T-Shirts');
                             if (["Face Masks", "Key Chains", "Jewelry", "Decor"].includes(cat.name)) p.collections.push('Trendy Accessories');
                             if (cat.name === 'Hoodies' && (parentSection === 'Women Clothing' || sub.name.includes("Women"))) p.collections.push("Women's Custom Wear");

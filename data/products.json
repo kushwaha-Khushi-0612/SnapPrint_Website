@@ -667,192 +667,104 @@
             ]
         },
         {
-            "id": "cat-mugs&cups",
-            "name": "Mugs & Cups",
+            "id": "cat-mugsandsippers",
+            "name": "Mugs and Sippers",
             "subcategories": [
                 {
-                    "id": "sub-beer",
-                    "name": "Beer",
-                    "image": "https://picsum.photos/seed/sub-beer/400/400",
-                    "description": "Beer Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Beer/products.json"
+                    "id": "sub-beermugs",
+                    "name": "Beer Mugs",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2023/09/beer-mug.jpg?width=200&format=webp",
+                    "description": "Beer Mugs Mugs and Sippers ",
+                    "productCount": "302+",
+                    "dataFile": "constants/products/Mugs and Sippers/Beer Mugs/products.json"
                 },
                 {
-                    "id": "sub-cartoon",
-                    "name": "Cartoon",
-                    "image": "https://picsum.photos/seed/sub-cartoon/400/400",
-                    "description": "Cartoon Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Cartoon/products.json"
+                    "id": "sub-ceramicmugs",
+                    "name": "Ceramic Mugs",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/06/ceramic_mugs.jpg?width=200&format=webp",
+                    "description": "Ceramic Mugs Mugs and Sippers ",
+                    "productCount": "1227+",
+                    "dataFile": "constants/products/Mugs and Sippers/Ceramic Mugs/products.json"
                 },
                 {
-                    "id": "sub-ceramic",
-                    "name": "Ceramic",
-                    "image": "https://picsum.photos/seed/sub-ceramic/400/400",
-                    "description": "Ceramic Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Ceramic/products.json"
+                    "id": "sub-circlecoasters",
+                    "name": "Circle Coasters",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2023/08/coaster.jpg?width=200&format=webp",
+                    "description": "Circle Coasters Mugs and Sippers ",
+                    "productCount": "421+",
+                    "dataFile": "constants/products/Mugs and Sippers/Circle Coasters/products.json"
                 },
                 {
-                    "id": "sub-coffee",
-                    "name": "Coffee",
-                    "image": "https://picsum.photos/seed/sub-coffee/400/400",
-                    "description": "Coffee Mugs & Cups ",
+                    "id": "sub-fullprintmugs",
+                    "name": "Full Print Mugs",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/06/fp_mugs.jpg?width=200&format=webp",
+                    "description": "Full Print Mugs Mugs and Sippers ",
                     "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Coffee/products.json"
+                    "dataFile": "constants/products/Mugs and Sippers/Full Print Mugs/products.json"
                 },
                 {
-                    "id": "sub-couple",
-                    "name": "Couple",
-                    "image": "https://picsum.photos/seed/sub-couple/400/400",
-                    "description": "Couple Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Couple/products.json"
+                    "id": "sub-leathercoasters",
+                    "name": "Leather Coasters",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2023/11/leather-coaster.jpg?width=200&format=webp",
+                    "description": "Leather Coasters Mugs and Sippers ",
+                    "productCount": "2+",
+                    "dataFile": "constants/products/Mugs and Sippers/Leather Coasters/products.json"
                 },
                 {
-                    "id": "sub-custom",
-                    "name": "Custom",
-                    "image": "https://picsum.photos/seed/sub-custom/400/400",
-                    "description": "Custom Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Custom/products.json"
+                    "id": "sub-magicmugs",
+                    "name": "Magic Mugs",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2023/11/magic-mug.jpg?width=200&format=webp",
+                    "description": "Magic Mugs Mugs and Sippers ",
+                    "productCount": "89+",
+                    "dataFile": "constants/products/Mugs and Sippers/Magic Mugs/products.json"
                 },
                 {
-                    "id": "sub-designer",
-                    "name": "Designer",
-                    "image": "https://picsum.photos/seed/sub-designer/400/400",
-                    "description": "Designer Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Designer/products.json"
+                    "id": "sub-shotglasses",
+                    "name": "Shot Glasses",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2023/09/shot-glass.jpg?width=200&format=webp",
+                    "description": "Shot Glasses Mugs and Sippers ",
+                    "productCount": "285+",
+                    "dataFile": "constants/products/Mugs and Sippers/Shot Glasses/products.json"
                 },
                 {
-                    "id": "sub-doublewall",
-                    "name": "Double Wall",
-                    "image": "https://picsum.photos/seed/sub-doublewall/400/400",
-                    "description": "Double Wall Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Double Wall/products.json"
+                    "id": "sub-sipperbottles",
+                    "name": "Sipper Bottles",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2023/10/bottle.jpg?width=200&format=webp",
+                    "description": "Sipper Bottles Mugs and Sippers ",
+                    "productCount": "395+",
+                    "dataFile": "constants/products/Mugs and Sippers/Sipper Bottles/products.json"
                 },
                 {
-                    "id": "sub-ecofriendly",
-                    "name": "Eco-Friendly",
-                    "image": "https://picsum.photos/seed/sub-ecofriendly/400/400",
-                    "description": "Eco-Friendly Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Eco-Friendly/products.json"
+                    "id": "sub-squarecoasters",
+                    "name": "Square Coasters",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2024/02/coaster-1.jpg?width=200&format=webp",
+                    "description": "Square Coasters Mugs and Sippers ",
+                    "productCount": "418+",
+                    "dataFile": "constants/products/Mugs and Sippers/Square Coasters/products.json"
                 },
                 {
-                    "id": "sub-espresso",
-                    "name": "Espresso",
-                    "image": "https://picsum.photos/seed/sub-espresso/400/400",
-                    "description": "Espresso Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Espresso/products.json"
+                    "id": "sub-teacups",
+                    "name": "Tea Cups",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/06/tea-cup-cat.jpg?width=200&format=webp",
+                    "description": "Tea Cups Mugs and Sippers ",
+                    "productCount": "22+",
+                    "dataFile": "constants/products/Mugs and Sippers/Tea Cups/products.json"
                 },
                 {
-                    "id": "sub-glass",
-                    "name": "Glass",
-                    "image": "https://picsum.photos/seed/sub-glass/400/400",
-                    "description": "Glass Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Glass/products.json"
+                    "id": "sub-travelmugs",
+                    "name": "Travel Mugs",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/06/travel_mug.jpg?width=200&format=webp",
+                    "description": "Travel Mugs Mugs and Sippers ",
+                    "productCount": "136+",
+                    "dataFile": "constants/products/Mugs and Sippers/Travel Mugs/products.json"
                 },
                 {
-                    "id": "sub-glossy",
-                    "name": "Glossy",
-                    "image": "https://picsum.photos/seed/sub-glossy/400/400",
-                    "description": "Glossy Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Glossy/products.json"
-                },
-                {
-                    "id": "sub-handmade",
-                    "name": "Handmade",
-                    "image": "https://picsum.photos/seed/sub-handmade/400/400",
-                    "description": "Handmade Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Handmade/products.json"
-                },
-                {
-                    "id": "sub-insulated",
-                    "name": "Insulated",
-                    "image": "https://picsum.photos/seed/sub-insulated/400/400",
-                    "description": "Insulated Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Insulated/products.json"
-                },
-                {
-                    "id": "sub-magicheatsensitive",
-                    "name": "Magic (Heat Sensitive)",
-                    "image": "https://picsum.photos/seed/sub-magicheatsensitive/400/400",
-                    "description": "Magic (Heat Sensitive) Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Magic (Heat Sensitive)/products.json"
-                },
-                {
-                    "id": "sub-mattefinish",
-                    "name": "Matte Finish",
-                    "image": "https://picsum.photos/seed/sub-mattefinish/400/400",
-                    "description": "Matte Finish Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Matte Finish/products.json"
-                },
-                {
-                    "id": "sub-minimalist",
-                    "name": "Minimalist",
-                    "image": "https://picsum.photos/seed/sub-minimalist/400/400",
-                    "description": "Minimalist Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Minimalist/products.json"
-                },
-                {
-                    "id": "sub-office",
-                    "name": "Office",
-                    "image": "https://picsum.photos/seed/sub-office/400/400",
-                    "description": "Office Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Office/products.json"
-                },
-                {
-                    "id": "sub-photo",
-                    "name": "Photo",
-                    "image": "https://picsum.photos/seed/sub-photo/400/400",
-                    "description": "Photo Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Photo/products.json"
-                },
-                {
-                    "id": "sub-printed",
-                    "name": "Printed",
-                    "image": "https://picsum.photos/seed/sub-printed/400/400",
-                    "description": "Printed Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Printed/products.json"
-                },
-                {
-                    "id": "sub-stainlesssteel",
-                    "name": "Stainless Steel",
-                    "image": "https://picsum.photos/seed/sub-stainlesssteel/400/400",
-                    "description": "Stainless Steel Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Stainless Steel/products.json"
-                },
-                {
-                    "id": "sub-tea",
-                    "name": "Tea",
-                    "image": "https://picsum.photos/seed/sub-tea/400/400",
-                    "description": "Tea Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Tea/products.json"
-                },
-                {
-                    "id": "sub-travel",
-                    "name": "Travel",
-                    "image": "https://picsum.photos/seed/sub-travel/400/400",
-                    "description": "Travel Mugs & Cups ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Mugs & Cups/Travel/products.json"
+                    "id": "sub-tumblers",
+                    "name": "Tumblers",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2022/11/Tumbler.jpg?width=200&format=webp",
+                    "description": "Tumblers Mugs and Sippers ",
+                    "productCount": "28+",
+                    "dataFile": "constants/products/Mugs and Sippers/Tumblers/products.json"
                 }
             ]
         },
@@ -1073,172 +985,116 @@
             "name": "Photo Frames",
             "subcategories": [
                 {
-                    "id": "sub-acrylic",
-                    "name": "Acrylic",
-                    "image": "https://picsum.photos/seed/sub-acrylic/400/400",
-                    "description": "Acrylic Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Acrylic/products.json"
+                    "id": "sub-photoframes-0",
+                    "name": "Caricature Photo Frames",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/08/Caricature-frame.png?width=200&format=webp",
+                    "description": "Caricature Photo Frames ",
+                    "productCount": "64+",
+                    "dataFile": "constants/products/Photo Frames/Caricature Photo Frames/products.json"
                 },
                 {
-                    "id": "sub-certificate",
-                    "name": "Certificate",
-                    "image": "https://picsum.photos/seed/sub-certificate/400/400",
-                    "description": "Certificate Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Certificate/products.json"
+                    "id": "sub-photoframes-1",
+                    "name": "Neon Frames",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/08/Neon-Frame.png?width=200&format=webp",
+                    "description": "Neon Frames ",
+                    "productCount": "10+",
+                    "dataFile": "constants/products/Photo Frames/Neon Frames/products.json"
                 },
                 {
-                    "id": "sub-collage",
-                    "name": "Collage",
-                    "image": "https://picsum.photos/seed/sub-collage/400/400",
-                    "description": "Collage Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Collage/products.json"
+                    "id": "sub-photoframes-2",
+                    "name": "Engraved Frames",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/08/Eng-Frame.png?width=200&format=webp",
+                    "description": "Engraved Frames ",
+                    "productCount": "28+",
+                    "dataFile": "constants/products/Photo Frames/Engraved Frames/products.json"
                 },
                 {
-                    "id": "sub-couple",
-                    "name": "Couple",
-                    "image": "https://picsum.photos/seed/sub-couple/400/400",
-                    "description": "Couple Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Couple/products.json"
+                    "id": "sub-photoframes-3",
+                    "name": "LED Frames",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/08/LED-Frame.png?width=200&format=webp",
+                    "description": "LED Frames ",
+                    "productCount": "97+",
+                    "dataFile": "constants/products/Photo Frames/LED Frames/products.json"
                 },
                 {
-                    "id": "sub-customized",
-                    "name": "Customized",
-                    "image": "https://picsum.photos/seed/sub-customized/400/400",
-                    "description": "Customized Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Customized/products.json"
+                    "id": "sub-photoframes-4",
+                    "name": "Alphabet Frames",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2019/04/A.jpg?width=200&format=webp",
+                    "description": "Alphabet Frames ",
+                    "productCount": "0+",
+                    "dataFile": "constants/products/Photo Frames/Alphabet Frames/products.json"
                 },
                 {
-                    "id": "sub-designer",
-                    "name": "Designer",
-                    "image": "https://picsum.photos/seed/sub-designer/400/400",
-                    "description": "Designer Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Designer/products.json"
+                    "id": "sub-photoframes-5",
+                    "name": "Table Frames",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/08/Table-frame.png?width=200&format=webp",
+                    "description": "Table Frames ",
+                    "productCount": "147+",
+                    "dataFile": "constants/products/Photo Frames/Table Frames/products.json"
                 },
                 {
-                    "id": "sub-digital",
-                    "name": "Digital",
-                    "image": "https://picsum.photos/seed/sub-digital/400/400",
-                    "description": "Digital Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Digital/products.json"
+                    "id": "sub-photoframes-6",
+                    "name": "Wall Hanging Frames",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/08/Wall-Hanging-Frame.png?width=200&format=webp",
+                    "description": "Wall Hanging Frames ",
+                    "productCount": "55+",
+                    "dataFile": "constants/products/Photo Frames/Wall Hanging Frames/products.json"
                 },
                 {
-                    "id": "sub-floating",
-                    "name": "Floating",
-                    "image": "https://picsum.photos/seed/sub-floating/400/400",
-                    "description": "Floating Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Floating/products.json"
+                    "id": "sub-photoframes-7",
+                    "name": "Rectangle Acrylic Photo Frames",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/08/rect_acr.png?width=200&format=webp",
+                    "description": "Rectangle Acrylic Photo Frames ",
+                    "productCount": "281+",
+                    "dataFile": "constants/products/Photo Frames/Rectangle Acrylic Photo Frames/products.json"
                 },
                 {
-                    "id": "sub-glass",
-                    "name": "Glass",
-                    "image": "https://picsum.photos/seed/sub-glass/400/400",
-                    "description": "Glass Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Glass/products.json"
+                    "id": "sub-photoframes-8",
+                    "name": "Square Acrylic Photo Frames",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/08/sq-acr.png?width=200&format=webp",
+                    "description": "Square Acrylic Photo Frames ",
+                    "productCount": "201+",
+                    "dataFile": "constants/products/Photo Frames/Square Acrylic Photo Frames/products.json"
                 },
                 {
-                    "id": "sub-kids",
-                    "name": "Kids",
-                    "image": "https://picsum.photos/seed/sub-kids/400/400",
-                    "description": "Kids Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Kids/products.json"
+                    "id": "sub-photoframes-9",
+                    "name": "3D Miniature Fridge Magnets",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2024/07/fridge-magnet-2.jpg?width=200&format=webp",
+                    "description": "3D Miniature Fridge Magnets ",
+                    "productCount": "5+",
+                    "dataFile": "constants/products/Photo Frames/3D Miniature Fridge Magnets/products.json"
                 },
                 {
-                    "id": "sub-led",
-                    "name": "LED",
-                    "image": "https://picsum.photos/seed/sub-led/400/400",
-                    "description": "LED Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/LED/products.json"
+                    "id": "sub-photoframes-10",
+                    "name": "Caricature Fridge Magnets",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2024/07/fridge-magnet-Caricatures.jpg?width=200&format=webp",
+                    "description": "Caricature Fridge Magnets ",
+                    "productCount": "47+",
+                    "dataFile": "constants/products/Photo Frames/Caricature Fridge Magnets/products.json"
                 },
                 {
-                    "id": "sub-metal",
-                    "name": "Metal",
-                    "image": "https://picsum.photos/seed/sub-metal/400/400",
-                    "description": "Metal Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Metal/products.json"
+                    "id": "sub-photoframes-11",
+                    "name": "Photo Fridge Magnets",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2024/07/fridge-magnet.jpg?width=200&format=webp",
+                    "description": "Photo Fridge Magnets ",
+                    "productCount": "124+",
+                    "dataFile": "constants/products/Photo Frames/Photo Fridge Magnets/products.json"
                 },
                 {
-                    "id": "sub-minimalist",
-                    "name": "Minimalist",
-                    "image": "https://picsum.photos/seed/sub-minimalist/400/400",
-                    "description": "Minimalist Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Minimalist/products.json"
+                    "id": "sub-photoframes-12",
+                    "name": "Rectangle Photo Canvas",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/08/Canvas.png?width=200&format=webp",
+                    "description": "Rectangle Photo Canvas ",
+                    "productCount": "271+",
+                    "dataFile": "constants/products/Photo Frames/Rectangle Photo Canvas/products.json"
                 },
                 {
-                    "id": "sub-multiphoto",
-                    "name": "Multi-Photo",
-                    "image": "https://picsum.photos/seed/sub-multiphoto/400/400",
-                    "description": "Multi-Photo Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Multi-Photo/products.json"
-                },
-                {
-                    "id": "sub-poster",
-                    "name": "Poster",
-                    "image": "https://picsum.photos/seed/sub-poster/400/400",
-                    "description": "Poster Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Poster/products.json"
-                },
-                {
-                    "id": "sub-rustic",
-                    "name": "Rustic",
-                    "image": "https://picsum.photos/seed/sub-rustic/400/400",
-                    "description": "Rustic Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Rustic/products.json"
-                },
-                {
-                    "id": "sub-shadowbox",
-                    "name": "Shadow Box",
-                    "image": "https://picsum.photos/seed/sub-shadowbox/400/400",
-                    "description": "Shadow Box Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Shadow Box/products.json"
-                },
-                {
-                    "id": "sub-tabletop",
-                    "name": "Tabletop",
-                    "image": "https://picsum.photos/seed/sub-tabletop/400/400",
-                    "description": "Tabletop Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Tabletop/products.json"
-                },
-                {
-                    "id": "sub-vintage",
-                    "name": "Vintage",
-                    "image": "https://picsum.photos/seed/sub-vintage/400/400",
-                    "description": "Vintage Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Vintage/products.json"
-                },
-                {
-                    "id": "sub-wallhanging",
-                    "name": "Wall Hanging",
-                    "image": "https://picsum.photos/seed/sub-wallhanging/400/400",
-                    "description": "Wall Hanging Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Wall Hanging/products.json"
-                },
-                {
-                    "id": "sub-wooden",
-                    "name": "Wooden",
-                    "image": "https://picsum.photos/seed/sub-wooden/400/400",
-                    "description": "Wooden Photo Frames ",
-                    "productCount": "8+",
-                    "dataFile": "constants/products/Photo Frames/Wooden/products.json"
+                    "id": "sub-photoframes-13",
+                    "name": "Square Photo Canvas",
+                    "image": "https://static.yourprint.in/wp-content/uploads/2025/08/canvas-2.png?width=200&format=webp",
+                    "description": "Square Photo Canvas ",
+                    "productCount": "198+",
+                    "dataFile": "constants/products/Photo Frames/Square Photo Canvas/products.json"
                 }
             ]
         },

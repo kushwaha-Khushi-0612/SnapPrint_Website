@@ -13,7 +13,7 @@ const dataService = {
 
         // Try getting from sessionStorage
         try {
-            const cached = sessionStorage.getItem('snapprint_products_db_cache_v1779533017222');
+            const cached = sessionStorage.getItem('snapprint_products_db_cache_v1779556860218');
             if (cached) {
                 this.productsDB = JSON.parse(cached);
                 return this.productsDB;
@@ -28,7 +28,7 @@ const dataService = {
             
             // Save to sessionStorage
             try {
-                sessionStorage.setItem('snapprint_products_db_cache_v1779533017222', JSON.stringify(this.productsDB));
+                sessionStorage.setItem('snapprint_products_db_cache_v1779556860218', JSON.stringify(this.productsDB));
             } catch (e) {
                 console.warn('[DataService] Failed to write to sessionStorage:', e);
             }
@@ -45,7 +45,7 @@ const dataService = {
 
         // Try getting from sessionStorage
         try {
-            const cached = sessionStorage.getItem('snapprint_homepage_products_cache_v1779533017222');
+            const cached = sessionStorage.getItem('snapprint_homepage_products_cache_v1779556860218');
             if (cached) {
                 this.cachedHomepageProducts = JSON.parse(cached);
                 return this.cachedHomepageProducts;
@@ -73,7 +73,7 @@ const dataService = {
         this.cachedHomepageProducts = homeProds;
 
         try {
-            sessionStorage.setItem('snapprint_homepage_products_cache_v1779533017222', JSON.stringify(homeProds));
+            sessionStorage.setItem('snapprint_homepage_products_cache_v1779556860218', JSON.stringify(homeProds));
         } catch (e) {
             console.warn('[DataService] Failed to write homepage cache to sessionStorage:', e);
         }
@@ -86,7 +86,7 @@ const dataService = {
 
         // Try getting from sessionStorage
         try {
-            const cached = sessionStorage.getItem('snapprint_flat_products_cache_v1779533017222');
+            const cached = sessionStorage.getItem('snapprint_flat_products_cache_v1779556860218');
             if (cached) {
                 this.cachedAllProducts = JSON.parse(cached);
                 
@@ -173,7 +173,7 @@ const dataService = {
                                         if (discount >= 40 || p.badge === 'Sale') p.collections.push('Flash Sales');
                                         if (discount >= 30) p.collections.push('Deals');
                                         if (p.rating >= 4.5 || p.badge === 'Bestseller') p.collections.push('Top Selection');
-                                        if (['Decor', 'Photo Frames', 'Jewelry', 'Key Chains', 'Mugs & Cups'].includes(cat.name)) p.collections.push('Occasions');
+                                        if (['Decor', 'Photo Frames', 'Jewelry', 'Key Chains', 'Mugs and Sippers'].includes(cat.name)) p.collections.push('Occasions');
                                         if (["Men's Special", "Women's Special", "Kids Clothing", "T-Shirts"].includes(cat.name) || ["Men's Special", "Women's Special"].includes(sub.name)) p.collections.push('Heart Winning T-Shirts');
                                         if (["Face Masks", "Key Chains", "Jewelry", "Decor"].includes(cat.name)) p.collections.push('Trendy Accessories');
                                         if (cat.name === 'Hoodies' && (parentSection === 'Women Clothing' || sub.name.includes("Women"))) p.collections.push("Women's Custom Wear");
@@ -217,7 +217,7 @@ const dataService = {
 
         // Save to sessionStorage
         try {
-            sessionStorage.setItem('snapprint_flat_products_cache_v1779533017222', JSON.stringify(allProds));
+            sessionStorage.setItem('snapprint_flat_products_cache_v1779556860218', JSON.stringify(allProds));
         } catch (e) {
             console.warn('[DataService] Failed to write flat cache to sessionStorage:', e);
         }
@@ -328,7 +328,7 @@ const dataService = {
                                 if (discount >= 40 || p.badge === 'Sale') p.collections.push('Flash Sales');
                                 if (discount >= 30) p.collections.push('Deals');
                                 if (p.rating >= 4.5 || p.badge === 'Bestseller') p.collections.push('Top Selection');
-                                if (['Decor', 'Photo Frames', 'Jewelry', 'Key Chains', 'Mugs & Cups'].includes(cat.name)) p.collections.push('Occasions');
+                                if (['Decor', 'Photo Frames', 'Jewelry', 'Key Chains', 'Mugs and Sippers'].includes(cat.name)) p.collections.push('Occasions');
                                 if (["Men's Special", "Women's Special", "Kids Clothing", "T-Shirts"].includes(cat.name) || ["Men's Special", "Women's Special"].includes(sub.name)) p.collections.push('Heart Winning T-Shirts');
                                 if (["Face Masks", "Key Chains", "Jewelry", "Decor"].includes(cat.name)) p.collections.push('Trendy Accessories');
                                 if (cat.name === 'Hoodies' && (parentSection === 'Women Clothing' || sub.name.includes("Women"))) p.collections.push("Women's Custom Wear");
@@ -441,7 +441,7 @@ const dataService = {
 
         // 2. Try getting from sessionStorage cache
         try {
-            const cached = sessionStorage.getItem('snapprint_flat_products_cache_v1779533017222');
+            const cached = sessionStorage.getItem('snapprint_flat_products_cache_v1779556860218');
             if (cached) {
                 const parsed = JSON.parse(cached);
                 const found = parsed.find(p => p.id === id);
@@ -457,7 +457,7 @@ const dataService = {
             if (found) return found;
         }
         try {
-            const cachedHome = sessionStorage.getItem('snapprint_homepage_products_cache_v1779533017222');
+            const cachedHome = sessionStorage.getItem('snapprint_homepage_products_cache_v1779556860218');
             if (cachedHome) {
                 const parsed = JSON.parse(cachedHome);
                 const found = parsed.find(p => p.id === id);

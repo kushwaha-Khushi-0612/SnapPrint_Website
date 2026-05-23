@@ -11,7 +11,7 @@ const categoryIcons = {
     'Jewelry': 'constants/images/Jwellery.png',
     'Key Chains': 'constants/images/KeyChains.png',
     'Kids Clothing': 'constants/images/Kids Special.png',
-    'Mugs & Cups': 'constants/images/Mugs and Cups.png',
+    'Mugs and Sippers': 'constants/images/Mugs and Cups.png',
     'Pendants': 'constants/images/pendants.png',
     'Phone Accessories': 'constants/images/phoneCases.png',
     'Photo Frames': 'constants/images/PhotoFrames.png',
@@ -96,7 +96,7 @@ function renderCategories(categories, containerId) {
         "Key Chains",
         "Kids Clothing",
         "Phone Accessories",
-        "Mugs & Cups",
+        "Mugs and Sippers",
         "Pendants",
         "Photo Frames",
         "Tote Bags"

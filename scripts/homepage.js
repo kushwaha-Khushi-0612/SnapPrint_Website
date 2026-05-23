@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             // CRITICAL FALLBACK: If DB is empty or fails, use these core categories so it's NEVER empty
             let dbCats = (db && db.categories && db.categories.length > 0) ? db.categories : [
-                { name: "T-Shirts" }, { name: "Hoodies" }, { name: "Mugs & Cups" }, { name: "Decor" }, { name: "Phone Accessories" }
+                { name: "T-Shirts" }, { name: "Hoodies" }, { name: "Mugs and Sippers" }, { name: "Decor" }, { name: "Phone Accessories" }
             ];
 
             const categories = dbCats.map(cat => {
