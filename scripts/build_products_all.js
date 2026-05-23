@@ -100,6 +100,14 @@ function buildAllProducts() {
     fs.writeFileSync(PRODUCTS_HOMEPAGE_PATH, JSON.stringify(homepageProducts, null, 4));
     console.log(`Successfully compiled curated homepage database!`);
     console.log(`Total curated products compiled: ${homepageProducts.length}`);
+
+    // Generate Sitemap
+    try {
+        const { generateSitemap } = require('./generate_sitemap.js');
+        generateSitemap();
+    } catch (e) {
+        console.error('Failed to generate sitemap:', e);
+    }
 }
 
 buildAllProducts();

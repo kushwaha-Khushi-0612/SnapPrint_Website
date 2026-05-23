@@ -307,6 +307,11 @@ async function loadProductData() {
     // Update product info
     document.getElementById('product-category').textContent = productData.category;
     document.getElementById('product-title').textContent = productData.title;
+    document.title = `${productData.title} | SnapPrint`;
+    
+    if (window.seoService) {
+        window.seoService.updateProduct(productData);
+    }
     document.getElementById('rating-value').textContent = productData.rating || 4.5;
 
     let rvCount = productData.reviewCount || 100;

@@ -1,5 +1,5 @@
 # SnapPrint Robots.txt
-# Allow crawlers to index public pages, disallow private directories
+# Optimized for SEO & Crawl Budget
 
 User-agent: *
 Allow: /
@@ -13,8 +13,9 @@ Allow: /customizer.html
 Allow: /constants/
 Allow: /styles/
 Allow: /widgets/
+Allow: /scripts/
 
-# Disallow private/sensitive paths
+# Disallow private/sensitive paths and useless query params
 Disallow: /admin/
 Disallow: /temp/
 Disallow: /profile.html
@@ -27,6 +28,12 @@ Disallow: /scratch/
 Disallow: /scripts/private/
 Disallow: /*?*filter=
 Disallow: /*?*sort=
+Disallow: /*?*session=
+Disallow: /checkout.html
+
+# Target Googlebot specifically for aggressive crawling
+User-agent: Googlebot
+Allow: /
 
 # Sitemap location
 Sitemap: https://snapprint.in/sitemap.xml

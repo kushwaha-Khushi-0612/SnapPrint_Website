@@ -163,6 +163,18 @@ function updatePageHeader() {
     document.getElementById('category-name').textContent = categoryData.name;
     document.getElementById('category-icon').textContent = categoryData.icon;
     document.getElementById('category-title').textContent = categoryData.name;
+    document.title = `${categoryData.name} | SnapPrint`;
+    
+    // Dynamic SEO
+    if (window.seoService) {
+        let count = 0;
+        if (categoryData.sections) {
+            categoryData.sections.forEach(s => s.subcategories?.forEach(sub => count += (sub.products?.length || parseInt(sub.productCount) || 0)));
+        } else if (categoryData.subcategories) {
+            categoryData.subcategories.forEach(sub => count += (sub.products?.length || parseInt(sub.productCount) || 0));
+        }
+        window.seoService.updateCategory(categoryData.name, count || 100);
+    }
     document.getElementById('category-description').textContent = categoryData.description;
 
     // SEO Data Mapping
