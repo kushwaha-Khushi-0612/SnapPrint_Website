@@ -4,9 +4,9 @@
         "title": "Cotton Face Masks Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-cotton1/400/400",
+        "image": "https://picsum.photos/seed/sub-cotton/400/400",
         "rating": "4.2",
-        "reviewCount": 71,
+        "reviewCount": 101,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cotton2/400/400",
         "rating": "4.2",
-        "reviewCount": 180,
+        "reviewCount": 20,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,25 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cotton3/400/400",
         "rating": "4.2",
-        "reviewCount": 201,
+        "reviewCount": 132,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cotton-4",
+        "title": "Cotton Face Masks Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cotton4/400/400",
+        "rating": "4.2",
+        "reviewCount": 128,
         "color": "White",
         "availableSizes": [
             "S",
@@ -54,31 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-cotton-4",
-        "title": "Cotton Face Masks Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-cotton4/400/400",
-        "rating": "4.2",
-        "reviewCount": 212,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
         "id": "p-sub-cotton-5",
         "title": "Cotton Face Masks Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cotton5/400/400",
         "rating": "4.2",
-        "reviewCount": 133,
+        "reviewCount": 184,
         "color": "White",
         "availableSizes": [
             "S",
@@ -96,25 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cotton6/400/400",
         "rating": "4.2",
-        "reviewCount": 66,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-cotton-7",
-        "title": "Cotton Face Masks Sample 7",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-cotton7/400/400",
-        "rating": "4.2",
-        "reviewCount": 160,
+        "reviewCount": 137,
         "color": "White",
         "availableSizes": [
             "S",
@@ -126,13 +108,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-cotton-8",
-        "title": "Cotton Face Masks Sample 8",
+        "id": "p-sub-cotton-7",
+        "title": "Cotton Face Masks Sample 7",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-cotton8/400/400",
+        "image": "https://picsum.photos/seed/sub-cotton7/400/400",
         "rating": "4.2",
-        "reviewCount": 127,
+        "reviewCount": 171,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +122,25 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cotton-8",
+        "title": "Cotton Face Masks Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cotton8/400/400",
+        "rating": "4.2",
+        "reviewCount": 212,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

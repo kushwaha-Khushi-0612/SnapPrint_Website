@@ -1,0 +1,21 @@
+[
+    {
+        "id": "p-kids-6",
+        "sku_id": "SKU-KIDS6",
+        "title": "Joggers for Kids",
+        "description": "Premium quality Joggers for Kids for your little ones.",
+        "price": 399,
+        "originalPrice": 799,
+        "rating": 4.6,
+        "reviewCount": 33,
+        "availableSizes": [
+            "2-3Y",
+            "4-5Y",
+            "6-7Y",
+            "8-9Y"
+        ],
+        "badge": "Bestseller",
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/03/cafe-1-1-1-247x296.jpg",
+        "can_beCustomised": 1
+    }
+]

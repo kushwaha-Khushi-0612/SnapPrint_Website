@@ -4,9 +4,9 @@
         "title": "Cartoon Mugs & Cups Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-cartoon1/400/400",
+        "image": "https://picsum.photos/seed/sub-cartoon/400/400",
         "rating": "4.2",
-        "reviewCount": 83,
+        "reviewCount": 81,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cartoon2/400/400",
         "rating": "4.2",
-        "reviewCount": 202,
+        "reviewCount": 79,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,25 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cartoon3/400/400",
         "rating": "4.2",
-        "reviewCount": 207,
+        "reviewCount": 65,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cartoon-4",
+        "title": "Cartoon Mugs & Cups Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cartoon4/400/400",
+        "rating": "4.2",
+        "reviewCount": 196,
         "color": "White",
         "availableSizes": [
             "S",
@@ -54,31 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-cartoon-4",
-        "title": "Cartoon Mugs & Cups Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-cartoon4/400/400",
-        "rating": "4.2",
-        "reviewCount": 91,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
         "id": "p-sub-cartoon-5",
         "title": "Cartoon Mugs & Cups Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cartoon5/400/400",
         "rating": "4.2",
-        "reviewCount": 132,
+        "reviewCount": 93,
         "color": "White",
         "availableSizes": [
             "S",
@@ -96,25 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cartoon6/400/400",
         "rating": "4.2",
-        "reviewCount": 42,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-cartoon-7",
-        "title": "Cartoon Mugs & Cups Sample 7",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-cartoon7/400/400",
-        "rating": "4.2",
-        "reviewCount": 204,
+        "reviewCount": 193,
         "color": "White",
         "availableSizes": [
             "S",
@@ -126,13 +108,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-cartoon-8",
-        "title": "Cartoon Mugs & Cups Sample 8",
+        "id": "p-sub-cartoon-7",
+        "title": "Cartoon Mugs & Cups Sample 7",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-cartoon8/400/400",
+        "image": "https://picsum.photos/seed/sub-cartoon7/400/400",
         "rating": "4.2",
-        "reviewCount": 122,
+        "reviewCount": 84,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +122,25 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cartoon-8",
+        "title": "Cartoon Mugs & Cups Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cartoon8/400/400",
+        "rating": "4.2",
+        "reviewCount": 40,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

@@ -4,9 +4,9 @@
         "title": "Transparent Tote Bags Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-transparent1/400/400",
+        "image": "https://picsum.photos/seed/sub-transparent/400/400",
         "rating": "4.2",
-        "reviewCount": 103,
+        "reviewCount": 171,
         "color": "White",
         "availableSizes": [
             "S",
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent2/400/400",
         "rating": "4.2",
-        "reviewCount": 173,
+        "reviewCount": 110,
         "color": "White",
         "availableSizes": [
             "S",
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent3/400/400",
         "rating": "4.2",
-        "reviewCount": 116,
+        "reviewCount": 149,
         "color": "White",
         "availableSizes": [
             "S",
@@ -60,7 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent4/400/400",
         "rating": "4.2",
-        "reviewCount": 105,
+        "reviewCount": 70,
         "color": "White",
         "availableSizes": [
             "S",
@@ -68,7 +68,7 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     },
     {
@@ -78,7 +78,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent5/400/400",
         "rating": "4.2",
-        "reviewCount": 167,
+        "reviewCount": 121,
         "color": "White",
         "availableSizes": [
             "S",
@@ -86,7 +86,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -96,7 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent6/400/400",
         "rating": "4.2",
-        "reviewCount": 121,
+        "reviewCount": 192,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +104,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent7/400/400",
         "rating": "4.2",
-        "reviewCount": 89,
+        "reviewCount": 26,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-transparent8/400/400",
         "rating": "4.2",
-        "reviewCount": 67,
+        "reviewCount": 200,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

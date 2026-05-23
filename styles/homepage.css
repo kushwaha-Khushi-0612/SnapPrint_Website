@@ -1381,13 +1381,13 @@ html {
     .wishlist-btn,
     .product-arrow-btn {
         width: 26px !important;
-        height: 26px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     .wishlist-btn svg,
     .product-arrow-btn svg {
         width: 12px !important;
-        height: 12px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     .category-grid {
@@ -2115,7 +2115,7 @@ html {
 
 /* Homepage regular product grid card height fix for absolute uniformity */
 .product-grid .product-card-detail {
-    height: 330px !important;
+    min-height: 38px !important; height: auto !important;
     /* Absolute fixed card height */
     display: flex !important;
     flex-direction: column !important;
@@ -2123,7 +2123,7 @@ html {
 }
 
 .product-grid .product-card-image {
-    height: 180px !important;
+    min-height: 38px !important; height: auto !important;
     aspect-ratio: auto !important;
     display: flex !important;
     align-items: center !important;
@@ -2141,7 +2141,7 @@ html {
 }
 
 .product-grid .product-card-info {
-    height: 150px !important;
+    min-height: 38px !important; height: auto !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -2154,7 +2154,7 @@ html {
     font-size: 14px !important;
     font-weight: 600 !important;
     line-height: 1.35 !important;
-    height: 38px !important;
+    min-height: 38px !important; height: auto !important;
     margin-bottom: 6px !important;
     display: -webkit-box !important;
     -webkit-line-clamp: 2 !important;

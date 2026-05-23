@@ -4,9 +4,9 @@
         "title": "Vintage Photo Frames Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-vintage1/400/400",
+        "image": "https://picsum.photos/seed/sub-vintage/400/400",
         "rating": "4.2",
-        "reviewCount": 124,
+        "reviewCount": 138,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-vintage2/400/400",
         "rating": "4.2",
-        "reviewCount": 93,
+        "reviewCount": 136,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-vintage3/400/400",
         "rating": "4.2",
-        "reviewCount": 131,
+        "reviewCount": 31,
         "color": "White",
         "availableSizes": [
             "S",
@@ -50,7 +50,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -60,43 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-vintage4/400/400",
         "rating": "4.2",
-        "reviewCount": 22,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Staff Pick",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-vintage-5",
-        "title": "Vintage Photo Frames Sample 5",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-vintage5/400/400",
-        "rating": "4.2",
-        "reviewCount": 218,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Mega Sale",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-vintage-6",
-        "title": "Vintage Photo Frames Sample 6",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-vintage6/400/400",
-        "rating": "4.2",
-        "reviewCount": 95,
+        "reviewCount": 52,
         "color": "White",
         "availableSizes": [
             "S",
@@ -108,13 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-vintage-7",
-        "title": "Vintage Photo Frames Sample 7",
+        "id": "p-sub-vintage-5",
+        "title": "Vintage Photo Frames Sample 5",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-vintage7/400/400",
+        "image": "https://picsum.photos/seed/sub-vintage5/400/400",
         "rating": "4.2",
-        "reviewCount": 159,
+        "reviewCount": 214,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +86,43 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-vintage-6",
+        "title": "Vintage Photo Frames Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-vintage6/400/400",
+        "rating": "4.2",
+        "reviewCount": 188,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-vintage-7",
+        "title": "Vintage Photo Frames Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-vintage7/400/400",
+        "rating": "4.2",
+        "reviewCount": 29,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-vintage8/400/400",
         "rating": "4.2",
-        "reviewCount": 127,
+        "reviewCount": 76,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": null,
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

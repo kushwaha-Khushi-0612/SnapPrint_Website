@@ -4,9 +4,9 @@
         "title": "Plain Face Masks Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-plain1/400/400",
+        "image": "https://picsum.photos/seed/sub-plain/400/400",
         "rating": "4.2",
-        "reviewCount": 26,
+        "reviewCount": 201,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-plain2/400/400",
         "rating": "4.2",
-        "reviewCount": 30,
+        "reviewCount": 26,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-plain3/400/400",
         "rating": "4.2",
-        "reviewCount": 52,
+        "reviewCount": 46,
         "color": "White",
         "availableSizes": [
             "S",
@@ -50,7 +50,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -60,7 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-plain4/400/400",
         "rating": "4.2",
-        "reviewCount": 108,
+        "reviewCount": 79,
         "color": "White",
         "availableSizes": [
             "S",
@@ -78,25 +78,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-plain5/400/400",
         "rating": "4.2",
-        "reviewCount": 28,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-plain-6",
-        "title": "Plain Face Masks Sample 6",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-plain6/400/400",
-        "rating": "4.2",
-        "reviewCount": 194,
+        "reviewCount": 48,
         "color": "White",
         "availableSizes": [
             "S",
@@ -108,13 +90,31 @@
         "can_beCustomised": 1
     },
     {
+        "id": "p-sub-plain-6",
+        "title": "Plain Face Masks Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-plain6/400/400",
+        "rating": "4.2",
+        "reviewCount": 144,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
         "id": "p-sub-plain-7",
         "title": "Plain Face Masks Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-plain7/400/400",
         "rating": "4.2",
-        "reviewCount": 80,
+        "reviewCount": 160,
         "color": "White",
         "availableSizes": [
             "S",
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-plain8/400/400",
         "rating": "4.2",
-        "reviewCount": 140,
+        "reviewCount": 68,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Bestseller",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

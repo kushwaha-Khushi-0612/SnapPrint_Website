@@ -1,0 +1,68 @@
+[
+    {
+        "id": "p-plussizetshirt-1",
+        "title": "Olive Green Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
+        "price": 599,
+        "originalPrice": 1711,
+        "image": "https://static.yourprint.in/wp-content/uploads/2022/02/OliveGreen_o.jpg?width=450&format=webp",
+        "rating": "4.7",
+        "reviewCount": 81,
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-plussizetshirt-2",
+        "title": "Black Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
+        "price": 599,
+        "originalPrice": 1711,
+        "image": "https://static.yourprint.in/wp-content/uploads/2022/02/Black_o-1.jpg?width=450&format=webp",
+        "rating": "4.7",
+        "reviewCount": 208,
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-plussizetshirt-3",
+        "title": "White Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
+        "price": 599,
+        "originalPrice": 1711,
+        "image": "https://static.yourprint.in/wp-content/uploads/2022/02/White_o-2.jpg?width=450&format=webp",
+        "rating": "4.7",
+        "reviewCount": 56,
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-plussizetshirt-4",
+        "title": "Blue Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
+        "price": 599,
+        "originalPrice": 1331,
+        "image": "https://static.yourprint.in/wp-content/uploads/2022/02/BLue_o-1.jpg?width=450&format=webp",
+        "rating": "4.7",
+        "reviewCount": 186,
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-plussizetshirt-5",
+        "title": "Red Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
+        "price": 599,
+        "originalPrice": 1198,
+        "image": "https://static.yourprint.in/wp-content/uploads/2022/02/Red_o-1.jpg?width=450&format=webp",
+        "rating": "4.7",
+        "reviewCount": 111,
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-plussizetshirt-6",
+        "title": "Grey Plus Size Customized Half Sleeve Men’s Cotton T-Shirt",
+        "price": 599,
+        "originalPrice": 1331,
+        "image": "https://static.yourprint.in/wp-content/uploads/2022/02/Grey_o-1.jpg?width=450&format=webp",
+        "rating": "4.7",
+        "reviewCount": 224,
+        "badge": null,
+        "can_beCustomised": 1
+    }
+]

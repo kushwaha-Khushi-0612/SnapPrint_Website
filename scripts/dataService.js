@@ -13,7 +13,7 @@ const dataService = {
 
         // Try getting from sessionStorage
         try {
-            const cached = sessionStorage.getItem('snapprint_products_db_cache_v3');
+            const cached = sessionStorage.getItem('snapprint_products_db_cache_v1779533017222');
             if (cached) {
                 this.productsDB = JSON.parse(cached);
                 return this.productsDB;
@@ -28,7 +28,7 @@ const dataService = {
             
             // Save to sessionStorage
             try {
-                sessionStorage.setItem('snapprint_products_db_cache_v3', JSON.stringify(this.productsDB));
+                sessionStorage.setItem('snapprint_products_db_cache_v1779533017222', JSON.stringify(this.productsDB));
             } catch (e) {
                 console.warn('[DataService] Failed to write to sessionStorage:', e);
             }
@@ -45,7 +45,7 @@ const dataService = {
 
         // Try getting from sessionStorage
         try {
-            const cached = sessionStorage.getItem('snapprint_homepage_products_cache_v3');
+            const cached = sessionStorage.getItem('snapprint_homepage_products_cache_v1779533017222');
             if (cached) {
                 this.cachedHomepageProducts = JSON.parse(cached);
                 return this.cachedHomepageProducts;
@@ -73,7 +73,7 @@ const dataService = {
         this.cachedHomepageProducts = homeProds;
 
         try {
-            sessionStorage.setItem('snapprint_homepage_products_cache_v3', JSON.stringify(homeProds));
+            sessionStorage.setItem('snapprint_homepage_products_cache_v1779533017222', JSON.stringify(homeProds));
         } catch (e) {
             console.warn('[DataService] Failed to write homepage cache to sessionStorage:', e);
         }
@@ -86,7 +86,7 @@ const dataService = {
 
         // Try getting from sessionStorage
         try {
-            const cached = sessionStorage.getItem('snapprint_flat_products_cache_v3');
+            const cached = sessionStorage.getItem('snapprint_flat_products_cache_v1779533017222');
             if (cached) {
                 this.cachedAllProducts = JSON.parse(cached);
                 
@@ -217,7 +217,7 @@ const dataService = {
 
         // Save to sessionStorage
         try {
-            sessionStorage.setItem('snapprint_flat_products_cache_v2', JSON.stringify(allProds));
+            sessionStorage.setItem('snapprint_flat_products_cache_v1779533017222', JSON.stringify(allProds));
         } catch (e) {
             console.warn('[DataService] Failed to write flat cache to sessionStorage:', e);
         }
@@ -441,7 +441,7 @@ const dataService = {
 
         // 2. Try getting from sessionStorage cache
         try {
-            const cached = sessionStorage.getItem('snapprint_flat_products_cache_v2');
+            const cached = sessionStorage.getItem('snapprint_flat_products_cache_v1779533017222');
             if (cached) {
                 const parsed = JSON.parse(cached);
                 const found = parsed.find(p => p.id === id);
@@ -457,7 +457,7 @@ const dataService = {
             if (found) return found;
         }
         try {
-            const cachedHome = sessionStorage.getItem('snapprint_homepage_products_cache_v2');
+            const cachedHome = sessionStorage.getItem('snapprint_homepage_products_cache_v1779533017222');
             if (cachedHome) {
                 const parsed = JSON.parse(cachedHome);
                 const found = parsed.find(p => p.id === id);

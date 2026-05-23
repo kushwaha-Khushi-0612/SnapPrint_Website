@@ -4,9 +4,9 @@
         "title": "Metal Photo Frames Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-metal1/400/400",
+        "image": "https://picsum.photos/seed/sub-metal/400/400",
         "rating": "4.2",
-        "reviewCount": 168,
+        "reviewCount": 161,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-metal2/400/400",
         "rating": "4.2",
-        "reviewCount": 200,
+        "reviewCount": 212,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-metal3/400/400",
         "rating": "4.2",
-        "reviewCount": 121,
+        "reviewCount": 70,
         "color": "White",
         "availableSizes": [
             "S",
@@ -50,7 +50,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -60,25 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-metal4/400/400",
         "rating": "4.2",
-        "reviewCount": 194,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Mega Sale",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-metal-5",
-        "title": "Metal Photo Frames Sample 5",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-metal5/400/400",
-        "rating": "4.2",
-        "reviewCount": 45,
+        "reviewCount": 196,
         "color": "White",
         "availableSizes": [
             "S",
@@ -90,13 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-metal-6",
-        "title": "Metal Photo Frames Sample 6",
+        "id": "p-sub-metal-5",
+        "title": "Metal Photo Frames Sample 5",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-metal6/400/400",
+        "image": "https://picsum.photos/seed/sub-metal5/400/400",
         "rating": "4.2",
-        "reviewCount": 34,
+        "reviewCount": 169,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +86,25 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-metal-6",
+        "title": "Metal Photo Frames Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-metal6/400/400",
+        "rating": "4.2",
+        "reviewCount": 168,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-metal7/400/400",
         "rating": "4.2",
-        "reviewCount": 97,
+        "reviewCount": 193,
         "color": "White",
         "availableSizes": [
             "S",
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-metal8/400/400",
         "rating": "4.2",
-        "reviewCount": 82,
+        "reviewCount": 202,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": null,
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

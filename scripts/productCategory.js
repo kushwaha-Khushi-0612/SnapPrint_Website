@@ -72,7 +72,7 @@ function loadHeroImages() {
             'https://images.unsplash.com/photo-1609505833958-16f65ffb5ad1?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?w=1200&h=600&fit=crop'
         ],
-        'Phone Cases': [
+        'Phone Accessories': [
             'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1617296538902-887900d9b592?w=1200&h=600&fit=crop',
             'https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=1200&h=600&fit=crop'
@@ -132,7 +132,7 @@ async function loadCategoryData() {
     const iconsMap = {
         'T-Shirts': 'constants/icons/tshirt.svg',
         'Hoodies': 'constants/icons/hoodie.svg',
-        'Phone Cases': 'constants/icons/phone-case.svg',
+        'Phone Accessories': 'constants/icons/phone-case.svg',
         'Mugs': 'constants/icons/mug.svg',
         'Frames': 'constants/icons/frame.svg',
         'Keychains': 'constants/icons/keychain.svg',
@@ -187,7 +187,7 @@ function updatePageHeader() {
             title: 'Custom Keychains Online India | Personalized Keychain Printing – SnapPrint',
             desc: 'Create personalized keychains with photos or text. Stylish, durable, and perfect for gifting. Order custom keychains online with fast delivery in India.'
         },
-        'Phone Cases': {
+        'Phone Accessories': {
             title: 'Custom Phone Cases India | Personalized Mobile Covers Online – SnapPrint',
             desc: 'Design your own phone cases with photos, names, or artwork. High-quality printed mobile covers for all models. Order custom phone cases online now.'
         },

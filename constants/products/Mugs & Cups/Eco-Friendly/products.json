@@ -4,9 +4,9 @@
         "title": "Eco-Friendly Mugs & Cups Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-ecofriendly1/400/400",
+        "image": "https://picsum.photos/seed/sub-ecofriendly/400/400",
         "rating": "4.2",
-        "reviewCount": 143,
+        "reviewCount": 149,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly2/400/400",
         "rating": "4.2",
-        "reviewCount": 89,
+        "reviewCount": 205,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly3/400/400",
         "rating": "4.2",
-        "reviewCount": 174,
+        "reviewCount": 118,
         "color": "White",
         "availableSizes": [
             "S",
@@ -50,7 +50,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -60,7 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly4/400/400",
         "rating": "4.2",
-        "reviewCount": 204,
+        "reviewCount": 76,
         "color": "White",
         "availableSizes": [
             "S",
@@ -86,7 +86,7 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -96,7 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly6/400/400",
         "rating": "4.2",
-        "reviewCount": 51,
+        "reviewCount": 60,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +104,7 @@
             "L",
             "XL"
         ],
-        "badge": null,
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly7/400/400",
         "rating": "4.2",
-        "reviewCount": 206,
+        "reviewCount": 125,
         "color": "White",
         "availableSizes": [
             "S",
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly8/400/400",
         "rating": "4.2",
-        "reviewCount": 104,
+        "reviewCount": 163,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Bestseller",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

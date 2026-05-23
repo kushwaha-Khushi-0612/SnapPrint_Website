@@ -53,36 +53,29 @@ function syncAndMigrate() {
                     products = JSON.parse(fs.readFileSync(oldJsonPath, 'utf8'));
                 }
 
-                // Rule: If it's V-Neck, always update from nn.json
-                if (subName.toLowerCase().includes('v neck')) {
-                     products = nnData.map((item, index) => ({
-                        id: `p-vneck-${index}`,
-                        sku_id: `SKU-VN${index}`,
-                        title: item.name,
-                        description: `Premium quality V-Neck T-Shirt. ${item.name}`,
-                        price: parseInt(item.sellingPrice) || 499,
-                        originalPrice: parseInt(item.markedPrice) || 998,
-                        rating: (Math.random() * 1.5 + 3.5).toFixed(1),
-                        reviewCount: Math.floor(Math.random() * 500) + 10,
-                        color: (item.colors && item.colors.length > 0) ? item.colors[0] : "White",
-                        availableSizes: ["S", "M", "L", "XL"],
-                        badge: item.discount ? `${item.discount} OFF` : null,
-                        image: item.image,
-                        can_beCustomised: 1
-                     }));
-                } 
                 // Rule: Refresh placeholders if needed
-                else if (products.length === 0 || products.some(p => p.baseImagePath)) {
+                if (products.length === 0 || products.some(p => p.baseImagePath)) {
                     products = generatePlaceholderProducts(catFolderName, subName, subId);
                 }
 
                 // Save products to localized file
                 fs.writeFileSync(localizedJsonPath, JSON.stringify(products, null, 4));
 
+                // Load custom images map if not loaded
+                let customImageMap = {};
+                try {
+                    customImageMap = JSON.parse(fs.readFileSync('data/mens_special_images.json', 'utf8'));
+                } catch(e) {}
+
+                let finalSubImage = (products.length > 0) ? (products[0].image || '') : '';
+                if (customImageMap[subName]) {
+                    finalSubImage = customImageMap[subName];
+                }
+
                 return {
                     id: subId,
                     name: subName,
-                    image: (products.length > 0) ? (products[0].image || '') : '',
+                    image: finalSubImage,
                     description: `${subName} ${catFolderName} ${parentSection ? 'for ' + parentSection : ''}`,
                     productCount: `${products.length}+`,
                     dataFile: localizedJsonPath.replace(/\\/g, '/') // Use forward slashes for web fetch
@@ -213,13 +206,20 @@ function syncAndMigrate() {
 
 function generatePlaceholderProducts(catName, subName, subId) {
     const products = [];
+    let customImage = `https://picsum.photos/seed/${subId}/400/400`;
+    try {
+        const fs = require('fs');
+        const imgMap = JSON.parse(fs.readFileSync('data/mens_special_images.json', 'utf8'));
+        if (imgMap[subName]) customImage = imgMap[subName];
+    } catch(e) {}
+
     for (let i = 1; i <= 8; i++) {
         products.push({
             id: `p-${subId}-${i}`,
             title: `${subName} ${catName} Sample ${i}`,
             price: 599,
             originalPrice: 1199,
-            image: `https://picsum.photos/seed/${subId}${i}/400/400`,
+            image: i === 1 ? customImage : `https://picsum.photos/seed/${subId}${i}/400/400`,
             rating: "4.2",
             reviewCount: Math.floor(Math.random() * 200) + 20,
             color: "White",

@@ -1,0 +1,21 @@
+[
+    {
+        "id": "p-kids-3",
+        "sku_id": "SKU-KIDS3",
+        "title": "Full Sleeves T-Shirts for Kids",
+        "description": "Premium quality Full Sleeves T-Shirts for Kids for your little ones.",
+        "price": 399,
+        "originalPrice": 799,
+        "rating": 4.6,
+        "reviewCount": 59,
+        "availableSizes": [
+            "2-3Y",
+            "4-5Y",
+            "6-7Y",
+            "8-9Y"
+        ],
+        "badge": "Bestseller",
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/02/Fulle-Sleeve-1-247x296.jpg",
+        "can_beCustomised": 1
+    }
+]

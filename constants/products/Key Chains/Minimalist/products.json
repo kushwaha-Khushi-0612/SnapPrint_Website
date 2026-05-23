@@ -4,9 +4,9 @@
         "title": "Minimalist Key Chains Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-minimalist1/400/400",
+        "image": "https://picsum.photos/seed/sub-minimalist/400/400",
         "rating": "4.2",
-        "reviewCount": 131,
+        "reviewCount": 101,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-minimalist2/400/400",
         "rating": "4.2",
-        "reviewCount": 51,
+        "reviewCount": 214,
         "color": "White",
         "availableSizes": [
             "S",
@@ -42,25 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-minimalist3/400/400",
         "rating": "4.2",
-        "reviewCount": 58,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-minimalist-4",
-        "title": "Minimalist Key Chains Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-minimalist4/400/400",
-        "rating": "4.2",
-        "reviewCount": 192,
+        "reviewCount": 205,
         "color": "White",
         "availableSizes": [
             "S",
@@ -72,13 +54,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-minimalist-5",
-        "title": "Minimalist Key Chains Sample 5",
+        "id": "p-sub-minimalist-4",
+        "title": "Minimalist Key Chains Sample 4",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-minimalist5/400/400",
+        "image": "https://picsum.photos/seed/sub-minimalist4/400/400",
         "rating": "4.2",
-        "reviewCount": 124,
+        "reviewCount": 98,
         "color": "White",
         "availableSizes": [
             "S",
@@ -86,7 +68,25 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-minimalist-5",
+        "title": "Minimalist Key Chains Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-minimalist5/400/400",
+        "rating": "4.2",
+        "reviewCount": 164,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -96,7 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-minimalist6/400/400",
         "rating": "4.2",
-        "reviewCount": 20,
+        "reviewCount": 32,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +104,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-minimalist7/400/400",
         "rating": "4.2",
-        "reviewCount": 205,
+        "reviewCount": 88,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-minimalist8/400/400",
         "rating": "4.2",
-        "reviewCount": 71,
+        "reviewCount": 173,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

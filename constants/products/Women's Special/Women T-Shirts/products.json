@@ -1,0 +1,25 @@
+[
+    {
+        "id": "p-wts-31",
+        "sku_id": "SKU-WTS31",
+        "title": "Mustard Customized Allen Solly Women’s Solid regular Fit T-Shirt",
+        "description": "Premium quality Mustard Customized Allen Solly Women’s Solid regular Fit T-Shirt. Designed specially for women.",
+        "price": 1318,
+        "originalPrice": 3766,
+        "rating": "4.5",
+        "reviewCount": 85,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/yP-mplace/T-Shirts/Womens_T-Shirts/YPB07SF776RL_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    }
+]

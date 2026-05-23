@@ -25,7 +25,7 @@ const heroSlides = [
     },
     {
         image: 'https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=1200&h=400&fit=crop',
-        alt: 'Phone Cases',
+        alt: 'Phone Accessories',
         title: 'Designer Phone Cases',
         description: 'Protect your phone with style - custom printed cases',
         buttonText: 'Browse Cases',
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             // CRITICAL FALLBACK: If DB is empty or fails, use these core categories so it's NEVER empty
             let dbCats = (db && db.categories && db.categories.length > 0) ? db.categories : [
-                { name: "T-Shirts" }, { name: "Hoodies" }, { name: "Mugs & Cups" }, { name: "Decor" }, { name: "Phone Cases" }
+                { name: "T-Shirts" }, { name: "Hoodies" }, { name: "Mugs & Cups" }, { name: "Decor" }, { name: "Phone Accessories" }
             ];
 
             const categories = dbCats.map(cat => {

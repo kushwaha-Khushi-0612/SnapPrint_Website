@@ -4,9 +4,9 @@
         "title": "Resin Pendants Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-resin1/400/400",
+        "image": "https://picsum.photos/seed/sub-resin/400/400",
         "rating": "4.2",
-        "reviewCount": 20,
+        "reviewCount": 57,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-resin2/400/400",
         "rating": "4.2",
-        "reviewCount": 59,
+        "reviewCount": 37,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-resin3/400/400",
         "rating": "4.2",
-        "reviewCount": 24,
+        "reviewCount": 219,
         "color": "White",
         "availableSizes": [
             "S",
@@ -50,7 +50,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -60,7 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-resin4/400/400",
         "rating": "4.2",
-        "reviewCount": 189,
+        "reviewCount": 193,
         "color": "White",
         "availableSizes": [
             "S",
@@ -78,25 +78,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-resin5/400/400",
         "rating": "4.2",
-        "reviewCount": 207,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-resin-6",
-        "title": "Resin Pendants Sample 6",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-resin6/400/400",
-        "rating": "4.2",
-        "reviewCount": 64,
+        "reviewCount": 90,
         "color": "White",
         "availableSizes": [
             "S",
@@ -108,13 +90,31 @@
         "can_beCustomised": 1
     },
     {
+        "id": "p-sub-resin-6",
+        "title": "Resin Pendants Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-resin6/400/400",
+        "rating": "4.2",
+        "reviewCount": 26,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
         "id": "p-sub-resin-7",
         "title": "Resin Pendants Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-resin7/400/400",
         "rating": "4.2",
-        "reviewCount": 198,
+        "reviewCount": 97,
         "color": "White",
         "availableSizes": [
             "S",
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-resin8/400/400",
         "rating": "4.2",
-        "reviewCount": 156,
+        "reviewCount": 143,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Bestseller",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

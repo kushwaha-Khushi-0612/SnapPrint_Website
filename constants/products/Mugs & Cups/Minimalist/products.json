@@ -4,63 +4,9 @@
         "title": "Minimalist Mugs & Cups Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-minimalist1/400/400",
+        "image": "https://picsum.photos/seed/sub-minimalist/400/400",
         "rating": "4.2",
-        "reviewCount": 124,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Mega Sale",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-minimalist-2",
-        "title": "Minimalist Mugs & Cups Sample 2",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-minimalist2/400/400",
-        "rating": "4.2",
-        "reviewCount": 218,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "New Arrival",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-minimalist-3",
-        "title": "Minimalist Mugs & Cups Sample 3",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-minimalist3/400/400",
-        "rating": "4.2",
-        "reviewCount": 218,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-minimalist-4",
-        "title": "Minimalist Mugs & Cups Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-minimalist4/400/400",
-        "rating": "4.2",
-        "reviewCount": 160,
+        "reviewCount": 141,
         "color": "White",
         "availableSizes": [
             "S",
@@ -72,13 +18,67 @@
         "can_beCustomised": 1
     },
     {
+        "id": "p-sub-minimalist-2",
+        "title": "Minimalist Mugs & Cups Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-minimalist2/400/400",
+        "rating": "4.2",
+        "reviewCount": 54,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-minimalist-3",
+        "title": "Minimalist Mugs & Cups Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-minimalist3/400/400",
+        "rating": "4.2",
+        "reviewCount": 44,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-minimalist-4",
+        "title": "Minimalist Mugs & Cups Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-minimalist4/400/400",
+        "rating": "4.2",
+        "reviewCount": 204,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
         "id": "p-sub-minimalist-5",
         "title": "Minimalist Mugs & Cups Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-minimalist5/400/400",
         "rating": "4.2",
-        "reviewCount": 92,
+        "reviewCount": 180,
         "color": "White",
         "availableSizes": [
             "S",
@@ -96,7 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-minimalist6/400/400",
         "rating": "4.2",
-        "reviewCount": 24,
+        "reviewCount": 176,
         "color": "White",
         "availableSizes": [
             "S",
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-minimalist7/400/400",
         "rating": "4.2",
-        "reviewCount": 110,
+        "reviewCount": 218,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-minimalist8/400/400",
         "rating": "4.2",
-        "reviewCount": 187,
+        "reviewCount": 41,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

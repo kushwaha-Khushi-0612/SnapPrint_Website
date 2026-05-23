@@ -1,0 +1,57 @@
+[
+    {
+        "id": "p-mens-track-new-0",
+        "title": "Black Customized Cotton Jogger Track Pant for Men",
+        "price": 649,
+        "originalPrice": 1442,
+        "image": "https://static.yourprint.in/wp-content/uploads/2021/12/black-3.jpg?width=450&format=webp",
+        "rating": "4.5",
+        "reviewCount": 95,
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-mens-track-new-1",
+        "title": "Navy Blue Customized Cotton Jogger Track Pant for Men",
+        "price": 649,
+        "originalPrice": 1854,
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/03/navy-blue.jpg?width=450&format=webp",
+        "rating": "4.5",
+        "reviewCount": 53,
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-mens-track-new-2",
+        "title": "Sage Green Customized Cotton Jogger Track Pant for Men",
+        "price": 649,
+        "originalPrice": 1298,
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/03/sage-green.jpg?width=450&format=webp",
+        "rating": "4.5",
+        "reviewCount": 41,
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-mens-track-new-3",
+        "title": "Cafe Brown Customized Cotton Jogger Track Pant for Men",
+        "price": 649,
+        "originalPrice": 1298,
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/03/cafe.jpg?width=450&format=webp",
+        "rating": "4.5",
+        "reviewCount": 214,
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-mens-track-new-4",
+        "title": "Pear Sorbet Customized Cotton Jogger Track Pant for Men",
+        "price": 649,
+        "originalPrice": 1442,
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/03/pear-sorbet-men.jpg?width=450&format=webp",
+        "rating": "4.5",
+        "reviewCount": 114,
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

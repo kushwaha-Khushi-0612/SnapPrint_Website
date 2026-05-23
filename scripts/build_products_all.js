@@ -91,8 +91,8 @@ function buildAllProducts() {
             const bScore = (b.badge ? 2 : 0) + parseFloat(b.rating || 4.0);
             return bScore - aScore;
         });
-        // Take at most 2 products per subcategory
-        const topProds = sorted.slice(0, 2);
+        // Take at most 6 products per subcategory
+        const topProds = sorted.slice(0, 6);
         homepageProducts.push(...topProds);
     });
 

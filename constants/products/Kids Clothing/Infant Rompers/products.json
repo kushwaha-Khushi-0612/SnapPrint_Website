@@ -1,0 +1,21 @@
+[
+    {
+        "id": "p-kids-2",
+        "sku_id": "SKU-KIDS2",
+        "title": "Infant Rompers",
+        "description": "Premium quality Infant Rompers for your little ones.",
+        "price": 399,
+        "originalPrice": 799,
+        "rating": 4.6,
+        "reviewCount": 51,
+        "availableSizes": [
+            "2-3Y",
+            "4-5Y",
+            "6-7Y",
+            "8-9Y"
+        ],
+        "badge": "Bestseller",
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/01/romper-247x296.jpg",
+        "can_beCustomised": 1
+    }
+]

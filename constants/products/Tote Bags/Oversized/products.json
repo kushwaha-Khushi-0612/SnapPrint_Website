@@ -4,9 +4,9 @@
         "title": "Oversized Tote Bags Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-oversized1/400/400",
+        "image": "https://picsum.photos/seed/sub-oversized/400/400",
         "rating": "4.2",
-        "reviewCount": 85,
+        "reviewCount": 75,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-oversized2/400/400",
         "rating": "4.2",
-        "reviewCount": 214,
+        "reviewCount": 93,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-oversized3/400/400",
         "rating": "4.2",
-        "reviewCount": 100,
+        "reviewCount": 39,
         "color": "White",
         "availableSizes": [
             "S",
@@ -50,7 +50,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -60,7 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-oversized4/400/400",
         "rating": "4.2",
-        "reviewCount": 81,
+        "reviewCount": 175,
         "color": "White",
         "availableSizes": [
             "S",
@@ -78,25 +78,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-oversized5/400/400",
         "rating": "4.2",
-        "reviewCount": 157,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-oversized-6",
-        "title": "Oversized Tote Bags Sample 6",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-oversized6/400/400",
-        "rating": "4.2",
-        "reviewCount": 188,
+        "reviewCount": 125,
         "color": "White",
         "availableSizes": [
             "S",
@@ -108,13 +90,31 @@
         "can_beCustomised": 1
     },
     {
+        "id": "p-sub-oversized-6",
+        "title": "Oversized Tote Bags Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-oversized6/400/400",
+        "rating": "4.2",
+        "reviewCount": 189,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
         "id": "p-sub-oversized-7",
         "title": "Oversized Tote Bags Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-oversized7/400/400",
         "rating": "4.2",
-        "reviewCount": 32,
+        "reviewCount": 177,
         "color": "White",
         "availableSizes": [
             "S",
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-oversized8/400/400",
         "rating": "4.2",
-        "reviewCount": 187,
+        "reviewCount": 38,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Bestseller",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

@@ -4,9 +4,9 @@
         "title": "Kids Face Masks Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-kids1/400/400",
+        "image": "https://picsum.photos/seed/sub-kids/400/400",
         "rating": "4.2",
-        "reviewCount": 70,
+        "reviewCount": 20,
         "color": "White",
         "availableSizes": [
             "S",
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-kids2/400/400",
         "rating": "4.2",
-        "reviewCount": 46,
+        "reviewCount": 117,
         "color": "White",
         "availableSizes": [
             "S",
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-kids3/400/400",
         "rating": "4.2",
-        "reviewCount": 205,
+        "reviewCount": 23,
         "color": "White",
         "availableSizes": [
             "S",
@@ -60,7 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-kids4/400/400",
         "rating": "4.2",
-        "reviewCount": 56,
+        "reviewCount": 107,
         "color": "White",
         "availableSizes": [
             "S",
@@ -68,7 +68,7 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     },
     {
@@ -78,7 +78,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-kids5/400/400",
         "rating": "4.2",
-        "reviewCount": 102,
+        "reviewCount": 48,
         "color": "White",
         "availableSizes": [
             "S",
@@ -86,7 +86,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -96,7 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-kids6/400/400",
         "rating": "4.2",
-        "reviewCount": 185,
+        "reviewCount": 111,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +104,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-kids7/400/400",
         "rating": "4.2",
-        "reviewCount": 70,
+        "reviewCount": 118,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-kids8/400/400",
         "rating": "4.2",
-        "reviewCount": 101,
+        "reviewCount": 202,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

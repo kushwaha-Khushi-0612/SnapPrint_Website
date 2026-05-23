@@ -4,9 +4,9 @@
         "title": "Foldable Tote Bags Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-foldable1/400/400",
+        "image": "https://picsum.photos/seed/sub-foldable/400/400",
         "rating": "4.2",
-        "reviewCount": 37,
+        "reviewCount": 110,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-foldable2/400/400",
         "rating": "4.2",
-        "reviewCount": 37,
+        "reviewCount": 105,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-foldable3/400/400",
         "rating": "4.2",
-        "reviewCount": 161,
+        "reviewCount": 148,
         "color": "White",
         "availableSizes": [
             "S",
@@ -50,7 +50,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -60,43 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-foldable4/400/400",
         "rating": "4.2",
-        "reviewCount": 148,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Staff Pick",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-foldable-5",
-        "title": "Foldable Tote Bags Sample 5",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-foldable5/400/400",
-        "rating": "4.2",
-        "reviewCount": 155,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Mega Sale",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-foldable-6",
-        "title": "Foldable Tote Bags Sample 6",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-foldable6/400/400",
-        "rating": "4.2",
-        "reviewCount": 203,
+        "reviewCount": 197,
         "color": "White",
         "availableSizes": [
             "S",
@@ -108,13 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-foldable-7",
-        "title": "Foldable Tote Bags Sample 7",
+        "id": "p-sub-foldable-5",
+        "title": "Foldable Tote Bags Sample 5",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-foldable7/400/400",
+        "image": "https://picsum.photos/seed/sub-foldable5/400/400",
         "rating": "4.2",
-        "reviewCount": 115,
+        "reviewCount": 110,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +86,43 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-foldable-6",
+        "title": "Foldable Tote Bags Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-foldable6/400/400",
+        "rating": "4.2",
+        "reviewCount": 69,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-foldable-7",
+        "title": "Foldable Tote Bags Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-foldable7/400/400",
+        "rating": "4.2",
+        "reviewCount": 110,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-foldable8/400/400",
         "rating": "4.2",
-        "reviewCount": 125,
+        "reviewCount": 111,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": null,
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

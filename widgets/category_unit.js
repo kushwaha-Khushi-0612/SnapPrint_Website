@@ -13,7 +13,7 @@ const categoryIcons = {
     'Kids Clothing': 'constants/images/Kids Special.png',
     'Mugs & Cups': 'constants/images/Mugs and Cups.png',
     'Pendants': 'constants/images/pendants.png',
-    'Phone Cases': 'constants/images/phoneCases.png',
+    'Phone Accessories': 'constants/images/phoneCases.png',
     'Photo Frames': 'constants/images/PhotoFrames.png',
     'T-Shirts': 'constants/images/Tshirts.png',
     'Tote Bags': 'constants/images/TOTABAGS.png',
@@ -28,7 +28,7 @@ const sizeMapping = {
     "Hoodies": "category-wide",
     "Kids Clothing": "category-wide",
     "Decor": "category-tall",
-    "Phone Cases": "category-tall"
+    "Phone Accessories": "category-tall"
 };
 
 // Colorful theme colors for mobile rings
@@ -95,7 +95,7 @@ function renderCategories(categories, containerId) {
         "Hoodies",
         "Key Chains",
         "Kids Clothing",
-        "Phone Cases",
+        "Phone Accessories",
         "Mugs & Cups",
         "Pendants",
         "Photo Frames",

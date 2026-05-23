@@ -4,9 +4,9 @@
         "title": "Adjustable Face Masks Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-adjustable1/400/400",
+        "image": "https://picsum.photos/seed/sub-adjustable/400/400",
         "rating": "4.2",
-        "reviewCount": 114,
+        "reviewCount": 31,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "New Arrival",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-adjustable2/400/400",
         "rating": "4.2",
-        "reviewCount": 207,
+        "reviewCount": 151,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,43 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-adjustable3/400/400",
         "rating": "4.2",
-        "reviewCount": 104,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-adjustable-4",
-        "title": "Adjustable Face Masks Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-adjustable4/400/400",
-        "rating": "4.2",
-        "reviewCount": 200,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-adjustable-5",
-        "title": "Adjustable Face Masks Sample 5",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-adjustable5/400/400",
-        "rating": "4.2",
-        "reviewCount": 199,
+        "reviewCount": 102,
         "color": "White",
         "availableSizes": [
             "S",
@@ -90,13 +54,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-adjustable-6",
-        "title": "Adjustable Face Masks Sample 6",
+        "id": "p-sub-adjustable-4",
+        "title": "Adjustable Face Masks Sample 4",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-adjustable6/400/400",
+        "image": "https://picsum.photos/seed/sub-adjustable4/400/400",
         "rating": "4.2",
-        "reviewCount": 178,
+        "reviewCount": 140,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +68,43 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-adjustable-5",
+        "title": "Adjustable Face Masks Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-adjustable5/400/400",
+        "rating": "4.2",
+        "reviewCount": 32,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-adjustable-6",
+        "title": "Adjustable Face Masks Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-adjustable6/400/400",
+        "rating": "4.2",
+        "reviewCount": 84,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-adjustable7/400/400",
         "rating": "4.2",
-        "reviewCount": 127,
+        "reviewCount": 71,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-adjustable8/400/400",
         "rating": "4.2",
-        "reviewCount": 185,
+        "reviewCount": 164,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

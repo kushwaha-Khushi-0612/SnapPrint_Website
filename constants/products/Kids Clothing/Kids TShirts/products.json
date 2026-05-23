@@ -1,0 +1,21 @@
+[
+    {
+        "id": "p-kids-0",
+        "sku_id": "SKU-KIDS0",
+        "title": "Kids T-Shirts",
+        "description": "Premium quality Kids T-Shirts for your little ones.",
+        "price": 399,
+        "originalPrice": 799,
+        "rating": 4.6,
+        "reviewCount": 98,
+        "availableSizes": [
+            "2-3Y",
+            "4-5Y",
+            "6-7Y",
+            "8-9Y"
+        ],
+        "badge": "Bestseller",
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/12/kids-clothing-1-247x296.jpg",
+        "can_beCustomised": 1
+    }
+]

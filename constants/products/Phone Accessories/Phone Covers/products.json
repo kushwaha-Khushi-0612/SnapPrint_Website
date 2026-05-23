@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-phonecovers-1",
+        "title": "Phone Covers Phone Accessories Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-case.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 131,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-phonecovers-2",
+        "title": "Phone Covers Phone Accessories Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-case.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 60,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-phonecovers-3",
+        "title": "Phone Covers Phone Accessories Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-case.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 152,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-phonecovers-4",
+        "title": "Phone Covers Phone Accessories Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-case.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 199,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-phonecovers-5",
+        "title": "Phone Covers Phone Accessories Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-case.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 206,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-phonecovers-6",
+        "title": "Phone Covers Phone Accessories Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-case.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 182,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-phonecovers-7",
+        "title": "Phone Covers Phone Accessories Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-case.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 75,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-phonecovers-8",
+        "title": "Phone Covers Phone Accessories Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-case.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 149,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

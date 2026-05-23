@@ -1,146 +1,68 @@
 [
     {
-        "id": "p-sub-menclothing-supimacotton-1",
-        "title": "Supima Cotton T-Shirts Sample 1",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton1/400/400",
-        "rating": "4.2",
-        "reviewCount": 164,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-menclothing-supimacotton-2",
-        "title": "Supima Cotton T-Shirts Sample 2",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton2/400/400",
-        "rating": "4.2",
-        "reviewCount": 62,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-menclothing-supimacotton-3",
-        "title": "Supima Cotton T-Shirts Sample 3",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton3/400/400",
-        "rating": "4.2",
-        "reviewCount": 58,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-menclothing-supimacotton-4",
-        "title": "Supima Cotton T-Shirts Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton4/400/400",
-        "rating": "4.2",
-        "reviewCount": 30,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Bestseller",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-menclothing-supimacotton-5",
-        "title": "Supima Cotton T-Shirts Sample 5",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton5/400/400",
-        "rating": "4.2",
-        "reviewCount": 81,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Trending",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-menclothing-supimacotton-6",
-        "title": "Supima Cotton T-Shirts Sample 6",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton6/400/400",
-        "rating": "4.2",
-        "reviewCount": 154,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
+        "id": "p-supima-1",
+        "title": "Lavender Supima Cottom Customized Half Sleeve Men’s Premium Cotton T-Shirt",
+        "price": 649,
+        "originalPrice": 1442,
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Tshirts/Men/supima_men_lavender_o.jpg?width=450&format=webp",
+        "rating": "4.8",
+        "reviewCount": 65,
         "badge": "Top Rated",
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-menclothing-supimacotton-7",
-        "title": "Supima Cotton T-Shirts Sample 7",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton7/400/400",
-        "rating": "4.2",
-        "reviewCount": 62,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Hot Deal",
+        "id": "p-supima-2",
+        "title": "Black Supima Cottom Customized Half Sleeve Men’s Premium Cotton T-Shirt",
+        "price": 649,
+        "originalPrice": 1442,
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Tshirts/Men/supima_men_black_o.jpg?width=450&format=webp",
+        "rating": "4.8",
+        "reviewCount": 147,
+        "badge": null,
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-menclothing-supimacotton-8",
-        "title": "Supima Cotton T-Shirts Sample 8",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-menclothing-supimacotton8/400/400",
-        "rating": "4.2",
-        "reviewCount": 123,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Staff Pick",
+        "id": "p-supima-3",
+        "title": "White Supima Cottom Customized Half Sleeve Men’s Premium Cotton T-Shirt",
+        "price": 649,
+        "originalPrice": 1442,
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Tshirts/Men/supima_men_white_o.jpg?width=450&format=webp",
+        "rating": "4.8",
+        "reviewCount": 247,
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-supima-4",
+        "title": "Navy Blue Supima Cottom Customized Half Sleeve Men’s Premium Cotton T-Shirt",
+        "price": 649,
+        "originalPrice": 1854,
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Tshirts/Men/supima_men_navy_o.jpg?width=450&format=webp",
+        "rating": "4.8",
+        "reviewCount": 93,
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-supima-5",
+        "title": "Beige Supima Cottom Customized Half Sleeve Men’s Premium Cotton T-Shirt",
+        "price": 649,
+        "originalPrice": 1442,
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Tshirts/Men/supima_men_beige_o.jpg?width=450&format=webp",
+        "rating": "4.8",
+        "reviewCount": 237,
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-supima-6",
+        "title": "Maroon Supima Cottom Customized Half Sleeve Men’s Premium Cotton T-Shirt",
+        "price": 649,
+        "originalPrice": 1854,
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Tshirts/Men/supima_men_maroon_o.jpg?width=450&format=webp",
+        "rating": "4.8",
+        "reviewCount": 244,
+        "badge": null,
         "can_beCustomised": 1
     }
 ]

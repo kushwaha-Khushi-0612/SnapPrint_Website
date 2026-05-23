@@ -4,9 +4,45 @@
         "title": "Poster Photo Frames Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-poster1/400/400",
+        "image": "https://picsum.photos/seed/sub-poster/400/400",
         "rating": "4.2",
-        "reviewCount": 135,
+        "reviewCount": 35,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-poster-2",
+        "title": "Poster Photo Frames Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-poster2/400/400",
+        "rating": "4.2",
+        "reviewCount": 151,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-poster-3",
+        "title": "Poster Photo Frames Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-poster3/400/400",
+        "rating": "4.2",
+        "reviewCount": 143,
         "color": "White",
         "availableSizes": [
             "S",
@@ -18,103 +54,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-poster-2",
-        "title": "Poster Photo Frames Sample 2",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-poster2/400/400",
-        "rating": "4.2",
-        "reviewCount": 164,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Trending",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-poster-3",
-        "title": "Poster Photo Frames Sample 3",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-poster3/400/400",
-        "rating": "4.2",
-        "reviewCount": 189,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Top Rated",
-        "can_beCustomised": 1
-    },
-    {
         "id": "p-sub-poster-4",
         "title": "Poster Photo Frames Sample 4",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-poster4/400/400",
         "rating": "4.2",
-        "reviewCount": 31,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Hot Deal",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-poster-5",
-        "title": "Poster Photo Frames Sample 5",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-poster5/400/400",
-        "rating": "4.2",
-        "reviewCount": 197,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Staff Pick",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-poster-6",
-        "title": "Poster Photo Frames Sample 6",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-poster6/400/400",
-        "rating": "4.2",
-        "reviewCount": 129,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Mega Sale",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-poster-7",
-        "title": "Poster Photo Frames Sample 7",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-poster7/400/400",
-        "rating": "4.2",
-        "reviewCount": 100,
+        "reviewCount": 38,
         "color": "White",
         "availableSizes": [
             "S",
@@ -126,13 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-poster-8",
-        "title": "Poster Photo Frames Sample 8",
+        "id": "p-sub-poster-5",
+        "title": "Poster Photo Frames Sample 5",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-poster8/400/400",
+        "image": "https://picsum.photos/seed/sub-poster5/400/400",
         "rating": "4.2",
-        "reviewCount": 195,
+        "reviewCount": 132,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +86,61 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-poster-6",
+        "title": "Poster Photo Frames Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-poster6/400/400",
+        "rating": "4.2",
+        "reviewCount": 20,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-poster-7",
+        "title": "Poster Photo Frames Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-poster7/400/400",
+        "rating": "4.2",
+        "reviewCount": 179,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-poster-8",
+        "title": "Poster Photo Frames Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-poster8/400/400",
+        "rating": "4.2",
+        "reviewCount": 20,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

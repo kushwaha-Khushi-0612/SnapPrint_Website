@@ -4,9 +4,63 @@
         "title": "Customized Photo Frames Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-customized1/400/400",
+        "image": "https://picsum.photos/seed/sub-customized/400/400",
         "rating": "4.2",
-        "reviewCount": 80,
+        "reviewCount": 67,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-customized-2",
+        "title": "Customized Photo Frames Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-customized2/400/400",
+        "rating": "4.2",
+        "reviewCount": 219,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-customized-3",
+        "title": "Customized Photo Frames Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-customized3/400/400",
+        "rating": "4.2",
+        "reviewCount": 188,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-customized-4",
+        "title": "Customized Photo Frames Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-customized4/400/400",
+        "rating": "4.2",
+        "reviewCount": 204,
         "color": "White",
         "availableSizes": [
             "S",
@@ -18,67 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-customized-2",
-        "title": "Customized Photo Frames Sample 2",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-customized2/400/400",
-        "rating": "4.2",
-        "reviewCount": 206,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-customized-3",
-        "title": "Customized Photo Frames Sample 3",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-customized3/400/400",
-        "rating": "4.2",
-        "reviewCount": 175,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-customized-4",
-        "title": "Customized Photo Frames Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-customized4/400/400",
-        "rating": "4.2",
-        "reviewCount": 69,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
         "id": "p-sub-customized-5",
         "title": "Customized Photo Frames Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-customized5/400/400",
         "rating": "4.2",
-        "reviewCount": 34,
+        "reviewCount": 62,
         "color": "White",
         "availableSizes": [
             "S",
@@ -86,7 +86,7 @@
             "L",
             "XL"
         ],
-        "badge": "Bestseller",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -104,7 +104,7 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-customized7/400/400",
         "rating": "4.2",
-        "reviewCount": 32,
+        "reviewCount": 65,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-customized8/400/400",
         "rating": "4.2",
-        "reviewCount": 196,
+        "reviewCount": 90,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

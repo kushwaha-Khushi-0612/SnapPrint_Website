@@ -4,9 +4,9 @@
         "title": "Anti-Pollution Face Masks Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-antipollution1/400/400",
+        "image": "https://picsum.photos/seed/sub-antipollution/400/400",
         "rating": "4.2",
-        "reviewCount": 114,
+        "reviewCount": 68,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-antipollution2/400/400",
         "rating": "4.2",
-        "reviewCount": 157,
+        "reviewCount": 86,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-antipollution3/400/400",
         "rating": "4.2",
-        "reviewCount": 77,
+        "reviewCount": 76,
         "color": "White",
         "availableSizes": [
             "S",
@@ -50,7 +50,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -60,25 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-antipollution4/400/400",
         "rating": "4.2",
-        "reviewCount": 200,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Mega Sale",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-antipollution-5",
-        "title": "Anti-Pollution Face Masks Sample 5",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-antipollution5/400/400",
-        "rating": "4.2",
-        "reviewCount": 53,
+        "reviewCount": 27,
         "color": "White",
         "availableSizes": [
             "S",
@@ -90,13 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-antipollution-6",
-        "title": "Anti-Pollution Face Masks Sample 6",
+        "id": "p-sub-antipollution-5",
+        "title": "Anti-Pollution Face Masks Sample 5",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-antipollution6/400/400",
+        "image": "https://picsum.photos/seed/sub-antipollution5/400/400",
         "rating": "4.2",
-        "reviewCount": 176,
+        "reviewCount": 159,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +86,25 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-antipollution-6",
+        "title": "Anti-Pollution Face Masks Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-antipollution6/400/400",
+        "rating": "4.2",
+        "reviewCount": 159,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-antipollution7/400/400",
         "rating": "4.2",
-        "reviewCount": 75,
+        "reviewCount": 156,
         "color": "White",
         "availableSizes": [
             "S",
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-antipollution8/400/400",
         "rating": "4.2",
-        "reviewCount": 183,
+        "reviewCount": 139,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": null,
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

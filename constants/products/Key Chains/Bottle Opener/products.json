@@ -4,9 +4,9 @@
         "title": "Bottle Opener Key Chains Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-bottleopener1/400/400",
+        "image": "https://picsum.photos/seed/sub-bottleopener/400/400",
         "rating": "4.2",
-        "reviewCount": 158,
+        "reviewCount": 152,
         "color": "White",
         "availableSizes": [
             "S",
@@ -24,7 +24,25 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-bottleopener2/400/400",
         "rating": "4.2",
-        "reviewCount": 101,
+        "reviewCount": 74,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-bottleopener-3",
+        "title": "Bottle Opener Key Chains Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-bottleopener3/400/400",
+        "rating": "4.2",
+        "reviewCount": 24,
         "color": "White",
         "availableSizes": [
             "S",
@@ -36,31 +54,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-bottleopener-3",
-        "title": "Bottle Opener Key Chains Sample 3",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-bottleopener3/400/400",
-        "rating": "4.2",
-        "reviewCount": 63,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Trending",
-        "can_beCustomised": 1
-    },
-    {
         "id": "p-sub-bottleopener-4",
         "title": "Bottle Opener Key Chains Sample 4",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-bottleopener4/400/400",
         "rating": "4.2",
-        "reviewCount": 132,
+        "reviewCount": 146,
         "color": "White",
         "availableSizes": [
             "S",
@@ -68,7 +68,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     },
     {
@@ -78,7 +78,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-bottleopener5/400/400",
         "rating": "4.2",
-        "reviewCount": 171,
+        "reviewCount": 75,
         "color": "White",
         "availableSizes": [
             "S",
@@ -86,7 +86,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -96,7 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-bottleopener6/400/400",
         "rating": "4.2",
-        "reviewCount": 35,
+        "reviewCount": 113,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +104,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-bottleopener7/400/400",
         "rating": "4.2",
-        "reviewCount": 175,
+        "reviewCount": 197,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-bottleopener8/400/400",
         "rating": "4.2",
-        "reviewCount": 185,
+        "reviewCount": 154,
         "color": "White",
         "availableSizes": [
             "S",

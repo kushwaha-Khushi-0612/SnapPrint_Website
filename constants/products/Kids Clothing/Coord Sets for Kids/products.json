@@ -1,0 +1,21 @@
+[
+    {
+        "id": "p-kids-7",
+        "sku_id": "SKU-KIDS7",
+        "title": "Co-ord Sets for Kids",
+        "description": "Premium quality Co-ord Sets for Kids for your little ones.",
+        "price": 399,
+        "originalPrice": 799,
+        "rating": 4.6,
+        "reviewCount": 62,
+        "availableSizes": [
+            "2-3Y",
+            "4-5Y",
+            "6-7Y",
+            "8-9Y"
+        ],
+        "badge": "Bestseller",
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/03/co-ordes-set-247x296.jpg",
+        "can_beCustomised": 1
+    }
+]

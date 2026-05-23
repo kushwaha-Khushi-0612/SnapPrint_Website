@@ -4,9 +4,9 @@
         "title": "Engraved Pendants Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-engraved1/400/400",
+        "image": "https://picsum.photos/seed/sub-engraved/400/400",
         "rating": "4.2",
-        "reviewCount": 112,
+        "reviewCount": 22,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-engraved2/400/400",
         "rating": "4.2",
-        "reviewCount": 117,
+        "reviewCount": 119,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-engraved3/400/400",
         "rating": "4.2",
-        "reviewCount": 144,
+        "reviewCount": 35,
         "color": "White",
         "availableSizes": [
             "S",
@@ -50,7 +50,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -60,25 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-engraved4/400/400",
         "rating": "4.2",
-        "reviewCount": 53,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Mega Sale",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-engraved-5",
-        "title": "Engraved Pendants Sample 5",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-engraved5/400/400",
-        "rating": "4.2",
-        "reviewCount": 43,
+        "reviewCount": 146,
         "color": "White",
         "availableSizes": [
             "S",
@@ -90,13 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-engraved-6",
-        "title": "Engraved Pendants Sample 6",
+        "id": "p-sub-engraved-5",
+        "title": "Engraved Pendants Sample 5",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-engraved6/400/400",
+        "image": "https://picsum.photos/seed/sub-engraved5/400/400",
         "rating": "4.2",
-        "reviewCount": 142,
+        "reviewCount": 199,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +86,25 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-engraved-6",
+        "title": "Engraved Pendants Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-engraved6/400/400",
+        "rating": "4.2",
+        "reviewCount": 132,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-engraved7/400/400",
         "rating": "4.2",
-        "reviewCount": 63,
+        "reviewCount": 190,
         "color": "White",
         "availableSizes": [
             "S",
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-engraved8/400/400",
         "rating": "4.2",
-        "reviewCount": 140,
+        "reviewCount": 81,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": null,
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

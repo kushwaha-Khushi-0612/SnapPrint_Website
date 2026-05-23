@@ -4,9 +4,45 @@
         "title": "Ceramic Mugs & Cups Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-ceramic1/400/400",
+        "image": "https://picsum.photos/seed/sub-ceramic/400/400",
         "rating": "4.2",
-        "reviewCount": 98,
+        "reviewCount": 67,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-ceramic-2",
+        "title": "Ceramic Mugs & Cups Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ceramic2/400/400",
+        "rating": "4.2",
+        "reviewCount": 54,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-ceramic-3",
+        "title": "Ceramic Mugs & Cups Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ceramic3/400/400",
+        "rating": "4.2",
+        "reviewCount": 108,
         "color": "White",
         "availableSizes": [
             "S",
@@ -18,103 +54,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-ceramic-2",
-        "title": "Ceramic Mugs & Cups Sample 2",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-ceramic2/400/400",
-        "rating": "4.2",
-        "reviewCount": 24,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Trending",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-ceramic-3",
-        "title": "Ceramic Mugs & Cups Sample 3",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-ceramic3/400/400",
-        "rating": "4.2",
-        "reviewCount": 151,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Top Rated",
-        "can_beCustomised": 1
-    },
-    {
         "id": "p-sub-ceramic-4",
         "title": "Ceramic Mugs & Cups Sample 4",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ceramic4/400/400",
         "rating": "4.2",
-        "reviewCount": 100,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Hot Deal",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-ceramic-5",
-        "title": "Ceramic Mugs & Cups Sample 5",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-ceramic5/400/400",
-        "rating": "4.2",
-        "reviewCount": 100,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Staff Pick",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-ceramic-6",
-        "title": "Ceramic Mugs & Cups Sample 6",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-ceramic6/400/400",
-        "rating": "4.2",
-        "reviewCount": 138,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Mega Sale",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-ceramic-7",
-        "title": "Ceramic Mugs & Cups Sample 7",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-ceramic7/400/400",
-        "rating": "4.2",
-        "reviewCount": 196,
+        "reviewCount": 89,
         "color": "White",
         "availableSizes": [
             "S",
@@ -126,13 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-ceramic-8",
-        "title": "Ceramic Mugs & Cups Sample 8",
+        "id": "p-sub-ceramic-5",
+        "title": "Ceramic Mugs & Cups Sample 5",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-ceramic8/400/400",
+        "image": "https://picsum.photos/seed/sub-ceramic5/400/400",
         "rating": "4.2",
-        "reviewCount": 70,
+        "reviewCount": 62,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +86,61 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-ceramic-6",
+        "title": "Ceramic Mugs & Cups Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ceramic6/400/400",
+        "rating": "4.2",
+        "reviewCount": 164,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-ceramic-7",
+        "title": "Ceramic Mugs & Cups Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ceramic7/400/400",
+        "rating": "4.2",
+        "reviewCount": 165,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-ceramic-8",
+        "title": "Ceramic Mugs & Cups Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ceramic8/400/400",
+        "rating": "4.2",
+        "reviewCount": 126,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

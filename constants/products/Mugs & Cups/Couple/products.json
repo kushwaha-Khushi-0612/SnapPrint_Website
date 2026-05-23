@@ -4,9 +4,9 @@
         "title": "Couple Mugs & Cups Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-couple1/400/400",
+        "image": "https://picsum.photos/seed/sub-couple/400/400",
         "rating": "4.2",
-        "reviewCount": 89,
+        "reviewCount": 164,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-couple2/400/400",
         "rating": "4.2",
-        "reviewCount": 82,
+        "reviewCount": 124,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,25 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-couple3/400/400",
         "rating": "4.2",
-        "reviewCount": 82,
+        "reviewCount": 210,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-couple-4",
+        "title": "Couple Mugs & Cups Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-couple4/400/400",
+        "rating": "4.2",
+        "reviewCount": 135,
         "color": "White",
         "availableSizes": [
             "S",
@@ -54,31 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-couple-4",
-        "title": "Couple Mugs & Cups Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-couple4/400/400",
-        "rating": "4.2",
-        "reviewCount": 210,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
         "id": "p-sub-couple-5",
         "title": "Couple Mugs & Cups Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-couple5/400/400",
         "rating": "4.2",
-        "reviewCount": 97,
+        "reviewCount": 117,
         "color": "White",
         "availableSizes": [
             "S",
@@ -96,25 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-couple6/400/400",
         "rating": "4.2",
-        "reviewCount": 80,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-couple-7",
-        "title": "Couple Mugs & Cups Sample 7",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-couple7/400/400",
-        "rating": "4.2",
-        "reviewCount": 183,
+        "reviewCount": 65,
         "color": "White",
         "availableSizes": [
             "S",
@@ -126,13 +108,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-couple-8",
-        "title": "Couple Mugs & Cups Sample 8",
+        "id": "p-sub-couple-7",
+        "title": "Couple Mugs & Cups Sample 7",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-couple8/400/400",
+        "image": "https://picsum.photos/seed/sub-couple7/400/400",
         "rating": "4.2",
-        "reviewCount": 219,
+        "reviewCount": 34,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +122,25 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-couple-8",
+        "title": "Couple Mugs & Cups Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-couple8/400/400",
+        "rating": "4.2",
+        "reviewCount": 75,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

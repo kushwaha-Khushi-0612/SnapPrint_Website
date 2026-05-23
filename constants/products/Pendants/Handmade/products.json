@@ -4,9 +4,9 @@
         "title": "Handmade Pendants Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-handmade1/400/400",
+        "image": "https://picsum.photos/seed/sub-handmade/400/400",
         "rating": "4.2",
-        "reviewCount": 161,
+        "reviewCount": 144,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "New Arrival",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-handmade2/400/400",
         "rating": "4.2",
-        "reviewCount": 30,
+        "reviewCount": 178,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,43 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-handmade3/400/400",
         "rating": "4.2",
-        "reviewCount": 141,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-handmade-4",
-        "title": "Handmade Pendants Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-handmade4/400/400",
-        "rating": "4.2",
-        "reviewCount": 132,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-handmade-5",
-        "title": "Handmade Pendants Sample 5",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-handmade5/400/400",
-        "rating": "4.2",
-        "reviewCount": 135,
+        "reviewCount": 188,
         "color": "White",
         "availableSizes": [
             "S",
@@ -90,13 +54,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-handmade-6",
-        "title": "Handmade Pendants Sample 6",
+        "id": "p-sub-handmade-4",
+        "title": "Handmade Pendants Sample 4",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-handmade6/400/400",
+        "image": "https://picsum.photos/seed/sub-handmade4/400/400",
         "rating": "4.2",
-        "reviewCount": 127,
+        "reviewCount": 47,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +68,43 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-handmade-5",
+        "title": "Handmade Pendants Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-handmade5/400/400",
+        "rating": "4.2",
+        "reviewCount": 169,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-handmade-6",
+        "title": "Handmade Pendants Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-handmade6/400/400",
+        "rating": "4.2",
+        "reviewCount": 71,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-handmade7/400/400",
         "rating": "4.2",
-        "reviewCount": 126,
+        "reviewCount": 106,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-handmade8/400/400",
         "rating": "4.2",
-        "reviewCount": 72,
+        "reviewCount": 41,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

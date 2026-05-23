@@ -4,9 +4,9 @@
         "title": "Office Mugs & Cups Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-office1/400/400",
+        "image": "https://picsum.photos/seed/sub-office/400/400",
         "rating": "4.2",
-        "reviewCount": 24,
+        "reviewCount": 139,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "New Arrival",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-office2/400/400",
         "rating": "4.2",
-        "reviewCount": 24,
+        "reviewCount": 130,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,43 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-office3/400/400",
         "rating": "4.2",
-        "reviewCount": 172,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-office-4",
-        "title": "Office Mugs & Cups Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-office4/400/400",
-        "rating": "4.2",
-        "reviewCount": 87,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-office-5",
-        "title": "Office Mugs & Cups Sample 5",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-office5/400/400",
-        "rating": "4.2",
-        "reviewCount": 118,
+        "reviewCount": 132,
         "color": "White",
         "availableSizes": [
             "S",
@@ -90,11 +54,29 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-office-6",
-        "title": "Office Mugs & Cups Sample 6",
+        "id": "p-sub-office-4",
+        "title": "Office Mugs & Cups Sample 4",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-office6/400/400",
+        "image": "https://picsum.photos/seed/sub-office4/400/400",
+        "rating": "4.2",
+        "reviewCount": 160,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-office-5",
+        "title": "Office Mugs & Cups Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-office5/400/400",
         "rating": "4.2",
         "reviewCount": 132,
         "color": "White",
@@ -104,7 +86,25 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-office-6",
+        "title": "Office Mugs & Cups Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-office6/400/400",
+        "rating": "4.2",
+        "reviewCount": 191,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-office7/400/400",
         "rating": "4.2",
-        "reviewCount": 217,
+        "reviewCount": 122,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-office8/400/400",
         "rating": "4.2",
-        "reviewCount": 94,
+        "reviewCount": 209,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

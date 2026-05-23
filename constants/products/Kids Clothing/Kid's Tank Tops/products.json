@@ -1,0 +1,21 @@
+[
+    {
+        "id": "p-kids-1",
+        "sku_id": "SKU-KIDS1",
+        "title": "Kid's Tank Tops",
+        "description": "Premium quality Kid's Tank Tops for your little ones.",
+        "price": 399,
+        "originalPrice": 799,
+        "rating": 4.6,
+        "reviewCount": 84,
+        "availableSizes": [
+            "2-3Y",
+            "4-5Y",
+            "6-7Y",
+            "8-9Y"
+        ],
+        "badge": "Bestseller",
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/02/kids-tank-top-1-247x296.jpg",
+        "can_beCustomised": 1
+    }
+]

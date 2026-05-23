@@ -4,9 +4,9 @@
         "title": "Waterproof Tote Bags Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-waterproof1/400/400",
+        "image": "https://picsum.photos/seed/sub-waterproof/400/400",
         "rating": "4.2",
-        "reviewCount": 165,
+        "reviewCount": 81,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-waterproof2/400/400",
         "rating": "4.2",
-        "reviewCount": 90,
+        "reviewCount": 97,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-waterproof3/400/400",
         "rating": "4.2",
-        "reviewCount": 186,
+        "reviewCount": 196,
         "color": "White",
         "availableSizes": [
             "S",
@@ -50,7 +50,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -60,7 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-waterproof4/400/400",
         "rating": "4.2",
-        "reviewCount": 218,
+        "reviewCount": 52,
         "color": "White",
         "availableSizes": [
             "S",
@@ -78,25 +78,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-waterproof5/400/400",
         "rating": "4.2",
-        "reviewCount": 167,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-waterproof-6",
-        "title": "Waterproof Tote Bags Sample 6",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-waterproof6/400/400",
-        "rating": "4.2",
-        "reviewCount": 74,
+        "reviewCount": 202,
         "color": "White",
         "availableSizes": [
             "S",
@@ -108,13 +90,31 @@
         "can_beCustomised": 1
     },
     {
+        "id": "p-sub-waterproof-6",
+        "title": "Waterproof Tote Bags Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-waterproof6/400/400",
+        "rating": "4.2",
+        "reviewCount": 29,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
         "id": "p-sub-waterproof-7",
         "title": "Waterproof Tote Bags Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-waterproof7/400/400",
         "rating": "4.2",
-        "reviewCount": 190,
+        "reviewCount": 79,
         "color": "White",
         "availableSizes": [
             "S",
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-waterproof8/400/400",
         "rating": "4.2",
-        "reviewCount": 47,
+        "reviewCount": 97,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Bestseller",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

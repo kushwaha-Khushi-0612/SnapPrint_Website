@@ -4,9 +4,9 @@
         "title": "Glass Mugs & Cups Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-glass1/400/400",
+        "image": "https://picsum.photos/seed/sub-glass/400/400",
         "rating": "4.2",
-        "reviewCount": 126,
+        "reviewCount": 102,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-glass2/400/400",
         "rating": "4.2",
-        "reviewCount": 53,
+        "reviewCount": 188,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,25 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-glass3/400/400",
         "rating": "4.2",
-        "reviewCount": 79,
+        "reviewCount": 128,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-glass-4",
+        "title": "Glass Mugs & Cups Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-glass4/400/400",
+        "rating": "4.2",
+        "reviewCount": 58,
         "color": "White",
         "availableSizes": [
             "S",
@@ -54,31 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-glass-4",
-        "title": "Glass Mugs & Cups Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-glass4/400/400",
-        "rating": "4.2",
-        "reviewCount": 89,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
         "id": "p-sub-glass-5",
         "title": "Glass Mugs & Cups Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-glass5/400/400",
         "rating": "4.2",
-        "reviewCount": 160,
+        "reviewCount": 30,
         "color": "White",
         "availableSizes": [
             "S",
@@ -96,25 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-glass6/400/400",
         "rating": "4.2",
-        "reviewCount": 202,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-glass-7",
-        "title": "Glass Mugs & Cups Sample 7",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-glass7/400/400",
-        "rating": "4.2",
-        "reviewCount": 25,
+        "reviewCount": 140,
         "color": "White",
         "availableSizes": [
             "S",
@@ -126,13 +108,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-glass-8",
-        "title": "Glass Mugs & Cups Sample 8",
+        "id": "p-sub-glass-7",
+        "title": "Glass Mugs & Cups Sample 7",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-glass8/400/400",
+        "image": "https://picsum.photos/seed/sub-glass7/400/400",
         "rating": "4.2",
-        "reviewCount": 216,
+        "reviewCount": 95,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +122,25 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-glass-8",
+        "title": "Glass Mugs & Cups Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-glass8/400/400",
+        "rating": "4.2",
+        "reviewCount": 171,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

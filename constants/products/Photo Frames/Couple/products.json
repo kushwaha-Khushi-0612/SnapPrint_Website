@@ -4,9 +4,9 @@
         "title": "Couple Photo Frames Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-couple1/400/400",
+        "image": "https://picsum.photos/seed/sub-couple/400/400",
         "rating": "4.2",
-        "reviewCount": 202,
+        "reviewCount": 106,
         "color": "White",
         "availableSizes": [
             "S",
@@ -24,7 +24,25 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-couple2/400/400",
         "rating": "4.2",
-        "reviewCount": 128,
+        "reviewCount": 212,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-couple-3",
+        "title": "Couple Photo Frames Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-couple3/400/400",
+        "rating": "4.2",
+        "reviewCount": 119,
         "color": "White",
         "availableSizes": [
             "S",
@@ -36,31 +54,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-couple-3",
-        "title": "Couple Photo Frames Sample 3",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-couple3/400/400",
-        "rating": "4.2",
-        "reviewCount": 144,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Trending",
-        "can_beCustomised": 1
-    },
-    {
         "id": "p-sub-couple-4",
         "title": "Couple Photo Frames Sample 4",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-couple4/400/400",
         "rating": "4.2",
-        "reviewCount": 153,
+        "reviewCount": 210,
         "color": "White",
         "availableSizes": [
             "S",
@@ -68,7 +68,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     },
     {
@@ -78,7 +78,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-couple5/400/400",
         "rating": "4.2",
-        "reviewCount": 156,
+        "reviewCount": 131,
         "color": "White",
         "availableSizes": [
             "S",
@@ -86,7 +86,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -96,7 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-couple6/400/400",
         "rating": "4.2",
-        "reviewCount": 52,
+        "reviewCount": 134,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +104,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-couple7/400/400",
         "rating": "4.2",
-        "reviewCount": 186,
+        "reviewCount": 183,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-couple8/400/400",
         "rating": "4.2",
-        "reviewCount": 68,
+        "reviewCount": 190,
         "color": "White",
         "availableSizes": [
             "S",

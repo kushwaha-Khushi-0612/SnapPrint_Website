@@ -4,9 +4,9 @@
         "title": "Cartoon Face Masks Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-cartoon1/400/400",
+        "image": "https://picsum.photos/seed/sub-cartoon/400/400",
         "rating": "4.2",
-        "reviewCount": 181,
+        "reviewCount": 133,
         "color": "White",
         "availableSizes": [
             "S",
@@ -24,7 +24,25 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cartoon2/400/400",
         "rating": "4.2",
-        "reviewCount": 34,
+        "reviewCount": 91,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-cartoon-3",
+        "title": "Cartoon Face Masks Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-cartoon3/400/400",
+        "rating": "4.2",
+        "reviewCount": 77,
         "color": "White",
         "availableSizes": [
             "S",
@@ -36,31 +54,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-cartoon-3",
-        "title": "Cartoon Face Masks Sample 3",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-cartoon3/400/400",
-        "rating": "4.2",
-        "reviewCount": 195,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Trending",
-        "can_beCustomised": 1
-    },
-    {
         "id": "p-sub-cartoon-4",
         "title": "Cartoon Face Masks Sample 4",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cartoon4/400/400",
         "rating": "4.2",
-        "reviewCount": 61,
+        "reviewCount": 34,
         "color": "White",
         "availableSizes": [
             "S",
@@ -68,7 +68,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     },
     {
@@ -78,7 +78,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cartoon5/400/400",
         "rating": "4.2",
-        "reviewCount": 30,
+        "reviewCount": 184,
         "color": "White",
         "availableSizes": [
             "S",
@@ -86,7 +86,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -96,7 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cartoon6/400/400",
         "rating": "4.2",
-        "reviewCount": 189,
+        "reviewCount": 122,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +104,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cartoon7/400/400",
         "rating": "4.2",
-        "reviewCount": 129,
+        "reviewCount": 46,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-cartoon8/400/400",
         "rating": "4.2",
-        "reviewCount": 167,
+        "reviewCount": 104,
         "color": "White",
         "availableSizes": [
             "S",

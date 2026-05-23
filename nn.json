@@ -1,1 +1,37 @@
-[]
+[
+    {
+        "name": "Phone Covers",
+        "link": "https://www.yourprint.in/product-category/phone-covers",
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-case.jpg?width=200&format=webp",
+        "alt": "Phone Covers",
+        "title": "Phone Covers"
+    },
+    {
+        "name": "Phone Grips",
+        "link": "https://www.yourprint.in/product-category/customized-socket-grip-phone-holders",
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/pop-socket.jpg?width=200&format=webp",
+        "alt": "Phone Grips",
+        "title": "Phone Grips"
+    },
+    {
+        "name": "Mobile Phone Stand",
+        "link": "https://www.yourprint.in/product-category/customized-mobile-phone-stand",
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-holder.jpg?width=200&format=webp",
+        "alt": "Mobile Phone Stand",
+        "title": "Mobile Phone Stand"
+    },
+    {
+        "name": "Power Banks",
+        "link": "https://www.yourprint.in/product-category/customized-power-banks",
+        "image": "https://static.yourprint.in/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-16-at-6.59.38-PM-2.jpeg?width=200&format=webp",
+        "alt": "Power Banks",
+        "title": "Power Banks"
+    },
+    {
+        "name": "USB Hubs",
+        "link": "https://www.yourprint.in/product-category/customized-usb-hubs",
+        "image": "https://static.yourprint.in/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-16-at-6.59.38-PM-1.jpeg?width=200&format=webp",
+        "alt": "USB Hubs",
+        "title": "USB Hubs"
+    }
+]

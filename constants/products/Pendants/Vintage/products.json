@@ -4,9 +4,9 @@
         "title": "Vintage Pendants Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-vintage1/400/400",
+        "image": "https://picsum.photos/seed/sub-vintage/400/400",
         "rating": "4.2",
-        "reviewCount": 64,
+        "reviewCount": 102,
         "color": "White",
         "availableSizes": [
             "S",
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-vintage2/400/400",
         "rating": "4.2",
-        "reviewCount": 137,
+        "reviewCount": 132,
         "color": "White",
         "availableSizes": [
             "S",
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-vintage3/400/400",
         "rating": "4.2",
-        "reviewCount": 54,
+        "reviewCount": 30,
         "color": "White",
         "availableSizes": [
             "S",
@@ -60,7 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-vintage4/400/400",
         "rating": "4.2",
-        "reviewCount": 213,
+        "reviewCount": 162,
         "color": "White",
         "availableSizes": [
             "S",
@@ -68,7 +68,7 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     },
     {
@@ -78,7 +78,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-vintage5/400/400",
         "rating": "4.2",
-        "reviewCount": 54,
+        "reviewCount": 183,
         "color": "White",
         "availableSizes": [
             "S",
@@ -86,7 +86,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -96,7 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-vintage6/400/400",
         "rating": "4.2",
-        "reviewCount": 157,
+        "reviewCount": 183,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +104,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-vintage7/400/400",
         "rating": "4.2",
-        "reviewCount": 168,
+        "reviewCount": 215,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-vintage8/400/400",
         "rating": "4.2",
-        "reviewCount": 215,
+        "reviewCount": 63,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

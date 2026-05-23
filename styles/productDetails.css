@@ -1915,7 +1915,7 @@
     overflow: hidden !important;
     position: relative !important;
     transition: transform 0.2s, box-shadow 0.2s !important;
-    height: 330px !important;
+    min-height: 38px !important; height: auto !important;
     /* Total height absolutely fixed */
     box-sizing: border-box !important;
 }
@@ -1929,7 +1929,7 @@
 /* Force image container to be exactly 180px in height */
 .product-grid .product-card-image {
     width: 100% !important;
-    height: 180px !important;
+    min-height: 38px !important; height: auto !important;
     background: #f8fafc !important;
     display: flex !important;
     align-items: center !important;
@@ -1958,7 +1958,7 @@
     flex-direction: column !important;
     justify-content: space-between !important;
     flex-grow: 1 !important;
-    height: 150px !important;
+    min-height: 38px !important; height: auto !important;
     box-sizing: border-box !important;
 }
 
@@ -1967,7 +1967,7 @@
     font-size: 14px !important;
     font-weight: 600 !important;
     line-height: 1.35 !important;
-    height: 38px !important;
+    min-height: 38px !important; height: auto !important;
     margin-bottom: 6px !important;
     display: -webkit-box !important;
     -webkit-line-clamp: 2 !important;
@@ -2032,7 +2032,7 @@
     left: auto !important;
     bottom: auto !important;
     width: 36px !important;
-    height: 36px !important;
+    min-height: 38px !important; height: auto !important;
     background: white !important;
     border: none !important;
     border-radius: 50% !important;
@@ -2046,7 +2046,7 @@
 .products-section .wishlist-btn svg,
 .product-grid .wishlist-btn svg {
     width: 18px !important;
-    height: 18px !important;
+    min-height: 38px !important; height: auto !important;
 }
 
 .product-grid.slider-active .product-card-link {
@@ -2137,11 +2137,11 @@
 
 .floating-props .prop-header svg {
     width: 12px !important;
-    height: 12px !important;
+    min-height: 38px !important; height: auto !important;
 }
 
 .floating-props #prop-text-input {
-    height: 38px !important;
+    min-height: 38px !important; height: auto !important;
     /* Shorter text area perfect for quick entries */
     font-size: 12px !important;
     padding: 6px !important;
@@ -2152,14 +2152,14 @@
 .floating-props #prop-font-select {
     padding: 4px 6px !important;
     font-size: 11px !important;
-    height: 26px !important;
+    min-height: 38px !important; height: auto !important;
     max-width: 140px !important;
     border-radius: 6px !important;
 }
 
 .floating-props #prop-color-input {
     width: 26px !important;
-    height: 26px !important;
+    min-height: 38px !important; height: auto !important;
 }
 
 .floating-props .icon-btn {
@@ -2170,7 +2170,7 @@
 
 .floating-props .icon-btn svg {
     width: 14px !important;
-    height: 14px !important;
+    min-height: 38px !important; height: auto !important;
 }
 
 .floating-props .prop-row {
@@ -2184,11 +2184,11 @@
 
 .floating-props label input[type="checkbox"] {
     width: 12px !important;
-    height: 12px !important;
+    min-height: 38px !important; height: auto !important;
 }
 
 .floating-props input[type="range"] {
-    height: 3px !important;
+    min-height: 38px !important; height: auto !important;
     margin-bottom: 6px !important;
 }
 
@@ -2313,13 +2313,13 @@
 
     .floating-btn {
         width: 34px !important;
-        height: 34px !important;
+        min-height: 38px !important; height: auto !important;
         border-radius: 6px !important;
     }
 
     .floating-btn svg {
         width: 16px !important;
-        height: 16px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     /* Shrink and align wishlist button inside customizer */
@@ -2327,13 +2327,13 @@
         top: 10px !important;
         left: 10px !important;
         width: 32px !important;
-        height: 32px !important;
+        min-height: 38px !important; height: auto !important;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12) !important;
     }
 
     .wishlist-btn svg {
         width: 16px !important;
-        height: 16px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     /* Adjust preview angle badge position and size on mobile */
@@ -2363,7 +2363,7 @@
 
     .floating-action-bar .action-btn {
         width: 34px !important;
-        height: 34px !important;
+        min-height: 38px !important; height: auto !important;
         border-radius: 50% !important;
         display: flex !important;
         align-items: center !important;
@@ -2373,7 +2373,7 @@
 
     .floating-action-bar .action-btn svg {
         width: 15px !important;
-        height: 15px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     /* Mobile properties panel overrides */
@@ -2399,11 +2399,11 @@
 
     .floating-props .prop-header svg {
         width: 10px !important;
-        height: 10px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     .floating-props #prop-text-input {
-        height: 32px !important;
+        min-height: 38px !important; height: auto !important;
         /* Compact textarea perfect for single-line mobile input */
         font-size: 11px !important;
         padding: 4px 6px !important;
@@ -2414,14 +2414,14 @@
     .floating-props #prop-font-select {
         padding: 2px 4px !important;
         font-size: 10px !important;
-        height: 24px !important;
+        min-height: 38px !important; height: auto !important;
         max-width: 120px !important;
         border-radius: 5px !important;
     }
 
     .floating-props #prop-color-input {
         width: 22px !important;
-        height: 22px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     .floating-props .icon-btn {
@@ -2432,7 +2432,7 @@
 
     .floating-props .icon-btn svg {
         width: 12px !important;
-        height: 12px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     .floating-props .prop-row {
@@ -2446,11 +2446,11 @@
 
     .floating-props label input[type="checkbox"] {
         width: 10px !important;
-        height: 10px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     .floating-props input[type="range"] {
-        height: 2px !important;
+        min-height: 38px !important; height: auto !important;
         margin-bottom: 4px !important;
     }
 
@@ -2579,13 +2579,13 @@ padding-top: 6px !important;
 
     .floating-btn {
         width: 34px !important;
-        height: 34px !important;
+        min-height: 38px !important; height: auto !important;
         border-radius: 6px !important;
     }
 
     .floating-btn svg {
         width: 16px !important;
-        height: 16px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     /* Shrink and align wishlist button inside customizer */
@@ -2593,13 +2593,13 @@ padding-top: 6px !important;
         top: 10px !important;
         left: 10px !important;
         width: 32px !important;
-        height: 32px !important;
+        min-height: 38px !important; height: auto !important;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12) !important;
     }
 
     .wishlist-btn svg {
         width: 16px !important;
-        height: 16px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     /* Adjust preview angle badge position and size on mobile */
@@ -2629,7 +2629,7 @@ padding-top: 6px !important;
 
     .floating-action-bar .action-btn {
         width: 34px !important;
-        height: 34px !important;
+        min-height: 38px !important; height: auto !important;
         border-radius: 50% !important;
         display: flex !important;
         align-items: center !important;
@@ -2639,7 +2639,7 @@ padding-top: 6px !important;
 
     .floating-action-bar .action-btn svg {
         width: 15px !important;
-        height: 15px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     /* Mobile properties panel overrides */
@@ -2665,11 +2665,11 @@ padding-top: 6px !important;
 
     .floating-props .prop-header svg {
         width: 10px !important;
-        height: 10px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     .floating-props #prop-text-input {
-        height: 32px !important;
+        min-height: 38px !important; height: auto !important;
         /* Compact textarea perfect for single-line mobile input */
         font-size: 11px !important;
         padding: 4px 6px !important;
@@ -2680,14 +2680,14 @@ padding-top: 6px !important;
     .floating-props #prop-font-select {
         padding: 2px 4px !important;
         font-size: 10px !important;
-        height: 24px !important;
+        min-height: 38px !important; height: auto !important;
         max-width: 120px !important;
         border-radius: 5px !important;
     }
 
     .floating-props #prop-color-input {
         width: 22px !important;
-        height: 22px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     .floating-props .icon-btn {
@@ -2698,7 +2698,7 @@ padding-top: 6px !important;
 
     .floating-props .icon-btn svg {
         width: 12px !important;
-        height: 12px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     .floating-props .prop-row {
@@ -2712,11 +2712,11 @@ padding-top: 6px !important;
 
     .floating-props label input[type="checkbox"] {
         width: 10px !important;
-        height: 10px !important;
+        min-height: 38px !important; height: auto !important;
     }
 
     .floating-props input[type="range"] {
-        height: 2px !important;
+        min-height: 38px !important; height: auto !important;
         margin-bottom: 4px !important;
     }
 

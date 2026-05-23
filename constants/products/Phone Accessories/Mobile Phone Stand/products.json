@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p-sub-mobilephonestand-1",
+        "title": "Mobile Phone Stand Phone Accessories Sample 1",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-holder.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 161,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-mobilephonestand-2",
+        "title": "Mobile Phone Stand Phone Accessories Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-holder.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 66,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-mobilephonestand-3",
+        "title": "Mobile Phone Stand Phone Accessories Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-holder.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 97,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-mobilephonestand-4",
+        "title": "Mobile Phone Stand Phone Accessories Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-holder.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 61,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-mobilephonestand-5",
+        "title": "Mobile Phone Stand Phone Accessories Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-holder.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 112,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-mobilephonestand-6",
+        "title": "Mobile Phone Stand Phone Accessories Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-holder.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 113,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-mobilephonestand-7",
+        "title": "Mobile Phone Stand Phone Accessories Sample 7",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-holder.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 175,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-mobilephonestand-8",
+        "title": "Mobile Phone Stand Phone Accessories Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/09/phone-holder.jpg?width=200&format=webp",
+        "rating": "4.2",
+        "reviewCount": 45,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    }
+]

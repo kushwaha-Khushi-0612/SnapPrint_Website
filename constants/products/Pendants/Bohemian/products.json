@@ -4,9 +4,9 @@
         "title": "Bohemian Pendants Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-bohemian1/400/400",
+        "image": "https://picsum.photos/seed/sub-bohemian/400/400",
         "rating": "4.2",
-        "reviewCount": 91,
+        "reviewCount": 128,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-bohemian2/400/400",
         "rating": "4.2",
-        "reviewCount": 117,
+        "reviewCount": 125,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-bohemian3/400/400",
         "rating": "4.2",
-        "reviewCount": 76,
+        "reviewCount": 170,
         "color": "White",
         "availableSizes": [
             "S",
@@ -50,7 +50,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -60,7 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-bohemian4/400/400",
         "rating": "4.2",
-        "reviewCount": 158,
+        "reviewCount": 181,
         "color": "White",
         "availableSizes": [
             "S",
@@ -78,25 +78,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-bohemian5/400/400",
         "rating": "4.2",
-        "reviewCount": 158,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-bohemian-6",
-        "title": "Bohemian Pendants Sample 6",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-bohemian6/400/400",
-        "rating": "4.2",
-        "reviewCount": 65,
+        "reviewCount": 48,
         "color": "White",
         "availableSizes": [
             "S",
@@ -108,13 +90,31 @@
         "can_beCustomised": 1
     },
     {
+        "id": "p-sub-bohemian-6",
+        "title": "Bohemian Pendants Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-bohemian6/400/400",
+        "rating": "4.2",
+        "reviewCount": 100,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
         "id": "p-sub-bohemian-7",
         "title": "Bohemian Pendants Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-bohemian7/400/400",
         "rating": "4.2",
-        "reviewCount": 132,
+        "reviewCount": 82,
         "color": "White",
         "availableSizes": [
             "S",
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-bohemian8/400/400",
         "rating": "4.2",
-        "reviewCount": 40,
+        "reviewCount": 167,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Bestseller",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

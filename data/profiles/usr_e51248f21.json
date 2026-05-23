@@ -25,22 +25,24 @@
     "last_chosen_address": 1,
     "analytics": {
         "categoryInterests": {
-            "T-Shirts": 55,
+            "T-Shirts": 94,
             "Decor": 11,
-            "Men's Special": 10,
-            "Phone Cases": 8,
-            "Women's Special": 6,
-            "Jewelry": 5,
+            "Men's Special": 99,
+            "Phone Cases": 10,
+            "Women's Special": 26,
+            "Jewelry": 11,
             "Mugs & Cups": 9,
-            "Kids Clothing": 4,
+            "Kids Clothing": 8,
             "Photo Frames": 5,
             "Footwear": 6,
             "Key Chains": 10,
             "Face Masks": 6,
-            "Hoodies": 12,
+            "Hoodies": 17,
             "Tote Bags": 3,
             "Pendants": 1,
-            "Frames": 1
+            "Frames": 1,
+            "Caps": 3,
+            "Phone Accessories": 18
         },
         "subcategoryInterests": {
             "Printed": 13,
@@ -74,18 +76,37 @@
             "Crop": 1,
             "Rubber": 1,
             "Raglan": 1,
-            "Silk": 1
+            "Silk": 1,
+            "Men Hoodies": 1,
+            "Womens Crop Tops": 1,
+            "Baseball Caps": 1,
+            "Women T-Shirts": 1,
+            "Men Tank Top Vest": 1,
+            "Aprons": 5,
+            "Clothing": 1,
+            "V Neck": 1
         },
         "badgeInterests": {
-            "50% OFF": 17,
-            "55% OFF": 10,
+            "50% OFF": 18,
+            "55% OFF": 11,
             "New Arrival": 7,
-            "Bestseller": 7,
-            "65% OFF": 4,
+            "Bestseller": 10,
+            "65% OFF": 6,
             "Limited Edition": 1,
-            "Hot Deal": 1
+            "Hot Deal": 1,
+            "Top Rated": 1
         },
         "viewHistory": [
+            "p-vneck-5",
+            "p-apron-men-402",
+            "p-mens-shirts-new-47",
+            "p-apron-men-357",
+            "p-apron-men-460",
+            "p-tanktop-men-0",
+            "p-wts-31",
+            "p-cap-23-1779480642514",
+            "p-wts-1",
+            "p-hoodie-22",
             "p-sub-silk-1",
             "sub-menclothing-fullsleeves-0",
             "p-sub-insulated-2",
@@ -95,19 +116,9 @@
             "p-sub-necklaces-3",
             "p-sub-resin-3",
             "p-sub-laptop-6",
-            "sub-menclothing-cottonpolo-4",
-            "p-sub-acrylic-2",
-            "sub-oversized-150",
-            "p-sub-glass-4",
-            "p-sub-plain-4",
-            "p-sub-transparent-1",
-            "p-sub-magicheatsensitive-6",
-            "sub-oversized-53",
-            "p-sub-shockproof-5",
-            "sub-menclothing-graphic-0",
-            "sub-oversized-1"
+            "sub-menclothing-cottonpolo-4"
         ],
-        "lastInteracted": 1779471316261
+        "lastInteracted": 1779533096355
     },
-    "lastSync": "2026-05-22 19:35:16"
+    "lastSync": "2026-05-23 12:44:56"
 }

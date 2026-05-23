@@ -4,9 +4,9 @@
         "title": "Women Clothing Footwear Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-womenclothing1/400/400",
+        "image": "https://picsum.photos/seed/sub-womenclothing/400/400",
         "rating": "4.2",
-        "reviewCount": 83,
+        "reviewCount": 160,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "New Arrival",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-womenclothing2/400/400",
         "rating": "4.2",
-        "reviewCount": 155,
+        "reviewCount": 186,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,43 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-womenclothing3/400/400",
         "rating": "4.2",
-        "reviewCount": 153,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-womenclothing-4",
-        "title": "Women Clothing Footwear Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-womenclothing4/400/400",
-        "rating": "4.2",
-        "reviewCount": 209,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-womenclothing-5",
-        "title": "Women Clothing Footwear Sample 5",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-womenclothing5/400/400",
-        "rating": "4.2",
-        "reviewCount": 27,
+        "reviewCount": 215,
         "color": "White",
         "availableSizes": [
             "S",
@@ -90,13 +54,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-womenclothing-6",
-        "title": "Women Clothing Footwear Sample 6",
+        "id": "p-sub-womenclothing-4",
+        "title": "Women Clothing Footwear Sample 4",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-womenclothing6/400/400",
+        "image": "https://picsum.photos/seed/sub-womenclothing4/400/400",
         "rating": "4.2",
-        "reviewCount": 73,
+        "reviewCount": 176,
         "color": "White",
         "availableSizes": [
             "S",
@@ -104,7 +68,43 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-5",
+        "title": "Women Clothing Footwear Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing5/400/400",
+        "rating": "4.2",
+        "reviewCount": 211,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-womenclothing-6",
+        "title": "Women Clothing Footwear Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-womenclothing6/400/400",
+        "rating": "4.2",
+        "reviewCount": 141,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -114,7 +114,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-womenclothing7/400/400",
         "rating": "4.2",
-        "reviewCount": 105,
+        "reviewCount": 134,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "Top Rated",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-womenclothing8/400/400",
         "rating": "4.2",
-        "reviewCount": 60,
+        "reviewCount": 102,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

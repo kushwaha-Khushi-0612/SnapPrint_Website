@@ -4,7 +4,97 @@
         "title": "Rubber Key Chains Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-rubber1/400/400",
+        "image": "https://picsum.photos/seed/sub-rubber/400/400",
+        "rating": "4.2",
+        "reviewCount": 69,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-rubber-2",
+        "title": "Rubber Key Chains Sample 2",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-rubber2/400/400",
+        "rating": "4.2",
+        "reviewCount": 196,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-rubber-3",
+        "title": "Rubber Key Chains Sample 3",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-rubber3/400/400",
+        "rating": "4.2",
+        "reviewCount": 60,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-rubber-4",
+        "title": "Rubber Key Chains Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-rubber4/400/400",
+        "rating": "4.2",
+        "reviewCount": 37,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-rubber-5",
+        "title": "Rubber Key Chains Sample 5",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-rubber5/400/400",
+        "rating": "4.2",
+        "reviewCount": 213,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-rubber-6",
+        "title": "Rubber Key Chains Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-rubber6/400/400",
         "rating": "4.2",
         "reviewCount": 103,
         "color": "White",
@@ -18,103 +108,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-rubber-2",
-        "title": "Rubber Key Chains Sample 2",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-rubber2/400/400",
-        "rating": "4.2",
-        "reviewCount": 52,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Trending",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-rubber-3",
-        "title": "Rubber Key Chains Sample 3",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-rubber3/400/400",
-        "rating": "4.2",
-        "reviewCount": 144,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Top Rated",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-rubber-4",
-        "title": "Rubber Key Chains Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-rubber4/400/400",
-        "rating": "4.2",
-        "reviewCount": 79,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Hot Deal",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-rubber-5",
-        "title": "Rubber Key Chains Sample 5",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-rubber5/400/400",
-        "rating": "4.2",
-        "reviewCount": 192,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Staff Pick",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-rubber-6",
-        "title": "Rubber Key Chains Sample 6",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-rubber6/400/400",
-        "rating": "4.2",
-        "reviewCount": 78,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Mega Sale",
-        "can_beCustomised": 1
-    },
-    {
         "id": "p-sub-rubber-7",
         "title": "Rubber Key Chains Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-rubber7/400/400",
         "rating": "4.2",
-        "reviewCount": 93,
+        "reviewCount": 106,
         "color": "White",
         "availableSizes": [
             "S",
@@ -122,7 +122,7 @@
             "L",
             "XL"
         ],
-        "badge": "New Arrival",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-rubber8/400/400",
         "rating": "4.2",
-        "reviewCount": 21,
+        "reviewCount": 185,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Limited Edition",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

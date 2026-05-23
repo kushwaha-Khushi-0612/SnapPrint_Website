@@ -4,9 +4,9 @@
         "title": "Eco-Friendly Tote Bags Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-ecofriendly1/400/400",
+        "image": "https://picsum.photos/seed/sub-ecofriendly/400/400",
         "rating": "4.2",
-        "reviewCount": 138,
+        "reviewCount": 140,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Hot Deal",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly2/400/400",
         "rating": "4.2",
-        "reviewCount": 128,
+        "reviewCount": 186,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly3/400/400",
         "rating": "4.2",
-        "reviewCount": 38,
+        "reviewCount": 67,
         "color": "White",
         "availableSizes": [
             "S",
@@ -50,7 +50,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": "Bestseller",
         "can_beCustomised": 1
     },
     {
@@ -60,7 +60,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly4/400/400",
         "rating": "4.2",
-        "reviewCount": 134,
+        "reviewCount": 197,
         "color": "White",
         "availableSizes": [
             "S",
@@ -78,25 +78,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly5/400/400",
         "rating": "4.2",
-        "reviewCount": 121,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-ecofriendly-6",
-        "title": "Eco-Friendly Tote Bags Sample 6",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-ecofriendly6/400/400",
-        "rating": "4.2",
-        "reviewCount": 57,
+        "reviewCount": 160,
         "color": "White",
         "availableSizes": [
             "S",
@@ -108,13 +90,31 @@
         "can_beCustomised": 1
     },
     {
+        "id": "p-sub-ecofriendly-6",
+        "title": "Eco-Friendly Tote Bags Sample 6",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-ecofriendly6/400/400",
+        "rating": "4.2",
+        "reviewCount": 90,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
         "id": "p-sub-ecofriendly-7",
         "title": "Eco-Friendly Tote Bags Sample 7",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly7/400/400",
         "rating": "4.2",
-        "reviewCount": 57,
+        "reviewCount": 205,
         "color": "White",
         "availableSizes": [
             "S",
@@ -132,7 +132,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-ecofriendly8/400/400",
         "rating": "4.2",
-        "reviewCount": 57,
+        "reviewCount": 52,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +140,7 @@
             "L",
             "XL"
         ],
-        "badge": "Bestseller",
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]

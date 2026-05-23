@@ -1,0 +1,35 @@
+[
+    {
+        "id": "p-mens-shorts-new-0",
+        "title": "Black Customized Cotton Shorts for Men",
+        "price": 499,
+        "originalPrice": 998,
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/03/black-1.jpg?width=450&format=webp",
+        "rating": "4.5",
+        "reviewCount": 84,
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-mens-shorts-new-1",
+        "title": "Navy Blue Customized Cotton Shorts for Men",
+        "price": 499,
+        "originalPrice": 1109,
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/03/navy-blue-1.jpg?width=450&format=webp",
+        "rating": "4.5",
+        "reviewCount": 120,
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-mens-shorts-new-2",
+        "title": "Sage Green Customized Cotton Shorts for Men",
+        "price": 499,
+        "originalPrice": 1426,
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/03/sage-green-2.jpg?width=450&format=webp",
+        "rating": "4.5",
+        "reviewCount": 94,
+        "badge": null,
+        "can_beCustomised": 1
+    }
+]

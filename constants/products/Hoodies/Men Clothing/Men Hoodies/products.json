@@ -1,0 +1,2431 @@
+[
+    {
+        "id": "p-hoodie-0",
+        "sku_id": "SKU-HOODIE0",
+        "title": "Black Customized Hoodie with Pockets",
+        "description": "Premium quality Black Customized Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "4.3",
+        "reviewCount": 265,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/12/black-2.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-2",
+        "sku_id": "SKU-HOODIE2",
+        "title": "Green Acid Wash Pattern Customized Hoodie with Pockets",
+        "description": "Premium quality Green Acid Wash Pattern Customized Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1299,
+        "originalPrice": 3711,
+        "rating": "4.9",
+        "reviewCount": 443,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "Green",
+            "Navy Blue",
+            "Maroon"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/aw_hoodie_green_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-4",
+        "sku_id": "SKU-HOODIE4",
+        "title": "Cool Font Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Cool Font Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.6",
+        "reviewCount": 127,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d63_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-6",
+        "sku_id": "SKU-HOODIE6",
+        "title": "Monogram Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Monogram Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.6",
+        "reviewCount": 298,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d34_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-8",
+        "sku_id": "SKU-HOODIE8",
+        "title": "Money Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Money Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "3.7",
+        "reviewCount": 178,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d18_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-10",
+        "sku_id": "SKU-HOODIE10",
+        "title": "Royal Name Initials Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Royal Name Initials Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2098,
+        "rating": "4.9",
+        "reviewCount": 295,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d181_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-12",
+        "sku_id": "SKU-HOODIE12",
+        "title": "Money Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Money Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.6",
+        "reviewCount": 167,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d71_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-14",
+        "sku_id": "SKU-HOODIE14",
+        "title": "Estd Year with Name Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Estd Year with Name Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "4.3",
+        "reviewCount": 358,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d177_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-16",
+        "sku_id": "SKU-HOODIE16",
+        "title": "Fierce Name Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Fierce Name Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.7",
+        "reviewCount": 417,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d48_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-18",
+        "sku_id": "SKU-HOODIE18",
+        "title": "Name Initials with Year Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Name Initials with Year Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "4.6",
+        "reviewCount": 77,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d172_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-20",
+        "sku_id": "SKU-HOODIE20",
+        "title": "Emojis Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Emojis Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2997,
+        "rating": "4.8",
+        "reviewCount": 55,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d73_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-22",
+        "sku_id": "SKU-HOODIE22",
+        "title": "Moon with Name Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Moon with Name Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "5.0",
+        "reviewCount": 509,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d16_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-24",
+        "sku_id": "SKU-HOODIE24",
+        "title": "Nature Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Nature Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.9",
+        "reviewCount": 201,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d17_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-26",
+        "sku_id": "SKU-HOODIE26",
+        "title": "Name Initials Design Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Name Initials Design Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "4.9",
+        "reviewCount": 415,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d186_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-28",
+        "sku_id": "SKU-HOODIE28",
+        "title": "White Flower Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality White Flower Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "3.6",
+        "reviewCount": 123,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d33_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-30",
+        "sku_id": "SKU-HOODIE30",
+        "title": "Astronaut in Mind Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Astronaut in Mind Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "4.4",
+        "reviewCount": 138,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d112_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-32",
+        "sku_id": "SKU-HOODIE32",
+        "title": "Biker Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Biker Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "3.9",
+        "reviewCount": 113,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d131_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-34",
+        "sku_id": "SKU-HOODIE34",
+        "title": "Verified Name Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Verified Name Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 899,
+        "originalPrice": 2569,
+        "rating": "4.7",
+        "reviewCount": 430,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d96_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-36",
+        "sku_id": "SKU-HOODIE36",
+        "title": "Name Initials Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Name Initials Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "4.6",
+        "reviewCount": 195,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d161_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-38",
+        "sku_id": "SKU-HOODIE38",
+        "title": "Calm Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Calm Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 899,
+        "originalPrice": 2569,
+        "rating": "4.8",
+        "reviewCount": 185,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d88_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-40",
+        "sku_id": "SKU-HOODIE40",
+        "title": "Insta ID Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Insta ID Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.4",
+        "reviewCount": 115,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d97_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-42",
+        "sku_id": "SKU-HOODIE42",
+        "title": "Cool Astronaut Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Cool Astronaut Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2997,
+        "rating": "3.9",
+        "reviewCount": 403,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d53_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-44",
+        "sku_id": "SKU-HOODIE44",
+        "title": "Navy Blue Acid Wash Pattern Customized Hoodie with Pockets",
+        "description": "Premium quality Navy Blue Acid Wash Pattern Customized Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1299,
+        "originalPrice": 2598,
+        "rating": "4.0",
+        "reviewCount": 401,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "Green",
+            "Navy Blue",
+            "Maroon"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/aw_hoodie_navy_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-46",
+        "sku_id": "SKU-HOODIE46",
+        "title": "Heart with Monogram Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Heart with Monogram Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.8",
+        "reviewCount": 342,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d13_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-48",
+        "sku_id": "SKU-HOODIE48",
+        "title": "Camera Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Camera Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "3.5",
+        "reviewCount": 80,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d74_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-50",
+        "sku_id": "SKU-HOODIE50",
+        "title": "Monogram Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Monogram Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.0",
+        "reviewCount": 413,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d41_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-52",
+        "sku_id": "SKU-HOODIE52",
+        "title": "Drop Name Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Drop Name Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.8",
+        "reviewCount": 98,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d39_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-54",
+        "sku_id": "SKU-HOODIE54",
+        "title": "Neon Green Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Neon Green Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.6",
+        "reviewCount": 101,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d28_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-56",
+        "sku_id": "SKU-HOODIE56",
+        "title": "Rainbow with Name Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Rainbow with Name Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "3.6",
+        "reviewCount": 401,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d26_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-58",
+        "sku_id": "SKU-HOODIE58",
+        "title": "2 Faces Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality 2 Faces Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 899,
+        "originalPrice": 1798,
+        "rating": "5.0",
+        "reviewCount": 138,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d130_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-60",
+        "sku_id": "SKU-HOODIE60",
+        "title": "Cool Name Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Cool Name Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2098,
+        "rating": "4.4",
+        "reviewCount": 48,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d167_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-62",
+        "sku_id": "SKU-HOODIE62",
+        "title": "High Five Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality High Five Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 899,
+        "originalPrice": 2569,
+        "rating": "3.5",
+        "reviewCount": 314,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d37_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-64",
+        "sku_id": "SKU-HOODIE64",
+        "title": "Stylish Name Initials Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Stylish Name Initials Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "4.2",
+        "reviewCount": 199,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d182_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-66",
+        "sku_id": "SKU-HOODIE66",
+        "title": "Anime Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Anime Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "4.3",
+        "reviewCount": 307,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d133_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-68",
+        "sku_id": "SKU-HOODIE68",
+        "title": "Name Initials Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Name Initials Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "4.3",
+        "reviewCount": 190,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d166_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-70",
+        "sku_id": "SKU-HOODIE70",
+        "title": "Sunrise Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Sunrise Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 999,
+        "originalPrice": 2854,
+        "rating": "3.9",
+        "reviewCount": 446,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d47_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-72",
+        "sku_id": "SKU-HOODIE72",
+        "title": "Astronaut Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Astronaut Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2098,
+        "rating": "4.8",
+        "reviewCount": 113,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d135_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-74",
+        "sku_id": "SKU-HOODIE74",
+        "title": "Gamer Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Gamer Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.6",
+        "reviewCount": 294,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d44_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-76",
+        "sku_id": "SKU-HOODIE76",
+        "title": "Ace Card Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Ace Card Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "5.0",
+        "reviewCount": 487,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d116_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-78",
+        "sku_id": "SKU-HOODIE78",
+        "title": "Diamond Name Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Diamond Name Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 999,
+        "originalPrice": 1998,
+        "rating": "3.8",
+        "reviewCount": 391,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d158_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-80",
+        "sku_id": "SKU-HOODIE80",
+        "title": "Floating Astronaut Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Floating Astronaut Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.0",
+        "reviewCount": 481,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d95_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-82",
+        "sku_id": "SKU-HOODIE82",
+        "title": "Open Heart Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Open Heart Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 999,
+        "originalPrice": 2854,
+        "rating": "3.7",
+        "reviewCount": 227,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d70_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-84",
+        "sku_id": "SKU-HOODIE84",
+        "title": "Anchor Name Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Anchor Name Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2098,
+        "rating": "3.7",
+        "reviewCount": 127,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d176_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-86",
+        "sku_id": "SKU-HOODIE86",
+        "title": "Gamer Dude Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Gamer Dude Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2997,
+        "rating": "4.3",
+        "reviewCount": 43,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d56_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-88",
+        "sku_id": "SKU-HOODIE88",
+        "title": "Name Initials Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Name Initials Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 899,
+        "originalPrice": 1798,
+        "rating": "4.4",
+        "reviewCount": 253,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d162_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-90",
+        "sku_id": "SKU-HOODIE90",
+        "title": "Trigonal Name Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Trigonal Name Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "3.7",
+        "reviewCount": 248,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d171_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-92",
+        "sku_id": "SKU-HOODIE92",
+        "title": "Astronaut Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Astronaut Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2997,
+        "rating": "3.6",
+        "reviewCount": 18,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d50_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-94",
+        "sku_id": "SKU-HOODIE94",
+        "title": "Dragon Warrior Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Dragon Warrior Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2098,
+        "rating": "4.6",
+        "reviewCount": 453,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d121_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-96",
+        "sku_id": "SKU-HOODIE96",
+        "title": "Funky Superhero Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Funky Superhero Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "3.6",
+        "reviewCount": 416,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d101_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-98",
+        "sku_id": "SKU-HOODIE98",
+        "title": "Next Level Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Next Level Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.2",
+        "reviewCount": 91,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d21_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-100",
+        "sku_id": "SKU-HOODIE100",
+        "title": "Superhero Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Superhero Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "3.8",
+        "reviewCount": 225,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d51_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-102",
+        "sku_id": "SKU-HOODIE102",
+        "title": "Superhero Helmet Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Superhero Helmet Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2098,
+        "rating": "4.9",
+        "reviewCount": 368,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d117_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-104",
+        "sku_id": "SKU-HOODIE104",
+        "title": "Sword Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Sword Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.4",
+        "reviewCount": 67,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d64_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-106",
+        "sku_id": "SKU-HOODIE106",
+        "title": "Warrior Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Warrior Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2997,
+        "rating": "4.3",
+        "reviewCount": 500,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d93_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-108",
+        "sku_id": "SKU-HOODIE108",
+        "title": "Biker Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Biker Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "3.7",
+        "reviewCount": 348,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d72_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-110",
+        "sku_id": "SKU-HOODIE110",
+        "title": "Fierce Sword Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Fierce Sword Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "5.0",
+        "reviewCount": 133,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d49_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-112",
+        "sku_id": "SKU-HOODIE112",
+        "title": "Fierce Warrior Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Fierce Warrior Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2098,
+        "rating": "4.9",
+        "reviewCount": 95,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d118_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-114",
+        "sku_id": "SKU-HOODIE114",
+        "title": "Green Monkey Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Green Monkey Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.0",
+        "reviewCount": 196,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d94_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-116",
+        "sku_id": "SKU-HOODIE116",
+        "title": "Name Initials Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Name Initials Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2098,
+        "rating": "4.3",
+        "reviewCount": 68,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d156_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-118",
+        "sku_id": "SKU-HOODIE118",
+        "title": "Pocket Monster Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Pocket Monster Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 899,
+        "originalPrice": 2569,
+        "rating": "4.3",
+        "reviewCount": 324,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d67_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-120",
+        "sku_id": "SKU-HOODIE120",
+        "title": "Samurai Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Samurai Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "4.4",
+        "reviewCount": 495,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d125_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-122",
+        "sku_id": "SKU-HOODIE122",
+        "title": "Skater Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Skater Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 999,
+        "originalPrice": 2854,
+        "rating": "4.2",
+        "reviewCount": 230,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d43_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-124",
+        "sku_id": "SKU-HOODIE124",
+        "title": "Superhero Name Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Superhero Name Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2098,
+        "rating": "4.8",
+        "reviewCount": 424,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d108_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-126",
+        "sku_id": "SKU-HOODIE126",
+        "title": "Unbeatable Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Unbeatable Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 999,
+        "originalPrice": 2854,
+        "rating": "4.2",
+        "reviewCount": 412,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d52_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-128",
+        "sku_id": "SKU-HOODIE128",
+        "title": "Chill Dude Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Chill Dude Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 999,
+        "originalPrice": 2854,
+        "rating": "4.4",
+        "reviewCount": 371,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d36_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-130",
+        "sku_id": "SKU-HOODIE130",
+        "title": "Cool Sneakers Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Cool Sneakers Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2997,
+        "rating": "4.3",
+        "reviewCount": 231,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d69_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-132",
+        "sku_id": "SKU-HOODIE132",
+        "title": "Dino Name Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Dino Name Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.5",
+        "reviewCount": 221,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d57_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-134",
+        "sku_id": "SKU-HOODIE134",
+        "title": "Gamer Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Gamer Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2997,
+        "rating": "3.9",
+        "reviewCount": 393,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d83_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-136",
+        "sku_id": "SKU-HOODIE136",
+        "title": "Hang in There Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Hang in There Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2997,
+        "rating": "4.1",
+        "reviewCount": 326,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d75_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-138",
+        "sku_id": "SKU-HOODIE138",
+        "title": "Intense Gaze Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Intense Gaze Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.7",
+        "reviewCount": 500,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d45_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-140",
+        "sku_id": "SKU-HOODIE140",
+        "title": "My Name Is Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality My Name Is Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2997,
+        "rating": "3.7",
+        "reviewCount": 378,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d79_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-142",
+        "sku_id": "SKU-HOODIE142",
+        "title": "Name Initials Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Name Initials Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1698,
+        "rating": "4.3",
+        "reviewCount": 494,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d164_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-144",
+        "sku_id": "SKU-HOODIE144",
+        "title": "Name with Logo Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Name with Logo Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 999,
+        "originalPrice": 1998,
+        "rating": "4.4",
+        "reviewCount": 159,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d175_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-146",
+        "sku_id": "SKU-HOODIE146",
+        "title": "Ramen Shop Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Ramen Shop Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.9",
+        "reviewCount": 412,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d90_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-148",
+        "sku_id": "SKU-HOODIE148",
+        "title": "Red Superhero Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Red Superhero Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2997,
+        "rating": "4.1",
+        "reviewCount": 468,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d81_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-150",
+        "sku_id": "SKU-HOODIE150",
+        "title": "Samurai Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Samurai Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 999,
+        "originalPrice": 1998,
+        "rating": "4.8",
+        "reviewCount": 386,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d110_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-152",
+        "sku_id": "SKU-HOODIE152",
+        "title": "Silent Assassin Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Silent Assassin Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 999,
+        "originalPrice": 1998,
+        "rating": "4.9",
+        "reviewCount": 43,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d127_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-154",
+        "sku_id": "SKU-HOODIE154",
+        "title": "Subscribe Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Subscribe Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2098,
+        "rating": "4.4",
+        "reviewCount": 233,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d100_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-156",
+        "sku_id": "SKU-HOODIE156",
+        "title": "Traveller Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality Traveller Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 2426,
+        "rating": "4.9",
+        "reviewCount": 272,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d58_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-158",
+        "sku_id": "SKU-HOODIE158",
+        "title": "X-Ray Pocket Customized Unisex Printed Hoodie with Pockets",
+        "description": "Premium quality X-Ray Pocket Customized Unisex Printed Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 999,
+        "originalPrice": 2854,
+        "rating": "4.9",
+        "reviewCount": 346,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://s3-media.yourprint.in/Designs_Inners_and_Outers/Hoodies/Men/hoodie_uni_pat_d62_o.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-160",
+        "sku_id": "SKU-HOODIE160",
+        "title": "Maroon Customized Hoodie with Pockets",
+        "description": "Premium quality Maroon Customized Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 849,
+        "originalPrice": 1887,
+        "rating": "5.0",
+        "reviewCount": 388,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "55% OFF",
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/12/maroon-2.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-162",
+        "sku_id": "SKU-HOODIE162",
+        "title": "Light Purple Customized Hoodie with Pockets",
+        "description": "Premium quality Light Purple Customized Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2997,
+        "rating": "4.0",
+        "reviewCount": 449,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "65% OFF",
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/01/Light-Purple.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-164",
+        "sku_id": "SKU-HOODIE164",
+        "title": "Red Customized Hoodie with Pockets",
+        "description": "Premium quality Red Customized Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 999,
+        "originalPrice": 2220,
+        "rating": "4.2",
+        "reviewCount": 38,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "55% OFF",
+        "image": "https://static.yourprint.in/wp-content/uploads/2023/12/red-1.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-166",
+        "sku_id": "SKU-HOODIE166",
+        "title": "Persian Blue Customized Unisex Hoodie with Pockets",
+        "description": "Premium quality Persian Blue Customized Unisex Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2997,
+        "rating": "4.1",
+        "reviewCount": 394,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Free Color"
+        ],
+        "badge": "65% OFF",
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/01/Persian-Blue.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-hoodie-168",
+        "sku_id": "SKU-HOODIE168",
+        "title": "Fern Green Customized Unisex Hoodie with Pockets",
+        "description": "Premium quality Fern Green Customized Unisex Hoodie with Pockets. Enjoy extreme comfort and style.",
+        "price": 1049,
+        "originalPrice": 2098,
+        "rating": "5.0",
+        "reviewCount": 418,
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "colors": [
+            "Black",
+            "White",
+            "Navy Blue",
+            "Grey",
+            "Maroon",
+            "Olive Green",
+            "Red",
+            "Yellow",
+            "Light Brown",
+            "Persian Blue",
+            "Light Purple",
+            "Purple",
+            "Fern Green"
+        ],
+        "badge": "50% OFF",
+        "image": "https://static.yourprint.in/wp-content/uploads/2024/01/Fern-Green.jpg?width=450&format=webp",
+        "can_beCustomised": 1
+    }
+]

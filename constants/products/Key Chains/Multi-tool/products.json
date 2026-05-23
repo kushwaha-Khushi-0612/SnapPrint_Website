@@ -4,9 +4,9 @@
         "title": "Multi-tool Key Chains Sample 1",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-multitool1/400/400",
+        "image": "https://picsum.photos/seed/sub-multitool/400/400",
         "rating": "4.2",
-        "reviewCount": 128,
+        "reviewCount": 219,
         "color": "White",
         "availableSizes": [
             "S",
@@ -14,7 +14,7 @@
             "L",
             "XL"
         ],
-        "badge": "Staff Pick",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -24,7 +24,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-multitool2/400/400",
         "rating": "4.2",
-        "reviewCount": 62,
+        "reviewCount": 205,
         "color": "White",
         "availableSizes": [
             "S",
@@ -32,7 +32,7 @@
             "L",
             "XL"
         ],
-        "badge": "Mega Sale",
+        "badge": null,
         "can_beCustomised": 1
     },
     {
@@ -42,7 +42,25 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-multitool3/400/400",
         "rating": "4.2",
-        "reviewCount": 117,
+        "reviewCount": 21,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "Bestseller",
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-multitool-4",
+        "title": "Multi-tool Key Chains Sample 4",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-multitool4/400/400",
+        "rating": "4.2",
+        "reviewCount": 37,
         "color": "White",
         "availableSizes": [
             "S",
@@ -54,31 +72,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-multitool-4",
-        "title": "Multi-tool Key Chains Sample 4",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-multitool4/400/400",
-        "rating": "4.2",
-        "reviewCount": 71,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": "Limited Edition",
-        "can_beCustomised": 1
-    },
-    {
         "id": "p-sub-multitool-5",
         "title": "Multi-tool Key Chains Sample 5",
         "price": 599,
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-multitool5/400/400",
         "rating": "4.2",
-        "reviewCount": 85,
+        "reviewCount": 46,
         "color": "White",
         "availableSizes": [
             "S",
@@ -96,25 +96,7 @@
         "originalPrice": 1199,
         "image": "https://picsum.photos/seed/sub-multitool6/400/400",
         "rating": "4.2",
-        "reviewCount": 29,
-        "color": "White",
-        "availableSizes": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "badge": null,
-        "can_beCustomised": 1
-    },
-    {
-        "id": "p-sub-multitool-7",
-        "title": "Multi-tool Key Chains Sample 7",
-        "price": 599,
-        "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-multitool7/400/400",
-        "rating": "4.2",
-        "reviewCount": 156,
+        "reviewCount": 41,
         "color": "White",
         "availableSizes": [
             "S",
@@ -126,13 +108,13 @@
         "can_beCustomised": 1
     },
     {
-        "id": "p-sub-multitool-8",
-        "title": "Multi-tool Key Chains Sample 8",
+        "id": "p-sub-multitool-7",
+        "title": "Multi-tool Key Chains Sample 7",
         "price": 599,
         "originalPrice": 1199,
-        "image": "https://picsum.photos/seed/sub-multitool8/400/400",
+        "image": "https://picsum.photos/seed/sub-multitool7/400/400",
         "rating": "4.2",
-        "reviewCount": 182,
+        "reviewCount": 42,
         "color": "White",
         "availableSizes": [
             "S",
@@ -140,7 +122,25 @@
             "L",
             "XL"
         ],
-        "badge": "Trending",
+        "badge": null,
+        "can_beCustomised": 1
+    },
+    {
+        "id": "p-sub-multitool-8",
+        "title": "Multi-tool Key Chains Sample 8",
+        "price": 599,
+        "originalPrice": 1199,
+        "image": "https://picsum.photos/seed/sub-multitool8/400/400",
+        "rating": "4.2",
+        "reviewCount": 135,
+        "color": "White",
+        "availableSizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "badge": "New Arrival",
         "can_beCustomised": 1
     }
 ]
